@@ -24,8 +24,8 @@ require(fastrtext)
 try(theme_set(theme_minimal()), silent = TRUE) # set plot theme
 
 ## working dir
-root_dir <- "/home/jmr/Dropbox/Current projects/other_projects/covidizer"
-setwd(root_dir)
+root_dir <- getwd()
+setwd("train")
 
 ### Preping the data
 ###----------------------------------------------------------------------------------
@@ -86,9 +86,13 @@ if (!dir.exists("data")) {
 }
 
 #run the function
-dta_raw <- map_df(labeled_data_dir, load_dta)
-## change to the ML directory
-setwd("covid_ml")
+untar("data/labeled_data/labeled_data.tar.xz", exdir = "data/labeled_data")
+listed_files <- list.files("data/labeled_data", full.names = TRUE) %>%
+  subset(., stringr::str_detect(., "json"))
+
+# load
+dta_raw <- map_df(listed_files, load_dta)
+
 # export
 write_csv(dta_raw, 
           "data/0_data_parsed.csv")
@@ -502,7 +506,7 @@ readr::write_rds(rf_mod,
 
 ### Random forest
 tgrid <- expand.grid(
-  mtry = 8:10,
+  mtry = c(8, 16, 25, 30),
   splitrule = "gini",
   min.node.size = 10
 )

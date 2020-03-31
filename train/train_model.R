@@ -23,74 +23,8 @@ try(theme_set(theme_minimal()), silent = TRUE) # set plot theme
 
 ## working dir
 root_dir <- here::here()
-setwd(root_dir)
 
-### Preping the data
-###----------------------------------------------------------------------------------
-load_dta <- function(filename){
-  
-  ## parse json
-  parsed <- fromJSON(filename) 
-  
-  # check if empty
-  if (length(parsed) == 0) {
-    
-    cat(paste0("\n>> ", filename, " has no json.\n"), 
-        file = "logs/json_parse.txt", 
-        append = TRUE)
-    
-  } else {
-    
-    # turn into tibble and flatten all lists
-    my_tbl <- parsed %>%
-      as_tibble() %>%
-      mutate_if(is.list, unlist)
-    
-    ## add missing labels
-    if (!"has_corona_label" %in% names(my_tbl)) {
-      
-      my_tbl$has_corona_label <- ifelse(
-        str_extract(filename, "(?<=\\_data\\/).*?(?=\\-)") == "no_covid_label",
-        FALSE,
-        TRUE
-      )
-      
-    }
-    
-    ## rename a couple of vars
-    to_return <- my_tbl %>%
-      rename(is_covid = has_corona_label)
-    
-    
-    return(to_return)
-    
-    
-  }
-  
-}
-
-## sub dir for the log files
-if (!dir.exists("logs")) {
-  
-  dir.create("logs")
-  
-}
-
-# sub-dir for data
-if (!dir.exists("data")) {
-  
-  dir.create("data")
-  
-}
-
-#run the function to load the data and create the text unit of analysis
-dta_raw <- map_df(list.files(here::here("train", "labeled_data"), full.names = TRUE), load_dta) 
-## change to the ML directory
-setwd("covid_ml")
-# export
-write_csv(dta_raw, 
-          "data/0_data_parsed.csv")
-rm(list=ls())
+setwd("train")
 
 ### Unit of analysis: title + leading_paragraph
 ###---------------------------------------------------------------------------------------
