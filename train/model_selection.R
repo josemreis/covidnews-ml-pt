@@ -87,7 +87,7 @@ if (!dir.exists("data")) {
 
 #run the function
 untar("data/labeled_data/labeled_data.tar.xz", exdir = "data/labeled_data")
-listed_files <- list.files("data/labeled_data", full.names = TRUE) %>%
+listed_files <- list.files("data/labeled_data/labeled_data", full.names = TRUE) %>%
   subset(., stringr::str_detect(., "json"))
 
 # load
@@ -96,6 +96,7 @@ dta_raw <- map_df(listed_files, load_dta)
 # export
 write_csv(dta_raw, 
           "data/0_data_parsed.csv")
+
 rm(list=ls())
 
 ### Text Pre-Processing
