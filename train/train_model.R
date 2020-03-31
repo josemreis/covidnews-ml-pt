@@ -106,8 +106,10 @@ dtm <- prep_train(train$text) %>%
 rf_mod <- train(x = as.data.frame(dtm), 
                 y = as.factor(train[['is_covid']]), 
                 method = "ranger",
-                trControl = trainControl(method = "repeatedcv",
-                                         number = 10),
+                trControl = trainControl(method="repeatedcv",
+                                         number = 10,
+                                         repeats = 3, 
+                                         verboseIter = T),
                 tuneGrid = tgrid)
 
 # prep test
