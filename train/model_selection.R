@@ -26,7 +26,6 @@ try(theme_set(theme_minimal()), silent = TRUE) # set plot theme
 ## working dir
 root_dir <- "/home/jmr/Dropbox/Current projects/other_projects/covidizer"
 setwd(root_dir)
-labeled_data_dir <- list.files("factiva_covid19/labeled_data", full.names = TRUE)
 
 ### Preping the data
 ###----------------------------------------------------------------------------------
