@@ -4,7 +4,7 @@
 ### Setting things up
 ###------------------------------------------------------------------------------------------
 ## conditional install of packs
-packs <- c("tidyverse", "caret", "jsonlite", "fastrtext", "text2vec")
+packs <- c("tidyverse", "caret", "jsonlite", "fastrtext", "text2vec", "sparsity")
 for (pack in packs) {
   
   if (!requireNamespace(pack, quietly = TRUE)) {
@@ -17,14 +17,13 @@ for (pack in packs) {
 require(tidyverse)
 require(caret)
 require(jsonlite)
-require(fastrtext)
+library(ranger)
 require(text2vec)
+require(git2r)
 try(theme_set(theme_minimal()), silent = TRUE) # set plot theme
 
 ## working dir
 root_dir <- here::here()
-
-setwd("train")
 
 ### Unit of analysis: title + leading_paragraph
 ###---------------------------------------------------------------------------------------
@@ -86,7 +85,7 @@ if (!dir.exists("data")) {
 
 
 # list datasets
-listed_files <- list.files("data/labeled_data", full.names = TRUE) %>%
+listed_files <- list.files("train/data/labeled_data", full.names = TRUE) %>%
   subset(., stringr::str_detect(., "json"))
 
 # load
@@ -94,10 +93,10 @@ dta_raw <- map_df(listed_files, load_dta)
 
 # export
 write_csv(dta_raw, 
-          "data/0_data_parsed.csv")
+          "train/data/0_data_parsed.csv")
 
 ## prep
-dta_raw <- readr::read_csv("data/0_data_parsed.csv") %>%
+dta_raw <- readr::read_csv("train/data/0_data_parsed.csv") %>%
   mutate(lp_join = if_else(nchar(leading_paragraph) < 100,
                            remaining_content,
                            leading_paragraph),
@@ -105,7 +104,8 @@ dta_raw <- readr::read_csv("data/0_data_parsed.csv") %>%
                            "1", 
                            "0")) %>%
   unite(., col = "text", c("headlines", "lp_join"), sep = " ") %>%
-  distinct(text, is_covid, .keep_all = TRUE)
+  distinct(text, is_covid, .keep_all = TRUE) %>%
+  filter(!is.na(is_covid))
 
 ### Models
 ###---------------------------------------------------------------------------------------
@@ -131,10 +131,10 @@ prep_train <- function(txt) {
   vocab <- prune_vocabulary(vocab, term_count_min = 10, 
                             doc_proportion_max = 0.3)
   
-  saveRDS(vocab, file = "final_model/rf-vectorizer.rds")
+  saveRDS(vocab, file = "train/final_model/rf-vectorizer.rds")
   
   ## vectorizer
-  vectorizer <- vocab_vectorizer(vocab)
+  vectorizer <<- vocab_vectorizer(vocab)
   
   ## turn to document term matrix
   dtm_text <- create_dtm(it, vectorizer)
@@ -142,42 +142,44 @@ prep_train <- function(txt) {
   tfidf <- TfIdf$new()
   # fit model to train data and transform train data with fitted model
   dtm_text_tfidf <- fit_transform(dtm_text, tfidf)
-  
-  ## export tfidf model
-  saveRDS(dtm_text_tfidf, file = "final_model/tfidf-model.rds")
-  
+  ## pass to environment where function is called (pass it to test set)
+  trained_tfidf <<- tfidf
   ## return
-  return(list(dtm = dtm_text_tfidf, tfidf_model = tfidf))
+  return(dtm_text_tfidf)
   
 }
 
 ## fit the model
 # prep train data
-train <- dta_raw[trainIndex,]
-clean_train <- prep_train(train$text)
-dtm <- clean_train$dtm %>%
+train_df <- dta_raw[trainIndex,]
+clean_train <- prep_train(train_df$text)
+# export the dtm
+sparsity::write.svmlight(clean_train, labelVector = as.numeric(train$is_covid), file = "train/final_model/train_dtm.svmlight")
+# reformat for the model
+dtm <- clean_train %>%
   as.matrix() %>%
   as.data.frame()
 
-
-# Train using the  best model
+# Tune randomly selected predictors (min.node.size seems to be optima at 20 for most mtry)
+set.seed(1234)
 tgrid <- expand.grid(
-  mtry = c(60, 100, 150),
+  mtry = c(floor(sqrt(ncol(dtm))), 100),
   splitrule = "gini",
-  min.node.size = c(20, 30)
+  min.node.size = c(1, 20, 40)
 )
+tcntrl <- trainControl(method="repeatedcv",
+                       number = 10,
+                       repeats = 3, 
+                       verboseIter = T)
 
-rf_mod <- train(x = as.data.frame(dtm), 
-                y = as.factor(train[['is_covid']]), 
+rf_mod <- caret::train(x = dtm, 
+                y = as.factor(train_df[["is_covid"]]), 
                 method = "ranger",
-                trControl = trainControl(method="repeatedcv",
-                                         number = 10,
-                                         repeats = 3, 
-                                         verboseIter = T),
+                trControl = tcntrl,
                 tuneGrid = tgrid)
 
 # prep test
-prep_test <- function(txt, tfidf_model = clean_train$tfidf_model) {
+prep_test <- function(txt) {
   
   prep_fun = tolower
   tok_fun = word_tokenizer
@@ -187,15 +189,9 @@ prep_test <- function(txt, tfidf_model = clean_train$tfidf_model) {
                tokenizer = tok_fun,
                progressbar = TRUE)
   
-  ## vectorizer
-  vocab <- readRDS("final_model/rf-vectorizer.rds")
-  vectorizer <- vocab_vectorizer(vocab)
-  
   ## turn to document term matrix
-  dtm_text <- create_dtm(it, vectorizer)
-  
-  # # apply pre-trained tf-idf transformation to test data
-  dtm_text_tfidf <- transform(dtm_text, tfidf_model)
+  dtm_text_tfidf <- create_dtm(it, vectorizer) %>%
+    transform(trained_tfidf)
   
   ## return
   return(dtm_text_tfidf)
@@ -216,7 +212,7 @@ rf_cm
 
 # save it
 readr::write_rds(rf_mod,
-                 path = "models/rf-model.rds")
+                 path = "train/final_model/rf-model.rds")
 
 ## model-metrics-final
 mod_metrics <- rbind(tibble(value = rf_cm$overall, metric = names(rf_cm$overall)),
@@ -234,16 +230,29 @@ mod_metrics <- rbind(tibble(value = rf_cm$overall, metric = names(rf_cm$overall)
          fitted_on = Sys.Date()) %>%
   select(model_accuracy = Accuracy, model_kappa = Kappa, model_f1 = F1, model_precision = Precision, model_recall = Recall, everything())
 
-png(filename = "final_model/rf-params.png", width = 800, height = 600)
-plot(rf_mod)
+png(filename = "train/final_model/rf-params.png", width = 800, height = 600)
+plot(rf_mod, metric = "kapa")
 dev.off()
 
 readr::write_csv(mod_metrics,
-                 path = "final_model/rf-model-metrics.csv")
+                 path = "train/final_model/rf-model-metrics.csv")
 
 ## for checking stability as training data gets fed into the model
 readr::write_csv(mod_metrics,
-                 path = paste("final_model/sample_level_metrics/rf-model-metrics","_sample_n_", model_metrics$sample_size, ".csv"))
+                 path = paste("train/final_model/sample_level_metrics/rf-model-metrics","_sample_n_", nrow(train_df), ".csv"))
 
 
+## push the new model
+
+# stage and commit changes
+add(repo = ".")
+
+commit(repo = ".", 
+       message = paste0("Retrained model " , Sys.time()),
+       all = TRUE)
+
+## push it
+push(object = ".",
+     credentials = cred_user_pass(username = "josemreis",
+                                  password = git_key))
 

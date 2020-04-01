@@ -19,7 +19,6 @@ library(text2vec)
 ## load the random forests model and model metrics
 model <- readRDS("train/final_model/rf-model.rds")
 model_metrics <- read.csv("train/final_model/rf-model-metrics.csv")
-tfidf_model <- readRDS("train/final_model/tfidf-model.rds")
 ## vectorizer
 vocab <- readRDS("train/final_model/rf-vectorizer.rds")
 ## config git folder
@@ -27,10 +26,26 @@ git2r::config(user.name = "josemreis",user.email = readLines("/home/jmr/ile_mail
 ## git key
 git_key <- readLines("/home/jmr/github_pass.txt")
 
-
-
 ## text input helper function
 ##------------------------------------------------------------------------
+## pre-train tfidf model
+train_tfidf_model <- function() {
+  
+  ## vectorizer
+  vectorizer <<- vocab_vectorizer(vocab)
+  
+  ## turn to document term matrix
+  dtm_text <- create_dtm(it, vectorizer)
+  
+  tfidf <- TfIdf$new()
+  
+  # fit model to train data and transform train data with fitted model
+  dtm_text_tfidf <- fit_transform(dtm_text, tfidf)
+  ## pass to environment where function is called (pass it to test set)
+  trained_tfidf <<- tfidf
+  
+}
+
 ### prep input data
 prep_input <- function(txt) {
   
@@ -49,12 +64,15 @@ prep_input <- function(txt) {
   ## turn to document term matrix
   dtm_text <- text2vec::create_dtm(it, vectorizer) 
   
-  dtm_text_tfidf <- transform(dtm_text, clean_train$tfidf_model) %>%
+  # 
+  dtm_text_tfidf <- transform(dtm_text, trained_tfidf)
+  
+  to_return <- dtm_text_tfidf %>%
     as.matrix() %>%
     as.data.frame()
   
   ## return
-  return(dtm_text)
+  return(to_return)
   
 }
 
@@ -68,6 +86,8 @@ covid_classifier <- function(txt) {
     trimws()
   
   if (!is.na(txt) && nchar(txt) > 80) {
+    ## train a tfidf model with corpus, tfidf model object passed this environment
+    train_tfidf_model()
   
     txt_dtm <- prep_input(txt = clean)
     
