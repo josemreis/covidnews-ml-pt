@@ -54,7 +54,7 @@ gdelt_call <- function(time_range = "120 minutes"){
                                 maximum_records = 250) %>% 
                         distinct(urlArticle, .keep_all = TRUE), silent = TRUE)
   
-  ## Make a query by sentiment
+  ## notify errors
   if (class(gdelt_pt_all) == "try-error") {
     
     # notify via email
