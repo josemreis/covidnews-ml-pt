@@ -10,31 +10,12 @@
 ######################################################################################
 ### Setting things up
 #-----------------------------------------------------------------------------------
-cat("\n>> Setting things up\n")
-
-## Conditional instalation of the packages
-packs <- c("tidyverse", "gdeltr2", "mailR", "rvest")
-for (pack in packs) {
-  
-  if (!requireNamespace(pack, quietly = TRUE)) {
-    
-    install.packages(pack)
-    
-  }
-}
-
 ## Load
 library(tidyverse)
 library(gdeltr2)
 library(git2r)
 library(mailR)
-library(rvest)
-
-## Directories
-# set working directory 
-# move to scrape-parse-classify
-setwd(gdelt_parent_dir)
-
+my_email <- readLines( '/home/jmr/my_gmail.txt')
 #------------------------------------------------------------------------------
 ### API helper functions
 #-----------------------------------------------------------------------------------
@@ -61,22 +42,29 @@ notifier <- function(er_dta = NULL) {
 gdelt_call <- function(time_range = "120 minutes"){
   
   ## Make query by theme. all medical classes plus 500 random classes
-  gdelt_pt_all <- try(ft_v2_api(timespans = time_range,
-                                   source_countries = "PO",
-                                   source_languages = "por",
-                                   translate = FALSE,
-                                   modes = "artlist",
-                                   visualize_results = FALSE,
-                                   return_message = TRUE) %>%
-                           distinct(urlArticle, .keep_all = TRUE), silent = TRUE)
+  gdelt_pt_all <- try(ft_v2_api(terms = "",
+                                timespans = time_range,
+                                source_countries = "PO",
+                                source_languages = "por",
+                                translate = FALSE,
+                                modes = "artlist",
+                                visualize_results = FALSE,
+                                return_message = TRUE,
+                                sort_by = "DateDesc",
+                                maximum_records = 250) %>% 
+                        distinct(urlArticle, .keep_all = TRUE), silent = TRUE)
   
   ## Make a query by sentiment
-  if (class(gdelt_pt_all)) {
+  if (class(gdelt_pt_all) == "try-error") {
     
     # notify via email
     notifier(er_dta = gdelt_pt_all)
     
+    return(tibble())
+    
   }
+  
+
   
   cat(">> GDELT query --> done.\n")
   return(gdelt_pt_all)
