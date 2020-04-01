@@ -28,129 +28,36 @@ The following object is masked from ‘package:purrr’:
 
     lift
 
-Parsing: https://api.gdeltproject.org/api/v2/doc/doc?query=%20sourcecountry:po&sourcelang:por&mode=artlist&format=json&timespan=120&maxrecords=250&sort=datedesc
+Parsing: https://api.gdeltproject.org/api/v2/doc/doc?query=%20sourcecountry:po&sourcelang:por&mode=artlist&format=json&timespan=30&maxrecords=250&sort=datedesc
 
-Joining, by = "urlGDELTV2FTAPI"
 >> GDELT query --> done.
-Warning message:
-In if (class(gdelt_pt_all) == "try-error") { :
+Warning messages:
+1: Trying to compute distinct() for variables not found in the data:
+- `urlArticle`
+This is an error, but only a warning is raised for compatibility reasons.
+The operation will return the input unchanged. 
+2: In if (class(gdelt_pt_all) == "try-error") { :
   the condition has length > 1 and only the first element will be used
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 João A… 2020-04-01 08:00:11 2020-04-01 03:00:00 "\"Prevenç… "\"Prev… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Ana Ma… 2020-04-01 08:00:12 2020-04-01 02:32:00 Cientista … "Na Ási… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Maria … 2020-04-01 08:00:12 2020-04-01 02:20:00 Nesta sema… "Na noi… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-04-01 08:00:13 2020-04-01 01:54:00 "Ministéri… "O navi… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 2 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Aline … 2020-04-01 08:00:14 2020-04-01 00:20:53 Que memóri… "Que me… <NUL…
-2 Magda … 2020-04-01 08:00:14 2020-04-01 00:20:53 Que memóri… "Que me… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Catari… 2020-04-01 08:00:14 2020-04-01 02:29:00 A primeira… "Em mea… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Luís R… 2020-04-01 08:00:15 2020-04-01 02:24:00 O OE 2020 … "O Orça… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Susana… 2020-04-01 08:00:16 2020-04-01 02:28:00 Nesta terç… "A deci… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Rita R… 2020-04-01 08:00:17 2020-04-01 02:27:00 Em Portuga… "Depois… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 3 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
-1 Destak  2020-04-01 08:00:17 <NULL>       As últimas… "Covid-… <NUL… Méxi…
-2 Leitor… 2020-04-01 08:00:17 <NULL>       As últimas… "Covid-… <NUL… Méxi…
-3 Destak… 2020-04-01 08:00:17 <NULL>       As últimas… "Covid-… <NUL… Méxi…
-# … with 1 more variable: url <chr>
-# A tibble: 0 x 0
-# A tibble: 3 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
-1 Destak  2020-04-01 08:00:19 <NULL>       As últimas… "Covid-… <NUL… EUA …
-2 Leitor… 2020-04-01 08:00:19 <NULL>       As últimas… "Covid-… <NUL… EUA …
-3 Destak… 2020-04-01 08:00:19 <NULL>       As últimas… "Covid-… <NUL… EUA …
-# … with 1 more variable: url <chr>
-# A tibble: 3 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
-1 Destak  2020-04-01 08:00:19 <NULL>       As últimas… "Covid-… <NUL… EUA …
-2 Leitor… 2020-04-01 08:00:19 <NULL>       As últimas… "Covid-… <NUL… EUA …
-3 Destak… 2020-04-01 08:00:19 <NULL>       As últimas… "Covid-… <NUL… EUA …
-# … with 1 more variable: url <chr>
-# A tibble: 3 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
-1 Destak  2020-04-01 08:00:20 <NULL>       As últimas… "Covid-… <NUL… Bols…
-2 Leitor… 2020-04-01 08:00:20 <NULL>       As últimas… "Covid-… <NUL… Bols…
-3 Destak… 2020-04-01 08:00:20 <NULL>       As últimas… "Covid-… <NUL… Bols…
-# … with 1 more variable: url <chr>
-# A tibble: 3 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
-1 Destak  2020-04-01 08:00:20 <NULL>       As últimas… "Covid-… <NUL… Quas…
-2 Leitor… 2020-04-01 08:00:20 <NULL>       As últimas… "Covid-… <NUL… Quas…
-3 Destak… 2020-04-01 08:00:20 <NULL>       As últimas… "Covid-… <NUL… Quas…
-# … with 1 more variable: url <chr>
-# A tibble: 3 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
-1 Destak  2020-04-01 08:00:21 <NULL>       As últimas… "Actual… <NUL… Sism…
-2 Leitor… 2020-04-01 08:00:21 <NULL>       As últimas… "Actual… <NUL… Sism…
-3 Destak… 2020-04-01 08:00:21 <NULL>       As últimas… "Actual… <NUL… Sism…
-# … with 1 more variable: url <chr>
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Vítor … 2020-04-01 08:00:27 2020-01-04 05:11:00 A companhi… "A admi… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-  |                                                                              |======================================================================| 100%
-  |                                                                              |======================================================================| 100%
-  |                                                                              |======================================================================| 100%
-  |                                                                              |======================================================================| 100%
-  |                                                                              |======================================================================| 100%
-  |                                                                              |======================================================================| 100%
-  |                                                                              |======================================================================| 100%
-  |                                                                              |======================================================================| 100%
-  |                                                                              |======================================================================| 100%
-  |                                                                              |======================================================================| 100%
-  |                                                                              |======================================================================| 100%
-  |                                                                              |======================================================================| 100%
-  |                                                                              |======================================================================| 100%
-  |                                                                              |======================================================================| 100%
-  |                                                                              |======================================================================| 100%
-  |                                                                              |======================================================================| 100%
-Joining, by = "url"
-
- Data pushed to remote github https://github.com/josemreis/covidnews-ml-pt
+Warning messages:
+1: Unknown or uninitialised column: 'urlArticle'. 
+2: Unknown or uninitialised column: 'titleArticle'. 
+Error: Can't subset columns that don't exist.
+✖ The column `title` doesn't exist.
+Backtrace:
+     █
+  1. ├─`%>%`(...)
+  2. │ ├─base::withVisible(eval(quote(`_fseq`(`_lhs`)), env, env))
+  3. │ └─base::eval(quote(`_fseq`(`_lhs`)), env, env)
+  4. │   └─base::eval(quote(`_fseq`(`_lhs`)), env, env)
+  5. │     └─`_fseq`(`_lhs`)
+  6. │       └─magrittr::freduce(value, `_function_list`)
+  7. │         └─function_list[[i]](value)
+  8. │           ├─tidyr::unite(...)
+  9. │           └─tidyr:::unite.data.frame(...)
+ 10. │             └─tidyselect::vars_select(tbl_vars(data), ...)
+ 11. │               └─tidyselect:::eval_select_impl(...)
+ 12. │                 ├─tidyselect:::with_subscript_errors(...)
+ 13. │                 │ ├─base::tryCatch(...)
+ 14. │                 │ │ └─base:::tryCatchList(expr, classes, parentenv, handlers)
+ 15. │                 │ │   └─base:::tryCatchOne(expr, names, pa
+Execution halted
