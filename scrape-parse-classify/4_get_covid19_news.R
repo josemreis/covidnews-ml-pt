@@ -45,12 +45,12 @@ cat(paste0("\n\n--- ", Sys.time(), " ---\n"),
 
 # set the time_range parameter depending on time of day
 cur_time_range <- dplyr::case_when(
-  as.numeric(format(Sys.time(), "%H")) %in% seq(0, 6) ~ "120 minutes",
-  as.numeric(format(Sys.time(), "%H")) %in% seq(7, 20) ~ "30 minutes",
-  as.numeric(format(Sys.time(), "%H")) %in% seq(20, 23) ~ "60 minutes"
+  as.numeric(format(Sys.time(), "%H")) %in% seq(0, 6) ~ "180 minutes",
+  as.numeric(format(Sys.time(), "%H")) %in% seq(7, 20) ~ "60 minutes",
+  as.numeric(format(Sys.time(), "%H")) %in% seq(20, 23) ~ "90 minutes"
 )
 
-## pull the metadata
+# ## pull the metadata
 gdelt_meta <- gdelt_call(time_range = cur_time_range) %>%
   filter(!is.na(urlArticle))
 
