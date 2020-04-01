@@ -107,3 +107,4 @@ filename <- paste("data/", "covidpred_pt_",format(Sys.time(), "%Y-%M-%d_%H-%M"),
 write_csv(classified,
           path = filename)
 # push
+automated_push(filename = filename)

@@ -111,5 +111,6 @@ automated_push <- function(filename) {
        credentials = cred_user_pass(username = "josemreis",
                                     password = git_key))
   
+  cat("\n Data pushed to remote github https://github.com/josemreis/covidnews-ml-pt")
   
 }
