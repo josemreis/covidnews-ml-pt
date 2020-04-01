@@ -97,14 +97,15 @@ classifier_input <- parsed_news %>%
 pred_data <- map2_df(classifier_input$pred_input, classifier_input$url, 
                      ~ (covid_classifier(.x) %>%  mutate(url = .y)))
 
-# join
+# join. Keep covid related articles.
 classified <- left_join(classifier_input, pred_data) %>%
-  select(prediction_covid_topic = about_covid, title, description, everything())
+  select(prediction_covid_topic = about_covid, title, description, everything()) %>%
+  filter(prediction_covid_topic == "1")
 
 ## 4 - Export and push
-filename <- paste("data/", "covidpred_pt_",format(Sys.time(), "%Y-%M-%d_%H-%M"), ".csv")
-# export
-write_csv(classified,
-          path = filename)
-# push
-automated_push(filename = filename)
+        filename <- paste("data/", "covidpred_pt_",format(Sys.time(), "%Y-%M-%d_%H-%M"), ".csv")
+        # export
+        write_csv(classified,
+                  path = filename)
+        # push
+        automated_push(filename = filename)
