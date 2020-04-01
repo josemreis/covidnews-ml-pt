@@ -89,8 +89,7 @@ parsed_news <- purrr::map2(gdelt_meta$urlArticle, gdelt_meta$titleArticle, funct
 ##-------------------------------------------------------------------------
 ## unit of analysis: title + description. If the latter is missing, we pass resort to "maintext"
 classifier_input <- parsed_news %>%
-  unite("pred_input", c("title", "description"), sep = " ", remove = FALSE) %>%
-  mutate(pred_input = replace(pred_input, which(is.na(description)), maintext)) %>%
+  mutate(pred_input = maintext) %>%
   distinct(url, .keep_all = TRUE)
 
 # get the prediction
