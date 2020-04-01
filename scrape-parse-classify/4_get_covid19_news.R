@@ -103,9 +103,9 @@ classified <- left_join(classifier_input, pred_data) %>%
   filter(prediction_covid_topic == "1")
 
 ## 4 - Export and push
-        filename <- paste("data/", "covidpred_pt_",format(Sys.time(), "%Y-%M-%d_%H-%M"), ".csv")
-        # export
-        write_csv(classified,
-                  path = filename)
-        # push
-        automated_push(filename = filename)
+filename <- paste("data/", "covidpred_pt_",format(Sys.time(), "%Y-%M-%d_%H-%M"), ".csv")
+# export
+write_csv(classified,
+          path = filename)
+# push
+automated_push(filename = filename)
