@@ -28,6 +28,73 @@ setwd("train")
 
 ### Unit of analysis: title + leading_paragraph
 ###---------------------------------------------------------------------------------------
+load_dta <- function(filename){
+  
+  ## parse json
+  parsed <- fromJSON(filename) 
+  
+  # check if empty
+  if (length(parsed) == 0) {
+    
+    cat(paste0("\n>> ", filename, " has no json.\n"), 
+        file = "logs/json_parse.txt", 
+        append = TRUE)
+    
+  } else {
+    
+    # turn into tibble and flatten all lists
+    my_tbl <- parsed %>%
+      as_tibble() %>%
+      mutate_if(is.list, unlist)
+    
+    ## add missing labels
+    if (!"has_corona_label" %in% names(my_tbl)) {
+      
+      my_tbl$has_corona_label <- ifelse(
+        str_extract(filename, "(?<=\\_data\\/).*?(?=\\-)") == "no_covid_label",
+        FALSE,
+        TRUE
+      )
+      
+    }
+    
+    ## rename a couple of vars
+    to_return <- my_tbl %>%
+      rename(is_covid = has_corona_label)
+    
+    
+    return(to_return)
+    
+    
+  }
+  
+}
+
+## sub dir for the log files
+if (!dir.exists("logs")) {
+  
+  dir.create("logs")
+  
+}
+
+# sub-dir for data
+if (!dir.exists("data")) {
+  
+  dir.create("data")
+  
+}
+
+listed_files <- list.files("data/labeled_data/labeled_data", full.names = TRUE) %>%
+  subset(., stringr::str_detect(., "json"))
+
+# load
+dta_raw <- map_df(listed_files, load_dta)
+
+# export
+write_csv(dta_raw, 
+          "data/0_data_parsed.csv")
+
+## prep
 dta_raw <- readr::read_csv("data/0_data_parsed.csv") %>%
   mutate(lp_join = if_else(nchar(leading_paragraph) < 100,
                            remaining_content,
@@ -40,23 +107,9 @@ dta_raw <- readr::read_csv("data/0_data_parsed.csv") %>%
 
 ### Models
 ###---------------------------------------------------------------------------------------
-### fastText
+### partition 70, 30
 set.seed(1234)
 trainIndex <- createDataPartition(dta_raw$is_covid, p = 0.7, list = FALSE, times = 1)
-## get training
-train_txt <- dta_raw[trainIndex,c("is_covid","text")] 
-test_txt <- dta_raw[-trainIndex,c("is_covid","text")] 
-
-
-# directory for the model
-tmp_file_model <- "models/fasttext_final"
-
-## learn the training data
-build_supervised(documents = dta_raw[['text']],
-                 targets = dta_raw[['is_covid']],
-                 model_path = 'tmp_file_model', loss = "softmax", ws = 10,
-                 dim = 100, lr = 1, epoch = 100, wordNgrams = 5, minCount = 10)
-
 
 ### Random forests
 ## Prep the input text
@@ -84,8 +137,12 @@ prep_train <- function(txt) {
   ## turn to document term matrix
   dtm_text <- create_dtm(it, vectorizer)
   
+  tfidf <- TfIdf$new()
+  # fit model to train data and transform train data with fitted model
+  dtm_text_tfidf <- fit_transform(dtm_text, tfidf)
+  
   ## return
-  return(dtm_text)
+  return(list(dtm = dtm_text_tfidf, tfidf_model = tfidf))
   
 }
 
@@ -99,7 +156,8 @@ tgrid <- expand.grid(
 ## fit the model
 # prep train data
 train <- dta_raw[trainIndex,]
-dtm <- prep_train(train$text) %>%
+clean_train <- prep_train(train$text)
+dtm <- clean_train$dtm %>%
   as.matrix() %>%
   as.data.frame()
 
@@ -113,7 +171,7 @@ rf_mod <- train(x = as.data.frame(dtm),
                 tuneGrid = tgrid)
 
 # prep test
-prep_test <- function(txt) {
+prep_test <- function(txt, tfidf_model = clean_train$tfidf_model) {
   
   prep_fun = tolower
   tok_fun = word_tokenizer
@@ -130,8 +188,11 @@ prep_test <- function(txt) {
   ## turn to document term matrix
   dtm_text <- create_dtm(it, vectorizer)
   
+  # # apply pre-trained tf-idf transformation to test data
+  dtm_text_tfidf <- transform(dtm_text, tfidf)
+  
   ## return
-  return(dtm_text)
+  return(dtm_text_tfidf)
   
 }
 

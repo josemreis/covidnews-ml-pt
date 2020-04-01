@@ -85,8 +85,6 @@ if (!dir.exists("data")) {
   
 }
 
-#run the function
-untar("data/labeled_data/labeled_data.tar.xz", exdir = "data/labeled_data")
 listed_files <- list.files("data/labeled_data/labeled_data", full.names = TRUE) %>%
   subset(., stringr::str_detect(., "json"))
 

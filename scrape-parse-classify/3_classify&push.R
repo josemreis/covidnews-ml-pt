@@ -49,6 +49,8 @@ prep_input <- function(txt) {
     as.matrix() %>%
     as.data.frame()
   
+  dtm_text_tfidf <- transform(dtm_text, clean_train$tfidf_model)
+  
   ## return
   return(dtm_text)
   
