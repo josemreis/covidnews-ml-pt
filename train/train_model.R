@@ -84,7 +84,9 @@ if (!dir.exists("data")) {
   
 }
 
-listed_files <- list.files("data/labeled_data/labeled_data", full.names = TRUE) %>%
+
+# list datasets
+listed_files <- list.files("data/labeled_data", full.names = TRUE) %>%
   subset(., stringr::str_detect(., "json"))
 
 # load
@@ -160,9 +162,9 @@ dtm <- clean_train$dtm %>%
 
 # Train using the  best model
 tgrid <- expand.grid(
-  mtry = c(30, 40, 60),
+  mtry = c(60, 100, 150),
   splitrule = "gini",
-  min.node.size = c(20, 30, 40)
+  min.node.size = c(20, 30)
 )
 
 rf_mod <- train(x = as.data.frame(dtm), 
@@ -238,6 +240,10 @@ dev.off()
 
 readr::write_csv(mod_metrics,
                  path = "final_model/rf-model-metrics.csv")
+
+## for checking stability as training data gets fed into the model
+readr::write_csv(mod_metrics,
+                 path = paste("final_model/sample_level_metrics/rf-model-metrics","_sample_n_", model_metrics$sample_size, ".csv"))
 
 
 
