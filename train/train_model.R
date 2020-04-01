@@ -129,7 +129,7 @@ prep_train <- function(txt) {
   vocab <- prune_vocabulary(vocab, term_count_min = 10, 
                             doc_proportion_max = 0.3)
   
-  saveRDS(vocab, file = "models/rf-vectorizer.rds")
+  saveRDS(vocab, file = "final_model/rf-vectorizer.rds")
   
   ## vectorizer
   vectorizer <- vocab_vectorizer(vocab)
@@ -141,17 +141,13 @@ prep_train <- function(txt) {
   # fit model to train data and transform train data with fitted model
   dtm_text_tfidf <- fit_transform(dtm_text, tfidf)
   
+  ## export tfidf model
+  saveRDS(dtm_text_tfidf, file = "final_model/tfidf-model.rds")
+  
   ## return
   return(list(dtm = dtm_text_tfidf, tfidf_model = tfidf))
   
 }
-
-# Train using the  best model
-tgrid <- expand.grid(
-  mtry = c(16, 25, 30),
-  splitrule = "gini",
-  min.node.size = 10
-)
 
 ## fit the model
 # prep train data
@@ -160,6 +156,14 @@ clean_train <- prep_train(train$text)
 dtm <- clean_train$dtm %>%
   as.matrix() %>%
   as.data.frame()
+
+
+# Train using the  best model
+tgrid <- expand.grid(
+  mtry = c(30, 40, 60),
+  splitrule = "gini",
+  min.node.size = c(20, 30, 40)
+)
 
 rf_mod <- train(x = as.data.frame(dtm), 
                 y = as.factor(train[['is_covid']]), 
@@ -182,14 +186,14 @@ prep_test <- function(txt, tfidf_model = clean_train$tfidf_model) {
                progressbar = TRUE)
   
   ## vectorizer
-  vocab <- readRDS("models/rf-vectorizer.rds")
+  vocab <- readRDS("final_model/rf-vectorizer.rds")
   vectorizer <- vocab_vectorizer(vocab)
   
   ## turn to document term matrix
   dtm_text <- create_dtm(it, vectorizer)
   
   # # apply pre-trained tf-idf transformation to test data
-  dtm_text_tfidf <- transform(dtm_text, tfidf)
+  dtm_text_tfidf <- transform(dtm_text, tfidf_model)
   
   ## return
   return(dtm_text_tfidf)
@@ -228,8 +232,12 @@ mod_metrics <- rbind(tibble(value = rf_cm$overall, metric = names(rf_cm$overall)
          fitted_on = Sys.Date()) %>%
   select(model_accuracy = Accuracy, model_kappa = Kappa, model_f1 = F1, model_precision = Precision, model_recall = Recall, everything())
 
+png(filename = "final_model/rf-params.png", width = 800, height = 600)
+plot(rf_mod)
+dev.off()
+
 readr::write_csv(mod_metrics,
-                 path = "models/rf-model-metrics.csv")
+                 path = "final_model/rf-model-metrics.csv")
 
 
 

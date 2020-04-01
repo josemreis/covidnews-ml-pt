@@ -19,6 +19,7 @@ library(text2vec)
 ## load the random forests model and model metrics
 model <- readRDS("train/final_model/rf-model.rds")
 model_metrics <- read.csv("train/final_model/rf-model-metrics.csv")
+tfidf_model <- readRDS("train/final_model/tfidf-model.rds")
 ## vectorizer
 vocab <- readRDS("train/final_model/rf-vectorizer.rds")
 ## config git folder
@@ -39,17 +40,18 @@ prep_input <- function(txt) {
   it <- text2vec::itoken(txt,
                          preprocessor = prep_fun, 
                          tokenizer = tok_fun,
-                         progressbar = TRUE)
+                         progressbar = TRUE,
+                         id = "target_text")
   
   ## vectorizer
   vectorizer <- text2vec::vocab_vectorizer(vocab)
   
   ## turn to document term matrix
-  dtm_text <- text2vec::create_dtm(it, vectorizer) %>%
+  dtm_text <- text2vec::create_dtm(it, vectorizer) 
+  
+  dtm_text_tfidf <- transform(dtm_text, clean_train$tfidf_model) %>%
     as.matrix() %>%
     as.data.frame()
-  
-  dtm_text_tfidf <- transform(dtm_text, clean_train$tfidf_model)
   
   ## return
   return(dtm_text)
