@@ -166,11 +166,11 @@ dtm <- clean_train %>%
 
 # Tune randomly selected predictors (min.node.size seems to be optima at 20 for most mtry)
 # set.seed(1234)
-# tgrid <- expand.grid(
-#   mtry = c(floor(sqrt(ncol(dtm))), floor(sqrt(ncol(dtm))) * 2, floor(sqrt(ncol(dtm))) * 3),
-#   splitrule = "gini",
-#   min.node.size = 20
-# )
+tgrid <- expand.grid(
+  mtry = c(floor(sqrt(ncol(dtm))), floor(sqrt(ncol(dtm))) * 2, floor(sqrt(ncol(dtm))) * 3),
+  splitrule = "gini",
+  min.node.size = 20
+)
 tcntrl <- trainControl(method="repeatedcv",
                        number = 10,
                        repeats = 3,
