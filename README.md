@@ -7,16 +7,18 @@ José Maria Reis
 
 This repo contains a scraper pipeline which:
 
-1.  Pulls all news from Porguese domains from [GDELT’s
+1.  Pulls all news from Porguese domains using [GDELT’s
     API](https://www.gdeltproject.org/) given a certain time range using
     [gdeltr2’s wrapper functions](https://github.com/abresler/gdeltr2).
-    For more details, see `scrape-parse-classify/1_gdelt_pull.R`
+    Data is collected and updated every 40, 60 or 120 minutes, depending
+    on time of day. For more details, see
+    `scrape-parse-classify/1_gdelt_pull.R`
 
-2.  Parses each news’ url in python using
+2.  Parses each news article with python using
     [news-please](https://github.com/fhamborg/news-please) or, if
     failling,
     [newspaper3k](https://newspaper.readthedocs.io/en/latest/), see
-    `scrape-parse-classifcy/2_news_parse.py`
+    `scrape-parse-classify/2_news_parse.py`
 
 3.  Predicts whether or not a news article is about covid-19 using a
     trained random forests model (more details below),
@@ -24,10 +26,10 @@ This repo contains a scraper pipeline which:
 
 4.  Automatically pushes the data to `data/... .csv` in this repository
     as a individual csv file, see
-    `scrape-parse-classifcy/3_classify&push.R`
+    `scrape-parse-classify/3_classify&push.R`
 
 To run the entire pipeline use
-`scrape-parse-classifcy/4_get_covid19_news.R`.
+`scrape-parse-classify/4_get_covid19_news.R`.
 
 ## Details on the model
 
