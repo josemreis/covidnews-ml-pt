@@ -165,22 +165,30 @@ dtm <- clean_train %>%
   as.data.frame()
 
 # Tune randomly selected predictors (min.node.size seems to be optima at 20 for most mtry)
-set.seed(1234)
-tgrid <- expand.grid(
-  mtry = c(floor(sqrt(ncol(dtm))), floor(sqrt(ncol(dtm))) * 2, 300, 400),
-  splitrule = "gini",
-  min.node.size = 20
-)
-tcntrl <- trainControl(method="repeatedcv",
-                       number = 10,
-                       repeats = 3, 
-                       verboseIter = T)
+# set.seed(1234)
+# tgrid <- expand.grid(
+#   mtry = c(floor(sqrt(ncol(dtm))), floor(sqrt(ncol(dtm))) * 2, floor(sqrt(ncol(dtm))) * 3),
+#   splitrule = "gini",
+#   min.node.size = 20
+# )
+# tcntrl <- trainControl(method="repeatedcv",
+#                        number = 10,
+#                        repeats = 3,
+#                        verboseIter = T)
+# 
+# rf_mod <- caret::train(x = dtm,
+#                 y = as.factor(train_df[["is_covid"]]),
+#                 method = "ranger",
+#                 trControl = tcntrl,
+#                 tuneGrid = tgrid)
 
-rf_mod <- caret::train(x = dtm, 
-                y = as.factor(train_df[["is_covid"]]), 
-                method = "ranger",
-                trControl = tcntrl,
-                tuneGrid = tgrid)
+
+# final model
+rf_mod <- caret::train(x = dtm,
+                       y = as.factor(train_df[["is_covid"]]),
+                       method = "ranger",
+                       trControl = tcntrl,
+                       tuneGrid = tgrid)
 
 # prep test
 prep_test <- function(txt) {

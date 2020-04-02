@@ -1,0 +1,833 @@
+Loading required package: tidyverse
+── Attaching packages ─────────────────────────────────────── tidyverse 1.3.0 ──
+✔ ggplot2 3.3.0     ✔ purrr   0.3.3
+✔ tibble  2.1.3     ✔ dplyr   0.8.5
+✔ tidyr   1.0.2     ✔ stringr 1.4.0
+✔ readr   1.3.1     ✔ forcats 0.5.0
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()
+Loading required package: caret
+Loading required package: lattice
+
+Attaching package: ‘caret’
+
+The following object is masked from ‘package:purrr’:
+
+    lift
+
+Loading required package: jsonlite
+
+Attaching package: ‘jsonlite’
+
+The following object is masked from ‘package:purrr’:
+
+    flatten
+
+Loading required package: fastrtext
+Loading required package: text2vec
+Parsed with column specification:
+cols(
+  headlines = col_character(),
+  pub_date = col_character(),
+  source_name = col_character(),
+  word_count = col_character(),
+  language = col_character(),
+  leading_paragraph = col_character(),
+  remaining_content = col_character(),
+  query = col_character(),
+  query_date_from = col_date(format = ""),
+  query_date_to = col_date(format = ""),
+  doc_id = col_character(),
+  is_covid = col_logical(),
+  author = col_character()
+)
+  |                                                                              |=======                                                               |  10%  |                                                                              |==============                                                        |  20%  |                                                                              |=====================                                                 |  30%  |                                                                              |============================                                          |  40%  |                                                                              |===================================                                   |  50%  |                                                                              |==========================================                            |  60%  |                                                                              |=================================================                     |  70%  |                                                                              |========================================================              |  80%  |                                                                              |===============================================================       |  90%  |                                                                              |======================================================================| 100%
+  |                                                                              |=======                                                               |  10%  |                                                                              |==============                                                        |  20%  |                                                                              |=====================                                                 |  30%  |                                                                              |============================                                          |  40%  |                                                                              |===================================                                   |  50%  |                                                                              |==========================================                            |  60%  |                                                                              |=================================================                     |  70%  |                                                                              |========================================================              |  80%  |                                                                              |===============================================================       |  90%  |                                                                              |======================================================================| 100%+ Fold01.Rep1: mtry= 60, splitrule=gini, min.node.size=20 
+Growing trees.. Progress: 75%. Estimated remaining time: 10 seconds.
+- Fold01.Rep1: mtry= 60, splitrule=gini, min.node.size=20 
++ Fold01.Rep1: mtry=100, splitrule=gini, min.node.size=20 
+Growing trees.. Progress: 62%. Estimated remaining time: 19 seconds.
+- Fold01.Rep1: mtry=100, splitrule=gini, min.node.size=20 
++ Fold01.Rep1: mtry=150, splitrule=gini, min.node.size=20 
+Growing trees.. Progress: 52%. Estimated remaining time: 28 seconds.
+- Fold01.Rep1: mtry=150, splitrule=gini, min.node.size=20 
++ Fold01.Rep1: mtry= 60, splitrule=gini, min.node.size=30 
+- Fold01.Rep1: mtry= 60, splitrule=gini, min.node.size=30 
++ Fold01.Rep1: mtry=100, splitrule=gini, min.node.size=30 
+- Fold01.Rep1: mtry=100, splitrule=gini, min.node.size=30 
++ Fold01.Rep1: mtry=150, splitrule=gini, min.node.size=30 
+Growing trees.. Progress: 64%. Estimated remaining time: 17 seconds.
+- Fold01.Rep1: mtry=150, splitrule=gini, min.node.size=30 
++ Fold02.Rep1: mtry= 60, splitrule=gini, min.node.size=20 
+model fit failed for Fold02.Rep1: mtry= 60, splitrule=gini, min.node.size=20 Error : Missing data in dependent variable.
+ 
+- Fold02.Rep1: mtry= 60, splitrule=gini, min.node.size=20 
++ Fold02.Rep1: mtry=100, splitrule=gini, min.node.size=20 
+model fit failed for Fold02.Rep1: mtry=100, splitrule=gini, min.node.size=20 Error : Missing data in dependent variable.
+ 
+- Fold02.Rep1: mtry=100, splitrule=gini, min.node.size=20 
++ Fold02.Rep1: mtry=150, splitrule=gini, min.node.size=20 
+model fit failed for Fold02.Rep1: mtry=150, splitrule=gini, min.node.size=20 Error : Missing data in dependent variable.
+ 
+- Fold02.Rep1: mtry=150, splitrule=gini, min.node.size=20 
++ Fold02.Rep1: mtry= 60, splitrule=gini, min.node.size=30 
+model fit failed for Fold02.Rep1: mtry= 60, splitrule=gini, min.node.size=30 Error : Missing data in dependent variable.
+ 
+- Fold02.Rep1: mtry= 60, splitrule=gini, min.node.size=30 
++ Fold02.Rep1: mtry=100, splitrule=gini, min.node.size=30 
+model fit failed for Fold02.Rep1: mtry=100, splitrule=gini, min.node.size=30 Error : Missing data in dependent variable.
+ 
+- Fold02.Rep1: mtry=100, splitrule=gini, min.node.size=30 
++ Fold02.Rep1: mtry=150, splitrule=gini, min.node.size=30 
+model fit failed for Fold02.Rep1: mtry=150, splitrule=gini, min.node.size=30 Error : Missing data in dependent variable.
+ 
+- Fold02.Rep1: mtry=150, splitrule=gini, min.node.size=30 
++ Fold03.Rep1: mtry= 60, splitrule=gini, min.node.size=20 
+model fit failed for Fold03.Rep1: mtry= 60, splitrule=gini, min.node.size=20 Error : Missing data in dependent variable.
+ 
+- Fold03.Rep1: mtry= 60, splitrule=gini, min.node.size=20 
++ Fold03.Rep1: mtry=100, splitrule=gini, min.node.size=20 
+model fit failed for Fold03.Rep1: mtry=100, splitrule=gini, min.node.size=20 Error : Missing data in dependent variable.
+ 
+- Fold03.Rep1: mtry=100, splitrule=gini, min.node.size=20 
++ Fold03.Rep1: mtry=150, splitrule=gini, min.node.size=20 
+model fit failed for Fold03.Rep1: mtry=150, splitrule=gini, min.node.size=20 Error : Missing data in dependent variable.
+ 
+- Fold03.Rep1: mtry=150, splitrule=gini, min.node.size=20 
++ Fold03.Rep1: mtry= 60, splitrule=gini, min.node.size=30 
+model fit failed for Fold03.Rep1: mtry= 60, splitrule=gini, min.node.size=30 Error : Missing data in dependent variable.
+ 
+- Fold03.Rep1: mtry= 60, splitrule=gini, min.node.size=30 
++ Fold03.Rep1: mtry=100, splitrule=gini, min.node.size=30 
+model fit failed for Fold03.Rep1: mtry=100, splitrule=gini, min.node.size=30 Error : Missing data in dependent variable.
+ 
+- Fold03.Rep1: mtry=100, splitrule=gini, min.node.size=30 
++ Fold03.Rep1: mtry=150, splitrule=gini, min.node.size=30 
+model fit failed for Fold03.Rep1: mtry=150, splitrule=gini, min.node.size=30 Error : Missing data in dependent variable.
+ 
+- Fold03.Rep1: mtry=150, splitrule=gini, min.node.size=30 
++ Fold04.Rep1: mtry= 60, splitrule=gini, min.node.size=20 
+model fit failed for Fold04.Rep1: mtry= 60, splitrule=gini, min.node.size=20 Error : Missing data in dependent variable.
+ 
+- Fold04.Rep1: mtry= 60, splitrule=gini, min.node.size=20 
++ Fold04.Rep1: mtry=100, splitrule=gini, min.node.size=20 
+model fit failed for Fold04.Rep1: mtry=100, splitrule=gini, min.node.size=20 Error : Missing data in dependent variable.
+ 
+- Fold04.Rep1: mtry=100, splitrule=gini, min.node.size=20 
++ Fold04.Rep1: mtry=150, splitrule=gini, min.node.size=20 
+model fit failed for Fold04.Rep1: mtry=150, splitrule=gini, min.node.size=20 Error : Missing data in dependent variable.
+ 
+- Fold04.Rep1: mtry=150, splitrule=gini, min.node.size=20 
++ Fold04.Rep1: mtry= 60, splitrule=gini, min.node.size=30 
+model fit failed for Fold04.Rep1: mtry= 60, splitrule=gini, min.node.size=30 Error : Missing data in dependent variable.
+ 
+- Fold04.Rep1: mtry= 60, splitrule=gini, min.node.size=30 
++ Fold04.Rep1: mtry=100, splitrule=gini, min.node.size=30 
+model fit failed for Fold04.Rep1: mtry=100, splitrule=gini, min.node.size=30 Error : Missing data in dependent variable.
+ 
+- Fold04.Rep1: mtry=100, splitrule=gini, min.node.size=30 
++ Fold04.Rep1: mtry=150, splitrule=gini, min.node.size=30 
+model fit failed for Fold04.Rep1: mtry=150, splitrule=gini, min.node.size=30 Error : Missing data in dependent variable.
+ 
+- Fold04.Rep1: mtry=150, splitrule=gini, min.node.size=30 
++ Fold05.Rep1: mtry= 60, splitrule=gini, min.node.size=20 
+model fit failed for Fold05.Rep1: mtry= 60, splitrule=gini, min.node.size=20 Error : Missing data in dependent variable.
+ 
+- Fold05.Rep1: mtry= 60, splitrule=gini, min.node.size=20 
++ Fold05.Rep1: mtry=100, splitrule=gini, min.node.size=20 
+model fit failed for Fold05.Rep1: mtry=100, splitrule=gini, min.node.size=20 Error : Missing data in dependent variable.
+ 
+- Fold05.Rep1: mtry=100, splitrule=gini, min.node.size=20 
++ Fold05.Rep1: mtry=150, splitrule=gini, min.node.size=20 
+model fit failed for Fold05.Rep1: mtry=150, splitrule=gini, min.node.size=20 Error : Missing data in dependent variable.
+ 
+- Fold05.Rep1: mtry=150, splitrule=gini, min.node.size=20 
++ Fold05.Rep1: mtry= 60, splitrule=gini, min.node.size=30 
+model fit failed for Fold05.Rep1: mtry= 60, splitrule=gini, min.node.size=30 Error : Missing data in dependent variable.
+ 
+- Fold05.Rep1: mtry= 60, splitrule=gini, min.node.size=30 
++ Fold05.Rep1: mtry=100, splitrule=gini, min.node.size=30 
+model fit failed for Fold05.Rep1: mtry=100, splitrule=gini, min.node.size=30 Error : Missing data in dependent variable.
+ 
+- Fold05.Rep1: mtry=100, splitrule=gini, min.node.size=30 
++ Fold05.Rep1: mtry=150, splitrule=gini, min.node.size=30 
+model fit failed for Fold05.Rep1: mtry=150, splitrule=gini, min.node.size=30 Error : Missing data in dependent variable.
+ 
+- Fold05.Rep1: mtry=150, splitrule=gini, min.node.size=30 
++ Fold06.Rep1: mtry= 60, splitrule=gini, min.node.size=20 
+model fit failed for Fold06.Rep1: mtry= 60, splitrule=gini, min.node.size=20 Error : Missing data in dependent variable.
+ 
+- Fold06.Rep1: mtry= 60, splitrule=gini, min.node.size=20 
++ Fold06.Rep1: mtry=100, splitrule=gini, min.node.size=20 
+model fit failed for Fold06.Rep1: mtry=100, splitrule=gini, min.node.size=20 Error : Missing data in dependent variable.
+ 
+- Fold06.Rep1: mtry=100, splitrule=gini, min.node.size=20 
++ Fold06.Rep1: mtry=150, splitrule=gini, min.node.size=20 
+model fit failed for Fold06.Rep1: mtry=150, splitrule=gini, min.node.size=20 Error : Missing data in dependent variable.
+ 
+- Fold06.Rep1: mtry=150, splitrule=gini, min.node.size=20 
++ Fold06.Rep1: mtry= 60, splitrule=gini, min.node.size=30 
+model fit failed for Fold06.Rep1: mtry= 60, splitrule=gini, min.node.size=30 Error : Missing data in dependent variable.
+ 
+- Fold06.Rep1: mtry= 60, splitrule=gini, min.node.size=30 
++ Fold06.Rep1: mtry=100, splitrule=gini, min.node.size=30 
+model fit failed for Fold06.Rep1: mtry=100, splitrule=gini, min.node.size=30 Error : Missing data in dependent variable.
+ 
+- Fold06.Rep1: mtry=100, splitrule=gini, min.node.size=30 
++ Fold06.Rep1: mtry=150, splitrule=gini, min.node.size=30 
+model fit failed for Fold06.Rep1: mtry=150, splitrule=gini, min.node.size=30 Error : Missing data in dependent variable.
+ 
+- Fold06.Rep1: mtry=150, splitrule=gini, min.node.size=30 
++ Fold07.Rep1: mtry= 60, splitrule=gini, min.node.size=20 
+model fit failed for Fold07.Rep1: mtry= 60, splitrule=gini, min.node.size=20 Error : Missing data in dependent variable.
+ 
+- Fold07.Rep1: mtry= 60, splitrule=gini, min.node.size=20 
++ Fold07.Rep1: mtry=100, splitrule=gini, min.node.size=20 
+model fit failed for Fold07.Rep1: mtry=100, splitrule=gini, min.node.size=20 Error : Missing data in dependent variable.
+ 
+- Fold07.Rep1: mtry=100, splitrule=gini, min.node.size=20 
++ Fold07.Rep1: mtry=150, splitrule=gini, min.node.size=20 
+model fit failed for Fold07.Rep1: mtry=150, splitrule=gini, min.node.size=20 Error : Missing data in dependent variable.
+ 
+- Fold07.Rep1: mtry=150, splitrule=gini, min.node.size=20 
++ Fold07.Rep1: mtry= 60, splitrule=gini, min.node.size=30 
+model fit failed for Fold07.Rep1: mtry= 60, splitrule=gini, min.node.size=30 Error : Missing data in dependent variable.
+ 
+- Fold07.Rep1: mtry= 60, splitrule=gini, min.node.size=30 
++ Fold07.Rep1: mtry=100, splitrule=gini, min.node.size=30 
+model fit failed for Fold07.Rep1: mtry=100, splitrule=gini, min.node.size=30 Error : Missing data in dependent variable.
+ 
+- Fold07.Rep1: mtry=100, splitrule=gini, min.node.size=30 
++ Fold07.Rep1: mtry=150, splitrule=gini, min.node.size=30 
+model fit failed for Fold07.Rep1: mtry=150, splitrule=gini, min.node.size=30 Error : Missing data in dependent variable.
+ 
+- Fold07.Rep1: mtry=150, splitrule=gini, min.node.size=30 
++ Fold08.Rep1: mtry= 60, splitrule=gini, min.node.size=20 
+model fit failed for Fold08.Rep1: mtry= 60, splitrule=gini, min.node.size=20 Error : Missing data in dependent variable.
+ 
+- Fold08.Rep1: mtry= 60, splitrule=gini, min.node.size=20 
++ Fold08.Rep1: mtry=100, splitrule=gini, min.node.size=20 
+model fit failed for Fold08.Rep1: mtry=100, splitrule=gini, min.node.size=20 Error : Missing data in dependent variable.
+ 
+- Fold08.Rep1: mtry=100, splitrule=gini, min.node.size=20 
++ Fold08.Rep1: mtry=150, splitrule=gini, min.node.size=20 
+model fit failed for Fold08.Rep1: mtry=150, splitrule=gini, min.node.size=20 Error : Missing data in dependent variable.
+ 
+- Fold08.Rep1: mtry=150, splitrule=gini, min.node.size=20 
++ Fold08.Rep1: mtry= 60, splitrule=gini, min.node.size=30 
+model fit failed for Fold08.Rep1: mtry= 60, splitrule=gini, min.node.size=30 Error : Missing data in dependent variable.
+ 
+- Fold08.Rep1: mtry= 60, splitrule=gini, min.node.size=30 
++ Fold08.Rep1: mtry=100, splitrule=gini, min.node.size=30 
+model fit failed for Fold08.Rep1: mtry=100, splitrule=gini, min.node.size=30 Error : Missing data in dependent variable.
+ 
+- Fold08.Rep1: mtry=100, splitrule=gini, min.node.size=30 
++ Fold08.Rep1: mtry=150, splitrule=gini, min.node.size=30 
+model fit failed for Fold08.Rep1: mtry=150, splitrule=gini, min.node.size=30 Error : Missing data in dependent variable.
+ 
+- Fold08.Rep1: mtry=150, splitrule=gini, min.node.size=30 
++ Fold09.Rep1: mtry= 60, splitrule=gini, min.node.size=20 
+model fit failed for Fold09.Rep1: mtry= 60, splitrule=gini, min.node.size=20 Error : Missing data in dependent variable.
+ 
+- Fold09.Rep1: mtry= 60, splitrule=gini, min.node.size=20 
++ Fold09.Rep1: mtry=100, splitrule=gini, min.node.size=20 
+model fit failed for Fold09.Rep1: mtry=100, splitrule=gini, min.node.size=20 Error : Missing data in dependent variable.
+ 
+- Fold09.Rep1: mtry=100, splitrule=gini, min.node.size=20 
++ Fold09.Rep1: mtry=150, splitrule=gini, min.node.size=20 
+model fit failed for Fold09.Rep1: mtry=150, splitrule=gini, min.node.size=20 Error : Missing data in dependent variable.
+ 
+- Fold09.Rep1: mtry=150, splitrule=gini, min.node.size=20 
++ Fold09.Rep1: mtry= 60, splitrule=gini, min.node.size=30 
+model fit failed for Fold09.Rep1: mtry= 60, splitrule=gini, min.node.size=30 Error : Missing data in dependent variable.
+ 
+- Fold09.Rep1: mtry= 60, splitrule=gini, min.node.size=30 
++ Fold09.Rep1: mtry=100, splitrule=gini, min.node.size=30 
+model fit failed for Fold09.Rep1: mtry=100, splitrule=gini, min.node.size=30 Error : Missing data in dependent variable.
+ 
+- Fold09.Rep1: mtry=100, splitrule=gini, min.node.size=30 
++ Fold09.Rep1: mtry=150, splitrule=gini, min.node.size=30 
+model fit failed for Fold09.Rep1: mtry=150, splitrule=gini, min.node.size=30 Error : Missing data in dependent variable.
+ 
+- Fold09.Rep1: mtry=150, splitrule=gini, min.node.size=30 
++ Fold10.Rep1: mtry= 60, splitrule=gini, min.node.size=20 
+model fit failed for Fold10.Rep1: mtry= 60, splitrule=gini, min.node.size=20 Error : Missing data in dependent variable.
+ 
+- Fold10.Rep1: mtry= 60, splitrule=gini, min.node.size=20 
++ Fold10.Rep1: mtry=100, splitrule=gini, min.node.size=20 
+model fit failed for Fold10.Rep1: mtry=100, splitrule=gini, min.node.size=20 Error : Missing data in dependent variable.
+ 
+- Fold10.Rep1: mtry=100, splitrule=gini, min.node.size=20 
++ Fold10.Rep1: mtry=150, splitrule=gini, min.node.size=20 
+model fit failed for Fold10.Rep1: mtry=150, splitrule=gini, min.node.size=20 Error : Missing data in dependent variable.
+ 
+- Fold10.Rep1: mtry=150, splitrule=gini, min.node.size=20 
++ Fold10.Rep1: mtry= 60, splitrule=gini, min.node.size=30 
+model fit failed for Fold10.Rep1: mtry= 60, splitrule=gini, min.node.size=30 Error : Missing data in dependent variable.
+ 
+- Fold10.Rep1: mtry= 60, splitrule=gini, min.node.size=30 
++ Fold10.Rep1: mtry=100, splitrule=gini, min.node.size=30 
+model fit failed for Fold10.Rep1: mtry=100, splitrule=gini, min.node.size=30 Error : Missing data in dependent variable.
+ 
+- Fold10.Rep1: mtry=100, splitrule=gini, min.node.size=30 
++ Fold10.Rep1: mtry=150, splitrule=gini, min.node.size=30 
+model fit failed for Fold10.Rep1: mtry=150, splitrule=gini, min.node.size=30 Error : Missing data in dependent variable.
+ 
+- Fold10.Rep1: mtry=150, splitrule=gini, min.node.size=30 
++ Fold11.Rep1: mtry= 60, splitrule=gini, min.node.size=20 
+model fit failed for Fold11.Rep1: mtry= 60, splitrule=gini, min.node.size=20 Error : Missing data in dependent variable.
+ 
+- Fold11.Rep1: mtry= 60, splitrule=gini, min.node.size=20 
++ Fold11.Rep1: mtry=100, splitrule=gini, min.node.size=20 
+model fit failed for Fold11.Rep1: mtry=100, splitrule=gini, min.node.size=20 Error : Missing data in dependent variable.
+ 
+- Fold11.Rep1: mtry=100, splitrule=gini, min.node.size=20 
++ Fold11.Rep1: mtry=150, splitrule=gini, min.node.size=20 
+model fit failed for Fold11.Rep1: mtry=150, splitrule=gini, min.node.size=20 Error : Missing data in dependent variable.
+ 
+- Fold11.Rep1: mtry=150, splitrule=gini, min.node.size=20 
++ Fold11.Rep1: mtry= 60, splitrule=gini, min.node.size=30 
+model fit failed for Fold11.Rep1: mtry= 60, splitrule=gini, min.node.size=30 Error : Missing data in dependent variable.
+ 
+- Fold11.Rep1: mtry= 60, splitrule=gini, min.node.size=30 
++ Fold11.Rep1: mtry=100, splitrule=gini, min.node.size=30 
+model fit failed for Fold11.Rep1: mtry=100, splitrule=gini, min.node.size=30 Error : Missing data in dependent variable.
+ 
+- Fold11.Rep1: mtry=100, splitrule=gini, min.node.size=30 
++ Fold11.Rep1: mtry=150, splitrule=gini, min.node.size=30 
+model fit failed for Fold11.Rep1: mtry=150, splitrule=gini, min.node.size=30 Error : Missing data in dependent variable.
+ 
+- Fold11.Rep1: mtry=150, splitrule=gini, min.node.size=30 
++ Fold01.Rep2: mtry= 60, splitrule=gini, min.node.size=20 
+Growing trees.. Progress: 88%. Estimated remaining time: 4 seconds.
+- Fold01.Rep2: mtry= 60, splitrule=gini, min.node.size=20 
++ Fold01.Rep2: mtry=100, splitrule=gini, min.node.size=20 
+Growing trees.. Progress: 56%. Estimated remaining time: 24 seconds.
+- Fold01.Rep2: mtry=100, splitrule=gini, min.node.size=20 
++ Fold01.Rep2: mtry=150, splitrule=gini, min.node.size=20 
+Growing trees.. Progress: 49%. Estimated remaining time: 32 seconds.
+- Fold01.Rep2: mtry=150, splitrule=gini, min.node.size=20 
++ Fold01.Rep2: mtry= 60, splitrule=gini, min.node.size=30 
+- Fold01.Rep2: mtry= 60, splitrule=gini, min.node.size=30 
++ Fold01.Rep2: mtry=100, splitrule=gini, min.node.size=30 
+Growing trees.. Progress: 71%. Estimated remaining time: 12 seconds.
+- Fold01.Rep2: mtry=100, splitrule=gini, min.node.size=30 
++ Fold01.Rep2: mtry=150, splitrule=gini, min.node.size=30 
+Growing trees.. Progress: 65%. Estimated remaining time: 16 seconds.
+- Fold01.Rep2: mtry=150, splitrule=gini, min.node.size=30 
++ Fold02.Rep2: mtry= 60, splitrule=gini, min.node.size=20 
+model fit failed for Fold02.Rep2: mtry= 60, splitrule=gini, min.node.size=20 Error : Missing data in dependent variable.
+ 
+- Fold02.Rep2: mtry= 60, splitrule=gini, min.node.size=20 
++ Fold02.Rep2: mtry=100, splitrule=gini, min.node.size=20 
+model fit failed for Fold02.Rep2: mtry=100, splitrule=gini, min.node.size=20 Error : Missing data in dependent variable.
+ 
+- Fold02.Rep2: mtry=100, splitrule=gini, min.node.size=20 
++ Fold02.Rep2: mtry=150, splitrule=gini, min.node.size=20 
+model fit failed for Fold02.Rep2: mtry=150, splitrule=gini, min.node.size=20 Error : Missing data in dependent variable.
+ 
+- Fold02.Rep2: mtry=150, splitrule=gini, min.node.size=20 
++ Fold02.Rep2: mtry= 60, splitrule=gini, min.node.size=30 
+model fit failed for Fold02.Rep2: mtry= 60, splitrule=gini, min.node.size=30 Error : Missing data in dependent variable.
+ 
+- Fold02.Rep2: mtry= 60, splitrule=gini, min.node.size=30 
++ Fold02.Rep2: mtry=100, splitrule=gini, min.node.size=30 
+model fit failed for Fold02.Rep2: mtry=100, splitrule=gini, min.node.size=30 Error : Missing data in dependent variable.
+ 
+- Fold02.Rep2: mtry=100, splitrule=gini, min.node.size=30 
++ Fold02.Rep2: mtry=150, splitrule=gini, min.node.size=30 
+model fit failed for Fold02.Rep2: mtry=150, splitrule=gini, min.node.size=30 Error : Missing data in dependent variable.
+ 
+- Fold02.Rep2: mtry=150, splitrule=gini, min.node.size=30 
++ Fold03.Rep2: mtry= 60, splitrule=gini, min.node.size=20 
+model fit failed for Fold03.Rep2: mtry= 60, splitrule=gini, min.node.size=20 Error : Missing data in dependent variable.
+ 
+- Fold03.Rep2: mtry= 60, splitrule=gini, min.node.size=20 
++ Fold03.Rep2: mtry=100, splitrule=gini, min.node.size=20 
+model fit failed for Fold03.Rep2: mtry=100, splitrule=gini, min.node.size=20 Error : Missing data in dependent variable.
+ 
+- Fold03.Rep2: mtry=100, splitrule=gini, min.node.size=20 
++ Fold03.Rep2: mtry=150, splitrule=gini, min.node.size=20 
+model fit failed for Fold03.Rep2: mtry=150, splitrule=gini, min.node.size=20 Error : Missing data in dependent variable.
+ 
+- Fold03.Rep2: mtry=150, splitrule=gini, min.node.size=20 
++ Fold03.Rep2: mtry= 60, splitrule=gini, min.node.size=30 
+model fit failed for Fold03.Rep2: mtry= 60, splitrule=gini, min.node.size=30 Error : Missing data in dependent variable.
+ 
+- Fold03.Rep2: mtry= 60, splitrule=gini, min.node.size=30 
++ Fold03.Rep2: mtry=100, splitrule=gini, min.node.size=30 
+model fit failed for Fold03.Rep2: mtry=100, splitrule=gini, min.node.size=30 Error : Missing data in dependent variable.
+ 
+- Fold03.Rep2: mtry=100, splitrule=gini, min.node.size=30 
++ Fold03.Rep2: mtry=150, splitrule=gini, min.node.size=30 
+model fit failed for Fold03.Rep2: mtry=150, splitrule=gini, min.node.size=30 Error : Missing data in dependent variable.
+ 
+- Fold03.Rep2: mtry=150, splitrule=gini, min.node.size=30 
++ Fold04.Rep2: mtry= 60, splitrule=gini, min.node.size=20 
+model fit failed for Fold04.Rep2: mtry= 60, splitrule=gini, min.node.size=20 Error : Missing data in dependent variable.
+ 
+- Fold04.Rep2: mtry= 60, splitrule=gini, min.node.size=20 
++ Fold04.Rep2: mtry=100, splitrule=gini, min.node.size=20 
+model fit failed for Fold04.Rep2: mtry=100, splitrule=gini, min.node.size=20 Error : Missing data in dependent variable.
+ 
+- Fold04.Rep2: mtry=100, splitrule=gini, min.node.size=20 
++ Fold04.Rep2: mtry=150, splitrule=gini, min.node.size=20 
+model fit failed for Fold04.Rep2: mtry=150, splitrule=gini, min.node.size=20 Error : Missing data in dependent variable.
+ 
+- Fold04.Rep2: mtry=150, splitrule=gini, min.node.size=20 
++ Fold04.Rep2: mtry= 60, splitrule=gini, min.node.size=30 
+model fit failed for Fold04.Rep2: mtry= 60, splitrule=gini, min.node.size=30 Error : Missing data in dependent variable.
+ 
+- Fold04.Rep2: mtry= 60, splitrule=gini, min.node.size=30 
++ Fold04.Rep2: mtry=100, splitrule=gini, min.node.size=30 
+model fit failed for Fold04.Rep2: mtry=100, splitrule=gini, min.node.size=30 Error : Missing data in dependent variable.
+ 
+- Fold04.Rep2: mtry=100, splitrule=gini, min.node.size=30 
++ Fold04.Rep2: mtry=150, splitrule=gini, min.node.size=30 
+model fit failed for Fold04.Rep2: mtry=150, splitrule=gini, min.node.size=30 Error : Missing data in dependent variable.
+ 
+- Fold04.Rep2: mtry=150, splitrule=gini, min.node.size=30 
++ Fold05.Rep2: mtry= 60, splitrule=gini, min.node.size=20 
+model fit failed for Fold05.Rep2: mtry= 60, splitrule=gini, min.node.size=20 Error : Missing data in dependent variable.
+ 
+- Fold05.Rep2: mtry= 60, splitrule=gini, min.node.size=20 
++ Fold05.Rep2: mtry=100, splitrule=gini, min.node.size=20 
+model fit failed for Fold05.Rep2: mtry=100, splitrule=gini, min.node.size=20 Error : Missing data in dependent variable.
+ 
+- Fold05.Rep2: mtry=100, splitrule=gini, min.node.size=20 
++ Fold05.Rep2: mtry=150, splitrule=gini, min.node.size=20 
+model fit failed for Fold05.Rep2: mtry=150, splitrule=gini, min.node.size=20 Error : Missing data in dependent variable.
+ 
+- Fold05.Rep2: mtry=150, splitrule=gini, min.node.size=20 
++ Fold05.Rep2: mtry= 60, splitrule=gini, min.node.size=30 
+model fit failed for Fold05.Rep2: mtry= 60, splitrule=gini, min.node.size=30 Error : Missing data in dependent variable.
+ 
+- Fold05.Rep2: mtry= 60, splitrule=gini, min.node.size=30 
++ Fold05.Rep2: mtry=100, splitrule=gini, min.node.size=30 
+model fit failed for Fold05.Rep2: mtry=100, splitrule=gini, min.node.size=30 Error : Missing data in dependent variable.
+ 
+- Fold05.Rep2: mtry=100, splitrule=gini, min.node.size=30 
++ Fold05.Rep2: mtry=150, splitrule=gini, min.node.size=30 
+model fit failed for Fold05.Rep2: mtry=150, splitrule=gini, min.node.size=30 Error : Missing data in dependent variable.
+ 
+- Fold05.Rep2: mtry=150, splitrule=gini, min.node.size=30 
++ Fold06.Rep2: mtry= 60, splitrule=gini, min.node.size=20 
+model fit failed for Fold06.Rep2: mtry= 60, splitrule=gini, min.node.size=20 Error : Missing data in dependent variable.
+ 
+- Fold06.Rep2: mtry= 60, splitrule=gini, min.node.size=20 
++ Fold06.Rep2: mtry=100, splitrule=gini, min.node.size=20 
+model fit failed for Fold06.Rep2: mtry=100, splitrule=gini, min.node.size=20 Error : Missing data in dependent variable.
+ 
+- Fold06.Rep2: mtry=100, splitrule=gini, min.node.size=20 
++ Fold06.Rep2: mtry=150, splitrule=gini, min.node.size=20 
+model fit failed for Fold06.Rep2: mtry=150, splitrule=gini, min.node.size=20 Error : Missing data in dependent variable.
+ 
+- Fold06.Rep2: mtry=150, splitrule=gini, min.node.size=20 
++ Fold06.Rep2: mtry= 60, splitrule=gini, min.node.size=30 
+model fit failed for Fold06.Rep2: mtry= 60, splitrule=gini, min.node.size=30 Error : Missing data in dependent variable.
+ 
+- Fold06.Rep2: mtry= 60, splitrule=gini, min.node.size=30 
++ Fold06.Rep2: mtry=100, splitrule=gini, min.node.size=30 
+model fit failed for Fold06.Rep2: mtry=100, splitrule=gini, min.node.size=30 Error : Missing data in dependent variable.
+ 
+- Fold06.Rep2: mtry=100, splitrule=gini, min.node.size=30 
++ Fold06.Rep2: mtry=150, splitrule=gini, min.node.size=30 
+model fit failed for Fold06.Rep2: mtry=150, splitrule=gini, min.node.size=30 Error : Missing data in dependent variable.
+ 
+- Fold06.Rep2: mtry=150, splitrule=gini, min.node.size=30 
++ Fold07.Rep2: mtry= 60, splitrule=gini, min.node.size=20 
+model fit failed for Fold07.Rep2: mtry= 60, splitrule=gini, min.node.size=20 Error : Missing data in dependent variable.
+ 
+- Fold07.Rep2: mtry= 60, splitrule=gini, min.node.size=20 
++ Fold07.Rep2: mtry=100, splitrule=gini, min.node.size=20 
+model fit failed for Fold07.Rep2: mtry=100, splitrule=gini, min.node.size=20 Error : Missing data in dependent variable.
+ 
+- Fold07.Rep2: mtry=100, splitrule=gini, min.node.size=20 
++ Fold07.Rep2: mtry=150, splitrule=gini, min.node.size=20 
+model fit failed for Fold07.Rep2: mtry=150, splitrule=gini, min.node.size=20 Error : Missing data in dependent variable.
+ 
+- Fold07.Rep2: mtry=150, splitrule=gini, min.node.size=20 
++ Fold07.Rep2: mtry= 60, splitrule=gini, min.node.size=30 
+model fit failed for Fold07.Rep2: mtry= 60, splitrule=gini, min.node.size=30 Error : Missing data in dependent variable.
+ 
+- Fold07.Rep2: mtry= 60, splitrule=gini, min.node.size=30 
++ Fold07.Rep2: mtry=100, splitrule=gini, min.node.size=30 
+model fit failed for Fold07.Rep2: mtry=100, splitrule=gini, min.node.size=30 Error : Missing data in dependent variable.
+ 
+- Fold07.Rep2: mtry=100, splitrule=gini, min.node.size=30 
++ Fold07.Rep2: mtry=150, splitrule=gini, min.node.size=30 
+model fit failed for Fold07.Rep2: mtry=150, splitrule=gini, min.node.size=30 Error : Missing data in dependent variable.
+ 
+- Fold07.Rep2: mtry=150, splitrule=gini, min.node.size=30 
++ Fold08.Rep2: mtry= 60, splitrule=gini, min.node.size=20 
+model fit failed for Fold08.Rep2: mtry= 60, splitrule=gini, min.node.size=20 Error : Missing data in dependent variable.
+ 
+- Fold08.Rep2: mtry= 60, splitrule=gini, min.node.size=20 
++ Fold08.Rep2: mtry=100, splitrule=gini, min.node.size=20 
+model fit failed for Fold08.Rep2: mtry=100, splitrule=gini, min.node.size=20 Error : Missing data in dependent variable.
+ 
+- Fold08.Rep2: mtry=100, splitrule=gini, min.node.size=20 
++ Fold08.Rep2: mtry=150, splitrule=gini, min.node.size=20 
+model fit failed for Fold08.Rep2: mtry=150, splitrule=gini, min.node.size=20 Error : Missing data in dependent variable.
+ 
+- Fold08.Rep2: mtry=150, splitrule=gini, min.node.size=20 
++ Fold08.Rep2: mtry= 60, splitrule=gini, min.node.size=30 
+model fit failed for Fold08.Rep2: mtry= 60, splitrule=gini, min.node.size=30 Error : Missing data in dependent variable.
+ 
+- Fold08.Rep2: mtry= 60, splitrule=gini, min.node.size=30 
++ Fold08.Rep2: mtry=100, splitrule=gini, min.node.size=30 
+model fit failed for Fold08.Rep2: mtry=100, splitrule=gini, min.node.size=30 Error : Missing data in dependent variable.
+ 
+- Fold08.Rep2: mtry=100, splitrule=gini, min.node.size=30 
++ Fold08.Rep2: mtry=150, splitrule=gini, min.node.size=30 
+model fit failed for Fold08.Rep2: mtry=150, splitrule=gini, min.node.size=30 Error : Missing data in dependent variable.
+ 
+- Fold08.Rep2: mtry=150, splitrule=gini, min.node.size=30 
++ Fold09.Rep2: mtry= 60, splitrule=gini, min.node.size=20 
+model fit failed for Fold09.Rep2: mtry= 60, splitrule=gini, min.node.size=20 Error : Missing data in dependent variable.
+ 
+- Fold09.Rep2: mtry= 60, splitrule=gini, min.node.size=20 
++ Fold09.Rep2: mtry=100, splitrule=gini, min.node.size=20 
+model fit failed for Fold09.Rep2: mtry=100, splitrule=gini, min.node.size=20 Error : Missing data in dependent variable.
+ 
+- Fold09.Rep2: mtry=100, splitrule=gini, min.node.size=20 
++ Fold09.Rep2: mtry=150, splitrule=gini, min.node.size=20 
+model fit failed for Fold09.Rep2: mtry=150, splitrule=gini, min.node.size=20 Error : Missing data in dependent variable.
+ 
+- Fold09.Rep2: mtry=150, splitrule=gini, min.node.size=20 
++ Fold09.Rep2: mtry= 60, splitrule=gini, min.node.size=30 
+model fit failed for Fold09.Rep2: mtry= 60, splitrule=gini, min.node.size=30 Error : Missing data in dependent variable.
+ 
+- Fold09.Rep2: mtry= 60, splitrule=gini, min.node.size=30 
++ Fold09.Rep2: mtry=100, splitrule=gini, min.node.size=30 
+model fit failed for Fold09.Rep2: mtry=100, splitrule=gini, min.node.size=30 Error : Missing data in dependent variable.
+ 
+- Fold09.Rep2: mtry=100, splitrule=gini, min.node.size=30 
++ Fold09.Rep2: mtry=150, splitrule=gini, min.node.size=30 
+model fit failed for Fold09.Rep2: mtry=150, splitrule=gini, min.node.size=30 Error : Missing data in dependent variable.
+ 
+- Fold09.Rep2: mtry=150, splitrule=gini, min.node.size=30 
++ Fold10.Rep2: mtry= 60, splitrule=gini, min.node.size=20 
+model fit failed for Fold10.Rep2: mtry= 60, splitrule=gini, min.node.size=20 Error : Missing data in dependent variable.
+ 
+- Fold10.Rep2: mtry= 60, splitrule=gini, min.node.size=20 
++ Fold10.Rep2: mtry=100, splitrule=gini, min.node.size=20 
+model fit failed for Fold10.Rep2: mtry=100, splitrule=gini, min.node.size=20 Error : Missing data in dependent variable.
+ 
+- Fold10.Rep2: mtry=100, splitrule=gini, min.node.size=20 
++ Fold10.Rep2: mtry=150, splitrule=gini, min.node.size=20 
+model fit failed for Fold10.Rep2: mtry=150, splitrule=gini, min.node.size=20 Error : Missing data in dependent variable.
+ 
+- Fold10.Rep2: mtry=150, splitrule=gini, min.node.size=20 
++ Fold10.Rep2: mtry= 60, splitrule=gini, min.node.size=30 
+model fit failed for Fold10.Rep2: mtry= 60, splitrule=gini, min.node.size=30 Error : Missing data in dependent variable.
+ 
+- Fold10.Rep2: mtry= 60, splitrule=gini, min.node.size=30 
++ Fold10.Rep2: mtry=100, splitrule=gini, min.node.size=30 
+model fit failed for Fold10.Rep2: mtry=100, splitrule=gini, min.node.size=30 Error : Missing data in dependent variable.
+ 
+- Fold10.Rep2: mtry=100, splitrule=gini, min.node.size=30 
++ Fold10.Rep2: mtry=150, splitrule=gini, min.node.size=30 
+model fit failed for Fold10.Rep2: mtry=150, splitrule=gini, min.node.size=30 Error : Missing data in dependent variable.
+ 
+- Fold10.Rep2: mtry=150, splitrule=gini, min.node.size=30 
++ Fold11.Rep2: mtry= 60, splitrule=gini, min.node.size=20 
+model fit failed for Fold11.Rep2: mtry= 60, splitrule=gini, min.node.size=20 Error : Missing data in dependent variable.
+ 
+- Fold11.Rep2: mtry= 60, splitrule=gini, min.node.size=20 
++ Fold11.Rep2: mtry=100, splitrule=gini, min.node.size=20 
+model fit failed for Fold11.Rep2: mtry=100, splitrule=gini, min.node.size=20 Error : Missing data in dependent variable.
+ 
+- Fold11.Rep2: mtry=100, splitrule=gini, min.node.size=20 
++ Fold11.Rep2: mtry=150, splitrule=gini, min.node.size=20 
+model fit failed for Fold11.Rep2: mtry=150, splitrule=gini, min.node.size=20 Error : Missing data in dependent variable.
+ 
+- Fold11.Rep2: mtry=150, splitrule=gini, min.node.size=20 
++ Fold11.Rep2: mtry= 60, splitrule=gini, min.node.size=30 
+model fit failed for Fold11.Rep2: mtry= 60, splitrule=gini, min.node.size=30 Error : Missing data in dependent variable.
+ 
+- Fold11.Rep2: mtry= 60, splitrule=gini, min.node.size=30 
++ Fold11.Rep2: mtry=100, splitrule=gini, min.node.size=30 
+model fit failed for Fold11.Rep2: mtry=100, splitrule=gini, min.node.size=30 Error : Missing data in dependent variable.
+ 
+- Fold11.Rep2: mtry=100, splitrule=gini, min.node.size=30 
++ Fold11.Rep2: mtry=150, splitrule=gini, min.node.size=30 
+model fit failed for Fold11.Rep2: mtry=150, splitrule=gini, min.node.size=30 Error : Missing data in dependent variable.
+ 
+- Fold11.Rep2: mtry=150, splitrule=gini, min.node.size=30 
++ Fold01.Rep3: mtry= 60, splitrule=gini, min.node.size=20 
+Growing trees.. Progress: 75%. Estimated remaining time: 10 seconds.
+- Fold01.Rep3: mtry= 60, splitrule=gini, min.node.size=20 
++ Fold01.Rep3: mtry=100, splitrule=gini, min.node.size=20 
+Growing trees.. Progress: 62%. Estimated remaining time: 18 seconds.
+- Fold01.Rep3: mtry=100, splitrule=gini, min.node.size=20 
++ Fold01.Rep3: mtry=150, splitrule=gini, min.node.size=20 
+Growing trees.. Progress: 46%. Estimated remaining time: 36 seconds.
+Growing trees.. Progress: 98%. Estimated remaining time: 1 seconds.
+- Fold01.Rep3: mtry=150, splitrule=gini, min.node.size=20 
++ Fold01.Rep3: mtry= 60, splitrule=gini, min.node.size=30 
+- Fold01.Rep3: mtry= 60, splitrule=gini, min.node.size=30 
++ Fold01.Rep3: mtry=100, splitrule=gini, min.node.size=30 
+Growing trees.. Progress: 93%. Estimated remaining time: 2 seconds.
+- Fold01.Rep3: mtry=100, splitrule=gini, min.node.size=30 
++ Fold01.Rep3: mtry=150, splitrule=gini, min.node.size=30 
+Growing trees.. Progress: 88%. Estimated remaining time: 4 seconds.
+- Fold01.Rep3: mtry=150, splitrule=gini, min.node.size=30 
++ Fold02.Rep3: mtry= 60, splitrule=gini, min.node.size=20 
+model fit failed for Fold02.Rep3: mtry= 60, splitrule=gini, min.node.size=20 Error : Missing data in dependent variable.
+ 
+- Fold02.Rep3: mtry= 60, splitrule=gini, min.node.size=20 
++ Fold02.Rep3: mtry=100, splitrule=gini, min.node.size=20 
+model fit failed for Fold02.Rep3: mtry=100, splitrule=gini, min.node.size=20 Error : Missing data in dependent variable.
+ 
+- Fold02.Rep3: mtry=100, splitrule=gini, min.node.size=20 
++ Fold02.Rep3: mtry=150, splitrule=gini, min.node.size=20 
+model fit failed for Fold02.Rep3: mtry=150, splitrule=gini, min.node.size=20 Error : Missing data in dependent variable.
+ 
+- Fold02.Rep3: mtry=150, splitrule=gini, min.node.size=20 
++ Fold02.Rep3: mtry= 60, splitrule=gini, min.node.size=30 
+model fit failed for Fold02.Rep3: mtry= 60, splitrule=gini, min.node.size=30 Error : Missing data in dependent variable.
+ 
+- Fold02.Rep3: mtry= 60, splitrule=gini, min.node.size=30 
++ Fold02.Rep3: mtry=100, splitrule=gini, min.node.size=30 
+model fit failed for Fold02.Rep3: mtry=100, splitrule=gini, min.node.size=30 Error : Missing data in dependent variable.
+ 
+- Fold02.Rep3: mtry=100, splitrule=gini, min.node.size=30 
++ Fold02.Rep3: mtry=150, splitrule=gini, min.node.size=30 
+model fit failed for Fold02.Rep3: mtry=150, splitrule=gini, min.node.size=30 Error : Missing data in dependent variable.
+ 
+- Fold02.Rep3: mtry=150, splitrule=gini, min.node.size=30 
++ Fold03.Rep3: mtry= 60, splitrule=gini, min.node.size=20 
+model fit failed for Fold03.Rep3: mtry= 60, splitrule=gini, min.node.size=20 Error : Missing data in dependent variable.
+ 
+- Fold03.Rep3: mtry= 60, splitrule=gini, min.node.size=20 
++ Fold03.Rep3: mtry=100, splitrule=gini, min.node.size=20 
+model fit failed for Fold03.Rep3: mtry=100, splitrule=gini, min.node.size=20 Error : Missing data in dependent variable.
+ 
+- Fold03.Rep3: mtry=100, splitrule=gini, min.node.size=20 
++ Fold03.Rep3: mtry=150, splitrule=gini, min.node.size=20 
+model fit failed for Fold03.Rep3: mtry=150, splitrule=gini, min.node.size=20 Error : Missing data in dependent variable.
+ 
+- Fold03.Rep3: mtry=150, splitrule=gini, min.node.size=20 
++ Fold03.Rep3: mtry= 60, splitrule=gini, min.node.size=30 
+model fit failed for Fold03.Rep3: mtry= 60, splitrule=gini, min.node.size=30 Error : Missing data in dependent variable.
+ 
+- Fold03.Rep3: mtry= 60, splitrule=gini, min.node.size=30 
++ Fold03.Rep3: mtry=100, splitrule=gini, min.node.size=30 
+model fit failed for Fold03.Rep3: mtry=100, splitrule=gini, min.node.size=30 Error : Missing data in dependent variable.
+ 
+- Fold03.Rep3: mtry=100, splitrule=gini, min.node.size=30 
++ Fold03.Rep3: mtry=150, splitrule=gini, min.node.size=30 
+model fit failed for Fold03.Rep3: mtry=150, splitrule=gini, min.node.size=30 Error : Missing data in dependent variable.
+ 
+- Fold03.Rep3: mtry=150, splitrule=gini, min.node.size=30 
++ Fold04.Rep3: mtry= 60, splitrule=gini, min.node.size=20 
+model fit failed for Fold04.Rep3: mtry= 60, splitrule=gini, min.node.size=20 Error : Missing data in dependent variable.
+ 
+- Fold04.Rep3: mtry= 60, splitrule=gini, min.node.size=20 
++ Fold04.Rep3: mtry=100, splitrule=gini, min.node.size=20 
+model fit failed for Fold04.Rep3: mtry=100, splitrule=gini, min.node.size=20 Error : Missing data in dependent variable.
+ 
+- Fold04.Rep3: mtry=100, splitrule=gini, min.node.size=20 
++ Fold04.Rep3: mtry=150, splitrule=gini, min.node.size=20 
+model fit failed for Fold04.Rep3: mtry=150, splitrule=gini, min.node.size=20 Error : Missing data in dependent variable.
+ 
+- Fold04.Rep3: mtry=150, splitrule=gini, min.node.size=20 
++ Fold04.Rep3: mtry= 60, splitrule=gini, min.node.size=30 
+model fit failed for Fold04.Rep3: mtry= 60, splitrule=gini, min.node.size=30 Error : Missing data in dependent variable.
+ 
+- Fold04.Rep3: mtry= 60, splitrule=gini, min.node.size=30 
++ Fold04.Rep3: mtry=100, splitrule=gini, min.node.size=30 
+model fit failed for Fold04.Rep3: mtry=100, splitrule=gini, min.node.size=30 Error : Missing data in dependent variable.
+ 
+- Fold04.Rep3: mtry=100, splitrule=gini, min.node.size=30 
++ Fold04.Rep3: mtry=150, splitrule=gini, min.node.size=30 
+model fit failed for Fold04.Rep3: mtry=150, splitrule=gini, min.node.size=30 Error : Missing data in dependent variable.
+ 
+- Fold04.Rep3: mtry=150, splitrule=gini, min.node.size=30 
++ Fold05.Rep3: mtry= 60, splitrule=gini, min.node.size=20 
+model fit failed for Fold05.Rep3: mtry= 60, splitrule=gini, min.node.size=20 Error : Missing data in dependent variable.
+ 
+- Fold05.Rep3: mtry= 60, splitrule=gini, min.node.size=20 
++ Fold05.Rep3: mtry=100, splitrule=gini, min.node.size=20 
+model fit failed for Fold05.Rep3: mtry=100, splitrule=gini, min.node.size=20 Error : Missing data in dependent variable.
+ 
+- Fold05.Rep3: mtry=100, splitrule=gini, min.node.size=20 
++ Fold05.Rep3: mtry=150, splitrule=gini, min.node.size=20 
+model fit failed for Fold05.Rep3: mtry=150, splitrule=gini, min.node.size=20 Error : Missing data in dependent variable.
+ 
+- Fold05.Rep3: mtry=150, splitrule=gini, min.node.size=20 
++ Fold05.Rep3: mtry= 60, splitrule=gini, min.node.size=30 
+model fit failed for Fold05.Rep3: mtry= 60, splitrule=gini, min.node.size=30 Error : Missing data in dependent variable.
+ 
+- Fold05.Rep3: mtry= 60, splitrule=gini, min.node.size=30 
++ Fold05.Rep3: mtry=100, splitrule=gini, min.node.size=30 
+model fit failed for Fold05.Rep3: mtry=100, splitrule=gini, min.node.size=30 Error : Missing data in dependent variable.
+ 
+- Fold05.Rep3: mtry=100, splitrule=gini, min.node.size=30 
++ Fold05.Rep3: mtry=150, splitrule=gini, min.node.size=30 
+model fit failed for Fold05.Rep3: mtry=150, splitrule=gini, min.node.size=30 Error : Missing data in dependent variable.
+ 
+- Fold05.Rep3: mtry=150, splitrule=gini, min.node.size=30 
++ Fold06.Rep3: mtry= 60, splitrule=gini, min.node.size=20 
+model fit failed for Fold06.Rep3: mtry= 60, splitrule=gini, min.node.size=20 Error : Missing data in dependent variable.
+ 
+- Fold06.Rep3: mtry= 60, splitrule=gini, min.node.size=20 
++ Fold06.Rep3: mtry=100, splitrule=gini, min.node.size=20 
+model fit failed for Fold06.Rep3: mtry=100, splitrule=gini, min.node.size=20 Error : Missing data in dependent variable.
+ 
+- Fold06.Rep3: mtry=100, splitrule=gini, min.node.size=20 
++ Fold06.Rep3: mtry=150, splitrule=gini, min.node.size=20 
+model fit failed for Fold06.Rep3: mtry=150, splitrule=gini, min.node.size=20 Error : Missing data in dependent variable.
+ 
+- Fold06.Rep3: mtry=150, splitrule=gini, min.node.size=20 
++ Fold06.Rep3: mtry= 60, splitrule=gini, min.node.size=30 
+model fit failed for Fold06.Rep3: mtry= 60, splitrule=gini, min.node.size=30 Error : Missing data in dependent variable.
+ 
+- Fold06.Rep3: mtry= 60, splitrule=gini, min.node.size=30 
++ Fold06.Rep3: mtry=100, splitrule=gini, min.node.size=30 
+model fit failed for Fold06.Rep3: mtry=100, splitrule=gini, min.node.size=30 Error : Missing data in dependent variable.
+ 
+- Fold06.Rep3: mtry=100, splitrule=gini, min.node.size=30 
++ Fold06.Rep3: mtry=150, splitrule=gini, min.node.size=30 
+model fit failed for Fold06.Rep3: mtry=150, splitrule=gini, min.node.size=30 Error : Missing data in dependent variable.
+ 
+- Fold06.Rep3: mtry=150, splitrule=gini, min.node.size=30 
++ Fold07.Rep3: mtry= 60, splitrule=gini, min.node.size=20 
+model fit failed for Fold07.Rep3: mtry= 60, splitrule=gini, min.node.size=20 Error : Missing data in dependent variable.
+ 
+- Fold07.Rep3: mtry= 60, splitrule=gini, min.node.size=20 
++ Fold07.Rep3: mtry=100, splitrule=gini, min.node.size=20 
+model fit failed for Fold07.Rep3: mtry=100, splitrule=gini, min.node.size=20 Error : Missing data in dependent variable.
+ 
+- Fold07.Rep3: mtry=100, splitrule=gini, min.node.size=20 
++ Fold07.Rep3: mtry=150, splitrule=gini, min.node.size=20 
+model fit failed for Fold07.Rep3: mtry=150, splitrule=gini, min.node.size=20 Error : Missing data in dependent variable.
+ 
+- Fold07.Rep3: mtry=150, splitrule=gini, min.node.size=20 
++ Fold07.Rep3: mtry= 60, splitrule=gini, min.node.size=30 
+model fit failed for Fold07.Rep3: mtry= 60, splitrule=gini, min.node.size=30 Error : Missing data in dependent variable.
+ 
+- Fold07.Rep3: mtry= 60, splitrule=gini, min.node.size=30 
++ Fold07.Rep3: mtry=100, splitrule=gini, min.node.size=30 
+model fit failed for Fold07.Rep3: mtry=100, splitrule=gini, min.node.size=30 Error : Missing data in dependent variable.
+ 
+- Fold07.Rep3: mtry=100, splitrule=gini, min.node.size=30 
++ Fold07.Rep3: mtry=150, splitrule=gini, min.node.size=30 
+model fit failed for Fold07.Rep3: mtry=150, splitrule=gini, min.node.size=30 Error : Missing data in dependent variable.
+ 
+- Fold07.Rep3: mtry=150, splitrule=gini, min.node.size=30 
++ Fold08.Rep3: mtry= 60, splitrule=gini, min.node.size=20 
+model fit failed for Fold08.Rep3: mtry= 60, splitrule=gini, min.node.size=20 Error : Missing data in dependent variable.
+ 
+- Fold08.Rep3: mtry= 60, splitrule=gini, min.node.size=20 
++ Fold08.Rep3: mtry=100, splitrule=gini, min.node.size=20 
+model fit failed for Fold08.Rep3: mtry=100, splitrule=gini, min.node.size=20 Error : Missing data in dependent variable.
+ 
+- Fold08.Rep3: mtry=100, splitrule=gini, min.node.size=20 
++ Fold08.Rep3: mtry=150, splitrule=gini, min.node.size=20 
+model fit failed for Fold08.Rep3: mtry=150, splitrule=gini, min.node.size=20 Error : Missing data in dependent variable.
+ 
+- Fold08.Rep3: mtry=150, splitrule=gini, min.node.size=20 
++ Fold08.Rep3: mtry= 60, splitrule=gini, min.node.size=30 
+model fit failed for Fold08.Rep3: mtry= 60, splitrule=gini, min.node.size=30 Error : Missing data in dependent variable.
+ 
+- Fold08.Rep3: mtry= 60, splitrule=gini, min.node.size=30 
++ Fold08.Rep3: mtry=100, splitrule=gini, min.node.size=30 
+model fit failed for Fold08.Rep3: mtry=100, splitrule=gini, min.node.size=30 Error : Missing data in dependent variable.
+ 
+- Fold08.Rep3: mtry=100, splitrule=gini, min.node.size=30 
++ Fold08.Rep3: mtry=150, splitrule=gini, min.node.size=30 
+model fit failed for Fold08.Rep3: mtry=150, splitrule=gini, min.node.size=30 Error : Missing data in dependent variable.
+ 
+- Fold08.Rep3: mtry=150, splitrule=gini, min.node.size=30 
++ Fold09.Rep3: mtry= 60, splitrule=gini, min.node.size=20 
+model fit failed for Fold09.Rep3: mtry= 60, splitrule=gini, min.node.size=20 Error : Missing data in dependent variable.
+ 
+- Fold09.Rep3: mtry= 60, splitrule=gini, min.node.size=20 
++ Fold09.Rep3: mtry=100, splitrule=gini, min.node.size=20 
+model fit failed for Fold09.Rep3: mtry=100, splitrule=gini, min.node.size=20 Error : Missing data in dependent variable.
+ 
+- Fold09.Rep3: mtry=100, splitrule=gini, min.node.size=20 
++ Fold09.Rep3: mtry=150, splitrule=gini, min.node.size=20 
+model fit failed for Fold09.Rep3: mtry=150, splitrule=gini, min.node.size=20 Error : Missing data in dependent variable.
+ 
+- Fold09.Rep3: mtry=150, splitrule=gini, min.node.size=20 
++ Fold09.Rep3: mtry= 60, splitrule=gini, min.node.size=30 
+model fit failed for Fold09.Rep3: mtry= 60, splitrule=gini, min.node.size=30 Error : Missing data in dependent variable.
+ 
+- Fold09.Rep3: mtry= 60, splitrule=gini, min.node.size=30 
++ Fold09.Rep3: mtry=100, splitrule=gini, min.node.size=30 
+model fit failed for Fold09.Rep3: mtry=100, splitrule=gini, min.node.size=30 Error : Missing data in dependent variable.
+ 
+- Fold09.Rep3: mtry=100, splitrule=gini, min.node.size=30 
++ Fold09.Rep3: mtry=150, splitrule=gini, min.node.size=30 
+model fit failed for Fold09.Rep3: mtry=150, splitrule=gini, min.node.size=30 Error : Missing data in dependent variable.
+ 
+- Fold09.Rep3: mtry=150, splitrule=gini, min.node.size=30 
++ Fold10.Rep3: mtry= 60, splitrule=gini, min.node.size=20 
+model fit failed for Fold10.Rep3: mtry= 60, splitrule=gini, min.node.size=20 Error : Missing data in dependent variable.
+ 
+- Fold10.Rep3: mtry= 60, splitrule=gini, min.node.size=20 
++ Fold10.Rep3: mtry=100, splitrule=gini, min.node.size=20 
+model fit failed for Fold10.Rep3: mtry=100, splitrule=gini, min.node.size=20 Error : Missing data in dependent variable.
+ 
+- Fold10.Rep3: mtry=100, splitrule=gini, min.node.size=20 
++ Fold10.Rep3: mtry=150, splitrule=gini, min.node.size=20 
+model fit failed for Fold10.Rep3: mtry=150, splitrule=gini, min.node.size=20 Error : Missing data in dependent variable.
+ 
+- Fold10.Rep3: mtry=150, splitrule=gini, min.node.size=20 
++ Fold10.Rep3: mtry= 60, splitrule=gini, min.node.size=30 
+model fit failed for Fold10.Rep3: mtry= 60, splitrule=gini, min.node.size=30 Error : Missing data in dependent variable.
+ 
+- Fold10.Rep3: mtry= 60, splitrule=gini, min.node.size=30 
++ Fold10.Rep3: mtry=100, splitrule=gini, min.node.size=30 
+model fit failed for Fold10.Rep3: mtry=100, splitrule=gini, min.node.size=30 Error : Missing data in dependent variable.
+ 
+- Fold10.Rep3: mtry=100, splitrule=gini, min.node.size=30 
++ Fold10.Rep3: mtry=150, splitrule=gini, min.node.size=30 
+model fit failed for Fold10.Rep3: mtry=150, splitrule=gini, min.node.size=30 Error : Missing data in dependent variable.
+ 
+- Fold10.Rep3: mtry=150, splitrule=gini, min.node.size=30 
++ Fold11.Rep3: mtry= 60, splitrule=gini, min.node.size=20 
+model fit failed for Fold11.Rep3: mtry= 60, splitrule=gini, min.node.size=20 Error : Missing data in dependent variable.
+ 
+- Fold11.Rep3: mtry= 60, splitrule=gini, min.node.size=20 
++ Fold11.Rep3: mtry=100, splitrule=gini, min.node.size=20 
+model fit failed for Fold11.Rep3: mtry=100, splitrule=gini, min.node.size=20 Error : Missing data in dependent variable.
+ 
+- Fold11.Rep3: mtry=100, splitrule=gini, min.node.size=20 
++ Fold11.Rep3: mtry=150, splitrule=gini, min.node.size=20 
+model fit failed for Fold11.Rep3: mtry=150, splitrule=gini, min.node.size=20 Error : Missing data in dependent variable.
+ 
+- Fold11.Rep3: mtry=150, splitrule=gini, min.node.size=20 
++ Fold11.Rep3: mtry= 60, splitrule=gini, min.node.size=30 
+model fit failed for Fold11.Rep3: mtry= 60, splitrule=gini, min.node.size=30 Error : Missing data in dependent variable.
+ 
+- Fold11.Rep3: mtry= 60, splitrule=gini, min.node.size=30 
++ Fold11.Rep3: mtry=100, splitrule=gini, min.node.size=30 
+model fit failed for Fold11.Rep3: mtry=100, splitrule=gini, min.node.size=30 Error : Missing data in dependent variable.
+ 
+- Fold11.Rep3: mtry=100, splitrule=gini, min.node.size=30 
++ Fold11.Rep3: mtry=150, splitrule=gini, min.node.size=30 
+model fit failed for Fold11.Rep3: mtry=150, splitrule=gini, min.node.size=30 Error : Missing data in dependent variable.
+ 
+- Fold11.Rep3: mtry=150, splitrule=gini, min.node.size=30 
+Aggregating results
+Something is wrong; all the Accuracy metric values are missing:
+    Accuracy       Kappa    
+ Min.   : NA   Min.   : NA  
+ 1st Qu.: NA   1st Qu.: NA  
+ Median : NA   Median : NA  
+ Mean   :NaN   Mean   :NaN  
+ 3rd Qu.: NA   3rd Qu.: NA  
+ Max.   : NA   Max.   : NA  
+ NA's   :6     NA's   :6    
+Error: Stopping
+In addition: There were 50 or more warnings (use warnings() to see the first 50)
+Execution halted
+ :6     NA's   :6    
+Error: Stopping
+In addition: There were 50 or more warnings (use warnings() to see the first 50)
+Execution halted
