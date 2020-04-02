@@ -28,7 +28,7 @@ To run the entire pipeline use ``scrape-parse-classifcy/4_get_covid19_news.R``.
 After some experimentation I settled on a random forests model using [ranger](https://cran.r-project.org/web/packages/ranger/index.html). 
 
 * **Corpus**: more than 6000 news articles from Portuguese outlets were collected using factiva. An article was considered to be about coronavirus if it contained the factiva label **Novel Coronaviruses**. You can find it in ``train/data/labeled_data``
-* **Sampling**: the first sample strategy involved making queries for news articles in random dates between 01/01/2018 adn 01/10/2019 - not coronavirus-related - and random dates between 15/02/2020 and today using the above-mentioned label as a query parameters. Has this was leading to some overfitting. Next, I made query for all news in a random date between 15/02/2020 and today, and labeled the data based on the presence of the coronavirus factiva label.
+* **Sampling**: the first sample strategy, up to roughly 3000 docs, involved making queries for news articles in random dates between 01/01/2018 adn 01/10/2019 - not coronavirus-related - and random dates between 15/02/2020 and today using the above-mentioned label as a query parameters. Has this was leading to some overfitting a new strategy was adopted. I made queries for all news in a random date between 15/02/2020 and today, and labeled the data based on the presence of the coronavirus factiva label.
 * **Features** - unigram to 5-ngram tokenized words without stop-words represented as a tf-idf vector
 * **10-fold crossvalidatio repeated 3 times** for parameter tunning
 * **Final specification**: Number of tree: 500; Randomly sampled covariates: 300; Min. node size: 20; splitrule: "Gini"
