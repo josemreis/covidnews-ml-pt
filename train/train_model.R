@@ -96,8 +96,8 @@ write_csv(dta_raw,
           "train/data/0_data_parsed.csv")
 
 ## prep
-dta_raw <- readr::read_csv("train/data/0_data_parsed.csv") %>%
-  mutate(lp_join = if_else(nchar(leading_paragraph) < 100,
+dta_raw2 <- readr::read_csv("train/data/0_data_parsed.csv") %>%
+  mutate(lp_join = if_else(nchar(leading_paragraph) < 600,
                            remaining_content,
                            leading_paragraph),
          is_covid = ifelse(is_covid == TRUE,
@@ -106,6 +106,11 @@ dta_raw <- readr::read_csv("train/data/0_data_parsed.csv") %>%
   unite(., col = "text", c("headlines", "lp_join"), sep = " ") %>%
   distinct(text, is_covid, .keep_all = TRUE) %>%
   filter(!is.na(is_covid))
+
+dta_raw <- readr::read_csv("train/data/0_data_parsed.csv") %>%
+  mutate(text = remaining_content) %>%
+  distinct(text, is_covid, .keep_all = TRUE) %>%
+  filter(!is.na(is_covid)) 
 
 ### Models
 ###---------------------------------------------------------------------------------------
@@ -128,8 +133,7 @@ prep_train <- function(txt) {
   ## create vocabulary
   vocab <- create_vocabulary(it, ngram = c(1L, 5L), stopwords = tm::stopwords("pt"))
   
-  vocab <- prune_vocabulary(vocab, term_count_min = 10, 
-                            doc_proportion_max = 0.3)
+  vocab <- prune_vocabulary(vocab, term_count_min = 20, doc_proportion_min = 0.001)
   
   saveRDS(vocab, file = "train/final_model/rf-vectorizer.rds")
   
@@ -154,7 +158,7 @@ prep_train <- function(txt) {
 train_df <- dta_raw[trainIndex,]
 clean_train <- prep_train(train_df$text)
 # export the dtm
-sparsity::write.svmlight(clean_train, labelVector = as.numeric(train$is_covid), file = "train/final_model/train_dtm.svmlight")
+sparsity::write.svmlight(clean_train, labelVector = as.numeric(train_df$is_covid), file = "train/final_model/train_dtm.svmlight")
 # reformat for the model
 dtm <- clean_train %>%
   as.matrix() %>%
@@ -163,9 +167,9 @@ dtm <- clean_train %>%
 # Tune randomly selected predictors (min.node.size seems to be optima at 20 for most mtry)
 set.seed(1234)
 tgrid <- expand.grid(
-  mtry = c(floor(sqrt(ncol(dtm))), 100),
+  mtry = c(floor(sqrt(ncol(dtm))), floor(sqrt(ncol(dtm))) * 2, 300, 400),
   splitrule = "gini",
-  min.node.size = c(1, 20, 40)
+  min.node.size = 20
 )
 tcntrl <- trainControl(method="repeatedcv",
                        number = 10,
@@ -231,7 +235,7 @@ mod_metrics <- rbind(tibble(value = rf_cm$overall, metric = names(rf_cm$overall)
   select(model_accuracy = Accuracy, model_kappa = Kappa, model_f1 = F1, model_precision = Precision, model_recall = Recall, everything())
 
 png(filename = "train/final_model/rf-params.png", width = 800, height = 600)
-plot(rf_mod, metric = "kapa")
+plot(rf_mod, metric = "Kappa")
 dev.off()
 
 readr::write_csv(mod_metrics,
@@ -241,9 +245,7 @@ readr::write_csv(mod_metrics,
 readr::write_csv(mod_metrics,
                  path = paste("train/final_model/sample_level_metrics/rf-model-metrics","_sample_n_", nrow(train_df), ".csv"))
 
-
 ## push the new model
-
 # stage and commit changes
 add(repo = ".")
 
@@ -254,5 +256,5 @@ commit(repo = ".",
 ## push it
 push(object = ".",
      credentials = cred_user_pass(username = "josemreis",
-                                  password = git_key))
+                                  password = readLines("/home/jmr/github_pass.txt")))
 

@@ -26,12 +26,33 @@ git2r::config(user.name = "josemreis",user.email = readLines("/home/jmr/ile_mail
 ## git key
 git_key <- readLines("/home/jmr/github_pass.txt")
 
+training_txt <-  readr::read_csv("train/data/0_data_parsed.csv") %>%
+  mutate(lp_join = if_else(nchar(leading_paragraph) < 100,
+                           remaining_content,
+                           leading_paragraph),
+         is_covid = ifelse(is_covid == TRUE,
+                           "1", 
+                           "0")) %>%
+  unite(., col = "text", c("headlines", "lp_join"), sep = " ") %>%
+  distinct(text, is_covid, .keep_all = TRUE) %>%
+  filter(!is.na(is_covid)) %>%
+  dplyr::pull("text")
+
 ## text input helper function
 ##------------------------------------------------------------------------
 ## pre-train tfidf model
-train_tfidf_model <- function() {
+train_tfidf_model <- function(txt = training_txt) {
   
-  ## vectorizer
+  ## tokenizing
+  prep_fun = tolower
+  tok_fun = word_tokenizer
+  
+  it <- itoken(txt,
+               preprocessor = prep_fun, 
+               tokenizer = tok_fun,
+               progressbar = TRUE)
+  
+  ## vectorizer, pass it to main environment
   vectorizer <<- vocab_vectorizer(vocab)
   
   ## turn to document term matrix
@@ -86,6 +107,7 @@ covid_classifier <- function(txt) {
     trimws()
   
   if (!is.na(txt) && nchar(txt) > 80) {
+    
     ## train a tfidf model with corpus, tfidf model object passed this environment
     train_tfidf_model()
   
