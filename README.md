@@ -49,7 +49,7 @@ After some experimentation I settled on a random forests model using
   - **Features** - unigram to 5-ngram tokenized words without stop-words
     represented as a tf-idf vector
   - **10-fold crossvalidatio repeated 3 times** for parameter tunning
-  - **Final
+  - Latest **model
 specification**
 
 <!-- end list -->
