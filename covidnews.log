@@ -55,38 +55,9 @@ In if (class(gdelt_pt_all) == "try-error") { :
 # A tibble: 1 x 8
   authors date_download       date_publish        description maintext text 
   <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Gonçal… 2020-04-02 17:40:22 2020-04-02 14:57:09 Noticiário… "🔊 Ouvi… <NUL…
+1 Nuno B… 2020-04-02 19:40:21 2020-04-02 15:53:16 Bruno Maga… "Motore… <NUL…
 # … with 2 more variables: title <chr>, url <chr>
 # A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Rádio … 2020-04-02 17:40:37 2020-04-02 15:07:05 O futeboli… "O fute… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <list>   <lis>
-1 Notíci… 2020-04-02 17:40:47 2020-04-02 10:01:04 "\"Percebi… <NULL>   <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Alexan… 2020-04-02 17:40:55 2020-04-02 14:39:51 Imunologis… "Anthon… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Lilian… 2020-04-02 17:40:57 2020-04-02 15:33:00 Já arranca… "Já tod… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
 # A tibble: 0 x 0
 # A tibble: 0 x 0
 # A tibble: 0 x 0
@@ -97,15 +68,10 @@ In if (class(gdelt_pt_all) == "try-error") { :
 # A tibble: 0 x 0
 # A tibble: 0 x 0
 # A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <list>   <lis>
-1 Notíci… 2020-04-02 17:41:23 2020-04-02 15:38:00 A atriz de… <NULL>   <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Rádio … 2020-04-02 17:41:24 2020-04-02 13:00:43 A SAD do D… "Após 2… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
+  authors date_download       date_publish description maintext text  title
+  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
+1 Correi… 2020-04-02 19:40:39 <NULL>       "O Alentej… "14h19 … <NUL… Alen…
+# … with 1 more variable: url <chr>
 # A tibble: 0 x 0
   |                                                                              |======================================================================| 100%
 Error in predict.ranger.forest(forest, data, predict.all, num.trees, type,  : 
