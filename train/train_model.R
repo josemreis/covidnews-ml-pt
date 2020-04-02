@@ -171,16 +171,16 @@ dtm <- clean_train %>%
 #   splitrule = "gini",
 #   min.node.size = 20
 # )
-# tcntrl <- trainControl(method="repeatedcv",
-#                        number = 10,
-#                        repeats = 3,
-#                        verboseIter = T)
-# 
-# rf_mod <- caret::train(x = dtm,
-#                 y = as.factor(train_df[["is_covid"]]),
-#                 method = "ranger",
-#                 trControl = tcntrl,
-#                 tuneGrid = tgrid)
+tcntrl <- trainControl(method="repeatedcv",
+                       number = 10,
+                       repeats = 3,
+                       verboseIter = T)
+
+rf_mod <- caret::train(x = dtm,
+                y = as.factor(train_df[["is_covid"]]),
+                method = "ranger",
+                trControl = tcntrl,
+                tuneGrid = tgrid)
 
 
 # final model
@@ -233,10 +233,10 @@ mod_metrics <- rbind(tibble(value = rf_cm$overall, metric = names(rf_cm$overall)
   pivot_wider(names_from = metric, values_from = value) %>%
   mutate(model = "Random Forests\n('ranger' package, R 3.5.3.)\nWright MN, Ziegler A (2017). “ranger: A Fast Implementation of Random Forests for High Dimensional Data in C++ and R.” Journal of Statistical Software, 77(1), 1–17. doi: 10.18637/jss.v077.i01.",
          sample_size = rf_mod$finalModel$num.samples,
-         train_prop_covid = sum(dta_raw$is_covid == "1")/nrow(dta_raw),
+         train_prop_covid = sum(dta_raw$is_covid == TRUE)/nrow(dta_raw),
          mtry = rf_mod$finalModel$mtry,
          n_tree = rf_mod$finalModel$num.trees,
-         min_node_size = rf_mod$finalModel$mtry,
+         min_node_size = 20,
          splitrule = "gini",
          model_type = "classification",
          fitted_on = Sys.Date()) %>%
