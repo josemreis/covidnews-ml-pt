@@ -96,16 +96,16 @@ write_csv(dta_raw,
           "train/data/0_data_parsed.csv")
 
 ## prep
-dta_raw2 <- readr::read_csv("train/data/0_data_parsed.csv") %>%
-  mutate(lp_join = if_else(nchar(leading_paragraph) < 600,
-                           remaining_content,
-                           leading_paragraph),
-         is_covid = ifelse(is_covid == TRUE,
-                           "1", 
-                           "0")) %>%
-  unite(., col = "text", c("headlines", "lp_join"), sep = " ") %>%
-  distinct(text, is_covid, .keep_all = TRUE) %>%
-  filter(!is.na(is_covid))
+# dta_raw <- readr::read_csv("train/data/0_data_parsed.csv") %>%
+#   mutate(lp_join = if_else(nchar(leading_paragraph) < 600,
+#                            remaining_content,
+#                            leading_paragraph),
+#          is_covid = ifelse(is_covid == TRUE,
+#                            "1", 
+#                            "0")) %>%
+#   unite(., col = "text", c("headlines", "lp_join"), sep = " ") %>%
+#   distinct(text, is_covid, .keep_all = TRUE) %>%
+#   filter(!is.na(is_covid))
 
 dta_raw <- readr::read_csv("train/data/0_data_parsed.csv") %>%
   mutate(text = remaining_content) %>%
@@ -255,7 +255,8 @@ readr::write_csv(mod_metrics,
 
 ## push the new model
 # stage and commit changes
-add(repo = ".")
+add(repo = ".",
+    path = ".")
 
 commit(repo = ".", 
        message = paste0("Retrained model " , Sys.time()),
