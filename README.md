@@ -11,13 +11,19 @@ This repo contains a scraper pipeline which:
 2.  Parses each news’ url in python using
     [news-please](https://github.com/fhamborg/news-please) or, if
     failling,
-    [newspaper3k](https://newspaper.readthedocs.io/en/latest/).
+    [newspaper3k](https://newspaper.readthedocs.io/en/latest/), see
+    `scrape-parse-classifcy/2_news_parse.py`
 
 3.  Predicts whether or not a news article is about covid-19 using a
-    trained random forests model (more details below)
+    trained random forests model (more details below),
+    see`scrape-parse-classifcy/3_classify&push.R`
 
 4.  Automatically pushes the data to `data/... .csv` in this repository
-    as a individual csv file.
+    as a individual csv file, see
+    `scrape-parse-classifcy/3_classify&push.R`
+
+To run the entire pipeline use
+`scrape-parse-classifcy/4_get_covid19_news.R`.
 
 Details on the model
 --------------------
