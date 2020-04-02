@@ -13,7 +13,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 This repo contains a scraper pipeline which:
 
-1. Pulls all news from Porguese domains using [GDELT's API](https://www.gdeltproject.org/) given a certain time range using [gdeltr2's wrapper functions](https://github.com/abresler/gdeltr2). Data is collected and updated every 40, 60 or 120 minutes, depending on time of day. For more details, see ``scrape-parse-classify/1_gdelt_pull.R``
+1. Pulls all news from Portuguese domains using [GDELT's API](https://www.gdeltproject.org/) given a certain time range using [gdeltr2's wrapper functions](https://github.com/abresler/gdeltr2). Data is collected and updated every 40, 60 or 120 minutes, depending on time of day. For more details, see ``scrape-parse-classify/1_gdelt_pull.R``
 
 2. Parses each news article with python using [news-please](https://github.com/fhamborg/news-please) or, if failling, [newspaper3k](https://newspaper.readthedocs.io/en/latest/), see ``scrape-parse-classify/2_news_parse.py``
 
@@ -43,4 +43,10 @@ knitr::kable(read.csv("train/final_model/rf-model-metrics.csv")[,c(7:13)], forma
 knitr::kable(read.csv("train/final_model/rf-model-metrics.csv")[,c(1:5)], format = "markdown")
 ```
 
+
+## Output example
+
+```{r}
+dplyr::glimpse(read.csv(list.files("data", full.names = TRUE)[1]))
+```
 
