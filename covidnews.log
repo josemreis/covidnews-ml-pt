@@ -1,13 +1,13 @@
 There were 43 warnings (use warnings() to see them)
 Loading required package: tidyverse
-── [1mAttaching packages[22m ────────── tidyverse 1.3.0 ──
-[32m✓[39m [34mggplot2[39m 3.3.0     [32m✓[39m [34mpurrr  [39m 0.3.3
-[32m✓[39m [34mtibble [39m 2.1.3     [32m✓[39m [34mdplyr  [39m 0.8.5
-[32m✓[39m [34mtidyr  [39m 1.0.2     [32m✓[39m [34mstringr[39m 1.4.0
-[32m✓[39m [34mreadr  [39m 1.3.1     [32m✓[39m [34mforcats[39m 0.5.0
-── [1mConflicts[22m ───────────── tidyverse_conflicts() ──
-[31mx[39m [34mdplyr[39m::[32mfilter()[39m masks [34mstats[39m::filter()
-[31mx[39m [34mdplyr[39m::[32mlag()[39m    masks [34mstats[39m::lag()
+── Attaching packages ─────────────────────────────────────── tidyverse 1.3.0 ──
+✔ ggplot2 3.3.0     ✔ purrr   0.3.3
+✔ tibble  2.1.3     ✔ dplyr   0.8.5
+✔ tidyr   1.0.2     ✔ stringr 1.4.0
+✔ readr   1.3.1     ✔ forcats 0.5.0
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()
 [1] ""
 
 Attaching package: ‘git2r’
@@ -30,19 +30,19 @@ The following object is masked from ‘package:purrr’:
 
 Parsed with column specification:
 cols(
-  headlines = [31mcol_character()[39m,
-  pub_date = [31mcol_character()[39m,
-  source_name = [31mcol_character()[39m,
-  word_count = [31mcol_character()[39m,
-  language = [31mcol_character()[39m,
-  leading_paragraph = [31mcol_character()[39m,
-  remaining_content = [31mcol_character()[39m,
-  query = [31mcol_character()[39m,
-  query_date_from = [34mcol_date(format = "")[39m,
-  query_date_to = [34mcol_date(format = "")[39m,
-  doc_id = [31mcol_character()[39m,
-  is_covid = [33mcol_logical()[39m,
-  author = [31mcol_character()[39m
+  headlines = col_character(),
+  pub_date = col_character(),
+  source_name = col_character(),
+  word_count = col_character(),
+  language = col_character(),
+  leading_paragraph = col_character(),
+  remaining_content = col_character(),
+  query = col_character(),
+  query_date_from = col_date(format = ""),
+  query_date_to = col_date(format = ""),
+  doc_id = col_character(),
+  is_covid = col_logical(),
+  author = col_character()
 )
   |                                                                              |=======                                                               |  10%  |                                                                              |==============                                                        |  20%  |                                                                              |=====================                                                 |  30%  |                                                                              |============================                                          |  40%  |                                                                              |===================================                                   |  50%  |                                                                              |==========================================                            |  60%  |                                                                              |=================================================                     |  70%  |                                                                              |========================================================              |  80%  |                                                                              |===============================================================       |  90%  |                                                                              |======================================================================| 100%
 Parsing: https://api.gdeltproject.org/api/v2/doc/doc?query=%20sourcecountry:po&sourcelang:por&mode=artlist&format=json&timespan=40&maxrecords=250&sort=datedesc
@@ -52,117 +52,117 @@ Joining, by = "urlGDELTV2FTAPI"
 Warning message:
 In if (class(gdelt_pt_all) == "try-error") { :
   the condition has length > 1 and only the first element will be used
-[38;5;246m# A tibble: 0 x 0[39m
-[38;5;246m# A tibble: 1 x 8[39m
+# A tibble: 0 x 0
+# A tibble: 1 x 8
   authors date_download       date_publish        description maintext text 
-  [3m[38;5;246m<chr>[39m[23m   [3m[38;5;246m<dttm>[39m[23m              [3m[38;5;246m<dttm>[39m[23m              [3m[38;5;246m<chr>[39m[23m       [3m[38;5;246m<list>[39m[23m   [3m[38;5;246m<lis>[39m[23m
-[38;5;250m1[39m Notíci… 2020-04-02 [38;5;246m21:32:01[39m 2020-04-02 [38;5;246m19:30:00[39m O objetivo… [38;5;246m<NULL>[39m   [38;5;246m<NUL[0m…
-[38;5;246m# … with 2 more variables: title [3m[38;5;246m<chr>[38;5;246m[23m, url [3m[38;5;246m<chr>[38;5;246m[23m[39m
-[38;5;246m# A tibble: 0 x 0[39m
-[38;5;246m# A tibble: 0 x 0[39m
-[38;5;246m# A tibble: 0 x 0[39m
-[38;5;246m# A tibble: 1 x 8[39m
+  <chr>   <dttm>              <dttm>              <chr>       <list>   <lis>
+1 Notíci… 2020-04-02 21:34:13 2020-04-02 19:30:00 O objetivo… <NULL>   <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 1 x 8
   authors date_download       date_publish description maintext text  title
-  [3m[38;5;246m<chr>[39m[23m   [3m[38;5;246m<dttm>[39m[23m              [3m[38;5;246m<list>[39m[23m       [3m[38;5;246m<chr>[39m[23m       [3m[38;5;246m<chr>[39m[23m    [3m[38;5;246m<lis>[39m[23m [3m[38;5;246m<chr>[39m[23m
-[38;5;250m1[39m Carlos… 2020-04-02 [38;5;246m21:32:10[39m [38;5;246m<NULL>[39m       O grupo Lu… [38;5;246m"[39mO grup… [38;5;246m<NUL[0m… Covi…
-[38;5;246m# … with 1 more variable: url [3m[38;5;246m<chr>[38;5;246m[23m[39m
-[38;5;246m# A tibble: 0 x 0[39m
-[38;5;246m# A tibble: 0 x 0[39m
-[38;5;246m# A tibble: 0 x 0[39m
-[38;5;246m# A tibble: 0 x 0[39m
-[38;5;246m# A tibble: 0 x 0[39m
-[38;5;246m# A tibble: 1 x 8[39m
+  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
+1 Carlos… 2020-04-02 21:34:23 <NULL>       O grupo Lu… "O grup… <NUL… Covi…
+# … with 1 more variable: url <chr>
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 1 x 8
   authors date_download       date_publish        description maintext text 
-  [3m[38;5;246m<chr>[39m[23m   [3m[38;5;246m<dttm>[39m[23m              [3m[38;5;246m<dttm>[39m[23m              [3m[38;5;246m<chr>[39m[23m       [3m[38;5;246m<chr>[39m[23m    [3m[38;5;246m<lis>[39m[23m
-[38;5;250m1[39m Pedro … 2020-04-02 [38;5;246m21:32:17[39m 2020-04-02 [38;5;246m17:47:29[39m A partir d… [38;5;246m"[39mHoje o… [38;5;246m<NUL[0m…
-[38;5;246m# … with 2 more variables: title [3m[38;5;246m<chr>[38;5;246m[23m, url [3m[38;5;246m<chr>[38;5;246m[23m[39m
-[38;5;246m# A tibble: 1 x 8[39m
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Pedro … 2020-04-02 21:34:30 2020-04-02 17:47:29 A partir d… "Hoje o… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 1 x 8
   authors date_download       date_publish        description maintext text 
-  [3m[38;5;246m<chr>[39m[23m   [3m[38;5;246m<dttm>[39m[23m              [3m[38;5;246m<dttm>[39m[23m              [3m[38;5;246m<chr>[39m[23m       [3m[38;5;246m<chr>[39m[23m    [3m[38;5;246m<lis>[39m[23m
-[38;5;250m1[39m Bruno … 2020-04-02 [38;5;246m21:32:18[39m 2020-04-02 [38;5;246m16:13:38[39m O crescime… [38;5;246m"[39mPor ve… [38;5;246m<NUL[0m…
-[38;5;246m# … with 2 more variables: title [3m[38;5;246m<chr>[38;5;246m[23m, url [3m[38;5;246m<chr>[38;5;246m[23m[39m
-[38;5;246m# A tibble: 1 x 8[39m
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Bruno … 2020-04-02 21:34:31 2020-04-02 16:13:38 O crescime… "Por ve… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 1 x 8
   authors date_download       date_publish        description maintext text 
-  [3m[38;5;246m<chr>[39m[23m   [3m[38;5;246m<dttm>[39m[23m              [3m[38;5;246m<dttm>[39m[23m              [3m[38;5;246m<chr>[39m[23m       [3m[38;5;246m<chr>[39m[23m    [3m[38;5;246m<lis>[39m[23m
-[38;5;250m1[39m Nuno M… 2020-04-02 [38;5;246m21:32:19[39m 2020-04-02 [38;5;246m19:43:50[39m Isto é mai… [38;5;246m"[39mIsto é… [38;5;246m<NUL[0m…
-[38;5;246m# … with 2 more variables: title [3m[38;5;246m<chr>[38;5;246m[23m, url [3m[38;5;246m<chr>[38;5;246m[23m[39m
-[38;5;246m# A tibble: 1 x 8[39m
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Nuno M… 2020-04-02 21:34:32 2020-04-02 19:43:50 Isto é mai… "Isto é… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 1 x 8
   authors date_download       date_publish        description maintext text 
-  [3m[38;5;246m<chr>[39m[23m   [3m[38;5;246m<dttm>[39m[23m              [3m[38;5;246m<dttm>[39m[23m              [3m[38;5;246m<chr>[39m[23m       [3m[38;5;246m<chr>[39m[23m    [3m[38;5;246m<lis>[39m[23m
-[38;5;250m1[39m Bruno … 2020-04-02 [38;5;246m21:32:19[39m 2020-04-02 [38;5;246m20:00:18[39m Estão a ro… [38;5;246m"[39mNos úl… [38;5;246m<NUL[0m…
-[38;5;246m# … with 2 more variables: title [3m[38;5;246m<chr>[38;5;246m[23m, url [3m[38;5;246m<chr>[38;5;246m[23m[39m
-[38;5;246m# A tibble: 1 x 8[39m
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Bruno … 2020-04-02 21:34:32 2020-04-02 20:00:18 Estão a ro… "Nos úl… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 1 x 8
   authors date_download       date_publish        description maintext text 
-  [3m[38;5;246m<chr>[39m[23m   [3m[38;5;246m<dttm>[39m[23m              [3m[38;5;246m<dttm>[39m[23m              [3m[38;5;246m<chr>[39m[23m       [3m[38;5;246m<chr>[39m[23m    [3m[38;5;246m<lis>[39m[23m
-[38;5;250m1[39m Notíci… 2020-04-02 [38;5;246m21:32:19[39m 2020-04-02 [38;5;246m19:28:39[39m Uma equipa… [38;5;246m"[39mUm est… [38;5;246m<NUL[0m…
-[38;5;246m# … with 2 more variables: title [3m[38;5;246m<chr>[38;5;246m[23m, url [3m[38;5;246m<chr>[38;5;246m[23m[39m
-[38;5;246m# A tibble: 1 x 8[39m
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Notíci… 2020-04-02 21:34:33 2020-04-02 19:28:39 Uma equipa… "Um est… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 1 x 8
   authors date_download       date_publish        description maintext text 
-  [3m[38;5;246m<chr>[39m[23m   [3m[38;5;246m<dttm>[39m[23m              [3m[38;5;246m<dttm>[39m[23m              [3m[38;5;246m<chr>[39m[23m       [3m[38;5;246m<chr>[39m[23m    [3m[38;5;246m<lis>[39m[23m
-[38;5;250m1[39m Filipa… 2020-04-02 [38;5;246m21:32:20[39m 2020-04-02 [38;5;246m18:48:12[39m De acordo … [38;5;246m"[39mO Cons… [38;5;246m<NUL[0m…
-[38;5;246m# … with 2 more variables: title [3m[38;5;246m<chr>[38;5;246m[23m, url [3m[38;5;246m<chr>[38;5;246m[23m[39m
-[38;5;246m# A tibble: 0 x 0[39m
-[38;5;246m# A tibble: 0 x 0[39m
-[38;5;246m# A tibble: 0 x 0[39m
-[38;5;246m# A tibble: 0 x 0[39m
-[38;5;246m# A tibble: 1 x 8[39m
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Filipa… 2020-04-02 21:34:34 2020-04-02 18:48:12 De acordo … "O Cons… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 1 x 8
   authors date_download       date_publish        description maintext text 
-  [3m[38;5;246m<chr>[39m[23m   [3m[38;5;246m<dttm>[39m[23m              [3m[38;5;246m<dttm>[39m[23m              [3m[38;5;246m<chr>[39m[23m       [3m[38;5;246m<chr>[39m[23m    [3m[38;5;246m<lis>[39m[23m
-[38;5;250m1[39m Bruno … 2020-04-02 [38;5;246m21:32:28[39m 2020-04-02 [38;5;246m18:20:39[39m De acordo … [38;5;246m"[39mAprove… [38;5;246m<NUL[0m…
-[38;5;246m# … with 2 more variables: title [3m[38;5;246m<chr>[38;5;246m[23m, url [3m[38;5;246m<chr>[38;5;246m[23m[39m
-[38;5;246m# A tibble: 0 x 0[39m
-[38;5;246m# A tibble: 0 x 0[39m
-[38;5;246m# A tibble: 0 x 0[39m
-[38;5;246m# A tibble: 0 x 0[39m
-[38;5;246m# A tibble: 0 x 0[39m
-[38;5;246m# A tibble: 0 x 0[39m
-[38;5;246m# A tibble: 0 x 0[39m
-[38;5;246m# A tibble: 0 x 0[39m
-[38;5;246m# A tibble: 1 x 8[39m
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Bruno … 2020-04-02 21:34:40 2020-04-02 18:20:39 De acordo … "Aprove… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 1 x 8
   authors date_download       date_publish        description maintext text 
-  [3m[38;5;246m<chr>[39m[23m   [3m[38;5;246m<dttm>[39m[23m              [3m[38;5;246m<dttm>[39m[23m              [3m[38;5;246m<chr>[39m[23m       [3m[38;5;246m<chr>[39m[23m    [3m[38;5;246m<lis>[39m[23m
-[38;5;250m1[39m Bruno … 2020-04-02 [38;5;246m21:32:42[39m 2020-04-02 [38;5;246m16:50:02[39m Se está ca… [38;5;246m"[39mQuando… [38;5;246m<NUL[0m…
-[38;5;246m# … with 2 more variables: title [3m[38;5;246m<chr>[38;5;246m[23m, url [3m[38;5;246m<chr>[38;5;246m[23m[39m
-[38;5;246m# A tibble: 1 x 8[39m
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Bruno … 2020-04-02 21:34:53 2020-04-02 16:50:02 Se está ca… "Quando… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 1 x 8
   authors date_download       date_publish        description maintext text 
-  [3m[38;5;246m<chr>[39m[23m   [3m[38;5;246m<dttm>[39m[23m              [3m[38;5;246m<dttm>[39m[23m              [3m[38;5;246m<chr>[39m[23m       [3m[38;5;246m<chr>[39m[23m    [3m[38;5;246m<lis>[39m[23m
-[38;5;250m1[39m Marili… 2020-04-02 [38;5;246m21:32:43[39m 2020-04-02 [38;5;246m19:35:12[39m Têm circul… [38;5;246m"[39mForam … [38;5;246m<NUL[0m…
-[38;5;246m# … with 2 more variables: title [3m[38;5;246m<chr>[38;5;246m[23m, url [3m[38;5;246m<chr>[38;5;246m[23m[39m
-[38;5;246m# A tibble: 1 x 8[39m
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Marili… 2020-04-02 21:34:54 2020-04-02 19:35:12 Têm circul… "Foram … <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 1 x 8
   authors date_download       date_publish        description maintext text 
-  [3m[38;5;246m<chr>[39m[23m   [3m[38;5;246m<dttm>[39m[23m              [3m[38;5;246m<dttm>[39m[23m              [3m[38;5;246m<chr>[39m[23m       [3m[38;5;246m<chr>[39m[23m    [3m[38;5;246m<lis>[39m[23m
-[38;5;250m1[39m Bruno … 2020-04-02 [38;5;246m21:32:43[39m 2020-04-02 [38;5;246m15:52:27[39m Agora acab… [38;5;246m"[39mDepois… [38;5;246m<NUL[0m…
-[38;5;246m# … with 2 more variables: title [3m[38;5;246m<chr>[38;5;246m[23m, url [3m[38;5;246m<chr>[38;5;246m[23m[39m
-[38;5;246m# A tibble: 1 x 8[39m
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Bruno … 2020-04-02 21:34:55 2020-04-02 15:52:27 Agora acab… "Depois… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 1 x 8
   authors date_download       date_publish        description maintext text 
-  [3m[38;5;246m<chr>[39m[23m   [3m[38;5;246m<dttm>[39m[23m              [3m[38;5;246m<dttm>[39m[23m              [3m[38;5;246m<chr>[39m[23m       [3m[38;5;246m<chr>[39m[23m    [3m[38;5;246m<lis>[39m[23m
-[38;5;250m1[39m Rádio … 2020-04-02 [38;5;246m21:32:44[39m 2020-04-02 [38;5;246m08:01:32[39m A Assemble… [38;5;246m"[39mCovid-… [38;5;246m<NUL[0m…
-[38;5;246m# … with 2 more variables: title [3m[38;5;246m<chr>[38;5;246m[23m, url [3m[38;5;246m<chr>[38;5;246m[23m[39m
-[38;5;246m# A tibble: 1 x 8[39m
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Rádio … 2020-04-02 21:34:55 2020-04-02 08:01:32 A Assemble… "Covid-… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 1 x 8
   authors date_download       date_publish        description maintext text 
-  [3m[38;5;246m<chr>[39m[23m   [3m[38;5;246m<dttm>[39m[23m              [3m[38;5;246m<dttm>[39m[23m              [3m[38;5;246m<chr>[39m[23m       [3m[38;5;246m<chr>[39m[23m    [3m[38;5;246m<lis>[39m[23m
-[38;5;250m1[39m Nuno M… 2020-04-02 [38;5;246m21:32:44[39m 2020-04-02 [38;5;246m19:41:45[39m SSD vs HDD… [38;5;246m"[39mPorque… [38;5;246m<NUL[0m…
-[38;5;246m# … with 2 more variables: title [3m[38;5;246m<chr>[38;5;246m[23m, url [3m[38;5;246m<chr>[38;5;246m[23m[39m
-[38;5;246m# A tibble: 1 x 8[39m
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Nuno M… 2020-04-02 21:34:56 2020-04-02 19:41:45 SSD vs HDD… "Porque… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 1 x 8
   authors date_download       date_publish        description maintext text 
-  [3m[38;5;246m<chr>[39m[23m   [3m[38;5;246m<dttm>[39m[23m              [3m[38;5;246m<dttm>[39m[23m              [3m[38;5;246m<chr>[39m[23m       [3m[38;5;246m<chr>[39m[23m    [3m[38;5;246m<lis>[39m[23m
-[38;5;250m1[39m Rádio … 2020-04-02 [38;5;246m21:32:45[39m 2020-04-02 [38;5;246m19:42:47[39m A Europa é… [38;5;246m"[39mFace a… [38;5;246m<NUL[0m…
-[38;5;246m# … with 2 more variables: title [3m[38;5;246m<chr>[38;5;246m[23m, url [3m[38;5;246m<chr>[38;5;246m[23m[39m
-[38;5;246m# A tibble: 1 x 8[39m
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Rádio … 2020-04-02 21:34:56 2020-04-02 19:42:47 A Europa é… "Face a… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 1 x 8
   authors date_download       date_publish        description maintext text 
-  [3m[38;5;246m<chr>[39m[23m   [3m[38;5;246m<dttm>[39m[23m              [3m[38;5;246m<dttm>[39m[23m              [3m[38;5;246m<chr>[39m[23m       [3m[38;5;246m<chr>[39m[23m    [3m[38;5;246m<lis>[39m[23m
-[38;5;250m1[39m Nuno M… 2020-04-02 [38;5;246m21:32:46[39m 2020-04-02 [38;5;246m18:35:14[39m Originalme… [38;5;246m"[39mOrigin… [38;5;246m<NUL[0m…
-[38;5;246m# … with 2 more variables: title [3m[38;5;246m<chr>[38;5;246m[23m, url [3m[38;5;246m<chr>[38;5;246m[23m[39m
-[38;5;246m# A tibble: 1 x 8[39m
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Nuno M… 2020-04-02 21:34:57 2020-04-02 18:35:14 Originalme… "Origin… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 1 x 8
   authors date_download       date_publish        description maintext text 
-  [3m[38;5;246m<chr>[39m[23m   [3m[38;5;246m<dttm>[39m[23m              [3m[38;5;246m<dttm>[39m[23m              [3m[38;5;246m<chr>[39m[23m       [3m[38;5;246m<chr>[39m[23m    [3m[38;5;246m<lis>[39m[23m
-[38;5;250m1[39m Nuno M… 2020-04-02 [38;5;246m21:32:46[39m 2020-04-02 [38;5;246m17:17:14[39m O que espe… [38;5;246m"[39mO que … [38;5;246m<NUL[0m…
-[38;5;246m# … with 2 more variables: title [3m[38;5;246m<chr>[38;5;246m[23m, url [3m[38;5;246m<chr>[38;5;246m[23m[39m
-[38;5;246m# A tibble: 1 x 8[39m
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Nuno M… 2020-04-02 21:34:58 2020-04-02 17:17:14 O que espe… "O que … <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 1 x 8
   authors date_download       date_publish        description maintext text 
-  [3m[38;5;246m<chr>[39m[23m   [3m[38;5;246m<dttm>[39m[23m              [3m[38;5;246m<dttm>[39m[23m              [3m[38;5;246m<chr>[39m[23m       [3m[38;5;246m<list>[39m[23m   [3m[38;5;246m<lis>[39m[23m
-[38;5;250m1[39m Notíci… 2020-04-02 [38;5;246m21:32:47[39m 2020-04-02 [38;5;246m19:15:00[39m Veja as pr… [38;5;246m<NULL>[39m   [38;5;246m<NUL[0m…
-[38;5;246m# … with 2 more variables: title [3m[38;5;246m<chr>[38;5;246m[23m, url [3m[38;5;246m<chr>[38;5;246m[23m[39m
+  <chr>   <dttm>              <dttm>              <chr>       <list>   <lis>
+1 Notíci… 2020-04-02 21:34:59 2020-04-02 19:15:00 Veja as pr… <NULL>   <NUL…
+# … with 2 more variables: title <chr>, url <chr>
   |                                                                              |======================================================================| 100%
   |                                                                              |======================================================================| 100%
   |                                                                              |======================================================================| 100%
