@@ -1,7 +1,5 @@
 Covid-19 news aggregator for Portuguese news
 ================
-José Maria Reis
-4/2/2020
 
 ## Description
 
@@ -39,7 +37,9 @@ After some experimentation I settled on a random forests model using
   - **Corpus**: more than 6000 news articles from Portuguese outlets
     were collected using factiva. An article was considered to be about
     coronavirus if it contained the factiva label **Novel
-    Coronaviruses**. You can find it in `train/data/labeled_data`
+    Coronaviruses**. You can find it in `train/data/labeled_data`. For
+    collecting the corpus, empty queries for Newspapers in Europe in
+    Portuguesew were used.
   - **Sampling**: the first sample strategy, up to roughly 3000 docs,
     involved making queries for news articles in random dates between
     01/01/2018 adn 01/10/2019 - not coronavirus-related - and random
@@ -50,7 +50,7 @@ After some experimentation I settled on a random forests model using
     presence of the coronavirus factiva label.
   - **Features** - unigram to 5-ngram tokenized words without stop-words
     represented as a tf-idf vector
-  - **10-fold crossvalidatio repeated 3 times** for parameter tunning
+  - **10-fold crossvalidation repeated 3 times** for parameter tunning
   - Latest **model
 specification**
 
