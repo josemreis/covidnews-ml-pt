@@ -97,7 +97,7 @@ classifier_input <- parsed_news %>%
 
 # get the prediction
 pred_data <- map2_df(classifier_input$pred_input, classifier_input$url, 
-                     ~ (covid_classifier(.x) %>%  mutate(ur = .y))) %>%
+                     ~ (covid_classifier(.x) %>%  mutate(url = .y))) %>%
   mutate(about_covid = ifelse(about_covid == TRUE,
                             "1",
                             "0"))
