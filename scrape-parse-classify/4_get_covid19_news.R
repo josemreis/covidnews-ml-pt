@@ -73,7 +73,8 @@ parsed_news <- purrr::map2(gdelt_meta$urlArticle, gdelt_meta$titleArticle, funct
   } else {
     
     to_return <- parsed %>%
-      mutate(gdelt_article_title = news_title) %>%
+      mutate(titleArticle = news_title,
+             urlArticle = news_url) %>%
       mutate_if(is.list, unlist) %>%
       mutate_all(list(~as.character(.))) %>%
       mutate_all(list(~na_if(.,"")))
@@ -84,7 +85,8 @@ parsed_news <- purrr::map2(gdelt_meta$urlArticle, gdelt_meta$titleArticle, funct
   
 }) %>%
   bind_rows() %>%
-  left_join(., gdelt_meta)
+  left_join(., gdelt_meta) %>%
+  rename(gdelt_title = titleArticle, gdelt_url = urlArticle)
 
 ## 3 - Classify
 ##-------------------------------------------------------------------------
@@ -95,7 +97,7 @@ classifier_input <- parsed_news %>%
 
 # get the prediction
 pred_data <- map2_df(classifier_input$pred_input, classifier_input$url, 
-                     ~ (covid_classifier(.x) %>%  mutate(url = .y))) %>%
+                     ~ (covid_classifier(.x) %>%  mutate(ur = .y))) %>%
   mutate(about_covid = ifelse(about_covid == TRUE,
                             "1",
                             "0"))

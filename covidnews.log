@@ -45,7 +45,7 @@ cols(
   author = col_character()
 )
   |                                                                              |=======                                                               |  10%  |                                                                              |==============                                                        |  20%  |                                                                              |=====================                                                 |  30%  |                                                                              |============================                                          |  40%  |                                                                              |===================================                                   |  50%  |                                                                              |==========================================                            |  60%  |                                                                              |=================================================                     |  70%  |                                                                              |========================================================              |  80%  |                                                                              |===============================================================       |  90%  |                                                                              |======================================================================| 100%
-Parsing: https://api.gdeltproject.org/api/v2/doc/doc?query=%20sourcecountry:po&sourcelang:por&mode=artlist&format=json&timespan=60&maxrecords=250&sort=datedesc
+Parsing: https://api.gdeltproject.org/api/v2/doc/doc?query=%20sourcecountry:po&sourcelang:por&mode=artlist&format=json&timespan=180&maxrecords=250&sort=datedesc
 
 Joining, by = "urlGDELTV2FTAPI"
 >> GDELT query --> done.
@@ -53,9 +53,224 @@ Warning message:
 In if (class(gdelt_pt_all) == "try-error") { :
   the condition has length > 1 and only the first element will be used
 # A tibble: 1 x 8
+  authors date_download       date_publish description maintext text  title
+  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
+1 Carlos… 2020-04-03 02:00:25 <NULL>       Quem fizer… "Quem f… <NUL… Covi…
+# … with 1 more variable: url <chr>
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 2 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Global… 2020-04-03 02:01:18 2020-04-02 23:44:00 Ministra d… "Franci… <NUL…
+2 Inês A… 2020-04-03 02:01:18 2020-04-02 23:44:00 Ministra d… "Franci… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Rádio … 2020-04-03 02:01:58 2020-04-02 23:01:48 "O Preside… "Marcel… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <list>   <lis>
+1 Rádio … 2020-04-03 02:01:59 2020-04-02 23:11:23 O Presiden… <NULL>   <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Rádio … 2020-04-03 02:01:59 2020-04-03 03:00:00 Episódio n… "Episód… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 0 x 0
+# A tibble: 2 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Global… 2020-04-03 02:02:03 2020-04-02 20:33:00 Davide Mar… "Davide… <NUL…
+2 Redaçã… 2020-04-03 02:02:03 2020-04-02 20:33:00 Davide Mar… "Davide… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 0 x 0
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Global… 2020-04-03 02:02:07 2020-04-02 22:33:00 O antigo v… "O anti… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Anselm… 2020-04-03 02:02:11 2020-04-02 20:15:00 Boa tarde.… "Boa ta… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 2 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Global… 2020-04-03 02:02:13 2020-04-02 22:24:00 O estado d… "O esta… <NUL…
+2 Redaçã… 2020-04-03 02:02:13 2020-04-02 22:24:00 O estado d… "O esta… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 2 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Global… 2020-04-03 02:02:14 2020-04-02 21:57:00 Medidas an… "Medida… <NUL…
+2 Redaçã… 2020-04-03 02:02:14 2020-04-02 21:57:00 Medidas an… "Medida… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 2 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Global… 2020-04-03 02:02:15 2020-04-02 21:17:00 Medida vis… "Medida… <NUL…
+2 Redaçã… 2020-04-03 02:02:15 2020-04-02 21:17:00 Medida vis… "Medida… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 0 x 0
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Notíci… 2020-04-03 02:02:19 2020-04-02 22:30:00 Veja as im… "Aprove… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Global… 2020-04-03 02:02:20 2020-04-02 23:12:00 Marcelo Re… "O esta… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 2 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Global… 2020-04-03 02:02:21 2020-04-02 23:18:00 Leonardo C… "Leonar… <NUL…
+2 Redaçã… 2020-04-03 02:02:21 2020-04-02 23:18:00 Leonardo C… "Leonar… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 2 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Global… 2020-04-03 02:02:22 2020-04-02 22:41:00 "Português… "Portug… <NUL…
+2 Redaçã… 2020-04-03 02:02:22 2020-04-02 22:41:00 "Português… "Portug… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 2 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Global… 2020-04-03 02:02:23 2020-04-02 22:53:00 Marcelo Re… "O Pres… <NUL…
+2 Guilhe… 2020-04-03 02:02:23 2020-04-02 22:53:00 Marcelo Re… "O Pres… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 2 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Global… 2020-04-03 02:02:25 2020-04-02 23:05:00 Comunicaçã… "Comuni… <NUL…
+2 Redaçã… 2020-04-03 02:02:25 2020-04-02 23:05:00 Comunicaçã… "Comuni… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Global… 2020-04-03 02:02:26 2020-04-02 22:18:00 "Martin Pr… "Martin… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Global… 2020-04-03 02:02:27 2020-04-02 22:20:00 As vendas … "© Orla… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 0 x 0
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Global… 2020-04-03 02:02:29 2020-04-02 17:16:00 Ángel Davi… "Ángel … <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 2 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Global… 2020-04-03 02:02:30 2020-04-02 22:57:00 Marcelo Re… "A segu… <NUL…
+2 Cátia … 2020-04-03 02:02:30 2020-04-02 22:57:00 Marcelo Re… "A segu… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 2 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Global… 2020-04-03 02:02:32 2020-04-02 21:38:00 Comissão P… "Liga e… <NUL…
+2 Antóni… 2020-04-03 02:02:32 2020-04-02 21:38:00 Comissão P… "Liga e… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Filipa… 2020-04-03 02:02:33 2020-04-02 22:00:01 Marcelo Re… "\"Ouvi… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 0 x 0
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Global… 2020-04-03 02:02:36 2020-04-02 23:05:00 O despacho… "Os dro… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 0 x 0
+# A tibble: 2 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Global… 2020-04-03 02:02:40 2020-04-02 23:16:00 Em mãos sa… "O uso … <NUL…
+2 Judith… 2020-04-03 02:02:40 2020-04-02 23:16:00 Em mãos sa… "O uso … <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <list>   <lis>
+1 Miguel… 2020-04-03 02:02:41 2020-04-02 22:30:00 A Neighbou… <NULL>   <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <list>   <lis>
+1 Catari… 2020-04-03 02:02:48 2020-04-02 22:45:00 Mensagens … <NULL>   <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 2 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Global… 2020-04-03 02:02:52 2020-04-02 20:35:00 Diretor do… "Direto… <NUL…
+2 Redaçã… 2020-04-03 02:02:52 2020-04-02 20:35:00 Diretor do… "Direto… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 2 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Global… 2020-04-03 02:02:54 2020-04-02 22:16:00 Marcelo Re… "Marcel… <NUL…
+2 Inês A… 2020-04-03 02:02:54 2020-04-02 22:16:00 Marcelo Re… "Marcel… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 0 x 0
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Global… 2020-04-03 02:03:08 2020-04-02 18:04:00 Expediente… "Expedi… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 2 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Global… 2020-04-03 02:03:09 2020-04-02 22:38:00 Dados divu… "Dados … <NUL…
+2 Redaçã… 2020-04-03 02:03:09 2020-04-02 22:38:00 Dados divu… "Dados … <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Global… 2020-04-03 02:03:11 2020-04-02 22:20:00 UFC quer m… "UFC qu… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 1 x 8
   authors date_download       date_publish        description maintext text 
   <chr>   <dttm>              <dttm>              <list>      <chr>    <lis>
-1 Braga … 2020-04-03 01:00:21 2020-04-02 16:58:36 <NULL>      "Na seq… <NUL…
+1 Braga … 2020-04-03 02:03:11 2020-04-02 16:58:36 <NULL>      "Na seq… <NUL…
 # … with 2 more variables: title <chr>, url <chr>
 # A tibble: 0 x 0
 # A tibble: 0 x 0
@@ -64,9 +279,9 @@ In if (class(gdelt_pt_all) == "try-error") { :
 # A tibble: 3 x 8
   authors date_download       date_publish description maintext text  title
   <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
-1 Destak  2020-04-03 01:00:32 <NULL>       As últimas… "Covid-… <NUL… Pres…
-2 Leitor… 2020-04-03 01:00:32 <NULL>       As últimas… "Covid-… <NUL… Pres…
-3 Destak… 2020-04-03 01:00:32 <NULL>       As últimas… "Covid-… <NUL… Pres…
+1 Destak  2020-04-03 02:03:21 <NULL>       As últimas… "Covid-… <NUL… Pres…
+2 Leitor… 2020-04-03 02:03:21 <NULL>       As últimas… "Covid-… <NUL… Pres…
+3 Destak… 2020-04-03 02:03:21 <NULL>       As últimas… "Covid-… <NUL… Pres…
 # … with 1 more variable: url <chr>
 # A tibble: 0 x 0
 # A tibble: 0 x 0
@@ -79,7 +294,7 @@ In if (class(gdelt_pt_all) == "try-error") { :
 # A tibble: 1 x 8
   authors date_download       date_publish description maintext text  title
   <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
-1 Jornal… 2020-04-03 01:01:02 <NULL>       A Liga Por… "Covid-… <NUL… Covi…
+1 Jornal… 2020-04-03 02:03:44 <NULL>       A Liga Por… "Covid-… <NUL… Covi…
 # … with 1 more variable: url <chr>
 # A tibble: 0 x 0
 # A tibble: 0 x 0
@@ -87,26 +302,26 @@ In if (class(gdelt_pt_all) == "try-error") { :
 # A tibble: 4 x 8
   authors date_download       date_publish description maintext text  title
   <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
-1 Destak  2020-04-03 01:01:16 <NULL>       As últimas… "Covid-… <NUL… PSP …
-2 Leitor… 2020-04-03 01:01:16 <NULL>       As últimas… "Covid-… <NUL… PSP …
-3 Dono D… 2020-04-03 01:01:16 <NULL>       As últimas… "Covid-… <NUL… PSP …
-4 Destak… 2020-04-03 01:01:16 <NULL>       As últimas… "Covid-… <NUL… PSP …
+1 Destak  2020-04-03 02:03:57 <NULL>       As últimas… "Covid-… <NUL… PSP …
+2 Leitor… 2020-04-03 02:03:57 <NULL>       As últimas… "Covid-… <NUL… PSP …
+3 Dono D… 2020-04-03 02:03:57 <NULL>       As últimas… "Covid-… <NUL… PSP …
+4 Destak… 2020-04-03 02:03:57 <NULL>       As últimas… "Covid-… <NUL… PSP …
 # … with 1 more variable: url <chr>
 # A tibble: 0 x 0
 # A tibble: 0 x 0
 # A tibble: 4 x 8
   authors date_download       date_publish description maintext text  title
   <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
-1 Destak  2020-04-03 01:01:22 <NULL>       As últimas… "Covid-… <NUL… "Aut…
-2 Leitor… 2020-04-03 01:01:22 <NULL>       As últimas… "Covid-… <NUL… "Aut…
-3 Dono D… 2020-04-03 01:01:22 <NULL>       As últimas… "Covid-… <NUL… "Aut…
-4 Destak… 2020-04-03 01:01:22 <NULL>       As últimas… "Covid-… <NUL… "Aut…
+1 Destak  2020-04-03 02:04:01 <NULL>       As últimas… "Covid-… <NUL… "Aut…
+2 Leitor… 2020-04-03 02:04:01 <NULL>       As últimas… "Covid-… <NUL… "Aut…
+3 Dono D… 2020-04-03 02:04:01 <NULL>       As últimas… "Covid-… <NUL… "Aut…
+4 Destak… 2020-04-03 02:04:01 <NULL>       As últimas… "Covid-… <NUL… "Aut…
 # … with 1 more variable: url <chr>
 # A tibble: 0 x 0
 # A tibble: 1 x 8
   authors date_download       date_publish        description maintext text 
   <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 João P… 2020-04-03 01:01:26 2020-04-02 23:07:00 A Universi… "João P… <NUL…
+1 João P… 2020-04-03 02:04:06 2020-04-02 23:07:00 A Universi… "João P… <NUL…
 # … with 2 more variables: title <chr>, url <chr>
 # A tibble: 0 x 0
 # A tibble: 0 x 0
@@ -114,15 +329,15 @@ In if (class(gdelt_pt_all) == "try-error") { :
 # A tibble: 1 x 8
   authors date_download       date_publish description maintext text  title
   <chr>   <dttm>              <list>       <list>      <chr>    <lis> <chr>
-1 Braga … 2020-04-03 01:01:35 <NULL>       <NULL>      A medic… <NUL… Brag…
+1 Braga … 2020-04-03 02:04:16 <NULL>       <NULL>      A medic… <NUL… Brag…
 # … with 1 more variable: url <chr>
 # A tibble: 4 x 8
   authors date_download       date_publish description maintext text  title
   <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
-1 Destak  2020-04-03 01:01:36 <NULL>       As últimas… "Covid-… <NUL… Gove…
-2 Leitor… 2020-04-03 01:01:36 <NULL>       As últimas… "Covid-… <NUL… Gove…
-3 Donos … 2020-04-03 01:01:36 <NULL>       As últimas… "Covid-… <NUL… Gove…
-4 Destak… 2020-04-03 01:01:36 <NULL>       As últimas… "Covid-… <NUL… Gove…
+1 Destak  2020-04-03 02:04:18 <NULL>       As últimas… "Covid-… <NUL… Gove…
+2 Leitor… 2020-04-03 02:04:18 <NULL>       As últimas… "Covid-… <NUL… Gove…
+3 Donos … 2020-04-03 02:04:18 <NULL>       As últimas… "Covid-… <NUL… Gove…
+4 Destak… 2020-04-03 02:04:18 <NULL>       As últimas… "Covid-… <NUL… Gove…
 # … with 1 more variable: url <chr>
 # A tibble: 0 x 0
 # A tibble: 0 x 0
@@ -131,17 +346,17 @@ In if (class(gdelt_pt_all) == "try-error") { :
 # A tibble: 4 x 8
   authors date_download       date_publish description maintext text  title
   <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
-1 Destak  2020-04-03 01:01:48 <NULL>       As últimas… "Covid-… <NUL… Ganh…
-2 Leitor… 2020-04-03 01:01:48 <NULL>       As últimas… "Covid-… <NUL… Ganh…
-3 Dono D… 2020-04-03 01:01:48 <NULL>       As últimas… "Covid-… <NUL… Ganh…
-4 Destak… 2020-04-03 01:01:48 <NULL>       As últimas… "Covid-… <NUL… Ganh…
+1 Destak  2020-04-03 02:04:30 <NULL>       As últimas… "Covid-… <NUL… Ganh…
+2 Leitor… 2020-04-03 02:04:30 <NULL>       As últimas… "Covid-… <NUL… Ganh…
+3 Dono D… 2020-04-03 02:04:30 <NULL>       As últimas… "Covid-… <NUL… Ganh…
+4 Destak… 2020-04-03 02:04:30 <NULL>       As últimas… "Covid-… <NUL… Ganh…
 # … with 1 more variable: url <chr>
 # A tibble: 3 x 8
   authors date_download       date_publish description maintext text  title
   <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
-1 Destak  2020-04-03 01:01:49 <NULL>       As últimas… "Covid-… <NUL… "PR …
-2 Leitor… 2020-04-03 01:01:49 <NULL>       As últimas… "Covid-… <NUL… "PR …
-3 Destak… 2020-04-03 01:01:49 <NULL>       As últimas… "Covid-… <NUL… "PR …
+1 Destak  2020-04-03 02:04:30 <NULL>       As últimas… "Covid-… <NUL… "PR …
+2 Leitor… 2020-04-03 02:04:30 <NULL>       As últimas… "Covid-… <NUL… "PR …
+3 Destak… 2020-04-03 02:04:30 <NULL>       As últimas… "Covid-… <NUL… "PR …
 # … with 1 more variable: url <chr>
 # A tibble: 0 x 0
 # A tibble: 0 x 0
@@ -150,9 +365,9 @@ In if (class(gdelt_pt_all) == "try-error") { :
 # A tibble: 3 x 8
   authors date_download       date_publish description maintext text  title
   <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
-1 Destak  2020-04-03 01:02:06 <NULL>       As últimas… "Covid-… <NUL… Univ…
-2 Leitor… 2020-04-03 01:02:06 <NULL>       As últimas… "Covid-… <NUL… Univ…
-3 Destak… 2020-04-03 01:02:06 <NULL>       As últimas… "Covid-… <NUL… Univ…
+1 Destak  2020-04-03 02:04:50 <NULL>       As últimas… "Covid-… <NUL… Univ…
+2 Leitor… 2020-04-03 02:04:50 <NULL>       As últimas… "Covid-… <NUL… Univ…
+3 Destak… 2020-04-03 02:04:50 <NULL>       As últimas… "Covid-… <NUL… Univ…
 # … with 1 more variable: url <chr>
 # A tibble: 0 x 0
 # A tibble: 0 x 0
@@ -165,7 +380,7 @@ In if (class(gdelt_pt_all) == "try-error") { :
 # A tibble: 1 x 8
   authors date_download       date_publish description maintext text  title
   <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
-1 Jornal… 2020-04-03 01:02:34 <NULL>       Faça o log… "Editor… <NUL… Baye…
+1 Jornal… 2020-04-03 02:05:44 <NULL>       Faça o log… "Editor… <NUL… Baye…
 # … with 1 more variable: url <chr>
 # A tibble: 0 x 0
 # A tibble: 0 x 0
@@ -177,7 +392,7 @@ In if (class(gdelt_pt_all) == "try-error") { :
 # A tibble: 1 x 8
   authors date_download       date_publish        description maintext text 
   <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Jn Agê… 2020-04-03 01:02:48 2020-04-02 22:37:00 "O primeir… "JN/Agê… <NUL…
+1 Jn Agê… 2020-04-03 02:05:57 2020-04-02 22:37:00 "O primeir… "JN/Agê… <NUL…
 # … with 2 more variables: title <chr>, url <chr>
 # A tibble: 0 x 0
 # A tibble: 0 x 0
@@ -186,7 +401,7 @@ In if (class(gdelt_pt_all) == "try-error") { :
 # A tibble: 1 x 8
   authors date_download       date_publish        description maintext text 
   <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-04-03 01:02:53 2020-04-02 22:05:00 "Num discu… "Rita S… <NUL…
+1 Global… 2020-04-03 02:06:03 2020-04-02 22:05:00 "Num discu… "Rita S… <NUL…
 # … with 2 more variables: title <chr>, url <chr>
 # A tibble: 0 x 0
 # A tibble: 0 x 0
@@ -199,14 +414,14 @@ In if (class(gdelt_pt_all) == "try-error") { :
 # A tibble: 1 x 8
   authors date_download       date_publish        description maintext text 
   <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Jn Agê… 2020-04-03 01:03:06 2020-04-02 22:28:00 A França a… "JN/Agê… <NUL…
+1 Jn Agê… 2020-04-03 02:06:15 2020-04-02 22:28:00 A França a… "JN/Agê… <NUL…
 # … with 2 more variables: title <chr>, url <chr>
 # A tibble: 0 x 0
 # A tibble: 0 x 0
 # A tibble: 1 x 8
   authors date_download       date_publish        description maintext text 
   <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Jn Agê… 2020-04-03 01:03:10 2020-04-02 22:46:00 O maior cr… "JN/Agê… <NUL…
+1 Jn Agê… 2020-04-03 02:06:18 2020-04-02 22:46:00 O maior cr… "JN/Agê… <NUL…
 # … with 2 more variables: title <chr>, url <chr>
 # A tibble: 0 x 0
 # A tibble: 0 x 0
@@ -216,25 +431,384 @@ In if (class(gdelt_pt_all) == "try-error") { :
 # A tibble: 1 x 8
   authors date_download       date_publish        description maintext text 
   <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Maria … 2020-04-03 01:03:17 2020-04-02 20:55:04 A ordem de… "A orde… <NUL…
+1 Maria … 2020-04-03 02:06:28 2020-04-02 20:55:04 A ordem de… "A orde… <NUL…
 # … with 2 more variables: title <chr>, url <chr>
-  |                                                                              |======================================================================| 100%
-  |                                                                              |======================================================================| 100%
-  |                                                                              |======================================================================| 100%
-  |                                                                              |======================================================================| 100%
-  |                                                                              |======================================================================| 100%
-  |                                                                              |======================================================================| 100%
-  |                                                                              |======================================================================| 100%
-  |                                                                              |======================================================================| 100%
-  |                                                                              |======================================================================| 100%
-  |                                                                              |======================================================================| 100%
-  |                                                                              |======================================================================| 100%
-  |                                                                              |======================================================================| 100%
-  |                                                                              |======================================================================| 100%
-  |                                                                              |======================================================================| 100%
-  |                                                                              |======================================================================| 100%
-  |                                                                              |======================================================================| 100%
-  |                                                                              |======================================================================| 100%
-Joining, by = "url"
-
- Data pushed to remote github https://github.com/josemreis/covidnews-ml-pt
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <list>      <chr>    <lis>
+1 Pedro … 2020-04-03 02:06:32 2020-04-02 20:04:02 <NULL>      "Duas j… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <list>      <chr>    <lis>
+1 Pedro … 2020-04-03 02:06:36 2020-04-02 19:07:04 <NULL>      "A Admi… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <list>      <chr>    <lis>
+1 Antóni… 2020-04-03 02:06:40 2020-04-02 21:14:55 <NULL>      "Estamo… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <list>      <chr>    <lis>
+1 Nuno C… 2020-04-03 02:06:51 2020-04-02 20:50:29 <NULL>      "O Cent… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Nuno B… 2020-04-03 02:07:03 2020-04-02 17:58:49 Atenta à s… "Motore… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <list>      <chr>    <lis>
+1 Hugo R… 2020-04-03 02:07:09 2020-04-02 20:00:31 <NULL>      "Aeropo… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <list>   <lis>
+1 Marili… 2020-04-03 02:07:10 2020-04-02 22:36:43 A novidade… <NULL>   <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <list>      <chr>    <lis>
+1 Sul In… 2020-04-03 02:07:11 2020-04-02 19:34:24 <NULL>      "A Câma… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <list>      <chr>    <lis>
+1 Agênci… 2020-04-03 02:07:12 2020-04-02 18:21:34 <NULL>      "O decr… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Bruno … 2020-04-03 02:07:13 2020-02-04 22:41:00 Número de … "Portug… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Rádio … 2020-04-03 02:07:19 2020-04-02 21:04:15 A Liga gre… "Liga g… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Rádio … 2020-04-03 02:07:21 2020-04-02 21:03:15 "O preside… "\"Ning… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish description maintext text  title
+  <chr>   <dttm>              <list>       <list>      <chr>    <lis> <chr>
+1 Notíci… 2020-04-03 02:07:22 <NULL>       <NULL>      "O prim… <NUL… Trab…
+# … with 1 more variable: url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish description maintext text  title
+  <chr>   <dttm>              <list>       <list>      <chr>    <lis> <chr>
+1 Notíci… 2020-04-03 02:07:23 <NULL>       <NULL>      "A PSP … <NUL… PSP …
+# … with 1 more variable: url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Global… 2020-04-03 02:07:24 2020-04-02 20:32:00 "\"Estamos… "Centro… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Ana Pa… 2020-04-03 02:07:25 2020-04-02 20:01:00 Todos os a… "Aquilo… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Rita R… 2020-04-03 02:07:26 2020-04-02 21:52:00 Balanço da… "\"Apes… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish description maintext text  title
+  <chr>   <dttm>              <list>       <list>      <chr>    <lis> <chr>
+1 Notíci… 2020-04-03 02:07:27 <NULL>       <NULL>      "Pedro … <NUL… Func…
+# … with 1 more variable: url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish description maintext text  title
+  <chr>   <dttm>              <list>       <list>      <chr>    <lis> <chr>
+1 Notíci… 2020-04-03 02:07:28 <NULL>       <NULL>      "Portug… <NUL… Port…
+# … with 1 more variable: url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Valent… 2020-04-03 02:07:29 2020-04-03 00:08:00 O novo reg… "Prisõe… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 4 x 8
+  authors date_download       date_publish description maintext text  title
+  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
+1 Destak  2020-04-03 02:07:31 <NULL>       As últimas… "Covid-… <NUL… Empr…
+2 Leitor… 2020-04-03 02:07:31 <NULL>       As últimas… "Covid-… <NUL… Empr…
+3 Dono D… 2020-04-03 02:07:31 <NULL>       As últimas… "Covid-… <NUL… Empr…
+4 Destak… 2020-04-03 02:07:31 <NULL>       As últimas… "Covid-… <NUL… Empr…
+# … with 1 more variable: url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Jorge … 2020-04-03 02:07:31 2020-04-02 18:29:00 O Presiden… "O Pres… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Rádio … 2020-04-03 02:07:32 2020-04-02 22:16:39 O regresso… "Jogado… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish description maintext text  title
+  <chr>   <dttm>              <list>       <list>      <chr>    <lis> <chr>
+1 Notíci… 2020-04-03 02:07:32 <NULL>       <NULL>      "A perd… <NUL… Covi…
+# … with 1 more variable: url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish description maintext text  title
+  <chr>   <dttm>              <list>       <list>      <chr>    <lis> <chr>
+1 Notíci… 2020-04-03 02:07:33 <NULL>       <NULL>      "As ren… <NUL… Alva…
+# … with 1 more variable: url <chr>
+# A tibble: 3 x 8
+  authors date_download       date_publish description maintext text  title
+  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
+1 Destak  2020-04-03 02:07:34 <NULL>       As últimas… "Actual… <NUL… Preç…
+2 Leitor… 2020-04-03 02:07:34 <NULL>       As últimas… "Actual… <NUL… Preç…
+3 Destak… 2020-04-03 02:07:34 <NULL>       As últimas… "Actual… <NUL… Preç…
+# … with 1 more variable: url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish description maintext text  title
+  <chr>   <dttm>              <list>       <list>      <chr>    <lis> <chr>
+1 Notíci… 2020-04-03 02:07:35 <NULL>       <NULL>      "O dire… <NUL… Dire…
+# … with 1 more variable: url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish description maintext text  title
+  <chr>   <dttm>              <list>       <list>      <chr>    <lis> <chr>
+1 Notíci… 2020-04-03 02:07:36 <NULL>       <NULL>      "A Asso… <NUL… Adia…
+# … with 1 more variable: url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Global… 2020-04-03 02:07:37 2020-04-02 19:18:00 Sem Filas … "E se p… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Global… 2020-04-03 02:07:38 2020-04-02 21:17:00 "As detida… "Foram … <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish description maintext text  title
+  <chr>   <dttm>              <list>       <list>      <chr>    <lis> <chr>
+1 Notíci… 2020-04-03 02:07:39 <NULL>       <NULL>      "O Hosp… <NUL… Covi…
+# … with 1 more variable: url <chr>
+# A tibble: 3 x 8
+  authors date_download       date_publish description maintext text  title
+  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
+1 Destak  2020-04-03 02:07:40 <NULL>       As últimas… "Covid-… <NUL… Açor…
+2 Leitor… 2020-04-03 02:07:40 <NULL>       As últimas… "Covid-… <NUL… Açor…
+3 Destak… 2020-04-03 02:07:40 <NULL>       As últimas… "Covid-… <NUL… Açor…
+# … with 1 more variable: url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish description maintext text  title
+  <chr>   <dttm>              <list>       <list>      <chr>    <lis> <chr>
+1 Notíci… 2020-04-03 02:07:41 <NULL>       <NULL>      "A Polí… <NUL… PJ d…
+# … with 1 more variable: url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish description maintext text  title
+  <chr>   <dttm>              <list>       <list>      <chr>    <lis> <chr>
+1 Notíci… 2020-04-03 02:07:42 <NULL>       <NULL>      "O pres… <NUL… Pres…
+# … with 1 more variable: url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Sandra… 2020-04-03 02:07:43 2020-04-02 18:37:00 "A comunid… "Como s… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 3 x 8
+  authors date_download       date_publish description maintext text  title
+  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
+1 Destak  2020-04-03 02:07:44 <NULL>       As últimas… "Covid-… <NUL… Pres…
+2 Leitor… 2020-04-03 02:07:44 <NULL>       As últimas… "Covid-… <NUL… Pres…
+3 Destak… 2020-04-03 02:07:44 <NULL>       As últimas… "Covid-… <NUL… Pres…
+# … with 1 more variable: url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Rádio … 2020-04-03 02:07:45 2020-04-02 18:02:41 Os futebol… "João F… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish description maintext text  title
+  <chr>   <dttm>              <list>       <list>      <chr>    <lis> <chr>
+1 Notíci… 2020-04-03 02:07:46 <NULL>       <NULL>      "A Conc… <NUL… Conc…
+# … with 1 more variable: url <chr>
+# A tibble: 3 x 8
+  authors date_download       date_publish description maintext text  title
+  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
+1 Destak  2020-04-03 02:07:47 <NULL>       As últimas… "Covid-… <NUL… Crem…
+2 Leitor… 2020-04-03 02:07:47 <NULL>       As últimas… "Covid-… <NUL… Crem…
+3 Destak… 2020-04-03 02:07:47 <NULL>       As últimas… "Covid-… <NUL… Crem…
+# … with 1 more variable: url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish description maintext text  title
+  <chr>   <dttm>              <list>       <list>      <chr>    <lis> <chr>
+1 Notíci… 2020-04-03 02:07:47 <NULL>       <NULL>      "O prim… <NUL… Gove…
+# … with 1 more variable: url <chr>
+# A tibble: 4 x 8
+  authors date_download       date_publish description maintext text  title
+  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
+1 Destak  2020-04-03 02:07:48 <NULL>       As últimas… "Covid-… <NUL… Impa…
+2 Leitor… 2020-04-03 02:07:48 <NULL>       As últimas… "Covid-… <NUL… Impa…
+3 Dono D… 2020-04-03 02:07:48 <NULL>       As últimas… "Covid-… <NUL… Impa…
+4 Destak… 2020-04-03 02:07:48 <NULL>       As últimas… "Covid-… <NUL… Impa…
+# … with 1 more variable: url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish description maintext text  title
+  <chr>   <dttm>              <list>       <list>      <chr>    <lis> <chr>
+1 Notíci… 2020-04-03 02:07:49 <NULL>       <NULL>      "Anadia… <NUL… Covi…
+# … with 1 more variable: url <chr>
+# A tibble: 4 x 8
+  authors date_download       date_publish description maintext text  title
+  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
+1 Destak  2020-04-03 02:07:50 <NULL>       As últimas… "Actual… <NUL… Nova…
+2 Leitor… 2020-04-03 02:07:50 <NULL>       As últimas… "Actual… <NUL… Nova…
+3 Dono D… 2020-04-03 02:07:50 <NULL>       As últimas… "Actual… <NUL… Nova…
+4 Destak… 2020-04-03 02:07:50 <NULL>       As últimas… "Actual… <NUL… Nova…
+# … with 1 more variable: url <chr>
+# A tibble: 0 x 0
+# A tibble: 1 x 8
+  authors date_download       date_publish description maintext text  title
+  <chr>   <dttm>              <list>       <list>      <chr>    <lis> <chr>
+1 Notíci… 2020-04-03 02:07:51 <NULL>       <NULL>      "O prim… <NUL… Port…
+# … with 1 more variable: url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish description maintext text  title
+  <chr>   <dttm>              <list>       <list>      <chr>    <lis> <chr>
+1 Notíci… 2020-04-03 02:07:52 <NULL>       <NULL>      "O muni… <NUL… Câma…
+# … with 1 more variable: url <chr>
+# A tibble: 3 x 8
+  authors date_download       date_publish description maintext text  title
+  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
+1 Destak  2020-04-03 02:07:53 <NULL>       As últimas… "Covid-… <NUL… "Hos…
+2 Leitor… 2020-04-03 02:07:53 <NULL>       As últimas… "Covid-… <NUL… "Hos…
+3 Destak… 2020-04-03 02:07:53 <NULL>       As últimas… "Covid-… <NUL… "Hos…
+# … with 1 more variable: url <chr>
+# A tibble: 0 x 0
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Rádio … 2020-04-03 02:07:54 2020-04-02 21:22:58 Dois ataqu… "No pri… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Notíci… 2020-04-03 02:07:55 2020-04-02 22:00:00 "Campanha … "Se son… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <list>      <chr>    <lis>
+1 Catari… 2020-04-03 02:08:00 2020-04-02 18:46:43 <NULL>      "Anadia… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 2 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Global… 2020-04-03 02:08:17 2020-04-02 21:36:00 Think tank… "Itália… <NUL…
+2 Hugo N… 2020-04-03 02:08:17 2020-04-02 21:36:00 Think tank… "Itália… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Fernan… 2020-04-03 02:08:18 2020-04-02 21:37:21 Noticiário… "🔊 Ouvi… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Global… 2020-04-03 02:08:26 2020-04-02 22:01:00 Estrutura … "O Port… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Rádio … 2020-04-03 02:08:27 2020-04-02 22:10:56 Reinaldo V… "Em dec… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Global… 2020-04-03 02:08:27 2020-04-02 21:45:00 Estes núme… "França… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 2 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Global… 2020-04-03 02:08:28 2020-04-02 20:48:00 Primeiro-m… "O prim… <NUL…
+2 Tsf Lu… 2020-04-03 02:08:28 2020-04-02 20:48:00 Primeiro-m… "O prim… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Filipa… 2020-04-03 02:08:29 2020-04-02 22:00:01 Marcelo Re… "\"Ouvi… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 2 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Global… 2020-04-03 02:08:35 2020-04-02 21:11:00 Todos os d… "O prim… <NUL…
+2 Cátia … 2020-04-03 02:08:35 2020-04-02 21:11:00 Todos os d… "O prim… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Global… 2020-04-03 02:08:36 2020-04-02 21:47:00 Sete joven… "Joaqui… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <list>      <chr>    <lis>
+1 João T… 2020-04-03 02:08:37 2020-04-02 18:17:13 <NULL>      "Os Sal… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 2 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Global… 2020-04-03 02:08:40 2020-04-02 20:53:00 Trabalhado… "O prim… <NUL…
+2 Cátia … 2020-04-03 02:08:40 2020-04-02 20:53:00 Trabalhado… "O prim… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 0 x 0
+Error: `by` required, because the data sources have no common variables
+Backtrace:
+     █
+  1. └─`%>%`(...)
+  2.   ├─base::withVisible(eval(quote(`_fseq`(`_lhs`)), env, env))
+  3.   └─base::eval(quote(`_fseq`(`_lhs`)), env, env)
+  4.     └─base::eval(quote(`_fseq`(`_lhs`)), env, env)
+  5.       └─`_fseq`(`_lhs`)
+  6.         └─magrittr::freduce(value, `_function_list`)
+  7.           ├─base::withVisible(function_list[[k]](value))
+  8.           └─function_list[[k]](value)
+  9.             ├─dplyr::left_join(., gdelt_meta)
+ 10.             └─dplyr:::left_join.tbl_df(., gdelt_meta)
+ 11.               ├─dplyr::common_by(by, x, y)
+ 12.               └─dplyr:::common_by.NULL(by, x, y)
+ 13.                 └─dplyr:::bad_args("by", "required, because the data sources have no common variables")
+ 14.                   └─dplyr:::glubort(fmt_args(args), ..., .envir = .envir)
+Execution halted
