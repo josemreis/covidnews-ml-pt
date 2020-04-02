@@ -52,24 +52,12 @@ After some experimentation I settled on a random forests model using
   - Latest **model
 specification**
 
-<!-- end list -->
-
-``` r
-knitr::kable(read.csv("train/final_model/rf-model-metrics.csv")[,c(7:13)], format = "markdown")
-```
-
 | sample\_size | train\_prop\_covid | mtry | n\_tree | min\_node\_size | splitrule | model\_type    |
 | -----------: | -----------------: | ---: | ------: | --------------: | :-------- | :------------- |
 |         4110 |          0.2374787 |  202 |     500 |              20 | gini      | classification |
 
   - Latest **model
 metrics**
-
-<!-- end list -->
-
-``` r
-knitr::kable(read.csv("train/final_model/rf-model-metrics.csv")[,c(1:5)], format = "markdown")
-```
 
 | model\_accuracy | model\_kappa | model\_f1 | model\_precision | model\_recall |
 | --------------: | -----------: | --------: | ---------------: | ------------: |

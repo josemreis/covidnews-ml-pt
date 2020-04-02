@@ -33,13 +33,13 @@ After some experimentation I settled on a random forests model using [ranger](ht
 * **10-fold crossvalidatio repeated 3 times** for parameter tunning
 * Latest **model specification**
 
-```{r}
+```{r echo=FALSE}
 knitr::kable(read.csv("train/final_model/rf-model-metrics.csv")[,c(7:13)], format = "markdown")
 ```
 
 * Latest **model metrics**
 
-```{r}
+```{r echo=FALSE}
 knitr::kable(read.csv("train/final_model/rf-model-metrics.csv")[,c(1:5)], format = "markdown")
 ```
 
