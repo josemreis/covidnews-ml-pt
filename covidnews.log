@@ -1,13 +1,13 @@
 There were 43 warnings (use warnings() to see them)
 Loading required package: tidyverse
-── Attaching packages ─────────────────────────────────────── tidyverse 1.3.0 ──
-✔ ggplot2 3.3.0     ✔ purrr   0.3.3
-✔ tibble  2.1.3     ✔ dplyr   0.8.5
-✔ tidyr   1.0.2     ✔ stringr 1.4.0
-✔ readr   1.3.1     ✔ forcats 0.5.0
-── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
-✖ dplyr::filter() masks stats::filter()
-✖ dplyr::lag()    masks stats::lag()
+── [1mAttaching packages[22m ────────── tidyverse 1.3.0 ──
+[32m✓[39m [34mggplot2[39m 3.3.0     [32m✓[39m [34mpurrr  [39m 0.3.3
+[32m✓[39m [34mtibble [39m 2.1.3     [32m✓[39m [34mdplyr  [39m 0.8.5
+[32m✓[39m [34mtidyr  [39m 1.0.2     [32m✓[39m [34mstringr[39m 1.4.0
+[32m✓[39m [34mreadr  [39m 1.3.1     [32m✓[39m [34mforcats[39m 0.5.0
+── [1mConflicts[22m ───────────── tidyverse_conflicts() ──
+[31mx[39m [34mdplyr[39m::[32mfilter()[39m masks [34mstats[39m::filter()
+[31mx[39m [34mdplyr[39m::[32mlag()[39m    masks [34mstats[39m::lag()
 [1] ""
 
 Attaching package: ‘git2r’
@@ -30,19 +30,19 @@ The following object is masked from ‘package:purrr’:
 
 Parsed with column specification:
 cols(
-  headlines = col_character(),
-  pub_date = col_character(),
-  source_name = col_character(),
-  word_count = col_character(),
-  language = col_character(),
-  leading_paragraph = col_character(),
-  remaining_content = col_character(),
-  query = col_character(),
-  query_date_from = col_date(format = ""),
-  query_date_to = col_date(format = ""),
-  doc_id = col_character(),
-  is_covid = col_logical(),
-  author = col_character()
+  headlines = [31mcol_character()[39m,
+  pub_date = [31mcol_character()[39m,
+  source_name = [31mcol_character()[39m,
+  word_count = [31mcol_character()[39m,
+  language = [31mcol_character()[39m,
+  leading_paragraph = [31mcol_character()[39m,
+  remaining_content = [31mcol_character()[39m,
+  query = [31mcol_character()[39m,
+  query_date_from = [34mcol_date(format = "")[39m,
+  query_date_to = [34mcol_date(format = "")[39m,
+  doc_id = [31mcol_character()[39m,
+  is_covid = [33mcol_logical()[39m,
+  author = [31mcol_character()[39m
 )
   |                                                                              |=======                                                               |  10%  |                                                                              |==============                                                        |  20%  |                                                                              |=====================                                                 |  30%  |                                                                              |============================                                          |  40%  |                                                                              |===================================                                   |  50%  |                                                                              |==========================================                            |  60%  |                                                                              |=================================================                     |  70%  |                                                                              |========================================================              |  80%  |                                                                              |===============================================================       |  90%  |                                                                              |======================================================================| 100%
 Parsing: https://api.gdeltproject.org/api/v2/doc/doc?query=%20sourcecountry:po&sourcelang:por&mode=artlist&format=json&timespan=40&maxrecords=250&sort=datedesc
@@ -52,29 +52,72 @@ Joining, by = "urlGDELTV2FTAPI"
 Warning message:
 In if (class(gdelt_pt_all) == "try-error") { :
   the condition has length > 1 and only the first element will be used
-# A tibble: 1 x 8
+[38;5;246m# A tibble: 1 x 8[39m
   authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Nuno B… 2020-04-02 19:40:21 2020-04-02 15:53:16 Bruno Maga… "Motore… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
-1 Correi… 2020-04-02 19:40:39 <NULL>       "O Alentej… "14h19 … <NUL… Alen…
-# … with 1 more variable: url <chr>
-# A tibble: 0 x 0
+  [3m[38;5;246m<chr>[39m[23m   [3m[38;5;246m<dttm>[39m[23m              [3m[38;5;246m<dttm>[39m[23m              [3m[38;5;246m<chr>[39m[23m       [3m[38;5;246m<chr>[39m[23m    [3m[38;5;246m<lis>[39m[23m
+[38;5;250m1[39m Fábio … 2020-04-02 [38;5;246m20:42:03[39m 2020-04-02 [38;5;246m18:38:55[39m As estimat… [38;5;246m"[39mA Fede… [38;5;246m<NUL[0m…
+[38;5;246m# … with 2 more variables: title [3m[38;5;246m<chr>[38;5;246m[23m, url [3m[38;5;246m<chr>[38;5;246m[23m[39m
+[38;5;246m# A tibble: 1 x 8[39m
+  authors date_download       date_publish        description maintext text 
+  [3m[38;5;246m<chr>[39m[23m   [3m[38;5;246m<dttm>[39m[23m              [3m[38;5;246m<dttm>[39m[23m              [3m[38;5;246m<chr>[39m[23m       [3m[38;5;246m<chr>[39m[23m    [3m[38;5;246m<lis>[39m[23m
+[38;5;250m1[39m Catari… 2020-04-02 [38;5;246m20:42:05[39m 2020-04-02 [38;5;246m17:52:00[39m O governo … [38;5;246m"[39mA 12 d… [38;5;246m<NUL[0m…
+[38;5;246m# … with 2 more variables: title [3m[38;5;246m<chr>[38;5;246m[23m, url [3m[38;5;246m<chr>[38;5;246m[23m[39m
+[38;5;246m# A tibble: 10 x 8[39m
+   authors date_download       date_publish        description maintext text 
+   [3m[38;5;246m<chr>[39m[23m   [3m[38;5;246m<dttm>[39m[23m              [3m[38;5;246m<dttm>[39m[23m              [3m[38;5;246m<chr>[39m[23m       [3m[38;5;246m<chr>[39m[23m    [3m[38;5;246m<lis>[39m[23m
+[38;5;250m 1[39m Ana Su… 2020-04-02 [38;5;246m20:42:06[39m 2020-02-04 [38;5;246m17:54:00[39m [38;5;246m"[39mComo é qu… [38;5;246m"[39mComo é… [38;5;246m<NUL[0m…
+[38;5;250m 2[39m Edgar … 2020-04-02 [38;5;246m20:42:06[39m 2020-02-04 [38;5;246m17:54:00[39m [38;5;246m"[39mComo é qu… [38;5;246m"[39mComo é… [38;5;246m<NUL[0m…
+[38;5;250m 3[39m Ricard… 2020-04-02 [38;5;246m20:42:06[39m 2020-02-04 [38;5;246m17:54:00[39m [38;5;246m"[39mComo é qu… [38;5;246m"[39mComo é… [38;5;246m<NUL[0m…
+[38;5;250m 4[39m Presid… 2020-04-02 [38;5;246m20:42:06[39m 2020-02-04 [38;5;246m17:54:00[39m [38;5;246m"[39mComo é qu… [38;5;246m"[39mComo é… [38;5;246m<NUL[0m…
+[38;5;250m 5[39m Nuno G… 2020-04-02 [38;5;246m20:42:06[39m 2020-02-04 [38;5;246m17:54:00[39m [38;5;246m"[39mComo é qu… [38;5;246m"[39mComo é… [38;5;246m<NUL[0m…
+[38;5;250m 6[39m Direto… 2020-04-02 [38;5;246m20:42:06[39m 2020-02-04 [38;5;246m17:54:00[39m [38;5;246m"[39mComo é qu… [38;5;246m"[39mComo é… [38;5;246m<NUL[0m…
+[38;5;250m 7[39m Patríc… 2020-04-02 [38;5;246m20:42:06[39m 2020-02-04 [38;5;246m17:54:00[39m [38;5;246m"[39mComo é qu… [38;5;246m"[39mComo é… [38;5;246m<NUL[0m…
+[38;5;250m 8[39m Direto… 2020-04-02 [38;5;246m20:42:06[39m 2020-02-04 [38;5;246m17:54:00[39m [38;5;246m"[39mComo é qu… [38;5;246m"[39mComo é… [38;5;246m<NUL[0m…
+[38;5;250m 9[39m Luís L… 2020-04-02 [38;5;246m20:42:06[39m 2020-02-04 [38;5;246m17:54:00[39m [38;5;246m"[39mComo é qu… [38;5;246m"[39mComo é… [38;5;246m<NUL[0m…
+[38;5;250m10[39m Presid… 2020-04-02 [38;5;246m20:42:06[39m 2020-02-04 [38;5;246m17:54:00[39m [38;5;246m"[39mComo é qu… [38;5;246m"[39mComo é… [38;5;246m<NUL[0m…
+[38;5;246m# … with 2 more variables: title [3m[38;5;246m<chr>[38;5;246m[23m, url [3m[38;5;246m<chr>[38;5;246m[23m[39m
+[38;5;246m# A tibble: 0 x 0[39m
+[38;5;246m# A tibble: 1 x 8[39m
+  authors date_download       date_publish        description maintext text 
+  [3m[38;5;246m<chr>[39m[23m   [3m[38;5;246m<dttm>[39m[23m              [3m[38;5;246m<dttm>[39m[23m              [3m[38;5;246m<chr>[39m[23m       [3m[38;5;246m<chr>[39m[23m    [3m[38;5;246m<lis>[39m[23m
+[38;5;250m1[39m Notíci… 2020-04-02 [38;5;246m20:42:08[39m 2020-04-02 [38;5;246m18:36:03[39m Homenagem … [38;5;246m"[39m\"Mais… [38;5;246m<NUL[0m…
+[38;5;246m# … with 2 more variables: title [3m[38;5;246m<chr>[38;5;246m[23m, url [3m[38;5;246m<chr>[38;5;246m[23m[39m
+[38;5;246m# A tibble: 1 x 8[39m
+  authors date_download       date_publish        description maintext text 
+  [3m[38;5;246m<chr>[39m[23m   [3m[38;5;246m<dttm>[39m[23m              [3m[38;5;246m<dttm>[39m[23m              [3m[38;5;246m<chr>[39m[23m       [3m[38;5;246m<list>[39m[23m   [3m[38;5;246m<lis>[39m[23m
+[38;5;250m1[39m Catari… 2020-04-02 [38;5;246m20:42:09[39m 2020-04-02 [38;5;246m18:47:37[39m A apresent… [38;5;246m<NULL>[39m   [38;5;246m<NUL[0m…
+[38;5;246m# … with 2 more variables: title [3m[38;5;246m<chr>[38;5;246m[23m, url [3m[38;5;246m<chr>[38;5;246m[23m[39m
+[38;5;246m# A tibble: 0 x 0[39m
+[38;5;246m# A tibble: 0 x 0[39m
+[38;5;246m# A tibble: 0 x 0[39m
+[38;5;246m# A tibble: 0 x 0[39m
+[38;5;246m# A tibble: 1 x 8[39m
+  authors date_download       date_publish        description maintext text 
+  [3m[38;5;246m<chr>[39m[23m   [3m[38;5;246m<dttm>[39m[23m              [3m[38;5;246m<dttm>[39m[23m              [3m[38;5;246m<chr>[39m[23m       [3m[38;5;246m<chr>[39m[23m    [3m[38;5;246m<lis>[39m[23m
+[38;5;250m1[39m Notíci… 2020-04-02 [38;5;246m20:42:17[39m 2020-04-02 [38;5;246m18:38:28[39m Foi marcad… [38;5;246m"[39mO juiz… [38;5;246m<NUL[0m…
+[38;5;246m# … with 2 more variables: title [3m[38;5;246m<chr>[38;5;246m[23m, url [3m[38;5;246m<chr>[38;5;246m[23m[39m
+[38;5;246m# A tibble: 0 x 0[39m
+[38;5;246m# A tibble: 1 x 8[39m
+  authors date_download       date_publish        description maintext text 
+  [3m[38;5;246m<chr>[39m[23m   [3m[38;5;246m<dttm>[39m[23m              [3m[38;5;246m<dttm>[39m[23m              [3m[38;5;246m<chr>[39m[23m       [3m[38;5;246m<chr>[39m[23m    [3m[38;5;246m<lis>[39m[23m
+[38;5;250m1[39m Notíci… 2020-04-02 [38;5;246m20:42:20[39m 2020-04-02 [38;5;246m18:33:10[39m Número de … [38;5;246m"[39mMais d… [38;5;246m<NUL[0m…
+[38;5;246m# … with 2 more variables: title [3m[38;5;246m<chr>[38;5;246m[23m, url [3m[38;5;246m<chr>[38;5;246m[23m[39m
+[38;5;246m# A tibble: 0 x 0[39m
+[38;5;246m# A tibble: 0 x 0[39m
+[38;5;246m# A tibble: 0 x 0[39m
+[38;5;246m# A tibble: 0 x 0[39m
+[38;5;246m# A tibble: 0 x 0[39m
+[38;5;246m# A tibble: 0 x 0[39m
+[38;5;246m# A tibble: 1 x 8[39m
+  authors date_download       date_publish        description maintext text 
+  [3m[38;5;246m<chr>[39m[23m   [3m[38;5;246m<dttm>[39m[23m              [3m[38;5;246m<dttm>[39m[23m              [3m[38;5;246m<chr>[39m[23m       [3m[38;5;246m<chr>[39m[23m    [3m[38;5;246m<lis>[39m[23m
+[38;5;250m1[39m Lilian… 2020-04-02 [38;5;246m20:42:35[39m 2020-04-02 [38;5;246m18:50:00[39m Numa altur… [38;5;246m"[39m\"Sabe… [38;5;246m<NUL[0m…
+[38;5;246m# … with 2 more variables: title [3m[38;5;246m<chr>[38;5;246m[23m, url [3m[38;5;246m<chr>[38;5;246m[23m[39m
   |                                                                              |======================================================================| 100%
-Error in predict.ranger.forest(forest, data, predict.all, num.trees, type,  : 
-  Error: One or more independent variables not found in data.
-Calls: %>% ... predict -> predict.ranger -> predict -> predict.ranger.forest
-Execution halted
+  |                                                                              |======================================================================| 100%
+  |                                                                              |======================================================================| 100%
+  |                                                                              |======================================================================| 100%
+  |                                                                              |======================================================================| 100%
+  |                                                                              |======================================================================| 100%
+  |                                                                              |======================================================================| 100%
+Joining, by = "url"
