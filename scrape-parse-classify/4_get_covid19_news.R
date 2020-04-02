@@ -83,7 +83,8 @@ parsed_news <- purrr::map2(gdelt_meta$urlArticle, gdelt_meta$titleArticle, funct
   }
   
 }) %>%
-  bind_rows()
+  bind_rows() %>%
+  left_join(., gdelt_meta)
 
 ## 3 - Classify
 ##-------------------------------------------------------------------------
