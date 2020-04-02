@@ -38,18 +38,30 @@ After some experimentation I settled on a random forests model using
     were collected using factiva. An article was considered to be about
     coronavirus if it contained the factiva label **Novel
     Coronaviruses**. You can find it in `train/data/labeled_data`
-  - **Sampling**: the first sample strategy involved making queries for
-    news articles in random dates between 01/01/2018 adn 01/10/2019 -
-    not coronavirus-related - and random dates between 15/02/2020 and
-    today using the above-mentioned label as a query parameters. Has
-    this was leading to some overfitting. Next, I made query for all
-    news in a random date between 15/02/2020 and today, and labeled the
-    data based on the presence of the coronavirus factiva label.
+  - **Sampling**: the first sample strategy, up to roughly 3000 docs,
+    involved making queries for news articles in random dates between
+    01/01/2018 adn 01/10/2019 - not coronavirus-related - and random
+    dates between 15/02/2020 and today using the above-mentioned label
+    as a query parameters. Has this was leading to some overfitting a
+    new strategy was adopted. I made queries for all news in a random
+    date between 15/02/2020 and today, and labeled the data based on the
+    presence of the coronavirus factiva label.
   - **Features** - unigram to 5-ngram tokenized words without stop-words
     represented as a tf-idf vector
   - **10-fold crossvalidatio repeated 3 times** for parameter tunning
-  - **Final specification**: Number of tree: 500; Randomly sampled
-    covariates: 300; Min. node size: 20; splitrule: “Gini”
+  - **Final
+specification**
+
+<!-- end list -->
+
+``` r
+knitr::kable(read.csv("train/final_model/rf-model-metrics.csv")[,c(7:13)], format = "markdown")
+```
+
+| sample\_size | train\_prop\_covid | mtry | n\_tree | min\_node\_size | splitrule | model\_type    |
+| -----------: | -----------------: | ---: | ------: | --------------: | :-------- | :------------- |
+|         4110 |          0.2374787 |  202 |     500 |              20 | gini      | classification |
+
   - Latest **model
 metrics**
 
@@ -61,4 +73,4 @@ knitr::kable(read.csv("train/final_model/rf-model-metrics.csv")[,c(1:5)], format
 
 | model\_accuracy | model\_kappa | model\_f1 | model\_precision | model\_recall |
 | --------------: | -----------: | --------: | ---------------: | ------------: |
-|       0.9509238 |     0.865872 | 0.9676683 |        0.9673004 |     0.9680365 |
+|       0.9465909 |    0.8515594 | 0.9650817 |        0.9622222 |     0.9679583 |

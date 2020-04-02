@@ -236,14 +236,14 @@ mod_metrics <- rbind(tibble(value = rf_cm$overall, metric = names(rf_cm$overall)
          train_prop_covid = sum(dta_raw$is_covid == TRUE)/nrow(dta_raw),
          mtry = rf_mod$finalModel$mtry,
          n_tree = rf_mod$finalModel$num.trees,
-         min_node_size = 20,
-         splitrule = "gini",
+         min_node_size = rf_mod$finalModel$min.node.size,
+         splitrule = rf_mod$finalModel$splitrule,
          model_type = "classification",
          fitted_on = Sys.Date()) %>%
   select(model_accuracy = Accuracy, model_kappa = Kappa, model_f1 = F1, model_precision = Precision, model_recall = Recall, everything())
 
 png(filename = "train/final_model/rf-params.png", width = 800, height = 600)
-plot(rf_mod, metric = "Kappa")
+plot(rf_mod, metric = "F1")
 dev.off()
 
 readr::write_csv(mod_metrics,
