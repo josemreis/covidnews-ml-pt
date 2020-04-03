@@ -45,163 +45,36 @@ cols(
   author = col_character()
 )
   |                                                                              |=======                                                               |  10%  |                                                                              |==============                                                        |  20%  |                                                                              |=====================                                                 |  30%  |                                                                              |============================                                          |  40%  |                                                                              |===================================                                   |  50%  |                                                                              |==========================================                            |  60%  |                                                                              |=================================================                     |  70%  |                                                                              |========================================================              |  80%  |                                                                              |===============================================================       |  90%  |                                                                              |======================================================================| 100%
-Parsing: https://api.gdeltproject.org/api/v2/doc/doc?query=%20sourcecountry:po&sourcelang:por&mode=artlist&format=json&timespan=180&maxrecords=250&sort=datedesc
+Parsing: https://api.gdeltproject.org/api/v2/doc/doc?query=%20sourcecountry:po&sourcelang:por&mode=artlist&format=json&timespan=40&maxrecords=250&sort=datedesc
 
 Joining, by = "urlGDELTV2FTAPI"
 >> GDELT query --> done.
 Warning message:
 In if (class(gdelt_pt_all) == "try-error") { :
   the condition has length > 1 and only the first element will be used
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <list>      <chr>    <lis> <chr>
-1 Macauh… 2020-04-03 08:00:35 <NULL>       <NULL>      "During… <NUL… NewD…
-# … with 1 more variable: url <chr>
-# A tibble: 0 x 0
-# A tibble: 0 x 0
 # A tibble: 1 x 8
   authors date_download       date_publish        description maintext text 
   <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Bruno … 2020-04-03 08:00:42 2020-04-03 01:55:49 A PS5 está… "Devido… <NUL…
+1 Pedro … 2020-04-03 09:40:12 2020-04-03 02:00:22 LineageOS … "O Line… <NUL…
 # … with 2 more variables: title <chr>, url <chr>
 # A tibble: 1 x 8
   authors date_download       date_publish        description maintext text 
   <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Bruno … 2020-04-03 08:00:43 2020-04-03 01:06:04 Parece fic… "Um gru… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Jn Agê… 2020-04-03 08:00:48 2020-04-03 04:26:00 Investigad… "JN/Agê… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 2 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-04-03 08:01:13 2020-04-02 23:23:00 Números at… "Número… <NUL…
-2 Redaçã… 2020-04-03 08:01:13 2020-04-02 23:23:00 Números at… "Número… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
-1 Marina… 2020-04-03 08:01:17 <NULL>       Inquérito … "Inquér… <NUL… Covi…
-# … with 1 more variable: url <chr>
-# A tibble: 3 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
-1 Destak  2020-04-03 08:01:19 <NULL>       As últimas… "Covid-… <NUL… Peru…
-2 Leitor… 2020-04-03 08:01:19 <NULL>       As últimas… "Covid-… <NUL… Peru…
-3 Destak… 2020-04-03 08:01:19 <NULL>       As últimas… "Covid-… <NUL… Peru…
-# … with 1 more variable: url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Jn Agê… 2020-04-03 08:01:19 2020-04-03 04:11:00 A GNR e a … "JN/Agê… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 3 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
-1 Destak  2020-04-03 08:01:32 <NULL>       As últimas… "Covid-… <NUL… Gove…
-2 Leitor… 2020-04-03 08:01:32 <NULL>       As últimas… "Covid-… <NUL… Gove…
-3 Destak… 2020-04-03 08:01:32 <NULL>       As últimas… "Covid-… <NUL… Gove…
-# … with 1 more variable: url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Sofia … 2020-04-03 08:01:32 2020-04-03 00:02:28 André Coel… "O vice… <NUL…
+1 Rádio … 2020-04-03 09:40:13 2020-04-03 07:28:27 As empresa… "Covid-… <NUL…
 # … with 2 more variables: title <chr>, url <chr>
 # A tibble: 0 x 0
 # A tibble: 1 x 8
   authors date_download       date_publish        description maintext text 
   <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Inês B… 2020-04-03 08:01:36 2020-04-02 22:12:00 O secretár… "Inês B… <NUL…
+1 Rádio … 2020-04-03 09:40:15 2020-04-03 07:45:32 Mais de 20… "A bord… <NUL…
 # … with 2 more variables: title <chr>, url <chr>
 # A tibble: 0 x 0
-# A tibble: 2 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-04-03 08:01:39 2020-04-03 02:08:00 Estudo lev… "Estudo… <NUL…
-2 Redaçã… 2020-04-03 08:01:39 2020-04-03 02:08:00 Estudo lev… "Estudo… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
 # A tibble: 1 x 8
   authors date_download       date_publish        description maintext text 
   <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-04-03 08:01:40 2020-04-03 02:22:00 O presiden… "O pres… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Miguel… 2020-04-03 08:01:41 2020-04-03 02:22:00 Passaram 1… "Miguel… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Manuel… 2020-04-03 08:01:42 2020-04-03 02:24:00 Nestes dia… "Nestes… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Felisb… 2020-04-03 08:01:42 2020-04-03 02:20:00 Os média i… "Felisb… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Jn Agê… 2020-04-03 08:01:43 2020-04-03 03:45:00 O presiden… "JN/Agê… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Jn Agê… 2020-04-03 08:01:44 2020-04-03 03:31:00 As empresa… "JN/Agê… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Jn Agê… 2020-04-03 08:01:44 2020-04-03 03:55:00 O Brasil t… "JN/Agê… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-04-03 08:01:45 2020-04-03 02:19:00 1 - Portug… "andré … <NUL…
+1 Maria … 2020-04-03 09:40:17 2020-04-03 03:00:00 Os novos X… "A Xiao… <NUL…
 # … with 2 more variables: title <chr>, url <chr>
 Joining, by = c("titleArticle", "urlArticle")
-  |                                                                              |======================================================================| 100%
-  |                                                                              |======================================================================| 100%
-  |                                                                              |======================================================================| 100%
-  |                                                                              |======================================================================| 100%
-  |                                                                              |======================================================================| 100%
-  |                                                                              |======================================================================| 100%
-  |                                                                              |======================================================================| 100%
-  |                                                                              |======================================================================| 100%
-  |                                                                              |======================================================================| 100%
-  |                                                                              |======================================================================| 100%
-  |                                                                              |======================================================================| 100%
-  |                                                                              |======================================================================| 100%
-  |                                                                              |======================================================================| 100%
-  |                                                                              |======================================================================| 100%
-  |                                                                              |======================================================================| 100%
-  |                                                                              |======================================================================| 100%
   |                                                                              |======================================================================| 100%
   |                                                                              |======================================================================| 100%
   |                                                                              |======================================================================| 100%
