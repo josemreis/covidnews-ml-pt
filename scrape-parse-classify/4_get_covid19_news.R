@@ -110,7 +110,7 @@ classified <- left_join(classifier_input, pred_data) %>%
 if (nrow(classified) > 0) {
 
 ## 4 - Export and push
-filename <- paste0("data/", "covidpred_pt_", format(Sys.time(), "%Y-%M-%d_%H-%M"), ".csv")
+filename <- paste0("data/", "covidpred_pt_", format(Sys.time(), "%Y-%b-%d_%H-%M"), ".csv")
 # export
 write_csv(classified,
           path = filename)
