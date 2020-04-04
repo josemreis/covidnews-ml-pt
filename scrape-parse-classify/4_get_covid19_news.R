@@ -46,8 +46,8 @@ cat(paste0("\n\n--- ", Sys.time(), " ---\n"),
 # set the time_range parameter depending on time of day
 cur_time_range <- dplyr::case_when(
   as.numeric(format(Sys.time(), "%H")) %in% seq(0, 6) ~ "180 minutes",
-  as.numeric(format(Sys.time(), "%H")) %in% seq(7, 20) ~ "40 minutes",
-  as.numeric(format(Sys.time(), "%H")) %in% seq(20, 23) ~ "60 minutes"
+  as.numeric(format(Sys.time(), "%H")) %in% seq(7, 20) ~ "60 minutes",
+  as.numeric(format(Sys.time(), "%H")) %in% seq(20, 23) ~ "120 minutes"
 )
 
 # ## pull the metadata

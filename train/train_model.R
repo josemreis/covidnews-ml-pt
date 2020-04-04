@@ -25,62 +25,66 @@ try(theme_set(theme_minimal()), silent = TRUE) # set plot theme
 ## working dir
 root_dir <- here::here()
 
+## named entity coutns
+tidy_types <- read_csv("train/data/dbpedia_entity-type_counts.csv")
+
+
 ### Unit of analysis: title + leading_paragraph
 ###---------------------------------------------------------------------------------------
 load_dta <- function(filename){
-  
+
   ## parse json
-  parsed <- fromJSON(filename) 
-  
+  parsed <- fromJSON(filename)
+
   # check if empty
   if (length(parsed) == 0) {
-    
-    cat(paste0("\n>> ", filename, " has no json.\n"), 
-        file = "logs/json_parse.txt", 
+
+    cat(paste0("\n>> ", filename, " has no json.\n"),
+        file = "logs/json_parse.txt",
         append = TRUE)
-    
+
   } else {
-    
+
     # turn into tibble and flatten all lists
     my_tbl <- parsed %>%
       as_tibble() %>%
       mutate_if(is.list, unlist)
-    
+
     ## add missing labels
     if (!"has_corona_label" %in% names(my_tbl)) {
-      
+
       my_tbl$has_corona_label <- ifelse(
         str_extract(filename, "(?<=\\_data\\/).*?(?=\\-)") == "no_covid_label",
         FALSE,
         TRUE
       )
-      
+
     }
-    
+
     ## rename a couple of vars
     to_return <- my_tbl %>%
       rename(is_covid = has_corona_label)
-    
-    
+
+
     return(to_return)
-    
-    
+
+
   }
-  
+
 }
 
 ## sub dir for the log files
 if (!dir.exists("logs")) {
-  
+
   dir.create("logs")
-  
+
 }
 
 # sub-dir for data
 if (!dir.exists("data")) {
-  
+
   dir.create("data")
-  
+
 }
 
 
@@ -92,25 +96,25 @@ listed_files <- list.files("train/data/labeled_data", full.names = TRUE) %>%
 dta_raw <- map_df(listed_files, load_dta)
 
 # export
-write_csv(dta_raw, 
+write_csv(dta_raw,
           "train/data/0_data_parsed.csv")
 
 ## prep
-# dta_raw <- readr::read_csv("train/data/0_data_parsed.csv") %>%
-#   mutate(lp_join = if_else(nchar(leading_paragraph) < 600,
-#                            remaining_content,
-#                            leading_paragraph),
-#          is_covid = ifelse(is_covid == TRUE,
-#                            "1", 
-#                            "0")) %>%
-#   unite(., col = "text", c("headlines", "lp_join"), sep = " ") %>%
-#   distinct(text, is_covid, .keep_all = TRUE) %>%
-#   filter(!is.na(is_covid))
-
 dta_raw <- readr::read_csv("train/data/0_data_parsed.csv") %>%
-  mutate(text = remaining_content) %>%
+  mutate(lp_join = if_else(nchar(leading_paragraph) < 600,
+                           remaining_content,
+                           leading_paragraph),
+         is_covid = ifelse(is_covid == TRUE,
+                           "1",
+                           "0")) %>%
+  unite(., col = "text", c("headlines", "lp_join"), sep = " ") %>%
   distinct(text, is_covid, .keep_all = TRUE) %>%
-  filter(!is.na(is_covid)) 
+  filter(!is.na(is_covid))
+
+# dta_raw <- readr::read_csv("train/data/0_data_parsed.csv") %>%
+#   mutate(text = remaining_content) %>%
+#   distinct(text, is_covid, .keep_all = TRUE) %>%
+#   filter(!is.na(is_covid)) 
 
 ### Models
 ###---------------------------------------------------------------------------------------
@@ -118,22 +122,29 @@ dta_raw <- readr::read_csv("train/data/0_data_parsed.csv") %>%
 set.seed(1234)
 trainIndex <- createDataPartition(dta_raw$is_covid, p = 0.7, list = FALSE, times = 1)
 
-### Random forests
+### Random Forests
+## stemmer
+stemmer <- function(x) {
+  tokens = word_tokenizer(x)
+  lapply(tokens, SnowballC::wordStem, language="en")
+}
+
 ## Prep the input text
-prep_train <- function(txt) {
+prep_train <- function(txt, id) {
   
   prep_fun = tolower
-  tok_fun = word_tokenizer
+  tok_fun = stemmer
   
   it <- itoken(txt,
                preprocessor = prep_fun, 
                tokenizer = tok_fun,
-               progressbar = TRUE)
+               progressbar = TRUE,
+               id = id)
   
   ## create vocabulary
   vocab <- create_vocabulary(it, ngram = c(1L, 5L), stopwords = tm::stopwords("pt"))
   
-  vocab <- prune_vocabulary(vocab, term_count_min = 20, doc_proportion_min = 0.001)
+  vocab <- prune_vocabulary(vocab, term_count_min = 20)
   
   saveRDS(vocab, file = "train/final_model/rf-vectorizer.rds")
   
@@ -145,9 +156,18 @@ prep_train <- function(txt) {
   
   tfidf <- TfIdf$new()
   # fit model to train data and transform train data with fitted model
-  dtm_text_tfidf <- fit_transform(dtm_text, tfidf)
+  dtm_text_tfidf <- fit_transform(dtm_text, tfidf) %>%
+    as.matrix() %>%
+    as.data.frame() %>%
+    mutate(doc_id = rownames(.)) %>%
+    left_join(tidy_types) %>% ## add entity tyes
+    mutate_all(., ~ ifelse(is.na(.), 0, .)) %>%
+    left_join(select(dta_raw, doc_id, word_count)) %>%
+    mutate(word_count = as.numeric(str_extract(word_count, "[0-9]+"))) %>%
+    select(-doc_id)
+  
   ## pass to environment where function is called (pass it to test set)
-  trained_tfidf <<- tfidf
+  trained_tfidf <<- tfidf 
   ## return
   return(dtm_text_tfidf)
   
@@ -156,21 +176,17 @@ prep_train <- function(txt) {
 ## fit the model
 # prep train data
 train_df <- dta_raw[trainIndex,]
-clean_train <- prep_train(train_df$text)
-# export the dtm
-sparsity::write.svmlight(clean_train, labelVector = as.numeric(train_df$is_covid), file = "train/final_model/train_dtm.svmlight")
-# reformat for the model
-dtm <- clean_train %>%
-  as.matrix() %>%
-  as.data.frame()
+dtm <- prep_train(train_df$text, train_df$doc_id)
 
 # Tune randomly selected predictors (min.node.size seems to be optima at 20 for most mtry)
-# set.seed(1234)
+set.seed(1234)
 tgrid <- expand.grid(
   mtry = c(floor(sqrt(ncol(dtm))), floor(sqrt(ncol(dtm))) * 2, floor(sqrt(ncol(dtm))) * 3),
   splitrule = "gini",
   min.node.size = 20
 )
+
+# fit
 tcntrl <- trainControl(method="repeatedcv",
                        number = 10,
                        repeats = 3,
@@ -179,31 +195,35 @@ tcntrl <- trainControl(method="repeatedcv",
 rf_mod <- caret::train(x = dtm,
                 y = as.factor(train_df[["is_covid"]]),
                 method = "ranger",
+                importance = "impurity",
                 trControl = tcntrl,
                 tuneGrid = tgrid)
 
 
-# final model
-rf_mod <- caret::train(x = dtm,
-                       y = as.factor(train_df[["is_covid"]]),
-                       method = "ranger",
-                       trControl = tcntrl,
-                       tuneGrid = tgrid)
-
 # prep test
-prep_test <- function(txt) {
+prep_test <- function(txt, id) {
   
   prep_fun = tolower
-  tok_fun = word_tokenizer
+  tok_fun = stemmer
   
   it <- itoken(txt,
                preprocessor = prep_fun, 
                tokenizer = tok_fun,
-               progressbar = TRUE)
+               progressbar = TRUE,
+               id = id)
   
   ## turn to document term matrix
   dtm_text_tfidf <- create_dtm(it, vectorizer) %>%
-    transform(trained_tfidf)
+    transform(trained_tfidf) %>%
+    as.matrix() %>%
+    as.data.frame() %>%
+    mutate(doc_id = rownames(.)) %>%
+    left_join(tidy_types) %>% ## add entity tyes
+    mutate_all(., ~ ifelse(is.na(.), 0, .)) %>%
+    left_join(select(dta_raw, doc_id, word_count)) %>%
+    mutate(word_count = as.numeric(str_extract(word_count, "[0-9]+"))) %>%
+    select(-doc_id)
+  
   
   ## return
   return(dtm_text_tfidf)
@@ -211,9 +231,7 @@ prep_test <- function(txt) {
 }
 
 test <- dta_raw[-trainIndex,]
-dtm_test <- prep_test(test$text) %>%
-  as.matrix() %>%
-  as.data.frame()
+dtm_test <- prep_test(test$text, test$doc_id) 
 
 # predict
 predictions <- predict(rf_mod, newdata = dtm_test)
@@ -221,10 +239,6 @@ predictions <- predict(rf_mod, newdata = dtm_test)
 # confusion matrix
 rf_cm <- confusionMatrix(predictions, as.factor(test$is_covid))
 rf_cm
-
-# save it
-readr::write_rds(rf_mod,
-                 path = "train/final_model/rf-model.rds")
 
 ## model-metrics-final
 mod_metrics <- rbind(tibble(value = rf_cm$overall, metric = names(rf_cm$overall)),
@@ -242,28 +256,49 @@ mod_metrics <- rbind(tibble(value = rf_cm$overall, metric = names(rf_cm$overall)
          fitted_on = Sys.Date()) %>%
   select(model_accuracy = Accuracy, model_kappa = Kappa, model_f1 = F1, model_precision = Precision, model_recall = Recall, everything())
 
-png(filename = "train/final_model/rf-params.png", width = 800, height = 600)
-plot(rf_mod, metric = "F1")
-dev.off()
+## load the previous models
+latest_model <- map_df(list.files("train/final_model/sample_level_metrics", full.names = TRUE), 
+                          ~ read_csv(.x) %>%
+                            mutate(last_changed = file.info(.x)$ctime)) %>%
+  arrange(desc(last_changed)) %>%
+  slice(1)
 
-readr::write_csv(mod_metrics,
-                 path = "train/final_model/rf-model-metrics.csv")
 
 ## for checking stability as training data gets fed into the model
 readr::write_csv(mod_metrics,
                  path = paste("train/final_model/sample_level_metrics/rf-model-metrics","_sample_n_", nrow(train_df), ".csv"))
 
-## push the new model
-# stage and commit changes
-add(repo = ".",
-    path = ".")
 
-commit(repo = ".", 
-       message = paste0("Retrained model " , Sys.time()),
-       all = TRUE)
+if (mod_metrics$model_f1 > latest_model$model_f1){
+  
+  write_rds(rf_mod, path = "train/final_model/rf-model.rds")
+  # export current model metrics
+  readr::write_csv(mod_metrics,
+                   path = "train/final_model/rf-model-metrics.csv")
+  
+  system("notify-send improved F1 with the new model")
+  
+  # update model metrics in repo
+  rmarkdown::render("README.Rmd")
+  
+  ## push the new model
+  # stage and commit changes
+  add(repo = ".",
+      path = ".")
+  
+  commit(repo = ".", 
+         message = paste0("Retrained model " , Sys.time()),
+         all = TRUE)
+  
+  ## push it
+  push(object = ".",
+       credentials = cred_user_pass(username = "josemreis",
+                                    password = readLines("/home/jmr/github_pass.txt")))
+  
+  
+} else {
 
-## push it
-push(object = ".",
-     credentials = cred_user_pass(username = "josemreis",
-                                  password = readLines("/home/jmr/github_pass.txt")))
+  system("notify-send did not improve F1 with the new model")
+  
+}
 

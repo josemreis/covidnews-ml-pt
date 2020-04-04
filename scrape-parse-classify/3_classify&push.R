@@ -28,7 +28,7 @@ git_key <- readLines("/home/jmr/github_pass.txt")
 
 training_txt <-  readr::read_csv("train/data/0_data_parsed.csv") %>%
   mutate(text = remaining_content) %>%
-  distinct(text, is_covid, .keep_all = TRUE) %>%
+  distinct(doc_id, .keep_all = TRUE) %>%
   filter(!is.na(is_covid))  %>%
   dplyr::pull("text")
 
