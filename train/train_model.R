@@ -31,73 +31,73 @@ tidy_types <- read_csv("train/data/dbpedia_entity-type_counts.csv")
 
 ### Unit of analysis: title + leading_paragraph
 ###---------------------------------------------------------------------------------------
-load_dta <- function(filename){
-
-  ## parse json
-  parsed <- fromJSON(filename)
-
-  # check if empty
-  if (length(parsed) == 0) {
-
-    cat(paste0("\n>> ", filename, " has no json.\n"),
-        file = "logs/json_parse.txt",
-        append = TRUE)
-
-  } else {
-
-    # turn into tibble and flatten all lists
-    my_tbl <- parsed %>%
-      as_tibble() %>%
-      mutate_if(is.list, unlist)
-
-    ## add missing labels
-    if (!"has_corona_label" %in% names(my_tbl)) {
-
-      my_tbl$has_corona_label <- ifelse(
-        str_extract(filename, "(?<=\\_data\\/).*?(?=\\-)") == "no_covid_label",
-        FALSE,
-        TRUE
-      )
-
-    }
-
-    ## rename a couple of vars
-    to_return <- my_tbl %>%
-      rename(is_covid = has_corona_label)
-
-
-    return(to_return)
-
-
-  }
-
-}
-
-## sub dir for the log files
-if (!dir.exists("logs")) {
-
-  dir.create("logs")
-
-}
-
-# sub-dir for data
-if (!dir.exists("data")) {
-
-  dir.create("data")
-
-}
-
-
-# list datasets
-listed_files <- list.files("train/data/labeled_data", full.names = TRUE) %>%
-  subset(., stringr::str_detect(., "json"))
-
-# load
-dta_raw <- map_df(listed_files, load_dta)
-
-# export
-write_csv(dta_raw,
-          "train/data/0_data_parsed.csv")
+# load_dta <- function(filename){
+# 
+#   ## parse json
+#   parsed <- fromJSON(filename)
+# 
+#   # check if empty
+#   if (length(parsed) == 0) {
+# 
+#     cat(paste0("\n>> ", filename, " has no json.\n"),
+#         file = "logs/json_parse.txt",
+#         append = TRUE)
+# 
+#   } else {
+# 
+#     # turn into tibble and flatten all lists
+#     my_tbl <- parsed %>%
+#       as_tibble() %>%
+#       mutate_if(is.list, unlist)
+# 
+#     ## add missing labels
+#     if (!"has_corona_label" %in% names(my_tbl)) {
+# 
+#       my_tbl$has_corona_label <- ifelse(
+#         str_extract(filename, "(?<=\\_data\\/).*?(?=\\-)") == "no_covid_label",
+#         FALSE,
+#         TRUE
+#       )
+# 
+#     }
+# 
+#     ## rename a couple of vars
+#     to_return <- my_tbl %>%
+#       rename(is_covid = has_corona_label)
+# 
+# 
+#     return(to_return)
+# 
+# 
+#   }
+# 
+# }
+# 
+# ## sub dir for the log files
+# if (!dir.exists("logs")) {
+# 
+#   dir.create("logs")
+# 
+# }
+# 
+# # sub-dir for data
+# if (!dir.exists("data")) {
+# 
+#   dir.create("data")
+# 
+# }
+# 
+# 
+# # list datasets
+# listed_files <- list.files("train/data/labeled_data", full.names = TRUE) %>%
+#   subset(., stringr::str_detect(., "json"))
+# 
+# # load
+# dta_raw <- map_df(listed_files, load_dta)
+# 
+# # export
+# write_csv(dta_raw,
+#           "train/data/0_data_parsed.csv")
 
 ## prep
 dta_raw <- readr::read_csv("train/data/0_data_parsed.csv") %>%
@@ -179,25 +179,35 @@ train_df <- dta_raw[trainIndex,]
 dtm <- prep_train(train_df$text, train_df$doc_id)
 
 # Tune randomly selected predictors (min.node.size seems to be optima at 20 for most mtry)
-set.seed(1234)
-tgrid <- expand.grid(
-  mtry = c(floor(sqrt(ncol(dtm))), floor(sqrt(ncol(dtm))) * 2, floor(sqrt(ncol(dtm))) * 3),
-  splitrule = "gini",
-  min.node.size = 20
-)
+# set.seed(1234)
+# tgrid <- expand.grid(
+#   mtry = c(floor(sqrt(ncol(dtm))), floor(sqrt(ncol(dtm))) * 2, floor(sqrt(ncol(dtm))) * 3),
+#   splitrule = "gini",
+#   min.node.size = 20
+# )
+# 
+# # fit
+# tcntrl <- trainControl(method="repeatedcv",
+#                        number = 10,
+#                        repeats = 3,
+#                        verboseIter = T)
+# 
+# rf_mod <- caret::train(x = dtm,
+#                 y = as.factor(train_df[["is_covid"]]),
+#                 method = "ranger",
+#                 importance = "impurity",
+#                 trControl = tcntrl,
+#                 tuneGrid = tgrid)
 
-# fit
-tcntrl <- trainControl(method="repeatedcv",
-                       number = 10,
-                       repeats = 3,
-                       verboseIter = T)
-
+## final model
 rf_mod <- caret::train(x = dtm,
-                y = as.factor(train_df[["is_covid"]]),
-                method = "ranger",
-                importance = "impurity",
-                trControl = tcntrl,
-                tuneGrid = tgrid)
+                       y = as.factor(train_df[["is_covid"]]),
+                       method = "ranger",
+                       importance = "impurity",
+                       trControl = trainControl(method = "none"),
+                       tuneGrid = data.frame(mtry = floor(sqrt(ncol(dtm))) * 2,
+                                             splitrule = "gini",
+                                             min.node.size = 20))
 
 
 # prep test
@@ -247,7 +257,7 @@ mod_metrics <- rbind(tibble(value = rf_cm$overall, metric = names(rf_cm$overall)
   pivot_wider(names_from = metric, values_from = value) %>%
   mutate(model = "Random Forests\n('ranger' package, R 3.5.3.)\nWright MN, Ziegler A (2017). “ranger: A Fast Implementation of Random Forests for High Dimensional Data in C++ and R.” Journal of Statistical Software, 77(1), 1–17. doi: 10.18637/jss.v077.i01.",
          sample_size = rf_mod$finalModel$num.samples,
-         train_prop_covid = sum(dta_raw$is_covid == TRUE)/nrow(dta_raw),
+         train_prop_covid = sum(dta_raw$is_covid == "1")/nrow(dta_raw),
          mtry = rf_mod$finalModel$mtry,
          n_tree = rf_mod$finalModel$num.trees,
          min_node_size = rf_mod$finalModel$min.node.size,

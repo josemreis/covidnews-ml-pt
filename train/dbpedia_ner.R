@@ -11,22 +11,28 @@ dta_raw <- readr::read_csv("train/data/0_data_parsed.csv") %>%
   distinct(text, is_covid, .keep_all = TRUE) %>%
   filter(!is.na(is_covid) & !is.na(text))
 
+## load the latest dbpedia ner
+current_entities <- read_csv("train/data/dbpedia_named_entities.csv")
+
 
 ### wrapper function
 get_dbpedia_entities <- function(txt, doc_id) {
   
-  req <- tryCatch(RETRY(verb = "GET",
-                        url = "https://api.dbpedia-spotlight.org/pt/annotate",
-                        query = list(text = txt,
-                                confidence = 0.5,
-                                types = "DBpedia:Activity, DBpedia:AnatomicalStructure, DBpedia:ChemicalSubstance, DBpedia:Disease, DBpedia:Drug, DBpedia:Organisation, DBpedia:Person, DBpedia:Protein, DBpedia:Work"),
-                        accept_json(),
-                        times = 10,
-                        pause_min = 15),
-                  error = function(e) NULL)
-  
-  if (!is.null(req)){
+  if (!doc_id %in% current_entities$doc_id) {
     
+    
+    req <- tryCatch(RETRY(verb = "GET",
+                          url = "https://api.dbpedia-spotlight.org/pt/annotate",
+                          query = list(text = txt,
+                                       confidence = 0.5,
+                                       types = "DBpedia:Activity, DBpedia:AnatomicalStructure, DBpedia:ChemicalSubstance, DBpedia:Disease, DBpedia:Drug, DBpedia:Organisation, DBpedia:Person, DBpedia:Protein, DBpedia:Work"),
+                          accept_json(),
+                          times = 10,
+                          pause_min = 15),
+                    error = function(e) NULL)
+    
+    if (!is.null(req)){
+      
       ## parse
       res <- try(jsonlite::fromJSON(content(req, "text")) %>%
                    `[[`("Resources") %>%
@@ -49,31 +55,40 @@ get_dbpedia_entities <- function(txt, doc_id) {
         
       } 
       
+      
+    } else {
+      
+      res <- NULL
+      cat(paste("\nRequest refused.", req$status, sep = "\n"))
+      
+    }
+    
+    print(res)
+    
+    Sys.sleep(1)
+    return(res)  
+    
     
   } else {
     
-    res <- NULL
-    cat(paste("\nRequest refused.", req$status, sep = "\n"))
-    
+    print("done!")
   }
   
-  print(res)
-  
-  Sys.sleep(1)
-  return(res)
 }
 
 ### Extract
-covid_ner <- map2_df(dta_raw$text, dta_raw$doc_id,
+covid_ner <- map2_df(dta_raw$text[!dta_raw$doc_id %in% current_entities$doc_id], dta_raw$doc_id[!dta_raw$doc_id %in% current_entities$doc_id],
                      ~ get_dbpedia_entities(txt = .x, doc_id = .y))
-
 
 # join
 to_join <- select(dta_raw, doc_id, is_covid)
 joined <- left_join(covid_ner, to_join)
 
+## join to previous
+news_entities <- rbind(current_entities, joined)
+
 # export 
-write_csv(joined,
+write_csv(news_entities,
           "train/data/dbpedia_named_entities.csv")
 
 joined %>%
