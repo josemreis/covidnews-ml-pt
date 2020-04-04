@@ -28,7 +28,6 @@ root_dir <- here::here()
 ## named entity coutns
 tidy_types <- read_csv("train/data/dbpedia_entity-type_counts.csv")
 
-
 ### Unit of analysis: title + leading_paragraph
 ###---------------------------------------------------------------------------------------
 # load_dta <- function(filename){
@@ -155,7 +154,7 @@ prep_train <- function(txt, id) {
   dtm_text <- create_dtm(it, vectorizer)
   
   tfidf <- TfIdf$new()
-  # fit model to train data and transform train data with fitted model
+  # fit model to train data and transform train data with fitted model and add the remaining vars
   dtm_text_tfidf <- fit_transform(dtm_text, tfidf) %>%
     as.matrix() %>%
     as.data.frame() %>%
@@ -163,7 +162,6 @@ prep_train <- function(txt, id) {
     left_join(tidy_types) %>% ## add entity tyes
     mutate_all(., ~ ifelse(is.na(.), 0, .)) %>%
     left_join(select(dta_raw, doc_id, word_count)) %>%
-    mutate(word_count = as.numeric(str_extract(word_count, "[0-9]+"))) %>%
     select(-doc_id)
   
   ## pass to environment where function is called (pass it to test set)
@@ -177,6 +175,11 @@ prep_train <- function(txt, id) {
 # prep train data
 train_df <- dta_raw[trainIndex,]
 dtm <- prep_train(train_df$text, train_df$doc_id)
+
+## export training dtm
+write_csv(dtm %>%
+            mutate(is_covid = train_df$is_covid) %>%
+            select(is_covid, everything()), "train/data/training_dtm.csv")
 
 # Tune randomly selected predictors (min.node.size seems to be optima at 20 for most mtry)
 # set.seed(1234)
@@ -231,7 +234,6 @@ prep_test <- function(txt, id) {
     left_join(tidy_types) %>% ## add entity tyes
     mutate_all(., ~ ifelse(is.na(.), 0, .)) %>%
     left_join(select(dta_raw, doc_id, word_count)) %>%
-    mutate(word_count = as.numeric(str_extract(word_count, "[0-9]+"))) %>%
     select(-doc_id)
   
   

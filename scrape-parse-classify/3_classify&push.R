@@ -16,6 +16,9 @@ library(git2r)
 library(caret)
 library(text2vec)
 
+## source dbpedia ner
+source("train/dbpedia_ner.R")
+
 ## load the random forests model and model metrics
 model <- readRDS("train/final_model/rf-model.rds")
 model_metrics <- read.csv("train/final_model/rf-model-metrics.csv")
@@ -25,21 +28,37 @@ vocab <- readRDS("train/final_model/rf-vectorizer.rds")
 git2r::config(user.name = "josemreis",user.email = readLines("/home/jmr/ile_mail.txt"))
 ## git key
 git_key <- readLines("/home/jmr/github_pass.txt")
+## named entity coutns
+tidy_types <- read_csv("train/data/dbpedia_entity-type_counts.csv")
 
-training_txt <-  readr::read_csv("train/data/0_data_parsed.csv") %>%
-  mutate(text = remaining_content) %>%
-  distinct(doc_id, .keep_all = TRUE) %>%
-  filter(!is.na(is_covid))  %>%
+# load the training data
+training_txt <- readr::read_csv("train/data/0_data_parsed.csv") %>%
+  mutate(lp_join = if_else(nchar(leading_paragraph) < 600,
+                           remaining_content,
+                           leading_paragraph),
+         is_covid = ifelse(is_covid == TRUE,
+                           "1",
+                           "0")) %>%
+  unite(., col = "text", c("headlines", "lp_join"), sep = " ") %>%
+  distinct(text, is_covid, .keep_all = TRUE) %>%
+  filter(!is.na(is_covid)) %>%
   dplyr::pull("text")
 
 ## text input helper function
 ##------------------------------------------------------------------------
 ## pre-train tfidf model
+## stemmer
+stemmer <- function(x) {
+  tokens = word_tokenizer(x)
+  lapply(tokens, SnowballC::wordStem, language="en")
+}
+
+## define the function
 train_tfidf_model <- function(txt = training_txt) {
   
   ## tokenizing
   prep_fun = tolower
-  tok_fun = word_tokenizer
+  tok_fun = stemmer
   
   it <- itoken(txt,
                preprocessor = prep_fun, 
@@ -52,10 +71,12 @@ train_tfidf_model <- function(txt = training_txt) {
   ## turn to document term matrix
   dtm_text <- create_dtm(it, vectorizer)
   
+  # define the new tfidf model 
   tfidf <- TfIdf$new()
   
   # fit model to train data and transform train data with fitted model
-  dtm_text_tfidf <- fit_transform(dtm_text, tfidf)
+  dtm_text_tfidf <- fit_transform(dtm_text, tfidf) 
+  
   ## pass to environment where function is called (pass it to test set)
   trained_tfidf <<- tfidf
   
@@ -66,8 +87,28 @@ train_tfidf_model()
 ### prep input data
 prep_input <- function(txt) {
   
+  ## get dbpedia entities
+  entities <- get_dbpedia_entities(txt = txt, doc_id = "fooh") %>%
+    mutate(entity_types_all = str_extract_all(types, "(?<=DBpedia\\:)\\w+")) %>%
+    select(entity_types_all) %>%
+    dplyr::pull(entity_types_all) %>%
+    map_df(.,
+           ~ tibble(entity_type = .x)) %>%
+    count(entity_type) %>%
+    pivot_wider(names_from = entity_type, values_from = n, names_prefix = "entity_count_") %>%
+    mutate(doc_id = "fooh")
+  
+  ## add remaining entities with count == 0
+  other_types <- tidy_types[1,] %>%
+    mutate_all(., ~ ifelse(is.na(.) | is.double(.), 0, .)) %>%
+    mutate(doc_id = "fooh")
+  
+  entities_all <- left_join(entities, other_types) %>%
+    select(-doc_id)
+  
+  ## pre-process the text
   prep_fun = tolower
-  tok_fun = text2vec::word_tokenizer
+  tok_fun = stemmer
   
   it <- text2vec::itoken(txt,
                          preprocessor = prep_fun, 
@@ -81,12 +122,11 @@ prep_input <- function(txt) {
   ## turn to document term matrix
   dtm_text <- text2vec::create_dtm(it, vectorizer) 
   
-  # 
-  dtm_text_tfidf <- transform(dtm_text, trained_tfidf)
-  
-  to_return <- dtm_text_tfidf %>%
+  ## tfidf vectorization using the tfidf dtm used for training
+  dtm_text_tfidf <- transform(dtm_text, trained_tfidf) %>%
     as.matrix() %>%
-    as.data.frame()
+    as.data.frame() %>% ## add the remaining vars
+    cbind(entities_all) 
   
   ## return
   return(to_return)
