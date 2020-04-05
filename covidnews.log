@@ -534,7 +534,6 @@ No encoding supplied: defaulting to UTF-8.
 3 http… 11      Http… Carolina P… 1276   0.999993040273… 0.0              fooh  
 Joining, by = c("entity_count_Actor", "entity_count_Agent", "entity_count_Artist", "entity_count_Broadcaster", "entity_count_Organisation", "entity_count_Person", "entity_count_TelevisionStation", "doc_id")
   |                                                                              |======================================================================| 100%
-=========================================| 100%
 No encoding supplied: defaulting to UTF-8.
 # A tibble: 9 x 8
   URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
@@ -550,25 +549,28 @@ No encoding supplied: defaulting to UTF-8.
 9 http… 714     Wiki… Instagram   2915   1.0             0.0              fooh  
 Joining, by = c("entity_count_Agent", "entity_count_Company", "entity_count_Organisation", "entity_count_Software", "entity_count_Work", "doc_id")
   |                                                                              |======================================================================| 100%
-VIDIA      417    1.0             0.0             
- 4 http… 355     Wiki… NVIDIA      439    1.0             0.0             
- 5 http… 2198    Wiki… Apple       632    1.0             5.6740704582465…
- 6 http… 1908    Wiki… Intel       721    1.0             0.0             
- 7 http… 1908    Wiki… Intel       892    1.0             0.0             
- 8 http… 1908    Wiki… Intel       944    1.0             0.0             
- 9 http… 1908    Wiki… Intel       1412   1.0             0.0             
-10 http… 284     Http… Renoir      1607   0.998344724069… 0.0016580204116…
-11 http… 1453    Wiki… TIME        1847   0.999137809854… 0.0             
-12 http… 681     Wiki… AMD         2092   1.0             0.0             
-13 http… 284     Http… Renoir      2102   0.998344724069… 0.0016580204116…
-14 http… 1908    Wiki… Intel       2225   1.0             0.0             
-15 http… 1908    Wiki… Intel       2364   1.0             0.0             
-16 http… 2962    Wiki… Facebook    2986   1.0             0.0             
-17 http… 714     Wiki… Instagram   2995   1.0             0.0             
-# … with 1 more variable: doc_id <chr>
-Joining, by = c("entity_count_Agent", "entity_count_Company", "entity_count_Magazine", "entity_count_Organisation", "entity_count_PeriodicalLiterature", "entity_count_Person", "entity_count_Software", "entity_count_Work", "entity_count_WrittenWork", "doc_id")
-  |                                                                              |======================================================================| 100%
+=========================================| 100%
 No encoding supplied: defaulting to UTF-8.
+# A tibble: 13 x 8
+   URI   support types surfaceForm offset similarityScore percentageOfSec…
+   <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>           
+ 1 http… 2223    Wiki… Sony        78     0.999990581611… 9.4113104220524…
+ 2 http… 11      Http… Mark Cerny  129    1.0             0.0             
+ 3 http… 2223    Wiki… Sony        923    0.999990581611… 9.4113104220524…
+ 4 http… 2223    Wiki… Sony        1157   0.999990581611… 9.4113104220524…
+ 5 http… 2223    Wiki… Sony        1204   0.999990581611… 9.4113104220524…
+ 6 http… 2223    Wiki… Sony        1467   0.999990581611… 9.4113104220524…
+ 7 http… 4894    Wiki… Microsoft   1502   1.0             1.3231895642784…
+ 8 http… 2223    Wiki… Sony        1630   0.999990581611… 9.4113104220524…
+ 9 http… 2223    Wiki… Sony        1870   0.999990581611… 9.4113104220524…
+10 http… 4894    Wiki… Microsoft   1891   1.0             1.3231895642784…
+11 http… 8       Http… Phil Spenc… 1955   1.0             0.0             
+12 http… 2962    Wiki… Facebook    2511   1.0             0.0             
+13 http… 714     Wiki… Instagram   2520   1.0             0.0             
+# … with 1 more variable: doc_id <chr>
+Joining, by = c("entity_count_Agent", "entity_count_Company", "entity_count_Organisation", "entity_count_Person", "entity_count_Software", "entity_count_Work", "doc_id")
+  |                                                                              |======================================================================| 100%
+lied: defaulting to UTF-8.
 # A tibble: 16 x 8
    URI   support types surfaceForm offset similarityScore percentageOfSec…
    <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>           
@@ -591,11 +593,13 @@ No encoding supplied: defaulting to UTF-8.
 # … with 1 more variable: doc_id <chr>
 Joining, by = c("entity_count_Agent", "entity_count_Book", "entity_count_Company", "entity_count_Organisation", "entity_count_Software", "entity_count_TelevisionShow", "entity_count_VideoGame", "entity_count_Work", "entity_count_WrittenWork", "doc_id")
   |                                                                              |======================================================================| 100%
-iki… Sony        4969   No encoding supplied: defaulting to UTF-8.
-# A tibble: 16 x 8
-   URI   support types surfaceForm offset similarityScore percentageOfSec…
-   <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>           
- 1 http… 2223    Wiki… Sony        485    0.999999999688… 3.1164658725855…
+No encoding supplied: defaulting to UTF-8.
+
+No entities.
+NULL
+Joining, by = "doc_id"
+  |                                                                              |======================================================================| 100%
+p… 2223    Wiki… Sony        485    0.999999999688… 3.1164658725855…
  2 http… 4894    Wiki… Microsoft   3394   1.0             3.9470808333792…
  3 http… 2223   No encoding supplied: defaulting to UTF-8.
 
@@ -609,6 +613,8 @@ NULL
 Joining, by = "doc_id"
   |                                                             No encoding supplied: defaulting to UTF-8.
 # A tibble: 8 x 8
+  URI   support types surfaceForm oNo encoding supplied: defaulting to UTF-8.
+# A tibble: 8 x 8
   URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
   <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
 1 http… 662     Http… Henrique    146    0.999084057867… 9.1545274466978… fooh  
@@ -620,8 +626,10 @@ Joining, by = "doc_id"
 7 http… 3432    Wiki… Twitter     4563   1.0             0.0              fooh  
 8 http… 22      Wiki… anunciadas  4632   0.957289900882… 0.0              fooh  
 Joining, by = c("entity_count_Agent", "entity_count_Cleric", "entity_count_EducationalInstitution", "entity_count_Organisation", "entity_count_Person", "entity_count_Politician", "entity_count_Royalty", "entity_count_Saint", "entity_count_SoccerClub", "entity_count_SportsTeam", "entity_count_University", "entity_count_Website", "entity_count_Work", "doc_id")
-  |                                                                              |======================================================================| 100%
-                                             |=============================No encoding supplied: defaulting to UTF-8.
+  |                                                             There were 28 warnings (use warnings() to see them)
+Joining, by = "url"
+=================| 100%
+============================No encoding supplied: defaulting to UTF-8.
 # A tibble: 8 x 8
   URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
   <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
@@ -635,7 +643,13 @@ Joining, by = c("entity_count_Agent", "entity_count_Cleric", "entity_count_Educa
 8 http… 22      Wiki… anunciadas  4632   0.957289900882… 0.0              fooh  
 Joining, by = c("entity_count_Agent", "entity_count_Cleric", "entity_count_EducationalInstitution", "entity_count_Organisation", "entity_count_Person", "entity_count_Politician", "entity_count_Royalty", "entity_count_Saint", "entity_count_SoccerClub", "entity_count_SportsTeam", "entity_count_University", "entity_count_Website", "entity_count_Work", "doc_id")
   |                                                                              |======================================================================| 100%
-=========================================| 100%
-=========================================| 100%
-_count_Newspaper", "entity_count_PeriodicalLiterature", "entity_count_Wikidata", "entity_count_Work", "entity_count_WrittenWork", "doc_id")
+No encoding supplied: defaulting to UTF-8.
+# A tibble: 3 x 8
+  URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
+  <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
+1 http… 188     Wiki… Jornal de … 160    0.999999999579… 0.0              fooh  
+2 http… 148     Http… António Co… 904    0.999999185014… 0.0              fooh  
+3 http… 84      Wiki… WhatsApp    1632   1.0             0.0              fooh  
+Joining, by = c("entity_count_Agent", "entity_count_Newspaper", "entity_count_PeriodicalLiterature", "entity_count_Person", "entity_count_Politician", "entity_count_Software", "entity_count_Work", "entity_count_WrittenWork", "doc_id")
   |                                                                              |======================================================================| 100%
+=========================================| 100%
