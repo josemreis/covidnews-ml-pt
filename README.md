@@ -8,9 +8,8 @@ This repo contains a scraper pipeline which:
 1.  Pulls all news from available Portuguese domains using [GDELT’s
     API](https://www.gdeltproject.org/) given a certain time range using
     [gdeltr2’s wrapper functions](https://github.com/abresler/gdeltr2).
-    Data is collected and updated every 100, 120 or 240 minutes,
-    depending on time of day. For more details, see
-    `scrape-parse-classify/1_gdelt_pull.R`
+    Data is collected and updated every every 2 hours. For more details,
+    see `scrape-parse-classify/1_gdelt_pull.R`
 
 2.  Parses each news article with python using
     [news-please](https://github.com/fhamborg/news-please) or, if
