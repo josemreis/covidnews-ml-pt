@@ -161,7 +161,7 @@ prep_train <- function(txt, id) {
     mutate(doc_id = rownames(.)) %>%
     left_join(tidy_types) %>% ## add entity tyes
     mutate_all(., ~ ifelse(is.na(.), 0, .)) %>%
-    left_join(select(dta_raw, doc_id, word_count)) %>%
+    left_join(select(dta_raw, doc_id)) %>%
     select(-doc_id)
   
   ## pass to environment where function is called (pass it to test set)
@@ -233,7 +233,7 @@ prep_test <- function(txt, id) {
     mutate(doc_id = rownames(.)) %>%
     left_join(tidy_types) %>% ## add entity tyes
     mutate_all(., ~ ifelse(is.na(.), 0, .)) %>%
-    left_join(select(dta_raw, doc_id, word_count)) %>%
+    left_join(select(dta_raw, doc_id)) %>%
     select(-doc_id)
   
   
@@ -281,7 +281,7 @@ readr::write_csv(mod_metrics,
                  path = paste("train/final_model/sample_level_metrics/rf-model-metrics","_sample_n_", nrow(train_df), ".csv"))
 
 
-if (mod_metrics$model_f1 > latest_model$model_f1){
+if (mod_metrics$model_f1 > latest_model$model_f1) {
   
   write_rds(rf_mod, path = "train/final_model/rf-model.rds")
   # export current model metrics

@@ -20,7 +20,7 @@ get_dbpedia_entities <- function(txt, doc_id) {
                                        confidence = 0.5,
                                        types = "DBpedia:Activity, DBpedia:AnatomicalStructure, DBpedia:ChemicalSubstance, DBpedia:Disease, DBpedia:Drug, DBpedia:Organisation, DBpedia:Person, DBpedia:Protein, DBpedia:Work"),
                           accept_json(),
-                          times = 10,
+                          times = 3,
                           pause_min = 15),
                     error = function(e) NULL)
     
@@ -57,8 +57,6 @@ get_dbpedia_entities <- function(txt, doc_id) {
     }
     
     print(res)
-    
-    Sys.sleep(1)
     return(res)  
   
 }

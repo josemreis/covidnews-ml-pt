@@ -45,8 +45,8 @@ cat(paste0("\n\n--- ", Sys.time(), " ---\n"),
 
 # set the time_range parameter depending on time of day
 cur_time_range <- dplyr::case_when(
-  as.numeric(format(Sys.time(), "%H")) %in% seq(0, 6) ~ "180 minutes",
-  as.numeric(format(Sys.time(), "%H")) %in% seq(7, 20) ~ "60 minutes",
+  as.numeric(format(Sys.time(), "%H")) %in% seq(0, 6) ~ "240 minutes",
+  as.numeric(format(Sys.time(), "%H")) %in% seq(7, 20) ~ "100 minutes",
   as.numeric(format(Sys.time(), "%H")) %in% seq(20, 23) ~ "120 minutes"
 )
 
@@ -97,10 +97,7 @@ classifier_input <- parsed_news %>%
 
 # get the prediction
 pred_data <- map2_df(classifier_input$pred_input, classifier_input$url, 
-                     ~ (covid_classifier(.x) %>%  mutate(url = .y))) %>%
-  mutate(about_covid = ifelse(about_covid == TRUE,
-                            "1",
-                            "0"))
+                     ~ (covid_classifier(.x) %>%  mutate(url = .y))) 
 
 # join. Keep covid related articles.
 classified <- left_join(classifier_input, pred_data) %>%
@@ -110,7 +107,7 @@ classified <- left_join(classifier_input, pred_data) %>%
 if (nrow(classified) > 0) {
 
 ## 4 - Export and push
-filename <- paste0("data/", "covidpred_pt_", format(Sys.time(), "%Y-%b-%d_%H-%M"), ".csv")
+  filename <- paste0("data/", "covidpred_pt_", format(Sys.time(), "%Y-%m-%d-%H-%M"), ".csv")
 # export
 write_csv(classified,
           path = filename)

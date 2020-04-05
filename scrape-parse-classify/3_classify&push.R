@@ -87,8 +87,22 @@ train_tfidf_model()
 ### prep input data
 prep_input <- function(txt) {
   
+  ## the server has a limitfor character in the get request. Server limit seems to be 5000.
+  entity_txt <- ifelse(nchar(txt) > 5000,
+                        str_sub(txt, start = 1, end = 5000),
+                        txt)
+  
   ## get dbpedia entities
-  entities <- get_dbpedia_entities(txt = txt, doc_id = "fooh") %>%
+  entities <- try(get_dbpedia_entities(txt = entity_txt, doc_id = "fooh"), silent = TRUE)
+  
+  if (class(entities) == "try-error" || is.null(entities) || nrow(entities) == 0){
+    
+    # random empty tibble
+    entities <- tibble(types = "fooh")
+    
+  }
+  
+  entities <- entities %>%
     mutate(entity_types_all = str_extract_all(types, "(?<=DBpedia\\:)\\w+")) %>%
     select(entity_types_all) %>%
     dplyr::pull(entity_types_all) %>%
@@ -100,11 +114,19 @@ prep_input <- function(txt) {
   
   ## add remaining entities with count == 0
   other_types <- tidy_types[1,] %>%
-    mutate_all(., ~ ifelse(is.na(.) | is.double(.), 0, .)) %>%
     mutate(doc_id = "fooh")
   
   entities_all <- left_join(entities, other_types) %>%
-    select(-doc_id)
+    select(-doc_id) %>%
+    mutate_all(., ~ ifelse(is.na(.), 0, .)) 
+  
+  if (nrow(entities_all) == 0) {
+    
+    entities_all[1,] <- 0
+    entities_all <- entities_all %>%
+      select(-n)
+    
+  }
   
   ## pre-process the text
   prep_fun = tolower
@@ -129,7 +151,7 @@ prep_input <- function(txt) {
     cbind(entities_all) 
   
   ## return
-  return(to_return)
+  return(dtm_text_tfidf)
   
 }
 
@@ -142,12 +164,13 @@ covid_classifier <- function(txt) {
     stringi::stri_enc_toutf8(.) %>%
     trimws()
   
-  if (!is.na(txt) && nchar(txt) > 80) {
+  if (!is.na(clean) && nchar(clean) > 80) {
   
-    txt_dtm <- prep_input(txt = clean)
+    txt_dtm <- prep_input(txt = clean) %>%
+      mutate_all(., ~ ifelse(is.na(.) , 0, .)) 
     
     ## predict
-    my_pred <- caret::predict.train(model, newdata = txt_dtm)
+    my_pred <- predict(model, newdata = txt_dtm)
     
   } else {
     
@@ -156,13 +179,12 @@ covid_classifier <- function(txt) {
   }
     ## get mod metrics
     to_return <- model_metrics %>%
-      mutate(about_covid = my_pred,
-             txt_used = clean) %>%
+      mutate(about_covid = my_pred) %>%
       select(about_covid, everything())
     
     return(to_return)
     
-  }
+}
 
 ## automated github_push
 ##------------------------------------------------------------------------

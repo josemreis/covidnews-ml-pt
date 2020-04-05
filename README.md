@@ -8,8 +8,8 @@ This repo contains a scraper pipeline which:
 1.  Pulls all news from available Portuguese domains using [GDELT’s
     API](https://www.gdeltproject.org/) given a certain time range using
     [gdeltr2’s wrapper functions](https://github.com/abresler/gdeltr2).
-    Data is collected and updated every 40, 60 or 120 minutes, depending
-    on time of day. For more details, see
+    Data is collected and updated every 100, 120 or 240 minutes,
+    depending on time of day. For more details, see
     `scrape-parse-classify/1_gdelt_pull.R`
 
 2.  Parses each news article with python using
@@ -38,11 +38,11 @@ After some experimentation I settled on a random forests model using
     were collected using factiva. An article was considered to be about
     coronavirus if it contained the factiva label **Novel
     Coronaviruses**. You can find it in `train/data/labeled_data`. For
-    collecting the corpus, empty queries for Newspapers in Europe in
-    Portuguesew were used.
+    collecting the corpus, empty queries (“e”) for Newspapers in Europe
+    in Portuguese were used.
   - **Sampling**: the first sample strategy, up to roughly 3000 docs,
     involved making queries for news articles in random dates between
-    01/01/2018 adn 01/10/2019 - not coronavirus-related - and random
+    01/01/2018 and 01/10/2019 - not coronavirus-related - and random
     dates between 15/02/2020 and today using the above-mentioned label
     as a query parameters. Has this was leading to some overfitting a
     new strategy was adopted. I made queries for all news in a random
@@ -50,7 +50,11 @@ After some experimentation I settled on a random forests model using
     presence of the coronavirus factiva label.
   - **Features** - unigram to 5-ngram tokenized words without stop-words
     and stemmed represented as a tf-idf vector. Only words which
-    appeated in at least 20 documents were kept.
+    appeated in at least 20 documents were kept. Furthermore, using
+    [dbpedia’s spotlight api](https://www.dbpedia-spotlight.org/api)
+    extracted all named entities present in the document, aggregated
+    them by dbpedia macro-category, and added the counts for each
+    category as features.
   - **10-fold crossvalidation repeated 3 times** for parameter tunning
   - Latest **model
 specification**
@@ -72,44 +76,43 @@ metrics**
 dplyr::glimpse(read.csv(list.files("data", full.names = TRUE)[1]))
 ```
 
-    ## Observations: 80
-    ## Variables: 39
-    ## $ prediction_covid_topic [3m[38;5;246m<int>[39m[23m 1, 1, 1, 1, 1, 1,…
-    ## $ title                  [3m[38;5;246m<fct>[39m[23m "\"Podem ser libe…
-    ## $ description            [3m[38;5;246m<fct>[39m[23m "Ministra da Just…
-    ## $ authors                [3m[38;5;246m<fct>[39m[23m Global Media Grou…
-    ## $ date_download          [3m[38;5;246m<fct>[39m[23m 2020-04-03 02:07:…
-    ## $ maintext               [3m[38;5;246m<fct>[39m[23m "Francisca van Du…
-    ## $ url                    [3m[38;5;246m<fct>[39m[23m https://www.tsf.p…
-    ## $ gdelt_title            [3m[38;5;246m<fct>[39m[23m " ″ Podem ser lib…
-    ## $ gdelt_url              [3m[38;5;246m<fct>[39m[23m https://www.tsf.p…
-    ## $ date_publish           [3m[38;5;246m<fct>[39m[23m 2020-04-02 23:44:…
-    ## $ modeSearch             [3m[38;5;246m<fct>[39m[23m artlist, artlist,…
-    ## $ sourcecountrySearch    [3m[38;5;246m<fct>[39m[23m PO, PO, PO, PO, P…
-    ## $ termSearch             [3m[38;5;246m<lgl>[39m[23m NA, NA, NA, NA, N…
-    ## $ periodtimeSearch       [3m[38;5;246m<fct>[39m[23m 4 hours, 4 hours,…
-    ## $ isOR                   [3m[38;5;246m<lgl>[39m[23m FALSE, FALSE, FAL…
-    ## $ countMaximumRecords    [3m[38;5;246m<int>[39m[23m 250, 250, 250, 25…
-    ## $ urlGDELTV2FTAPI        [3m[38;5;246m<fct>[39m[23m https://api.gdelt…
-    ## $ urlArticleMobile       [3m[38;5;246m<fct>[39m[23m https://www.tsf.p…
-    ## $ datetimeArticle        [3m[38;5;246m<fct>[39m[23m 2020-04-02T21:15:…
-    ## $ urlImage               [3m[38;5;246m<fct>[39m[23m https://static.gl…
-    ## $ domainArticle          [3m[38;5;246m<fct>[39m[23m tsf.pt, ojogo.pt,…
-    ## $ languageArticle        [3m[38;5;246m<fct>[39m[23m Portuguese, Portu…
-    ## $ countryArticle         [3m[38;5;246m<fct>[39m[23m Portugal, Portuga…
-    ## $ pred_input             [3m[38;5;246m<fct>[39m[23m "Francisca van Du…
-    ## $ model_accuracy         [3m[38;5;246m<dbl>[39m[23m 0.9465909, 0.9465…
-    ## $ model_kappa            [3m[38;5;246m<dbl>[39m[23m 0.8515594, 0.8515…
-    ## $ model_f1               [3m[38;5;246m<dbl>[39m[23m 0.9650817, 0.9650…
-    ## $ model_precision        [3m[38;5;246m<dbl>[39m[23m 0.9622222, 0.9622…
-    ## $ model_recall           [3m[38;5;246m<dbl>[39m[23m 0.9679583, 0.9679…
-    ## $ model                  [3m[38;5;246m<fct>[39m[23m "Random Forests\n…
-    ## $ sample_size            [3m[38;5;246m<int>[39m[23m 4110, 4110, 4110,…
-    ## $ train_prop_covid       [3m[38;5;246m<dbl>[39m[23m 0.2374787, 0.2374…
-    ## $ mtry                   [3m[38;5;246m<int>[39m[23m 202, 202, 202, 20…
-    ## $ n_tree                 [3m[38;5;246m<int>[39m[23m 500, 500, 500, 50…
-    ## $ min_node_size          [3m[38;5;246m<int>[39m[23m 20, 20, 20, 20, 2…
-    ## $ splitrule              [3m[38;5;246m<fct>[39m[23m gini, gini, gini,…
-    ## $ model_type             [3m[38;5;246m<fct>[39m[23m classification, c…
-    ## $ fitted_on              [3m[38;5;246m<fct>[39m[23m 2020-04-02, 2020-…
-    ## $ txt_used               [3m[38;5;246m<fct>[39m[23m Francisca van Dun…
+    ## Observations: 24
+    ## Variables: 38
+    ## $ prediction_covid_topic <int> 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1…
+    ## $ title                  <fct> "Testes \"de prevenção\" em lares arrancaram e…
+    ## $ description            <fct> "Os testes de \"prevenção\" do covid-19 arranc…
+    ## $ authors                <fct> Céu Neves, Global Media Group, Global Media Gr…
+    ## $ date_download          <fct> 2020-04-05 13:40:19, 2020-04-05 13:40:20, 2020…
+    ## $ date_publish           <fct> 2020-04-05 11:15:00, 2020-04-05 11:33:00, 2020…
+    ## $ maintext               <fct> "Os testes ao covid-19 em lares de idosos, lan…
+    ## $ url                    <fct> https://www.dn.pt/pais/testes-de-prevencao-em-…
+    ## $ gdelt_title            <fct> "Testes ″ de preveno ″ em lares arrancaram em …
+    ## $ gdelt_url              <fct> https://www.dn.pt/pais/testes-de-prevencao-em-…
+    ## $ modeSearch             <fct> artlist, artlist, artlist, artlist, artlist, a…
+    ## $ sourcecountrySearch    <fct> PO, PO, PO, PO, PO, PO, PO, PO, PO, PO, PO, PO…
+    ## $ termSearch             <lgl> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA…
+    ## $ periodtimeSearch       <fct> 100 minutes, 100 minutes, 100 minutes, 100 min…
+    ## $ isOR                   <lgl> FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALS…
+    ## $ countMaximumRecords    <int> 250, 250, 250, 250, 250, 250, 250, 250, 250, 2…
+    ## $ urlGDELTV2FTAPI        <fct> https://api.gdeltproject.org/api/v2/doc/doc?qu…
+    ## $ urlArticleMobile       <fct> https://www.dn.pt/pais/amp/testes-de-prevencao…
+    ## $ datetimeArticle        <fct> 2020-04-05T09:15:00Z, 2020-04-05T09:15:00Z, 20…
+    ## $ urlImage               <fct> "https://static.globalnoticias.pt/dn/image.asp…
+    ## $ domainArticle          <fct> dn.pt, tsf.pt, tsf.pt, observador.pt, observad…
+    ## $ languageArticle        <fct> Portuguese, Portuguese, Portuguese, Portuguese…
+    ## $ countryArticle         <fct> Portugal, Portugal, Portugal, Portugal, Portug…
+    ## $ pred_input             <fct> "Os testes ao covid-19 em lares de idosos, lan…
+    ## $ model_accuracy         <dbl> 0.9646357, 0.9646357, 0.9646357, 0.9646357, 0.…
+    ## $ model_kappa            <dbl> 0.928081, 0.928081, 0.928081, 0.928081, 0.9280…
+    ## $ model_f1               <dbl> 0.9686674, 0.9686674, 0.9686674, 0.9686674, 0.…
+    ## $ model_precision        <dbl> 0.9704992, 0.9704992, 0.9704992, 0.9704992, 0.…
+    ## $ model_recall           <dbl> 0.9668425, 0.9668425, 0.9668425, 0.9668425, 0.…
+    ## $ model                  <fct> "Random Forests\n('ranger' package, R 3.5.3.)\…
+    ## $ sample_size            <int> 5479, 5479, 5479, 5479, 5479, 5479, 5479, 5479…
+    ## $ train_prop_covid       <dbl> 0.4347048, 0.4347048, 0.4347048, 0.4347048, 0.…
+    ## $ mtry                   <int> 204, 204, 204, 204, 204, 204, 204, 204, 204, 2…
+    ## $ n_tree                 <int> 500, 500, 500, 500, 500, 500, 500, 500, 500, 5…
+    ## $ min_node_size          <int> 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20…
+    ## $ splitrule              <fct> gini, gini, gini, gini, gini, gini, gini, gini…
+    ## $ model_type             <fct> classification, classification, classification…
+    ## $ fitted_on              <fct> 2020-04-05, 2020-04-05, 2020-04-05, 2020-04-05…

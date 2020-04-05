@@ -28,6 +28,24 @@ The following object is masked from ‘package:purrr’:
 
     lift
 
+Loading required package: httr
+
+Attaching package: ‘httr’
+
+The following object is masked from ‘package:caret’:
+
+    progress
+
+The following objects are masked from ‘package:git2r’:
+
+    config, content
+
+Parsed with column specification:
+cols(
+  .default = col_double(),
+  doc_id = col_character()
+)
+See spec(...) for full column specifications.
 Parsed with column specification:
 cols(
   headlines = col_character(),
@@ -45,7 +63,7 @@ cols(
   author = col_character()
 )
   |                                                                              |=======                                                               |  10%  |                                                                              |==============                                                        |  20%  |                                                                              |=====================                                                 |  30%  |                                                                              |============================                                          |  40%  |                                                                              |===================================                                   |  50%  |                                                                              |==========================================                            |  60%  |                                                                              |=================================================                     |  70%  |                                                                              |========================================================              |  80%  |                                                                              |===============================================================       |  90%  |                                                                              |======================================================================| 100%
-Parsing: https://api.gdeltproject.org/api/v2/doc/doc?query=%20sourcecountry:po&sourcelang:por&mode=artlist&format=json&timespan=180&maxrecords=250&sort=datedesc
+Parsing: https://api.gdeltproject.org/api/v2/doc/doc?query=%20sourcecountry:po&sourcelang:por&mode=artlist&format=json&timespan=100&maxrecords=250&sort=datedesc
 
 Joining, by = "urlGDELTV2FTAPI"
 >> GDELT query --> done.
@@ -54,747 +72,436 @@ In if (class(gdelt_pt_all) == "try-error") { :
   the condition has length > 1 and only the first element will be used
 # A tibble: 1 x 8
   authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <list>   <lis>
-1 Notíci… 2020-04-04 02:00:26 2020-04-04 00:05:00 Presidente… <NULL>   <NUL…
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Céu Ne… 2020-04-05 13:40:19 2020-04-05 11:15:00 "Os testes… "Os tes… <NUL…
 # … with 2 more variables: title <chr>, url <chr>
 # A tibble: 1 x 8
   authors date_download       date_publish        description maintext text 
   <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Antóni… 2020-04-04 02:00:28 2020-04-03 23:06:28 Ministério… "A mini… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Notíci… 2020-04-04 02:00:37 2020-04-03 23:50:35 Grant Gust… "Foi at… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Carlos… 2020-04-04 02:00:40 2020-04-03 22:19:00 O treinado… "A Itál… <NUL…
+1 Global… 2020-04-05 13:40:20 2020-04-05 11:33:00 Será apena… "© EPA\… <NUL…
 # … with 2 more variables: title <chr>, url <chr>
 # A tibble: 1 x 8
   authors date_download       date_publish        description maintext text 
   <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Maria … 2020-04-04 02:00:41 2020-04-03 22:45:00 Ministério… "Se hav… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <list>   <lis>
-1 Notíci… 2020-04-04 02:00:42 2020-04-03 23:29:02 "\"Cada ma… <NULL>   <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Notíci… 2020-04-04 02:00:46 2020-04-04 00:00:00 Iniciativa… "Mesmo … <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Notíci… 2020-04-04 02:00:47 2020-04-03 23:51:00 Dillon Pas… "Joseph… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 3 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
-1 Destak  2020-04-04 02:00:55 <NULL>       As últimas… "Covid-… <NUL… Empr…
-2 Leitor… 2020-04-04 02:00:55 <NULL>       As últimas… "Covid-… <NUL… Empr…
-3 Destak… 2020-04-04 02:00:55 <NULL>       As últimas… "Covid-… <NUL… Empr…
-# … with 1 more variable: url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Notíci… 2020-04-04 02:00:56 2020-04-03 23:30:00 O reputado… "O proj… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 3 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
-1 Destak  2020-04-04 02:01:05 <NULL>       As últimas… "Covid-… <NUL… Orde…
-2 Leitor… 2020-04-04 02:01:05 <NULL>       As últimas… "Covid-… <NUL… Orde…
-3 Destak… 2020-04-04 02:01:05 <NULL>       As últimas… "Covid-… <NUL… Orde…
-# … with 1 more variable: url <chr>
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-04-04 02:01:09 2020-04-03 23:31:00 Resposta d… "Os tra… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-04-04 02:01:33 2020-04-03 22:45:00 O futeboli… "JN/Agê… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Olga C… 2020-04-04 02:01:35 2020-04-03 22:38:00 A Câmara d… "Olga C… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-04-04 02:01:36 2020-04-03 23:29:00 A qualific… "JN/Agê… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Jn Agê… 2020-04-04 02:01:42 2020-04-03 23:09:00 Os trabalh… "JN/Agê… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-04-04 02:01:44 2020-04-03 23:18:00 A Global M… "Hoje à… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Carlos… 2020-04-04 02:01:47 2020-04-03 22:55:00 Para asseg… "Carlos… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-04-04 02:01:48 2020-04-03 22:49:00 A Câmara M… "Teixei… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-04-04 02:01:49 2020-04-03 22:57:00 A Bielorrú… "JN/Agê… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 2 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-04-04 02:01:55 2020-04-03 22:42:00 "Fernando … "Fernan… <NUL…
-2 Bruno … 2020-04-04 02:01:55 2020-04-03 22:42:00 "Fernando … "Fernan… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 4 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
-1 Destak  2020-04-04 02:01:56 <NULL>       As últimas… "Covid-… <NUL… Víru…
-2 Leitor… 2020-04-04 02:01:56 <NULL>       As últimas… "Covid-… <NUL… Víru…
-3 Anónimo 2020-04-04 02:01:56 <NULL>       As últimas… "Covid-… <NUL… Víru…
-4 Destak… 2020-04-04 02:01:56 <NULL>       As últimas… "Covid-… <NUL… Víru…
-# … with 1 more variable: url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <list>   <lis>
-1 Notíci… 2020-04-04 02:01:56 2020-04-03 23:04:55 O apresent… <NULL>   <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 2 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-04-04 02:02:00 2020-04-03 22:52:00 Fucile fal… "Fucile… <NUL…
-2 Bruno … 2020-04-04 02:02:00 2020-04-03 22:52:00 Fucile fal… "Fucile… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-04-04 02:02:13 2020-04-03 22:08:00 Imã da Mes… "A comu… <NUL…
+1 Pedro … 2020-04-05 13:40:20 2020-04-05 10:00:34 Tudo muda … "Apesar… <NUL…
 # … with 2 more variables: title <chr>, url <chr>
 # A tibble: 2 x 8
   authors date_download       date_publish        description maintext text 
   <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-04-04 02:02:14 2020-04-03 20:57:00 "\"Estamos… "\"Esta… <NUL…
-2 Rodrig… 2020-04-04 02:02:14 2020-04-03 20:57:00 "\"Estamos… "\"Esta… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-04-04 02:02:25 2020-04-03 22:11:00 O alerta é… "O bast… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 2 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-04-04 02:02:31 2020-04-03 22:34:00 A Associaç… "O dire… <NUL…
-2 Guilhe… 2020-04-04 02:02:31 2020-04-03 22:34:00 A Associaç… "O dire… <NUL…
+1 Global… 2020-04-05 13:40:21 2020-04-05 10:50:00 Nas idas a… "© Pixa… <NUL…
+2 Sara D… 2020-04-05 13:40:21 2020-04-05 10:50:00 Nas idas a… "© Pixa… <NUL…
 # … with 2 more variables: title <chr>, url <chr>
 # A tibble: 1 x 8
   authors date_download       date_publish        description maintext text 
   <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-04-04 02:02:32 2020-04-03 22:51:00 Técnico do… "Sérgio… <NUL…
+1 Pedro … 2020-04-05 13:40:22 2020-04-05 09:00:47 Informaçõe… "A posi… <NUL…
 # … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Anselm… 2020-04-04 02:02:39 2020-04-03 20:20:00 Boa tarde.… "Boa ta… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 2 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-04-04 02:02:45 2020-04-03 21:09:00 "\"O que n… "\"O qu… <NUL…
-2 Redaçã… 2020-04-04 02:02:45 2020-04-03 21:09:00 "\"O que n… "\"O qu… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-04-04 02:02:46 2020-04-03 23:00:00 Comité Olí… "As fed… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 2 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-04-04 02:02:47 2020-04-03 22:26:00 Foi eleito… "Foi el… <NUL…
-2 Rodrig… 2020-04-04 02:02:47 2020-04-03 22:26:00 Foi eleito… "Foi el… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Marili… 2020-04-04 02:02:53 2020-04-03 23:17:40 A apresent… "No pas… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 João P… 2020-04-04 02:02:55 2020-04-03 22:18:47 Noticiário… "🔊 Ouvi… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 2 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-04-04 02:03:03 2020-04-03 21:56:00 Fucile rec… "Fucile… <NUL…
-2 Bruno … 2020-04-04 02:03:03 2020-04-03 21:56:00 Fucile rec… "Fucile… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 2 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-04-04 02:03:05 2020-04-03 22:31:00 Presidente… "Presid… <NUL…
-2 Redaçã… 2020-04-04 02:03:05 2020-04-03 22:31:00 Presidente… "Presid… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 2 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-04-04 02:03:08 2020-04-03 23:17:00 "Ministra … "Minist… <NUL…
-2 Redaçã… 2020-04-04 02:03:08 2020-04-03 23:17:00 "Ministra … "Minist… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 2 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-04-04 02:03:09 2020-04-03 21:18:00 Campeonato… "Campeo… <NUL…
-2 Redaçã… 2020-04-04 02:03:09 2020-04-03 21:18:00 Campeonato… "Campeo… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 João P… 2020-04-04 02:03:15 2020-04-03 21:58:03 Noticiário… "🔊 Ouvi… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <list>   <lis>
-1 Notíci… 2020-04-04 02:03:15 2020-04-03 23:00:00 Além das q… <NULL>   <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 2 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-04-04 02:03:17 2020-04-03 22:57:00 Federações… "Federa… <NUL…
-2 Redaçã… 2020-04-04 02:03:17 2020-04-03 22:57:00 Federações… "Federa… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
-1 Joana … 2020-04-04 02:03:18 <NULL>       Foi elabor… "Foi el… <NUL… GNR …
-# … with 1 more variable: url <chr>
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Agênci… 2020-04-04 02:03:21 2020-03-04 23:14:00 Empresas c… "Empres… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
-1 Manuel… 2020-04-04 02:03:22 <NULL>       "O músico … "O músi… <NUL… Nuno…
-# … with 1 more variable: url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 João F… 2020-04-04 02:03:24 2020-03-04 23:01:00 O diretor-… "O dire… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
-1 Carlos… 2020-04-04 02:03:25 <NULL>       Queda a pi… "Queda … <NUL… Dado…
-# … with 1 more variable: url <chr>
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Joana … 2020-04-04 02:03:30 2020-04-09 02:00:00 Foram denu… "Foram … <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 3 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
-1 Destak  2020-04-04 02:03:32 <NULL>       As últimas… "Actual… <NUL… Empr…
-2 Leitor… 2020-04-04 02:03:32 <NULL>       As últimas… "Actual… <NUL… Empr…
-3 Destak… 2020-04-04 02:03:32 <NULL>       As últimas… "Actual… <NUL… Empr…
-# … with 1 more variable: url <chr>
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
 # A tibble: 0 x 0
 # A tibble: 0 x 0
 # A tibble: 1 x 8
   authors date_download       date_publish        description maintext text 
   <chr>   <dttm>              <dttm>              <chr>       <list>   <lis>
-1 Marili… 2020-04-04 02:03:47 2020-04-03 22:52:52 O cantor c… <NULL>   <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Notíci… 2020-04-04 02:03:58 2020-04-03 22:47:59 "\"Da part… "Uma me… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 10 x 8
-   authors date_download       date_publish        description maintext text 
-   <chr>   <dttm>              <dttm>              <list>      <chr>    <lis>
- 1 Foto    2020-04-04 02:03:59 2020-04-03 22:24:42 <NULL>      "Além d… <NUL…
- 2 Epa     2020-04-04 02:03:59 2020-04-03 22:24:42 <NULL>      "Além d… <NUL…
- 3 David … 2020-04-04 02:03:59 2020-04-03 22:24:42 <NULL>      "Além d… <NUL…
- 4 Luong … 2020-04-04 02:03:59 2020-04-03 22:24:42 <NULL>      "Além d… <NUL…
- 5 Epa Lu… 2020-04-04 02:03:59 2020-04-03 22:24:42 <NULL>      "Além d… <NUL…
- 6 Pa Luo… 2020-04-04 02:03:59 2020-04-03 22:24:42 <NULL>      "Além d… <NUL…
- 7 Epa An… 2020-04-04 02:03:59 2020-04-03 22:24:42 <NULL>      "Além d… <NUL…
- 8 Dean L… 2020-04-04 02:03:59 2020-04-03 22:24:42 <NULL>      "Além d… <NUL…
- 9 Epa Ni… 2020-04-04 02:03:59 2020-04-03 22:24:42 <NULL>      "Além d… <NUL…
-10 Wang Y… 2020-04-04 02:03:59 2020-04-03 22:24:42 <NULL>      "Além d… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 4 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Filipe… 2020-04-04 02:04:08 2020-04-03 14:25:51 Covid-19 j… "Portug… <NUL…
-2 Cristi… 2020-04-04 02:04:08 2020-04-03 14:25:51 Covid-19 j… "Portug… <NUL…
-3 Stefan… 2020-04-04 02:04:08 2020-04-03 14:25:51 Covid-19 j… "Portug… <NUL…
-4 Henriq… 2020-04-04 02:04:08 2020-04-03 14:25:51 Covid-19 j… "Portug… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 João F… 2020-04-04 02:04:25 2020-03-04 23:14:00 No total, … "Só nas… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <list>   <lis>
-1 Marili… 2020-04-04 02:05:03 2020-04-03 22:03:16 A apresent… <NULL>   <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <list>   <lis>
-1 Marili… 2020-04-04 02:05:04 2020-04-03 21:57:45 O príncipe… <NULL>   <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <list>   <lis>
-1 Notíci… 2020-04-04 02:05:12 2020-04-03 22:04:09 A atriz an… <NULL>   <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 3 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
-1 Destak  2020-04-04 02:05:13 <NULL>       As últimas… "Covid-… <NUL… Poli…
-2 Leitor… 2020-04-04 02:05:13 <NULL>       As últimas… "Covid-… <NUL… Poli…
-3 Destak… 2020-04-04 02:05:13 <NULL>       As últimas… "Covid-… <NUL… Poli…
-# … with 1 more variable: url <chr>
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <list>      <chr>    <lis>
-1 Agênci… 2020-04-04 02:05:19 2020-04-03 19:06:34 <NULL>      "Cento … <NUL…
+1 Catari… 2020-04-05 13:40:25 2020-04-04 13:20:14 O casal ap… <NULL>   <NUL…
 # … with 2 more variables: title <chr>, url <chr>
 # A tibble: 1 x 8
   authors date_download       date_publish        description maintext text 
   <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Rádio … 2020-04-04 02:05:20 2020-04-03 22:43:28 O Institut… "\"O pr… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <list>      <chr>    <lis>
-1 Sul In… 2020-04-04 02:05:22 2020-04-03 18:55:59 <NULL>      "Uma ar… <NUL…
+1 Agênci… 2020-04-05 13:40:27 2020-05-04 11:49:00 Um avião f… "Três c… <NUL…
 # … with 2 more variables: title <chr>, url <chr>
 # A tibble: 1 x 8
   authors date_download       date_publish        description maintext text 
   <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Miguel… 2020-04-04 02:05:23 2020-04-03 22:30:00 Teremos de… "A OneP… <NUL…
+1 Agênci… 2020-04-05 13:40:28 2020-05-04 11:54:00 A medida f… "A evol… <NUL…
 # … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <list>      <chr>    <lis> <chr>
-1 Braga … 2020-04-04 02:05:28 <NULL>       <NULL>      Os habi… <NUL… Brag…
-# … with 1 more variable: url <chr>
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <list>      <chr>    <lis>
-1 Pedro … 2020-04-04 02:05:33 2020-04-03 18:30:21 <NULL>      "21 ute… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 1 x 8
+# A tibble: 2 x 8
   authors date_download       date_publish        description maintext text 
   <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Notíci… 2020-04-04 02:05:36 2020-04-03 22:30:00 Como lidar… "Estar … <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <list>      <chr>    <lis>
-1 Sul In… 2020-04-04 02:05:38 2020-04-03 19:56:19 <NULL>      "A Câma… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Notíci… 2020-04-04 02:05:46 2020-04-03 22:01:20 Medida ser… "A Casa… <NUL…
+1 Global… 2020-04-05 13:40:29 2020-04-05 11:51:00 As empresa… "© Henr… <NUL…
+2 Dora P… 2020-04-05 13:40:29 2020-04-05 11:51:00 As empresa… "© Henr… <NUL…
 # … with 2 more variables: title <chr>, url <chr>
 # A tibble: 1 x 8
   authors date_download       date_publish        description maintext text 
   <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Notíci… 2020-04-04 02:05:48 2020-04-03 22:40:00 "President… "O pres… <NUL…
+1 Rádio … 2020-04-05 13:40:30 2020-04-05 11:09:35 Privadas d… "\"Esta… <NUL…
 # … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Notíci… 2020-04-04 02:05:51 2020-04-03 22:00:00 Perante o … "Face à… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Rádio … 2020-04-04 02:05:53 2020-04-03 22:37:45 A qualific… "Qualif… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <list>      <chr>    <lis>
-1 Braga … 2020-04-04 02:05:54 2020-04-03 18:46:43 <NULL>      "O Plan… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Ana Pe… 2020-04-04 02:06:32 2020-04-03 22:04:00 O Presiden… "O Pres… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
-1 Revist… 2020-04-04 02:06:35 <NULL>       Neste cart… "O cabe… <NUL… "Cab…
-# … with 1 more variable: url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
-1 Revist… 2020-04-04 02:06:37 <NULL>       Ideal para… "Aprove… <NUL… Esta…
-# … with 1 more variable: url <chr>
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-04-04 02:06:53 2020-04-03 22:14:00 O mito de … "Sérgio… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
 # A tibble: 0 x 0
 # A tibble: 0 x 0
 # A tibble: 3 x 8
   authors date_download       date_publish description maintext text  title
   <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
-1 Destak  2020-04-04 02:07:13 <NULL>       As últimas… "Covid-… <NUL… Gove…
-2 Leitor… 2020-04-04 02:07:13 <NULL>       As últimas… "Covid-… <NUL… Gove…
-3 Destak… 2020-04-04 02:07:13 <NULL>       As últimas… "Covid-… <NUL… Gove…
+1 Destak  2020-04-05 13:40:34 <NULL>       As últimas… "Covid-… <NUL… No V…
+2 Leitor… 2020-04-05 13:40:34 <NULL>       As últimas… "Covid-… <NUL… No V…
+3 Destak… 2020-04-05 13:40:34 <NULL>       As últimas… "Covid-… <NUL… No V…
 # … with 1 more variable: url <chr>
-# A tibble: 4 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
-1 Destak  2020-04-04 02:07:14 <NULL>       As últimas… "Covid-… <NUL… PCP …
-2 Leitor… 2020-04-04 02:07:14 <NULL>       As últimas… "Covid-… <NUL… PCP …
-3 Dono D… 2020-04-04 02:07:14 <NULL>       As últimas… "Covid-… <NUL… PCP …
-4 Destak… 2020-04-04 02:07:14 <NULL>       As últimas… "Covid-… <NUL… PCP …
-# … with 1 more variable: url <chr>
-# A tibble: 0 x 0
-# A tibble: 0 x 0
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Rádio … 2020-04-05 13:40:34 2020-04-05 10:04:22 Portugal r… "Portug… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
 # A tibble: 3 x 8
   authors date_download       date_publish description maintext text  title
   <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
-1 Destak  2020-04-04 02:07:20 <NULL>       As últimas… "Covid-… <NUL… Holl…
-2 Leitor… 2020-04-04 02:07:20 <NULL>       As últimas… "Covid-… <NUL… Holl…
-3 Destak… 2020-04-04 02:07:20 <NULL>       As últimas… "Covid-… <NUL… Holl…
+1 Destak  2020-04-05 13:40:35 <NULL>       As últimas… "Covid-… <NUL… Econ…
+2 Leitor… 2020-04-05 13:40:35 <NULL>       As últimas… "Covid-… <NUL… Econ…
+3 Destak… 2020-04-05 13:40:35 <NULL>       As últimas… "Covid-… <NUL… Econ…
 # … with 1 more variable: url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
-1 Revist… 2020-04-04 02:07:21 <NULL>       Manuel Luí… "Manuel… <NUL… Mand…
-# … with 1 more variable: url <chr>
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
-1 Revist… 2020-04-04 02:07:36 <NULL>       Os nativos… "Carang… <NUL… Fort…
-# … with 1 more variable: url <chr>
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
-1 Revist… 2020-04-04 02:07:50 <NULL>       Cristina F… "Cristi… <NUL… É tr…
-# … with 1 more variable: url <chr>
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
 # A tibble: 3 x 8
   authors date_download       date_publish description maintext text  title
   <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
-1 Destak  2020-04-04 02:08:02 <NULL>       As últimas… "Covid-… <NUL… OMS …
-2 Leitor… 2020-04-04 02:08:02 <NULL>       As últimas… "Covid-… <NUL… OMS …
-3 Destak… 2020-04-04 02:08:02 <NULL>       As últimas… "Covid-… <NUL… OMS …
+1 Destak  2020-04-05 13:40:35 <NULL>       As últimas… "Covid-… <NUL… Inst…
+2 Leitor… 2020-04-05 13:40:35 <NULL>       As últimas… "Covid-… <NUL… Inst…
+3 Destak… 2020-04-05 13:40:35 <NULL>       As últimas… "Covid-… <NUL… Inst…
 # … with 1 more variable: url <chr>
 # A tibble: 0 x 0
 # A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Rádio … 2020-04-05 13:40:41 2020-04-05 11:09:48 Um avião f… "O Airb… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
 # A tibble: 3 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Rtp     2020-04-04 02:08:13 2020-04-04 01:08:14 Um program… "João A… <NUL…
-2 Rádio … 2020-04-04 02:08:13 2020-04-04 01:08:14 Um program… "João A… <NUL…
-3 João A… 2020-04-04 02:08:13 2020-04-04 01:08:14 Um program… "João A… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
+  authors date_download       date_publish description maintext text  title
+  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
+1 Destak  2020-04-05 13:40:42 <NULL>       As últimas… "Covid-… <NUL… Rest…
+2 Leitor… 2020-04-05 13:40:42 <NULL>       As últimas… "Covid-… <NUL… Rest…
+3 Destak… 2020-04-05 13:40:42 <NULL>       As últimas… "Covid-… <NUL… Rest…
+# … with 1 more variable: url <chr>
 # A tibble: 0 x 0
 # A tibble: 1 x 8
   authors date_download       date_publish        description maintext text 
   <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Bruno … 2020-04-04 02:08:22 2020-04-03 21:52:32 O Galaxy S… "Recent… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Paulo … 2020-04-04 02:08:24 2020-04-03 20:00:52 Experiment… "Creio … <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Vítor … 2020-04-04 02:08:27 2020-04-03 18:00:44 Temos mais… "Que ra… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Ana Br… 2020-04-04 02:08:28 2020-04-03 20:49:32 Reunião es… "A dona… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-04-04 02:08:29 2020-04-03 21:45:00 Várias com… "Sofia … <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Jn Agê… 2020-04-04 02:08:37 2020-04-03 21:30:00 O ministro… "JN/Agê… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Marisa… 2020-04-04 02:08:38 2020-04-03 21:00:37 A Apple e … "A Appl… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-04-04 02:08:39 2020-04-03 18:24:00 O músico n… "Bill W… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Luís M… 2020-04-04 02:08:40 2020-04-03 21:27:00 O Hospital… "Luís M… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Maria … 2020-04-04 02:08:41 2020-04-03 17:13:00 "Um grupo … "Uma no… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-04-04 02:08:43 2020-04-03 21:15:00 O Agrupame… "MAI re… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-04-04 02:08:44 2020-04-03 17:51:00 O estado d… "Guia p… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Maria … 2020-04-04 02:08:45 2020-04-03 19:11:00 Disponível… "Dino D… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Catari… 2020-04-04 02:08:49 2020-04-03 21:58:00 Novos giná… "Já lá … <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Jn Agê… 2020-04-04 02:08:51 2020-04-03 21:54:00 As autorid… "JN/Agê… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-04-04 02:08:53 2020-04-03 21:17:00 O aumento … "R. S. … <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Jn Agê… 2020-04-04 02:08:57 2020-04-03 21:22:00 A pandemia… "JN/Agê… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 4 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Filipe… 2020-04-04 02:08:58 2020-04-03 11:03:20 A vítima t… "Duas r… <NUL…
-2 Cristi… 2020-04-04 02:08:58 2020-04-03 11:03:20 A vítima t… "Duas r… <NUL…
-3 Stefan… 2020-04-04 02:08:58 2020-04-03 11:03:20 A vítima t… "Duas r… <NUL…
-4 Henriq… 2020-04-04 02:08:58 2020-04-03 11:03:20 A vítima t… "Duas r… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-04-04 02:09:05 2020-04-03 21:08:00 A Organiza… "Vírus … <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-04-04 02:09:07 2020-04-03 18:01:00 Matos Fern… "Mapa d… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Ana So… 2020-04-04 02:09:08 2020-04-03 21:28:00 A Fundação… "Ana So… <NUL…
+1 Rádio … 2020-04-05 13:40:43 2020-04-05 11:07:20 A rainha I… "Covid-… <NUL…
 # … with 2 more variables: title <chr>, url <chr>
 # A tibble: 0 x 0
 # A tibble: 3 x 8
   authors date_download       date_publish description maintext text  title
   <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
-1 Destak  2020-04-04 02:09:16 <NULL>       As últimas… "Covid-… <NUL… Empr…
-2 Leitor… 2020-04-04 02:09:16 <NULL>       As últimas… "Covid-… <NUL… Empr…
-3 Destak… 2020-04-04 02:09:16 <NULL>       As últimas… "Covid-… <NUL… Empr…
+1 Destak  2020-04-05 13:40:46 <NULL>       As últimas… "Covid-… <NUL… Aviã…
+2 Leitor… 2020-04-05 13:40:46 <NULL>       As últimas… "Covid-… <NUL… Aviã…
+3 Destak… 2020-04-05 13:40:46 <NULL>       As últimas… "Covid-… <NUL… Aviã…
 # … with 1 more variable: url <chr>
 # A tibble: 3 x 8
   authors date_download       date_publish description maintext text  title
   <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
-1 Destak  2020-04-04 02:09:16 <NULL>       As últimas… "Covid-… <NUL… CDU/…
-2 Leitor… 2020-04-04 02:09:16 <NULL>       As últimas… "Covid-… <NUL… CDU/…
-3 Destak… 2020-04-04 02:09:16 <NULL>       As últimas… "Covid-… <NUL… CDU/…
+1 Destak  2020-04-05 13:40:46 <NULL>       As últimas… "Covid-… <NUL… Comu…
+2 Leitor… 2020-04-05 13:40:46 <NULL>       As últimas… "Covid-… <NUL… Comu…
+3 Destak… 2020-04-05 13:40:46 <NULL>       As últimas… "Covid-… <NUL… Comu…
 # … with 1 more variable: url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-04-04 02:09:17 2020-04-03 21:02:00 Música tem… "Espanh… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
 # A tibble: 3 x 8
   authors date_download       date_publish description maintext text  title
   <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
-1 Destak  2020-04-04 02:09:18 <NULL>       As últimas… "Covid-… <NUL… Empr…
-2 Leitor… 2020-04-04 02:09:18 <NULL>       As últimas… "Covid-… <NUL… Empr…
-3 Destak… 2020-04-04 02:09:18 <NULL>       As últimas… "Covid-… <NUL… Empr…
+1 Destak  2020-04-05 13:40:46 <NULL>       As últimas… "Covid-… <NUL… "\"S…
+2 Leitor… 2020-04-05 13:40:46 <NULL>       As últimas… "Covid-… <NUL… "\"S…
+3 Destak… 2020-04-05 13:40:46 <NULL>       As últimas… "Covid-… <NUL… "\"S…
 # … with 1 more variable: url <chr>
 # A tibble: 1 x 8
   authors date_download       date_publish        description maintext text 
   <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Rádio … 2020-04-04 02:09:19 2020-04-03 20:52:57 O Campeona… "Mundia… <NUL…
+1 Global… 2020-04-05 13:40:47 2020-04-05 11:12:00 O novo cor… "© EPA\… <NUL…
 # … with 2 more variables: title <chr>, url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Global… 2020-04-05 13:40:48 2020-04-05 11:19:00 Cerca de u… "Nuno M… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Rádio … 2020-04-05 13:40:49 2020-04-05 00:56:21 Os futebol… "Covid-… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Global… 2020-04-05 13:40:49 2020-04-05 11:02:00 "As cerca … "Emília… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Rádio … 2020-04-05 13:40:50 2020-04-04 22:57:39 RTP Notíci… "Covid-… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Rádio … 2020-04-05 13:41:42 2020-04-05 10:20:33 O professo… "\"Há u… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Rádio … 2020-04-05 13:41:43 2020-04-05 10:20:46 "O líder p… "Apesar… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Rádio … 2020-04-05 13:41:46 2020-04-05 10:20:14 O professo… "\"A em… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Rádio … 2020-04-05 13:41:47 2020-04-05 10:20:00 Os efeitos… "Segund… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 0 x 0
 Joining, by = c("titleArticle", "urlArticle")
+No encoding supplied: defaulting to UTF-8.
+# A tibble: 2 x 8
+  URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
+  <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
+1 http… 176     Wiki… Universida… 624    1.0             0.0              fooh  
+2 http… 4       Wiki… a colheita  1187   0.999997342664… 0.0              fooh  
+Joining, by = c("entity_count_Agent", "entity_count_Album", "entity_count_EducationalInstitution", "entity_count_MusicalWork", "entity_count_Organisation", "entity_count_University", "entity_count_Work", "doc_id")
   |                                                                              |======================================================================| 100%
-Error in predict.ranger.forest(forest, data, predict.all, num.trees, type,  : 
-  Error: One or more independent variables not found in data.
-Calls: %>% ... predict -> predict.ranger -> predict -> predict.ranger.forest
-Execution halted
+No encoding supplied: defaulting to UTF-8.
+# A tibble: 1 x 8
+  URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
+  <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
+1 http… 994     Wiki… Commonweal… 310    1.0             6.8530735304800… fooh  
+Joining, by = c("entity_count_Agent", "entity_count_Organisation", "doc_id")
+  |                                                                              |======================================================================| 100%
+No encoding supplied: defaulting to UTF-8.
+# A tibble: 8 x 8
+  URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
+  <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
+1 http… 232     Wiki… Skype       68     1.0             0.0              fooh  
+2 http… 232     Wiki… Skype       256    1.0             0.0              fooh  
+3 http… 232     Wiki… Skype       392    1.0             0.0              fooh  
+4 http… 232     Wiki… Skype       502    1.0             0.0              fooh  
+5 http… 232     Wiki… Skype       807    1.0             0.0              fooh  
+6 http… 232     Wiki… Skype       1403   1.0             0.0              fooh  
+7 http… 232     Wiki… Skype       1591   1.0             0.0              fooh  
+8 http… 232     Wiki… Skype       1683   1.0             0.0              fooh  
+Joining, by = c("entity_count_Software", "entity_count_Work", "doc_id")
+  |                                                                              |======================================================================| 100%
+No encoding supplied: defaulting to UTF-8.
+# A tibble: 1 x 8
+  URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
+  <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
+1 http… 9       Http… Beatriz Mo… 39     0.999999999963… 0.0              fooh  
+Joining, by = c("entity_count_Actor", "entity_count_Agent", "entity_count_Artist", "entity_count_Person", "doc_id")
+  |                                                                              |======================================================================| 100%
+No encoding supplied: defaulting to UTF-8.
+# A tibble: 10 x 8
+   URI   support types surfaceForm offset similarityScore percentageOfSec…
+   <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>           
+ 1 http… 2962    Wiki… Facebook    13     1.0             0.0             
+ 2 http… 2962    Wiki… Facebook    270    1.0             0.0             
+ 3 http… 2962    Wiki… Facebook    340    1.0             0.0             
+ 4 http… 2962    Wiki… Facebook    475    1.0             0.0             
+ 5 http… 84      Wiki… WhatsApp    601    1.0             0.0             
+ 6 http… 2962    Wiki… Facebook    773    1.0             0.0             
+ 7 http… 2962    Wiki… Facebook    1713   1.0             0.0             
+ 8 http… 2962    Wiki… Facebook    2015   1.0             0.0             
+ 9 http… 2962    Wiki… Facebook    2192   1.0             0.0             
+10 http… 2962    Wiki… Facebook    2429   1.0             0.0             
+# … with 1 more variable: doc_id <chr>
+Joining, by = c("entity_count_Agent", "entity_count_Company", "entity_count_Organisation", "entity_count_Software", "entity_count_Work", "doc_id")
+  |                                                                              |======================================================================| 100%
+No encoding supplied: defaulting to UTF-8.
+# A tibble: 1 x 8
+  URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
+  <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
+1 http… 14      Http… Augusto Sa… 1989   1.0             0.0              fooh  
+Joining, by = c("entity_count_Agent", "entity_count_Person", "entity_count_Politician", "doc_id")
+  |                                                                              |======================================================================| 100%
+No encoding supplied: defaulting to UTF-8.
+
+No entities.
+NULL
+Joining, by = "doc_id"
+  |                                                                              |======================================================================| 100%
+No encoding supplied: defaulting to UTF-8.
+# A tibble: 6 x 8
+  URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
+  <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
+1 http… 9       Http… Beatriz Mo… 69     0.999999999993… 0.0              fooh  
+2 http… 71      Wiki… TSF         482    0.970442983293… 0.0              fooh  
+3 http… 7       Wiki… a tendência 1091   0.999998481520… 0.0              fooh  
+4 http… 71      Wiki… TSF         1218   0.970442983293… 0.0              fooh  
+5 http… 8       Wiki… Lusoponte   1325   0.999999999999… 0.0              fooh  
+6 http… 71      Wiki… TSF         2247   0.970442983293… 0.0              fooh  
+Joining, by = c("entity_count_Actor", "entity_count_Agent", "entity_count_Artist", "entity_count_Broadcaster", "entity_count_Company", "entity_count_MusicalWork", "entity_count_Organisation", "entity_count_Person", "entity_count_RadioStation", "entity_count_Single", "entity_count_Work", "doc_id")
+  |                                                                              |======================================================================| 100%
+No encoding supplied: defaulting to UTF-8.
+
+No entities.
+NULL
+Joining, by = "doc_id"
+  |                                                                              |======================================================================| 100%
+No encoding supplied: defaulting to UTF-8.
+# A tibble: 1 x 8
+  URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
+  <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
+1 http… 199     Http… Ho Chi Minh 420    0.901494379189… 0.1092692567862… fooh  
+Joining, by = c("entity_count_Agent", "entity_count_Person", "entity_count_Politician", "doc_id")
+  |                                                                              |======================================================================| 100%
+No encoding supplied: defaulting to UTF-8.
+# A tibble: 1 x 8
+  URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
+  <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
+1 http… 123     Wiki… RTP         1105   0.653801402387… 0.5295164500210… fooh  
+Joining, by = c("entity_count_Agent", "entity_count_Broadcaster", "entity_count_Organisation", "entity_count_TelevisionStation", "doc_id")
+  |                                                                              |======================================================================| 100%
+No encoding supplied: defaulting to UTF-8.
+
+No entities.
+NULL
+Joining, by = "doc_id"
+  |                                                                              |======================================================================| 100%
+No encoding supplied: defaulting to UTF-8.
+# A tibble: 1 x 8
+  URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
+  <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
+1 http… 2055    Wiki… Ford        622    0.997566825466… 0.0022269229588… fooh  
+Joining, by = c("entity_count_Agent", "entity_count_Company", "entity_count_Organisation", "doc_id")
+  |                                                                              |======================================================================| 100%
+No encoding supplied: defaulting to UTF-8.
+
+No entities.
+NULL
+Joining, by = "doc_id"
+  |                                                                              |======================================================================| 100%
+No encoding supplied: defaulting to UTF-8.
+
+No entities.
+NULL
+Joining, by = "doc_id"
+  |                                                                              |======================================================================| 100%
+No encoding supplied: defaulting to UTF-8.
+
+No entities.
+NULL
+Joining, by = "doc_id"
+  |                                                                              |======================================================================| 100%
+No encoding supplied: defaulting to UTF-8.
+
+No entities.
+NULL
+Joining, by = "doc_id"
+  |                                                                              |======================================================================| 100%
+No encoding supplied: defaulting to UTF-8.
+
+No entities.
+NULL
+Joining, by = "doc_id"
+  |                                                                              |======================================================================| 100%
+No encoding supplied: defaulting to UTF-8.
+
+No entities.
+NULL
+Joining, by = "doc_id"
+  |                                                                              |======================================================================| 100%
+No encoding supplied: defaulting to UTF-8.
+
+No entities.
+NULL
+Joining, by = "doc_id"
+  |                                                                              |======================================================================| 100%
+No encoding supplied: defaulting to UTF-8.
+# A tibble: 4 x 8
+  URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
+  <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
+1 http… 210     Http… Marcelo Re… 492    1.0             0.0              fooh  
+2 http… 148     Http… António Co… 1698   0.999999185014… 0.0              fooh  
+3 http… 2       Http… Tiago Bran… 2597   0.999999999878… 0.0              fooh  
+4 http… 715     Wiki… RTP2        3100   1.0             4.6502414406816… fooh  
+Joining, by = c("entity_count_Agent", "entity_count_Broadcaster", "entity_count_Organisation", "entity_count_Person", "entity_count_Politician", "entity_count_TelevisionStation", "doc_id")
+  |                                                                              |======================================================================| 100%
+No encoding supplied: defaulting to UTF-8.
+# A tibble: 3 x 8
+  URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
+  <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
+1 http… 2623    Wiki… FC Barcelo… 1051   1.0             2.7066168109124… fooh  
+2 http… 853     Wiki… Atlético d… 1066   0.999746129517… 2.5393493340556… fooh  
+3 http… 1237    Wiki… Juventus    1163   0.999999999994… 5.3294311959727… fooh  
+Joining, by = c("entity_count_Agent", "entity_count_Organisation", "entity_count_SoccerClub", "entity_count_SportsTeam", "doc_id")
+  |                                                                              |======================================================================| 100%
+No encoding supplied: defaulting to UTF-8.
+# A tibble: 1 x 8
+  URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
+  <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
+1 http… 299     Http… Emília      0      0.885518179816… 0.0626412365542… fooh  
+Joining, by = c("entity_count_Agent", "entity_count_FictionalCharacter", "entity_count_Person", "doc_id")
+  |                                                                              |======================================================================| 100%
+No encoding supplied: defaulting to UTF-8.
+# A tibble: 1 x 8
+  URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
+  <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
+1 http… 3432    Wiki… Twitter     836    1.0             0.0              fooh  
+Joining, by = c("entity_count_Website", "entity_count_Work", "doc_id")
+  |                                                                              |======================================================================| 100%
+No encoding supplied: defaulting to UTF-8.
+# A tibble: 4 x 8
+  URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
+  <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
+1 http… 180     Http… Maduro      334    0.994576551833… 0.0              fooh  
+2 http… 1025    Wiki… Estados-me… 1217   1.0             2.9900862636076… fooh  
+3 http… 180     Http… Maduro      1412   0.994576551833… 0.0              fooh  
+4 http… 180     Http… Maduro      1954   0.994576551833… 0.0              fooh  
+Joining, by = c("entity_count_Agent", "entity_count_Organisation", "entity_count_Person", "entity_count_Politician", "entity_count_President", "doc_id")
+  |                                                                              |======================================================================| 100%
+No encoding supplied: defaulting to UTF-8.
+# A tibble: 12 x 8
+   URI   support types surfaceForm offset similarityScore percentageOfSec…
+   <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>           
+ 1 http… 4       Http… Pedro Fili… 196    0.999999989353… 0.0             
+ 2 http… 21      Wiki… Porto Canal 263    1.0             0.0             
+ 3 http… 1118    Http… Filipe      929    1.0             2.3350493439999…
+ 4 http… 4       Http… Pedro Fili… 1121   0.999999989353… 0.0             
+ 5 http… 341     Wiki… BE          1149   1.0             0.0             
+ 6 http… 341     Wiki… BE          1645   1.0             0.0             
+ 7 http… 4       Http… Pedro Fili… 2033   0.999999989353… 0.0             
+ 8 http… 5       Http… Eduardo Ca… 2469   1.0             0.0             
+ 9 http… 4       Http… Pedro Fili… 3084   0.999999989353… 0.0             
+10 http… 4       Http… Pedro Fili… 3352   0.999999989353… 0.0             
+11 http… 341     Wiki… BE          3652   1.0             0.0             
+12 http… 4       Http… Pedro Fili… 3711   0.999999989353… 0.0             
+# … with 1 more variable: doc_id <chr>
+Joining, by = c("entity_count_Agent", "entity_count_Broadcaster", "entity_count_Organisation", "entity_count_Person", "entity_count_PoliticalParty", "entity_count_Politician", "entity_count_Royalty", "entity_count_TelevisionStation", "doc_id")
+  |                                                                              |======================================================================| 100%
+No encoding supplied: defaulting to UTF-8.
+# A tibble: 7 x 8
+  URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
+  <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
+1 http… 177     Http… Passos      368    0.999981333291… 1.8667056835398… fooh  
+2 http… 1025    Wiki… Estados-me… 785    1.0             2.9195282414593… fooh  
+3 http… 277     Wiki… Conselho E… 1468   1.0             0.0              fooh  
+4 http… 19      Http… Vítor Cons… 1801   0.999999414124… 0.0              fooh  
+5 http… 222     Wiki… Financial … 1926   1.0             0.0              fooh  
+6 http… 180     Http… Maduro      2114   0.994576551833… 0.0              fooh  
+7 http… 180     Http… Maduro      3103   0.994576551833… 0.0              fooh  
+Joining, by = c("entity_count_Agent", "entity_count_Newspaper", "entity_count_Organisation", "entity_count_PeriodicalLiterature", "entity_count_Person", "entity_count_Politician", "entity_count_President", "entity_count_Work", "entity_count_WrittenWork", "doc_id")
+  |                                                                              |======================================================================| 100%
+No encoding supplied: defaulting to UTF-8.
+# A tibble: 3 x 8
+  URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
+  <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
+1 http… 4       Http… Jim Costa   1003   0.999986137041… 0.0              fooh  
+2 http… 594     Http… Donald Tru… 3417   1.0             0.0              fooh  
+3 http… 22      Http… Andrew Cuo… 3653   1.0             0.0              fooh  
+Joining, by = c("entity_count_Agent", "entity_count_Person", "entity_count_Politician", "doc_id")
+  |                                                                              |======================================================================| 100%
+There were 28 warnings (use warnings() to see them)
+Joining, by = "url"
+
+ Data pushed to remote github https://github.com/josemreis/covidnews-ml-pt
