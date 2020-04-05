@@ -50,7 +50,7 @@ training_txt <- readr::read_csv("train/data/0_data_parsed.csv") %>%
 ## stemmer
 stemmer <- function(x) {
   tokens = word_tokenizer(x)
-  lapply(tokens, SnowballC::wordStem, language="en")
+  lapply(tokens, SnowballC::wordStem, language = "por")
 }
 
 ## define the function

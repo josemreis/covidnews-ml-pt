@@ -125,7 +125,7 @@ trainIndex <- createDataPartition(dta_raw$is_covid, p = 0.7, list = FALSE, times
 ## stemmer
 stemmer <- function(x) {
   tokens = word_tokenizer(x)
-  lapply(tokens, SnowballC::wordStem, language="en")
+  lapply(tokens, SnowballC::wordStem, language = "por")
 }
 
 ## Prep the input text
