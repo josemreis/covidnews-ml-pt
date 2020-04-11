@@ -72,78 +72,139 @@ In if (class(gdelt_pt_all) == "try-error") { :
   the condition has length > 1 and only the first element will be used
 # A tibble: 0 x 0
 # A tibble: 0 x 0
-# A tibble: 4 x 8
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 1 x 8
   authors date_download       date_publish        description maintext text 
   <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Alexan… 2020-04-11 09:15:23 2020-04-11 02:54:00 Na hora do… "Num ac… <NUL…
-2 Consul… 2020-04-11 09:15:23 2020-04-11 02:54:00 Na hora do… "Num ac… <NUL…
-3 Licenc… 2020-04-11 09:15:23 2020-04-11 02:54:00 Na hora do… "Num ac… <NUL…
-4 Mestre… 2020-04-11 09:15:23 2020-04-11 02:54:00 Na hora do… "Num ac… <NUL…
+1 Luís O… 2020-04-11 11:15:18 2020-04-11 08:15:00 Faça um co… "— Tome… <NUL…
 # … with 2 more variables: title <chr>, url <chr>
 # A tibble: 0 x 0
 # A tibble: 1 x 8
   authors date_download       date_publish        description maintext text 
   <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Pedro … 2020-04-11 09:15:26 2020-04-11 03:00:47 O Edge da … "O Edge… <NUL…
+1 Cláudi… 2020-04-11 11:15:20 2020-04-11 07:41:00 No site do… "O Muse… <NUL…
 # … with 2 more variables: title <chr>, url <chr>
+# A tibble: 0 x 0
+# A tibble: 3 x 8
+  authors date_download       date_publish description maintext text  title
+  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
+1 Destak  2020-04-11 11:15:25 <NULL>       As últimas… "Covid-… <NUL… Cost…
+2 Leitor… 2020-04-11 11:15:25 <NULL>       As últimas… "Covid-… <NUL… Cost…
+3 Destak… 2020-04-11 11:15:25 <NULL>       As últimas… "Covid-… <NUL… Cost…
+# … with 1 more variable: url <chr>
+# A tibble: 2 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Maria … 2020-04-11 11:15:26 2020-04-11 07:30:00 O modo com… "Faz ag… <NUL…
+2 Profes… 2020-04-11 11:15:26 2020-04-11 07:30:00 O modo com… "Faz ag… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 3 x 8
+  authors date_download       date_publish description maintext text  title
+  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
+1 Destak  2020-04-11 11:15:27 <NULL>       As últimas… "Covid-… <NUL… Chin…
+2 Leitor… 2020-04-11 11:15:27 <NULL>       As últimas… "Covid-… <NUL… Chin…
+3 Destak… 2020-04-11 11:15:27 <NULL>       As últimas… "Covid-… <NUL… Chin…
+# … with 1 more variable: url <chr>
 # A tibble: 1 x 8
   authors date_download       date_publish        description maintext text 
   <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-04-11 09:15:27 2020-04-11 03:27:00 "Não lidam… "Não li… <NUL…
+1 Cláudi… 2020-04-11 11:15:28 2020-04-11 07:45:00 Este sábad… "O Teat… <NUL…
 # … with 2 more variables: title <chr>, url <chr>
+# A tibble: 3 x 8
+  authors date_download       date_publish description maintext text  title
+  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
+1 Destak  2020-04-11 11:15:29 <NULL>       As últimas… "Covid-… <NUL… Fica…
+2 Leitor… 2020-04-11 11:15:29 <NULL>       As últimas… "Covid-… <NUL… Fica…
+3 Destak… 2020-04-11 11:15:29 <NULL>       As últimas… "Covid-… <NUL… Fica…
+# … with 1 more variable: url <chr>
+# A tibble: 3 x 8
+  authors date_download       date_publish description maintext text  title
+  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
+1 Destak  2020-04-11 11:15:30 <NULL>       As últimas… "Covid-… <NUL… "\"N…
+2 Leitor… 2020-04-11 11:15:30 <NULL>       As últimas… "Covid-… <NUL… "\"N…
+3 Destak… 2020-04-11 11:15:30 <NULL>       As últimas… "Covid-… <NUL… "\"N…
+# … with 1 more variable: url <chr>
 # A tibble: 0 x 0
 # A tibble: 1 x 8
   authors date_download       date_publish        description maintext text 
   <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Pedro … 2020-04-11 09:15:30 2020-04-11 02:00:04 O Quiet Mo… "Mesmo … <NUL…
+1 José P… 2020-04-11 11:15:34 2020-04-11 07:00:00 Voltemos à… "Uma pe… <NUL…
 # … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
 Joining, by = c("titleArticle", "urlArticle")
 No encoding supplied: defaulting to UTF-8.
-
-No entities.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |======================================================================| 100%
-No encoding supplied: defaulting to UTF-8.
-# A tibble: 12 x 8
-   URI   support types surfaceForm offset similarityScore percentageOfSec…
-   <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>           
- 1 http… 420     Http… Edge        2      0.999999999841… 8.2138042035226…
- 2 http… 4894    Wiki… Microsoft   44     1.0             6.7575857331785…
- 3 http… 420     Http… Edge        279    0.999999999841… 8.2138042035226…
- 4 http… 420     Http… Edge        465    0.999999999841… 8.2138042035226…
- 5 http… 4894    Wiki… Microsoft   508    1.0             6.7575857331785…
- 6 http… 420     Http… Edge        531    0.999999999841… 8.2138042035226…
- 7 http… 223     Wiki… Chromium    692    1.0             7.5908202478088…
- 8 http… 4894    Wiki… Microsoft   1016   1.0             6.7575857331785…
- 9 http… 420     Http… Edge        1112   0.999999999841… 8.2138042035226…
-10 http… 4894    Wiki… Microsoft   1575   1.0             6.7575857331785…
-11 http… 3432    Wiki… Twitter     1739   1.0             0.0             
-12 http… 4894    Wiki… Microsoft   1852   1.0             6.7575857331785…
-# … with 1 more variable: doc_id <chr>
-Joining, by = c("entity_count_Agent", "entity_count_Artist", "entity_count_Company", "entity_count_MusicalArtist", "entity_count_Organisation", "entity_count_Person", "entity_count_Software", "entity_count_Website", "entity_count_Work", "doc_id")
-  |                                                                              |======================================================================| 100%
-No encoding supplied: defaulting to UTF-8.
-
-No entities.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |======================================================================| 100%
-No encoding supplied: defaulting to UTF-8.
-# A tibble: 7 x 8
+# A tibble: 2 x 8
   URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
   <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
-1 http… 2962    Wiki… Facebook    125    1.0             0.0              fooh  
-2 http… 2962    Wiki… Facebook    368    1.0             0.0              fooh  
-3 http… 2962    Wiki… Facebook    681    1.0             0.0              fooh  
-4 http… 2962    Wiki… Facebook    993    1.0             0.0              fooh  
-5 http… 2962    Wiki… Facebook    1266   1.0             0.0              fooh  
-6 http… 2962    Wiki… Facebook    1436   1.0             0.0              fooh  
-7 http… 2962    Wiki… Facebook    1724   1.0             0.0              fooh  
+1 http… 1191    Wiki… Royal Soci… 1052   0.999999999994… 5.4931209034136… fooh  
+2 http… 2962    Wiki… Facebook    1934   1.0             0.0              fooh  
 Joining, by = c("entity_count_Agent", "entity_count_Company", "entity_count_Organisation", "doc_id")
+  |                                                                              |======================================================================| 100%
+No encoding supplied: defaulting to UTF-8.
+
+No entities.
+NULL
+Joining, by = "doc_id"
+  |                                                                              |======================================================================| 100%
+No encoding supplied: defaulting to UTF-8.
+# A tibble: 2 x 8
+  URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
+  <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
+1 http… 18      Http… Jorge Cout… 86     0.999990671309… 0.0              fooh  
+2 http… 148     Http… António Co… 534    0.999999185014… 0.0              fooh  
+Joining, by = c("entity_count_Actor", "entity_count_Agent", "entity_count_Artist", "entity_count_Person", "entity_count_Politician", "doc_id")
+  |                                                                              |======================================================================| 100%
+No encoding supplied: defaulting to UTF-8.
+
+No entities.
+NULL
+Joining, by = "doc_id"
+  |                                                                              |======================================================================| 100%
+No encoding supplied: defaulting to UTF-8.
+
+No entities.
+NULL
+Joining, by = "doc_id"
+  |                                                                              |======================================================================| 100%
+No encoding supplied: defaulting to UTF-8.
+# A tibble: 10 x 8
+   URI   support types surfaceForm offset similarityScore percentageOfSec…
+   <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>           
+ 1 http… 971     Http… Maria II    20     0.999999988764… 1.1235747235204…
+ 2 http… 170     Http… Ricardo III 103    0.999999877196… 1.2279873438819…
+ 3 http… 170     Http… Ricardo III 236    0.999999877196… 1.2279873438819…
+ 4 http… 2589    Http… William Sh… 447    1.0             0.0             
+ 5 http… 22      Http… António Fo… 560    1.0             0.0             
+ 6 http… 54      Http… Márcia Bre… 576    0.999999875507… 0.0             
+ 7 http… 14      Http… Miguel Mor… 605    0.999999999999… 0.0             
+ 8 http… 3       Http… Raquel Cas… 653    0.999997543049… 0.0             
+ 9 http… 971     Http… Maria II    722    0.999999988764… 1.1235747235204…
+10 http… 64      Wiki… Vimeo       907    0.999999999994… 0.0             
+# … with 1 more variable: doc_id <chr>
+Joining, by = c("entity_count_Actor", "entity_count_Agent", "entity_count_Artist", "entity_count_Athlete", "entity_count_MusicalArtist", "entity_count_Person", "entity_count_Royalty", "entity_count_Website", "entity_count_Work", "doc_id")
+  |                                                                              |======================================================================| 100%
+No encoding supplied: defaulting to UTF-8.
+# A tibble: 4 x 8
+  URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
+  <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
+1 http… 603     Wiki… PCP         110    0.990656245611… 0.0072003618272… fooh  
+2 http… 148     Http… António Co… 243    0.999999185014… 0.0              fooh  
+3 http… 603     Wiki… PCP         566    0.990656245611… 0.0072003618272… fooh  
+4 http… 341     Wiki… Bloco de E… 574    1.0             0.0              fooh  
+Joining, by = c("entity_count_Agent", "entity_count_Organisation", "entity_count_Person", "entity_count_PoliticalParty", "entity_count_Politician", "doc_id")
+  |                                                                              |======================================================================| 100%
+No encoding supplied: defaulting to UTF-8.
+# A tibble: 1 x 8
+  URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
+  <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
+1 http… 148     Http… António Co… 467    0.999999185014… 0.0              fooh  
+Joining, by = c("entity_count_Agent", "entity_count_Person", "entity_count_Politician", "doc_id")
+  |                                                                              |======================================================================| 100%
+No encoding supplied: defaulting to UTF-8.
+
+No entities.
+NULL
+Joining, by = "doc_id"
   |                                                                              |======================================================================| 100%
 Warning messages:
 1: In if (class(res) == "try-error") { :
@@ -153,5 +214,15 @@ Warning messages:
 3: In if (class(res) == "try-error") { :
   the condition has length > 1 and only the first element will be used
 4: In if (class(res) == "try-error") { :
+  the condition has length > 1 and only the first element will be used
+5: In if (class(res) == "try-error") { :
+  the condition has length > 1 and only the first element will be used
+6: In if (class(res) == "try-error") { :
+  the condition has length > 1 and only the first element will be used
+7: In if (class(res) == "try-error") { :
+  the condition has length > 1 and only the first element will be used
+8: In if (class(res) == "try-error") { :
+  the condition has length > 1 and only the first element will be used
+9: In if (class(res) == "try-error") { :
   the condition has length > 1 and only the first element will be used
 Joining, by = "url"
