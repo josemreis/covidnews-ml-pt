@@ -71,40 +71,51 @@ Warning message:
 In if (class(gdelt_pt_all) == "try-error") { :
   the condition has length > 1 and only the first element will be used
 # A tibble: 0 x 0
-# A tibble: 4 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Filipe… 2020-04-12 10:15:14 2020-04-10 14:07:28 O Algarve … "Portug… <NUL…
-2 Henriq… 2020-04-12 10:15:14 2020-04-10 14:07:28 O Algarve … "Portug… <NUL…
-3 Cristi… 2020-04-12 10:15:14 2020-04-10 14:07:28 O Algarve … "Portug… <NUL…
-4 Stefan… 2020-04-12 10:15:14 2020-04-10 14:07:28 O Algarve … "Portug… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
 # A tibble: 0 x 0
-# A tibble: 3 x 8
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 1 x 8
   authors date_download       date_publish        description maintext text 
   <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Luís R… 2020-04-12 10:15:17 2020-04-12 06:00:00 Nós, os ve… "Neste … <NUL…
-2 Profes… 2020-04-12 10:15:17 2020-04-12 06:00:00 Nós, os ve… "Neste … <NUL…
-3 Fundad… 2020-04-12 10:15:17 2020-04-12 06:00:00 Nós, os ve… "Neste … <NUL…
+1 Jorge … 2020-04-12 11:15:24 2020-04-12 07:29:00 Em streami… "Jane F… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Antóni… 2020-04-12 11:15:24 2020-04-12 08:00:00 Em entrevi… "Minist… <NUL…
 # … with 2 more variables: title <chr>, url <chr>
 Joining, by = c("titleArticle", "urlArticle")
 No encoding supplied: defaulting to UTF-8.
-
-No entities.
-NULL
-Joining, by = "doc_id"
+# A tibble: 14 x 8
+   URI   support types surfaceForm offset similarityScore percentageOfSec…
+   <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>           
+ 1 http… 221     Http… Jane Fonda  0      1.0             0.0             
+ 2 http… 224     Http… Henry Fonda 134    1.0             0.0             
+ 3 http… 23      Wiki… Klute       318    1.0             0.0             
+ 4 http… 221     Http… Jane Fonda  572    1.0             0.0             
+ 5 http… 221     Http… Jane Fonda  780    1.0             0.0             
+ 6 http… 1795    Wiki… HBO         821    1.0             1.0312913582393…
+ 7 http… 23      Wiki… sessão de … 877    0.999999999700… 0.0             
+ 8 http… 221     Http… Jane Fonda  1168   1.0             0.0             
+ 9 http… 74      Http… Ted Turner  1482   1.0             0.0             
+10 http… 106     Http… Sydney Pol… 2033   1.0             0.0             
+11 http… 74      Http… Ted Turner  2775   1.0             0.0             
+12 http… 59      Http… Lily Tomlin 3173   1.0             0.0             
+13 http… 1508    Wiki… Netflix     3197   1.0             0.0             
+14 http… 221     Http… Jane Fonda  3631   1.0             0.0             
+# … with 1 more variable: doc_id <chr>
+Joining, by = c("entity_count_Actor", "entity_count_Agent", "entity_count_Artist", "entity_count_Broadcaster", "entity_count_Company", "entity_count_Film", "entity_count_Organisation", "entity_count_Person", "entity_count_TelevisionShow", "entity_count_TelevisionStation", "entity_count_Wikidata", "entity_count_Work", "doc_id")
   |                                                                              |======================================================================| 100%
 No encoding supplied: defaulting to UTF-8.
-# A tibble: 6 x 8
+# A tibble: 1 x 8
   URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
   <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
-1 http… 144     Http… António Jo… 832    1.0             0.0              fooh  
-2 http… 459     Http… Zeca        1461   1.0             4.1500118281514… fooh  
-3 http… 1204    Wiki… beneditino  1947   0.999173234934… 0.0              fooh  
-4 http… 3618    Http… Augusto     2293   0.999999998783… 1.2170090364315… fooh  
-5 http… 177     Http… Passos Coe… 3458   1.0             0.0              fooh  
-6 http… 47      Wiki… a notícia   4545   0.948068418674… 0.0547759167043… fooh  
-Joining, by = c("entity_count_Agent", "entity_count_Artist", "entity_count_MusicalArtist", "entity_count_Newspaper", "entity_count_Organisation", "entity_count_PeriodicalLiterature", "entity_count_Person", "entity_count_Politician", "entity_count_President", "entity_count_Royalty", "entity_count_Work", "entity_count_WrittenWork", "doc_id")
+1 http… 261     Http… Herculano   1022   0.999999999925… 7.4478074088508… fooh  
+Joining, by = c("entity_count_Agent", "entity_count_Person", "entity_count_Writer", "doc_id")
   |                                                                              |======================================================================| 100%
 Warning messages:
 1: In if (class(res) == "try-error") { :
