@@ -73,32 +73,73 @@ In if (class(gdelt_pt_all) == "try-error") { :
 # A tibble: 0 x 0
 # A tibble: 0 x 0
 # A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <list>   <lis>
+1 Notíci… 2020-04-14 10:15:26 2020-04-14 08:00:00 Maneiras i… <NULL>   <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 0 x 0
 # A tibble: 1 x 8
   authors date_download       date_publish        description maintext text 
   <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Tiago … 2020-04-14 09:15:18 2020-12-04 19:36:00 A 18 de Ma… "Foi em… <NUL…
+1 Rádio … 2020-04-14 10:15:29 2020-04-14 08:05:44 O ministro… "Em ent… <NUL…
 # … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-Joining, by = c("titleArticle", "urlArticle")
-No encoding supplied: defaulting to UTF-8.
 # A tibble: 1 x 8
-  URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
-  <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
-1 http… 210     Http… Marcelo Re… 4343   1.0             0.0              fooh  
-Joining, by = c("entity_count_Agent", "entity_count_Person", "entity_count_Politician", "doc_id")
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Rádio … 2020-04-14 10:15:30 2020-04-14 07:51:25 Os Estados… ", send… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Rádio … 2020-04-14 10:15:30 2020-04-14 07:30:02 Um total d… "Este n… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Rádio … 2020-04-14 10:15:30 2020-04-14 07:36:58 Uma média … "O Rela… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+Joining, by = c("titleArticle", "urlArticle")
+Error in curl::curl_fetch_memory(url, handle = handle): Timeout was reached: [api.dbpedia-spotlight.org] Operation timed out after 10000 milliseconds with 0 out of 0 bytes received
+Request failed [ERROR]. Retrying in 15 seconds...
+Error in curl::curl_fetch_memory(url, handle = handle): Timeout was reached: [api.dbpedia-spotlight.org] Operation timed out after 10001 milliseconds with 0 out of 0 bytes received
+Request failed [ERROR]. Retrying in 15 seconds...
+
+Request refused.
+NULL
+Joining, by = "doc_id"
   |                                                                              |======================================================================| 100%
-Warning message:
-In if (class(res) == "try-error") { :
-  the condition has length > 1 and only the first element will be used
+Error in curl::curl_fetch_memory(url, handle = handle): Timeout was reached: [api.dbpedia-spotlight.org] Operation timed out after 10000 milliseconds with 0 out of 0 bytes received
+Request failed [ERROR]. Retrying in 15 seconds...
+Error in curl::curl_fetch_memory(url, handle = handle): Timeout was reached: [api.dbpedia-spotlight.org] Operation timed out after 10001 milliseconds with 0 out of 0 bytes received
+Request failed [ERROR]. Retrying in 15 seconds...
+
+Request refused.
+NULL
+Joining, by = "doc_id"
+  |                                                                              |======================================================================| 100%
+Error in curl::curl_fetch_memory(url, handle = handle): Timeout was reached: [api.dbpedia-spotlight.org] Operation timed out after 10001 milliseconds with 0 out of 0 bytes received
+Request failed [ERROR]. Retrying in 15 seconds...
+Error in curl::curl_fetch_memory(url, handle = handle): Timeout was reached: [api.dbpedia-spotlight.org] Connection timed out after 10001 milliseconds
+Request failed [ERROR]. Retrying in 15 seconds...
+
+Request refused.
+NULL
+Joining, by = "doc_id"
+  |                                                                              |======================================================================| 100%
+Error in curl::curl_fetch_memory(url, handle = handle): Timeout was reached: [api.dbpedia-spotlight.org] Connection timed out after 10001 milliseconds
+Request failed [ERROR]. Retrying in 15 seconds...
+Error in curl::curl_fetch_memory(url, handle = handle): Timeout was reached: [api.dbpedia-spotlight.org] Connection timed out after 10000 milliseconds
+Request failed [ERROR]. Retrying in 15 seconds...
+
+Request refused.
+NULL
+Joining, by = "doc_id"
+  |                                                                              |======================================================================| 100%
 Joining, by = "url"
