@@ -936,7 +936,8 @@ Warning messages:
 6: In if (class(res) == "try-error") { :
   the condition has length > 1 and only the first element will be used
 Joining, by = "url"
-hed: [api.dbpedia-spotlight.org] Connection timed out after 10000 milliseconds
+
+ Data pushed to remote github https://github.com/josemreis/covidnews-ml-ptnds
 Request failed [ERROR]. Retrying in 15 seconds...
 Error in curl::curl_fetch_memory(url, handle = handle): Timeout was reached: [api.dbpedia-spotlight.org] Operation timed out after 10000 milliseconds with 0 out of 0 bytes received
 Request failed [ERROR]. Retrying in 15 seconds...
@@ -1452,33 +1453,38 @@ Joining, by = "doc_id"
   |                                                                              |======================================================================| 100%
 Request failed [403]. Retrying in 15 seconds...
 Request failed [403]. Retrying in 15 seconds...
-rying in 15 seconds...
+No encoding supplied: defaulting to UTF-8.
+# A tibble: 1 x 8
+  URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
+  <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
+1 http… 14      Wiki… tempos dif… 537    0.833981796243… 0.1989795918367… fooh  
+Joining, by = c("entity_count_MusicalWork", "entity_count_Song", "entity_count_Work", "doc_id")
+  |                                                                              |======================================================================| 100%
+Request failed [403]. Retrying in 15 seconds...
+Request failed [403]. Retrying in 15 seconds...
 
-Request refused.
-NULL
+Parsing error.
 Joining, by = "doc_id"
   |                                                                              |======================================================================| 100%
-Error in curl::curl_fetch_memory(url, handle = handle): Timeout was reached: [api.dbpedia-spotlight.org] Operation timed out after 10001 milliseconds with 0 out of 0 bytes received
-Request failed [ERROR]. Retrying in 15 seconds...
-Error in curl::curl_fetch_memory(url, handle = handle): Timeout was reached: [api.dbpedia-spotlight.org] Connection timed out after 10000 milliseconds
-Request failed [ERROR]. Retrying in 15 seconds...
+Request failed [403]. Retrying in 15 seconds...
+Request failed [403]. Retrying in 15 seconds...
 
-Request refused.
-NULL
+Parsing error.
 Joining, by = "doc_id"
   |                                                                              |======================================================================| 100%
-Error in curl::curl_fetch_memory(url, handle = handle): Timeout was reached: [api.dbpedia-spotlight.org] Operation timed out after 10001 milliseconds with 0 out of 0 bytes received
-Request failed [ERROR]. Retrying in 15 seconds...
-Error in curl::curl_fetch_memory(url, handle = handle): Timeout was reached: [api.dbpedia-spotlight.org] Connection timed out after 10001 milliseconds
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |======================================================================| 100%
-Error in curl::curl_fetch_memory(url, handle = handle): Timeout was reached: [api.dbpedia-spotlight.org] Connection timed out after 10000 milliseconds
-Request failed [ERROR]. Retrying in 15 seconds...
-Error in curl::curl_fetch_memory(url, handle = handle): Timeout was reached: [api.dbpedia-spotlight.org] Connection timed out after 10000 milliseconds
+Warning messages:
+1: In if (class(res) == "try-error") { :
+  the condition has length > 1 and only the first element will be used
+2: In if (class(res) == "try-error") { :
+  the condition has length > 1 and only the first element will be used
+3: In if (class(res) == "try-error") { :
+  the condition has length > 1 and only the first element will be used
+4: In if (class(res) == "try-error") { :
+  the condition has length > 1 and only the first element will be used
+5: In if (class(res) == "try-error") { :
+  the condition has length > 1 and only the first element will be used
+Joining, by = "url"
+: Timeout was reached: [api.dbpedia-spotlight.org] Connection timed out after 10000 milliseconds
 Request failed [ERROR]. Retrying in 15 seconds...
 
 Request refused.
@@ -1680,3 +1686,22 @@ Joining, by = "doc_id"
   |                                                                              |======================================================================| 100%
 Request failed [403]. Retrying in 15 seconds...
 Request failed [403]. Retrying in 15 seconds...
+No encoding supplied: defaulting to UTF-8.
+# A tibble: 1 x 8
+  URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
+  <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
+1 http… 2764    Wiki… Benfica     1981   0.999999999999… 5.7560094595785… fooh  
+Joining, by = c("entity_count_Agent", "entity_count_Organisation", "entity_count_SoccerClub", "entity_count_SportsTeam", "doc_id")
+  |                                                                              |======================================================================| 100%
+Request failed [403]. Retrying in 15 seconds...
+Request failed [403]. Retrying in 15 seconds...
+
+Parsing error.
+Joining, by = "doc_id"
+  |                                                                              |======================================================================| 100%
+Request failed [403]. Retrying in 15 seconds...
+Request failed [403]. Retrying in 15 seconds...
+
+Parsing error.
+Joining, by = "doc_id"
+  |                                                                              |======================================================================| 100%
