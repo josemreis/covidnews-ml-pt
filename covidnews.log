@@ -63,7 +63,7 @@ cols(
   author = col_character()
 )
   |                                                                              |=======                                                               |  10%  |                                                                              |==============                                                        |  20%  |                                                                              |=====================                                                 |  30%  |                                                                              |============================                                          |  40%  |                                                                              |===================================                                   |  50%  |                                                                              |==========================================                            |  60%  |                                                                              |=================================================                     |  70%  |                                                                              |========================================================              |  80%  |                                                                              |===============================================================       |  90%  |                                                                              |======================================================================| 100%
-Parsing: https://api.gdeltproject.org/api/v2/doc/doc?query=%20sourcecountry:po&sourcelang:por&mode=artlist&format=json&timespan=240&maxrecords=250&sort=datedesc
+Parsing: https://api.gdeltproject.org/api/v2/doc/doc?query=%20sourcecountry:po&sourcelang:por&mode=artlist&format=json&timespan=100&maxrecords=250&sort=datedesc
 
 Joining, by = "urlGDELTV2FTAPI"
 >> GDELT query --> done.
@@ -73,11 +73,6 @@ In if (class(gdelt_pt_all) == "try-error") { :
 # A tibble: 0 x 0
 # A tibble: 0 x 0
 # A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-04-17 02:15:30 2020-04-17 00:10:00 "De Chaves… "Zulay … <NUL…
-# … with 2 more variables: title <chr>, url <chr>
 # A tibble: 0 x 0
 # A tibble: 0 x 0
 # A tibble: 0 x 0
@@ -86,122 +81,17 @@ In if (class(gdelt_pt_all) == "try-error") { :
 # A tibble: 1 x 8
   authors date_download       date_publish        description maintext text 
   <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Agênci… 2020-04-17 02:15:46 2020-04-17 01:14:00 "A Comissã… "A Comi… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <list>      <chr>    <lis>
-1 Sul In… 2020-04-17 02:15:51 2020-04-16 19:48:39 <NULL>      "A ETIC… <NUL…
+1 Antóni… 2020-04-17 13:15:31 2020-04-17 08:00:00 O mundo qu… "“As fi… <NUL…
 # … with 2 more variables: title <chr>, url <chr>
 # A tibble: 0 x 0
 # A tibble: 0 x 0
 # A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <list>      <chr>    <lis>
-1 Sul In… 2020-04-17 02:16:02 2020-04-16 18:40:37 <NULL>      "As cos… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <list>      <chr>    <lis>
-1 Agênci… 2020-04-17 02:16:03 2020-04-16 19:31:22 <NULL>      "A Asse… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
 # A tibble: 3 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
-1 Destak  2020-04-17 02:16:04 <NULL>       As últimas… "Covid-… <NUL… Bols…
-2 Leitor… 2020-04-17 02:16:04 <NULL>       As últimas… "Covid-… <NUL… Bols…
-3 Destak… 2020-04-17 02:16:04 <NULL>       As últimas… "Covid-… <NUL… Bols…
-# … with 1 more variable: url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <list>      <chr>    <lis>
-1 Sul In… 2020-04-17 02:16:04 2020-04-16 19:32:52 <NULL>      "O prim… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <list>      <chr>    <lis>
-1 Hugo R… 2020-04-17 02:16:05 2020-04-16 18:54:01 <NULL>      "﻿﻿﻿﻿﻿\…      <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <list>      <chr>    <lis>
-1 João T… 2020-04-17 02:16:06 2020-04-16 22:10:45 <NULL>      "Águeda… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <list>      <chr>    <lis>
-1 Agênci… 2020-04-17 02:16:12 2020-04-16 19:48:51 <NULL>      "A reab… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 1 x 8
   authors date_download       date_publish        description maintext text 
   <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Rádio … 2020-04-17 02:16:12 2020-04-17 00:09:35 O Presiden… "O Pres… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 3 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
-1 Destak  2020-04-17 02:16:13 <NULL>       As últimas… "Covid-… <NUL… Víru…
-2 Leitor… 2020-04-17 02:16:13 <NULL>       As últimas… "Covid-… <NUL… Víru…
-3 Destak… 2020-04-17 02:16:13 <NULL>       As últimas… "Covid-… <NUL… Víru…
-# … with 1 more variable: url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <list>      <chr>    <lis>
-1 Luis C… 2020-04-17 02:16:14 2020-04-16 19:30:33 <NULL>      "A pand… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Rádio … 2020-04-17 02:16:15 2020-04-17 00:04:53 O Open dos… "Covid-… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <list>      <chr>    <lis>
-1 Sul In… 2020-04-17 02:16:16 2020-04-16 20:35:26 <NULL>      "A Esco… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Nuno M… 2020-04-17 02:16:20 2020-04-16 20:36:44 A Corsair … "A Cors… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Bruno … 2020-04-17 02:16:24 2020-04-17 00:29:23 Rumores fa… "O Appl… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <list>   <lis>
-1 Sérgio… 2020-04-17 02:16:31 2020-04-16 23:56:00 Denúncia f… <NULL>   <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Bruno … 2020-04-17 02:16:34 2020-04-16 22:07:49 Segundo um… "A gama… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Nuno M… 2020-04-17 02:16:35 2020-04-16 23:15:30 A resposta… "A resp… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Bruno … 2020-04-17 02:16:35 2020-04-16 20:44:42 As entidad… "Os gov… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <list>   <lis>
-1 Notíci… 2020-04-17 02:16:36 2020-04-17 00:00:00 Ir à casa-… <NULL>   <NUL…
+1 Rui Ta… 2020-04-17 13:15:34 2020-04-17 07:10:00 Tal como n… "Já ouv… <NUL…
+2 Histor… 2020-04-17 13:15:34 2020-04-17 07:10:00 Tal como n… "Já ouv… <NUL…
+3 Fundad… 2020-04-17 13:15:34 2020-04-17 07:10:00 Tal como n… "Já ouv… <NUL…
 # … with 2 more variables: title <chr>, url <chr>
 # A tibble: 0 x 0
 # A tibble: 0 x 0
@@ -222,1622 +112,674 @@ In if (class(gdelt_pt_all) == "try-error") { :
 # A tibble: 2 x 8
   authors date_download       date_publish        description maintext text 
   <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-04-17 02:17:27 2020-04-16 22:53:00 Luiz Henri… "Luiz H… <NUL…
-2 Lusa T… 2020-04-17 02:17:27 2020-04-16 22:53:00 Luiz Henri… "Luiz H… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Rádio … 2020-04-17 02:17:28 2020-04-16 23:18:08 O Presiden… "O Pres… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-04-17 02:17:29 2020-04-16 23:26:00 Marcelo Re… "O Pres… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-04-17 02:17:32 2020-04-16 22:25:00 Presidente… "O Pres… <NUL…
+1 Global… 2020-04-17 13:15:53 2020-04-17 10:07:00 São já cer… "São já… <NUL…
+2 Redaçã… 2020-04-17 13:15:53 2020-04-17 10:07:00 São já cer… "São já… <NUL…
 # … with 2 more variables: title <chr>, url <chr>
 # A tibble: 2 x 8
   authors date_download       date_publish        description maintext text 
   <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-04-17 02:17:33 2020-04-16 23:06:00 O estado d… "Marcel… <NUL…
-2 Gonçal… 2020-04-17 02:17:33 2020-04-16 23:06:00 O estado d… "Marcel… <NUL…
+1 Global… 2020-04-17 13:15:54 2020-04-17 11:04:00 O Sporting… "O Spor… <NUL…
+2 José M… 2020-04-17 13:15:54 2020-04-17 11:04:00 O Sporting… "O Spor… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 2 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Global… 2020-04-17 13:15:55 2020-04-17 10:43:00 Tentativa … "Tentat… <NUL…
+2 Freder… 2020-04-17 13:15:55 2020-04-17 10:43:00 Tentativa … "Tentat… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 2 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Global… 2020-04-17 13:15:56 2020-04-17 10:26:00 Organizaçã… "Organi… <NUL…
+2 João A… 2020-04-17 13:15:56 2020-04-17 10:26:00 Organizaçã… "Organi… <NUL…
 # … with 2 more variables: title <chr>, url <chr>
 # A tibble: 1 x 8
   authors date_download       date_publish        description maintext text 
   <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Agênci… 2020-04-17 02:17:34 2020-04-17 01:04:00 O lar Pere… "A Câma… <NUL…
+1 Rádio … 2020-04-17 13:15:57 2020-04-19 00:02:00 Patrulha d… "Muitas… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 2 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Global… 2020-04-17 13:15:58 2020-04-17 10:51:00 Declaraçõe… "Declar… <NUL…
+2 Redaçã… 2020-04-17 13:15:58 2020-04-17 10:51:00 Declaraçõe… "Declar… <NUL…
 # … with 2 more variables: title <chr>, url <chr>
 # A tibble: 1 x 8
   authors date_download       date_publish        description maintext text 
   <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Notíci… 2020-04-17 02:17:35 2020-04-16 23:30:00 Grupo full… "Dada o… <NUL…
+1 Rádio … 2020-04-17 13:15:59 2020-04-18 00:33:00 Em Casa d´… "Progra… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 2 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Global… 2020-04-17 13:16:00 2020-04-17 10:15:00 "\"Clarame… "Wuhan … <NUL…
+2 Redaçã… 2020-04-17 13:16:00 2020-04-17 10:15:00 "\"Clarame… "Wuhan … <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 2 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Global… 2020-04-17 13:16:01 2020-04-17 11:00:00 A opinião … "A opin… <NUL…
+2 Redaçã… 2020-04-17 13:16:01 2020-04-17 11:00:00 A opinião … "A opin… <NUL…
 # … with 2 more variables: title <chr>, url <chr>
 # A tibble: 1 x 8
   authors date_download       date_publish        description maintext text 
   <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Rádio … 2020-04-17 02:17:37 2020-04-16 23:00:57 O Presiden… "PR dec… <NUL…
+1 Global… 2020-04-17 13:16:02 2020-04-17 10:33:00 Clube bras… "Clube … <NUL…
 # … with 2 more variables: title <chr>, url <chr>
 # A tibble: 0 x 0
 # A tibble: 0 x 0
-# A tibble: 0 x 0
 # A tibble: 1 x 8
   authors date_download       date_publish        description maintext text 
   <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Notíci… 2020-04-17 02:17:45 2020-04-16 22:30:00 A Lush apr… "Embora… <NUL…
+1 Rádio … 2020-04-17 13:16:05 2020-04-17 10:48:22 "O economi… "\"Há u… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Global… 2020-04-17 13:16:05 2020-04-17 10:49:00 As autorid… "Hoje à… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Rádio … 2020-04-17 13:16:06 2020-04-17 10:45:59 "O economi… "As med… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Rádio … 2020-04-17 13:16:07 2020-04-17 10:51:08 O economis… "Em ent… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Rádio … 2020-04-17 13:16:07 2020-04-17 10:41:43 O Observat… "Observ… <NUL…
 # … with 2 more variables: title <chr>, url <chr>
 # A tibble: 0 x 0
 # A tibble: 0 x 0
 # A tibble: 1 x 8
   authors date_download       date_publish        description maintext text 
   <chr>   <dttm>              <dttm>              <chr>       <list>   <lis>
-1 Teresa… 2020-04-17 02:17:51 2020-04-16 23:00:00 É uma das … <NULL>   <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 3 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
-1 Destak  2020-04-17 02:17:56 <NULL>       As últimas… "Covid-… <NUL… "Mar…
-2 Leitor… 2020-04-17 02:17:56 <NULL>       As últimas… "Covid-… <NUL… "Mar…
-3 Destak… 2020-04-17 02:17:56 <NULL>       As últimas… "Covid-… <NUL… "Mar…
-# … with 1 more variable: url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <list>   <lis>
-1 Miguel… 2020-04-17 02:17:57 2020-04-16 22:30:00 A app de n… <NULL>   <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 3 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
-1 Destak  2020-04-17 02:18:01 <NULL>       As últimas… "Covid-… <NUL… 29 r…
-2 Leitor… 2020-04-17 02:18:01 <NULL>       As últimas… "Covid-… <NUL… 29 r…
-3 Destak… 2020-04-17 02:18:01 <NULL>       As últimas… "Covid-… <NUL… 29 r…
-# … with 1 more variable: url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Notíci… 2020-04-17 02:18:01 2020-04-16 22:37:49 O presiden… "O pres… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Notíci… 2020-04-17 02:18:03 2020-04-16 22:57:07 Com 99 ano… "Tom Mo… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Luís M… 2020-04-17 02:18:12 2020-04-16 22:00:00 O fotojorn… "As ima… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 2 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Maria … 2020-04-17 02:18:13 2020-04-16 22:23:14 Prorrogaçã… "Foi co… <NUL…
-2 Sofia … 2020-04-17 02:18:13 2020-04-16 22:23:14 Prorrogaçã… "Foi co… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 3 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Rtp     2020-04-17 02:18:14 2020-04-17 01:18:14 Teatro rad… "João A… <NUL…
-2 Rádio … 2020-04-17 02:18:14 2020-04-17 01:18:14 Teatro rad… "João A… <NUL…
-3 João A… 2020-04-17 02:18:14 2020-04-17 01:18:14 Teatro rad… "João A… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Marina… 2020-04-17 02:18:19 2020-04-16 22:59:48 O casal ir… "A prin… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Marina… 2020-04-17 02:18:27 2020-04-16 23:22:00 Um evento … "Apesar… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Notíci… 2020-04-17 02:18:30 2020-04-16 23:07:42 O Brasil r… "O mini… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
-1 Revist… 2020-04-17 02:18:41 <NULL>       A NOVA GEN… "Aos 91… <NUL… "\"A…
-# … with 1 more variable: url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Marisa… 2020-04-17 02:18:43 2020-04-16 18:00:15 A Google P… "A Goog… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Jn Agê… 2020-04-17 02:18:44 2020-04-16 22:44:00 O ministro… "JN/Agê… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
-1 Revist… 2020-04-17 02:18:45 <NULL>       Manuel Luí… "Manuel… <NUL… Arra…
-# … with 1 more variable: url <chr>
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Pedro … 2020-04-17 02:18:57 2020-04-16 18:55:26 O Prozis S… "Quem n… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Jn Agê… 2020-04-17 02:19:00 2020-04-16 23:03:00 Vinte e no… "JN/Agê… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Agênci… 2020-04-17 02:19:13 2020-04-17 01:04:00 O Banco Eu… "O Banc… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Jn Agê… 2020-04-17 02:19:17 2020-04-16 22:45:00 O Inter de… "JN/Agê… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
-1 Revist… 2020-04-17 02:19:18 <NULL>       Georgina R… "Georgi… <NUL… "É a…
-# … with 1 more variable: url <chr>
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Maria … 2020-04-17 02:19:28 2020-04-16 22:10:23 O Huawei P… "O Huaw… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Marisa… 2020-04-17 02:19:34 2020-04-16 21:00:49 Os utiliza… "Alguns… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
-1 Revist… 2020-04-17 02:19:38 <NULL>       Entre lágr… "Gustav… <NUL… Apre…
-# … with 1 more variable: url <chr>
-# A tibble: 3 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Filipe… 2020-04-17 02:19:39 2020-04-16 17:42:50 "Kepler-16… "O Kepl… <NUL…
-2 Henriq… 2020-04-17 02:19:39 2020-04-16 17:42:50 "Kepler-16… "O Kepl… <NUL…
-3 Cristi… 2020-04-17 02:19:39 2020-04-16 17:42:50 "Kepler-16… "O Kepl… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Jn Agê… 2020-04-17 02:19:40 2020-04-16 22:34:00 A Federaçã… "JN/Agê… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Sofia … 2020-04-17 02:19:46 2020-04-16 22:18:00 "Francisco… "Sofia … <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
-1 Revist… 2020-04-17 02:19:55 <NULL>       Cristina F… "Poderi… <NUL… Vest…
-# … with 1 more variable: url <chr>
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
-1 Revist… 2020-04-17 02:20:02 <NULL>       Atriz quas… "A atri… <NUL… Faz …
-# … with 1 more variable: url <chr>
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <list>      <chr>    <lis> <chr>
-1 Notíci… 2020-04-17 02:20:09 <NULL>       <NULL>      "A Asse… <NUL… Parl…
-# … with 1 more variable: url <chr>
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <list>      <chr>    <lis> <chr>
-1 Notíci… 2020-04-17 02:20:13 <NULL>       <NULL>      "O prim… <NUL… Prim…
-# … with 1 more variable: url <chr>
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <list>      <chr>    <lis> <chr>
-1 Notíci… 2020-04-17 02:20:16 <NULL>       <NULL>      "A asso… <NUL… Asso…
-# … with 1 more variable: url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <list>      <chr>    <lis> <chr>
-1 Notíci… 2020-04-17 02:20:17 <NULL>       <NULL>      "Numa a… <NUL… Muni…
-# … with 1 more variable: url <chr>
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Rádio … 2020-04-17 02:20:21 2020-04-16 22:57:08 Os maiores… "Agora … <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <list>      <chr>    <lis>
-1 João T… 2020-04-17 02:20:22 2020-04-16 17:52:18 <NULL>      "A Gres… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <list>      <chr>    <lis> <chr>
-1 Notíci… 2020-04-17 02:20:28 <NULL>       <NULL>      "O prim… <NUL… Antó…
-# … with 1 more variable: url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <list>      <chr>    <lis> <chr>
-1 Notíci… 2020-04-17 02:20:30 <NULL>       <NULL>      "As ins… <NUL… Cent…
-# … with 1 more variable: url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <list>      <chr>    <lis> <chr>
-1 Notíci… 2020-04-17 02:20:31 <NULL>       <NULL>      "Atende… <NUL… Figu…
-# … with 1 more variable: url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <list>      <chr>    <lis> <chr>
-1 Notíci… 2020-04-17 02:20:32 <NULL>       <NULL>      "A Câma… <NUL… Oliv…
-# … with 1 more variable: url <chr>
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <list>      <chr>    <lis> <chr>
-1 Notíci… 2020-04-17 02:20:38 <NULL>       <NULL>      "Uma ut… <NUL… Covi…
-# … with 1 more variable: url <chr>
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <list>      <chr>    <lis> <chr>
-1 Notíci… 2020-04-17 02:20:52 <NULL>       <NULL>      "O Pres… <NUL… Marc…
-# … with 1 more variable: url <chr>
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <list>      <chr>    <lis> <chr>
-1 Notíci… 2020-04-17 02:20:58 <NULL>       <NULL>      "Mais d… <NUL… 172 …
-# … with 1 more variable: url <chr>
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <list>      <chr>    <lis> <chr>
-1 Notíci… 2020-04-17 02:21:01 <NULL>       <NULL>      "O Pres… <NUL… Pres…
-# … with 1 more variable: url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <list>      <chr>    <lis> <chr>
-1 Notíci… 2020-04-17 02:21:01 <NULL>       <NULL>      "O prim… <NUL… Come…
-# … with 1 more variable: url <chr>
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <list>      <chr>    <lis> <chr>
-1 Notíci… 2020-04-17 02:21:05 <NULL>       <NULL>      "O Inst… <NUL… Desi…
-# … with 1 more variable: url <chr>
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <list>      <chr>    <lis> <chr>
-1 Notíci… 2020-04-17 02:21:12 <NULL>       <NULL>      "Os Gru… <NUL… 1,5 …
-# … with 1 more variable: url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <list>      <chr>    <lis> <chr>
-1 Notíci… 2020-04-17 02:21:13 <NULL>       <NULL>      "A educ… <NUL… Rout…
-# … with 1 more variable: url <chr>
-# A tibble: 3 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Rui Gu… 2020-04-17 02:21:14 2020-04-16 17:23:13 Os profess… "A pand… <NUL…
-2 Profes… 2020-04-17 02:21:14 2020-04-16 17:23:13 Os profess… "A pand… <NUL…
-3 Colabo… 2020-04-17 02:21:14 2020-04-16 17:23:13 Os profess… "A pand… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <list>      <chr>    <lis> <chr>
-1 Notíci… 2020-04-17 02:21:15 <NULL>       <NULL>      "A Câma… <NUL… Coim…
-# … with 1 more variable: url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-04-17 02:21:16 2020-04-16 19:45:00 Da cultura… "Da cul… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 3 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
-1 Destak  2020-04-17 02:21:17 <NULL>       As últimas… "Covid-… <NUL… 29 r…
-2 Leitor… 2020-04-17 02:21:17 <NULL>       As últimas… "Covid-… <NUL… 29 r…
-3 Destak… 2020-04-17 02:21:17 <NULL>       As últimas… "Covid-… <NUL… 29 r…
-# … with 1 more variable: url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-04-17 02:21:18 2020-04-16 22:21:00 As moratór… "As mor… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 3 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
-1 Destak  2020-04-17 02:21:24 <NULL>       As últimas… "Covid-… <NUL… Apoi…
-2 Leitor… 2020-04-17 02:21:24 <NULL>       As últimas… "Covid-… <NUL… Apoi…
-3 Destak… 2020-04-17 02:21:24 <NULL>       As últimas… "Covid-… <NUL… Apoi…
-# … with 1 more variable: url <chr>
-# A tibble: 2 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-04-17 02:21:25 2020-04-16 22:34:00 Dália Lópe… "Dália … <NUL…
-2 Redaçã… 2020-04-17 02:21:25 2020-04-16 22:34:00 Dália Lópe… "Dália … <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-04-17 02:21:33 2020-04-16 20:48:00 Mais difíc… "Mais d… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-04-17 02:21:36 2020-04-16 22:03:00 Hernâni re… "Hernân… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Notíci… 2020-04-17 02:21:37 2020-04-16 22:26:00 "President… "A pres… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-04-17 02:21:43 2020-04-16 20:41:00 Empresa al… "epa083… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-04-17 02:21:43 2020-04-16 20:14:00 Serie A1 f… "Serie … <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 3 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
-1 Destak  2020-04-17 02:21:44 <NULL>       As últimas… "Covid-… <NUL… Mini…
-2 Leitor… 2020-04-17 02:21:44 <NULL>       As últimas… "Covid-… <NUL… Mini…
-3 Destak… 2020-04-17 02:21:44 <NULL>       As últimas… "Covid-… <NUL… Mini…
-# … with 1 more variable: url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <list>   <lis>
-1 Notíci… 2020-04-17 02:21:45 2020-04-16 22:28:51 Junta-se a… <NULL>   <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 2 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-04-17 02:21:47 2020-04-16 22:33:00 Com a popu… "© Phot… <NUL…
-2 Maria … 2020-04-17 02:21:47 2020-04-16 22:33:00 Com a popu… "© Phot… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-04-17 02:21:49 2020-04-16 22:09:00 Jorge Andr… "Jorge … <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-04-17 02:21:53 2020-04-16 19:35:00 "Gabriel d… "Gabrie… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-04-17 02:21:54 2020-04-16 21:14:00 "A represe… "A repr… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-04-17 02:22:04 2020-04-16 17:39:00 Isto no ca… "Isto n… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Notíci… 2020-04-17 02:22:04 2020-04-16 22:37:49 O presiden… "O pres… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Marili… 2020-04-17 02:22:10 2020-04-16 22:41:00 O apresent… "Esta q… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 2 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-04-17 02:22:11 2020-04-16 21:33:00 O Kartódro… "O Kart… <NUL…
-2 Redaçã… 2020-04-17 02:22:11 2020-04-16 21:33:00 O Kartódro… "O Kart… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 2 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-04-17 02:22:17 2020-04-16 20:27:00 Organizado… "Organi… <NUL…
-2 João M… 2020-04-17 02:22:17 2020-04-16 20:27:00 Organizado… "Organi… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-04-17 02:22:18 2020-04-16 22:33:00 "Extremo d… "Extrem… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-04-17 02:22:21 2020-04-16 20:13:00 António Co… "Antóni… <NUL…
+1 Notíci… 2020-04-17 13:16:11 2020-04-17 10:23:53 País junta… <NULL>   <NUL…
 # … with 2 more variables: title <chr>, url <chr>
 # A tibble: 1 x 8
   authors date_download       date_publish        description maintext text 
   <chr>   <dttm>              <dttm>              <chr>       <list>   <lis>
-1 Sérgio… 2020-04-17 02:22:22 2020-04-16 22:27:53 Tribunal C… <NULL>   <NUL…
+1 Notíci… 2020-04-17 13:16:12 2020-04-17 10:02:00 O cantor f… <NULL>   <NUL…
 # … with 2 more variables: title <chr>, url <chr>
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Lilian… 2020-04-17 13:16:16 2020-04-17 10:40:00 Milhares d… "Segund… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 0 x 0
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <list>   <lis>
+1 Notíci… 2020-04-17 13:16:20 2020-04-17 10:07:35 "Primeiro-… <NULL>   <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish description maintext text  title
+  <chr>   <dttm>              <list>       <list>      <chr>    <lis> <chr>
+1 Diário… 2020-04-17 13:16:21 <NULL>       <NULL>      "No pri… <NUL… NewD…
+# … with 1 more variable: url <chr>
+# A tibble: 3 x 8
+  authors date_download       date_publish description maintext text  title
+  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
+1 Destak  2020-04-17 13:16:25 <NULL>       As últimas… "Actual… <NUL… Juro…
+2 Leitor… 2020-04-17 13:16:25 <NULL>       As últimas… "Actual… <NUL… Juro…
+3 Destak… 2020-04-17 13:16:25 <NULL>       As últimas… "Actual… <NUL… Juro…
+# … with 1 more variable: url <chr>
 # A tibble: 0 x 0
 # A tibble: 0 x 0
 # A tibble: 3 x 8
   authors date_download       date_publish description maintext text  title
   <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
-1 Destak  2020-04-17 02:22:25 <NULL>       As últimas… "Covid-… <NUL… IHRU…
-2 Leitor… 2020-04-17 02:22:25 <NULL>       As últimas… "Covid-… <NUL… IHRU…
-3 Destak… 2020-04-17 02:22:25 <NULL>       As últimas… "Covid-… <NUL… IHRU…
+1 Destak  2020-04-17 13:16:35 <NULL>       As últimas… "Covid-… <NUL… Cent…
+2 Leitor… 2020-04-17 13:16:35 <NULL>       As últimas… "Covid-… <NUL… Cent…
+3 Destak… 2020-04-17 13:16:35 <NULL>       As últimas… "Covid-… <NUL… Cent…
 # … with 1 more variable: url <chr>
 # A tibble: 1 x 8
   authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <list>   <lis>
+1 Miguel… 2020-04-17 13:16:36 2020-04-17 09:00:00 Uma das no… <NULL>   <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
   <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-04-17 02:22:26 2020-04-16 20:57:00 O campeona… "O camp… <NUL…
+1 Miguel… 2020-04-17 13:16:37 2020-04-17 10:35:06 Andrew Mor… "A NASA… <NUL…
 # … with 2 more variables: title <chr>, url <chr>
 # A tibble: 3 x 8
   authors date_download       date_publish description maintext text  title
   <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
-1 Destak  2020-04-17 02:22:26 <NULL>       As últimas… "Covid-… <NUL… Esta…
-2 Leitor… 2020-04-17 02:22:26 <NULL>       As últimas… "Covid-… <NUL… Esta…
-3 Destak… 2020-04-17 02:22:26 <NULL>       As últimas… "Covid-… <NUL… Esta…
+1 Destak  2020-04-17 13:16:39 <NULL>       As últimas… "Actual… <NUL… Bols…
+2 Leitor… 2020-04-17 13:16:39 <NULL>       As últimas… "Actual… <NUL… Bols…
+3 Destak… 2020-04-17 13:16:39 <NULL>       As últimas… "Actual… <NUL… Bols…
 # … with 1 more variable: url <chr>
 # A tibble: 0 x 0
-# A tibble: 2 x 8
+# A tibble: 4 x 8
+  authors date_download       date_publish description maintext text  title
+  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
+1 Destak  2020-04-17 13:16:43 <NULL>       As últimas… "Covid-… <NUL… Atua…
+2 Leitor… 2020-04-17 13:16:43 <NULL>       As últimas… "Covid-… <NUL… Atua…
+3 Anónimo 2020-04-17 13:16:43 <NULL>       As últimas… "Covid-… <NUL… Atua…
+4 Destak… 2020-04-17 13:16:43 <NULL>       As últimas… "Covid-… <NUL… Atua…
+# … with 1 more variable: url <chr>
+# A tibble: 1 x 8
   authors date_download       date_publish        description maintext text 
   <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-04-17 02:22:31 2020-04-16 22:18:00 Mário Cent… "Mário … <NUL…
-2 Judith… 2020-04-17 02:22:31 2020-04-16 22:18:00 Mário Cent… "Mário … <NUL…
+1 Notíci… 2020-04-17 13:16:43 2020-04-17 10:05:00 Maureen Ap… "Uma mu… <NUL…
 # … with 2 more variables: title <chr>, url <chr>
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Lucian… 2020-04-17 13:16:48 2020-04-16 13:42:54 Secretária… "Foram … <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <list>   <lis>
+1 Notíci… 2020-04-17 13:16:49 2020-04-17 09:16:00 299 pessoa… <NULL>   <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 0 x 0
 # A tibble: 3 x 8
   authors date_download       date_publish description maintext text  title
   <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
-1 Destak  2020-04-17 02:22:32 <NULL>       As últimas… "Covid-… <NUL… "PR …
-2 Leitor… 2020-04-17 02:22:32 <NULL>       As últimas… "Covid-… <NUL… "PR …
-3 Destak… 2020-04-17 02:22:32 <NULL>       As últimas… "Covid-… <NUL… "PR …
+1 Destak  2020-04-17 13:16:51 <NULL>       As últimas… "Covid-… <NUL… "\"H…
+2 Leitor… 2020-04-17 13:16:51 <NULL>       As últimas… "Covid-… <NUL… "\"H…
+3 Destak… 2020-04-17 13:16:51 <NULL>       As últimas… "Covid-… <NUL… "\"H…
+# … with 1 more variable: url <chr>
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <list>   <lis>
+1 Meliss… 2020-04-17 13:16:56 2020-04-17 09:26:13 Candidatur… <NULL>   <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <list>   <lis>
+1 Notíci… 2020-04-17 13:16:57 2020-04-17 10:00:00 Muita aten… <NULL>   <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish description maintext text  title
+  <chr>   <dttm>              <list>       <list>      <chr>    <lis> <chr>
+1 O Jorn… 2020-04-17 13:16:57 <NULL>       <NULL>      "A econ… <NUL… NewD…
+# … with 1 more variable: url <chr>
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 3 x 8
+  authors date_download       date_publish description maintext text  title
+  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
+1 Destak  2020-04-17 13:17:07 <NULL>       As últimas… "Covid-… <NUL… "Imp…
+2 Leitor… 2020-04-17 13:17:07 <NULL>       As últimas… "Covid-… <NUL… "Imp…
+3 Destak… 2020-04-17 13:17:07 <NULL>       As últimas… "Covid-… <NUL… "Imp…
+# … with 1 more variable: url <chr>
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <list>   <lis>
+1 Notíci… 2020-04-17 13:17:13 2020-04-17 10:30:52 Video de a… <NULL>   <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 0 x 0
+# A tibble: 3 x 8
+  authors date_download       date_publish description maintext text  title
+  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
+1 Destak  2020-04-17 13:17:18 <NULL>       As últimas… "Covid-… <NUL… "Gov…
+2 Leitor… 2020-04-17 13:17:18 <NULL>       As últimas… "Covid-… <NUL… "Gov…
+3 Destak… 2020-04-17 13:17:18 <NULL>       As últimas… "Covid-… <NUL… "Gov…
 # … with 1 more variable: url <chr>
 # A tibble: 1 x 8
   authors date_download       date_publish        description maintext text 
   <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-04-17 02:22:32 2020-04-16 21:20:00 Empenho de… "Empenh… <NUL…
+1 Notíci… 2020-04-17 13:17:19 2020-04-17 10:26:27 Tome nota … "Empres… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Sara G… 2020-04-17 13:17:20 2020-04-17 09:54:00 Acompanhe … "\"Acab… <NUL…
 # … with 2 more variables: title <chr>, url <chr>
 # A tibble: 0 x 0
 # A tibble: 1 x 8
   authors date_download       date_publish        description maintext text 
   <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 João R… 2020-04-17 02:22:34 2020-04-16 20:11:05 Luiz Henri… "O divó… <NUL…
+1 Notíci… 2020-04-17 13:17:23 2020-04-17 09:46:02 As 16 pess… "Um tot… <NUL…
 # … with 2 more variables: title <chr>, url <chr>
 # A tibble: 1 x 8
   authors date_download       date_publish        description maintext text 
   <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-04-17 02:22:35 2020-04-16 22:38:00 O braço-de… "Sara G… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 2 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-04-17 02:22:36 2020-04-16 21:30:00 O total de… "O tota… <NUL…
-2 Redaçã… 2020-04-17 02:22:36 2020-04-16 21:30:00 O total de… "O tota… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 2 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-04-17 02:22:36 2020-04-16 21:26:00 "\"É uma d… "\"É um… <NUL…
-2 Redaçã… 2020-04-17 02:22:36 2020-04-16 21:26:00 "\"É uma d… "\"É um… <NUL…
+1 Notíci… 2020-04-17 13:17:23 2020-04-17 10:31:00 A estrela … "A famo… <NUL…
 # … with 2 more variables: title <chr>, url <chr>
 # A tibble: 0 x 0
 # A tibble: 1 x 8
   authors date_download       date_publish        description maintext text 
   <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Catari… 2020-04-17 02:22:42 2020-04-16 22:00:54 Acompanhe … "O Pres… <NUL…
+1 Notíci… 2020-04-17 13:17:26 2020-04-17 09:00:00 Organize u… "A Rua … <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <list>   <lis>
+1 Miguel… 2020-04-17 13:17:27 2020-04-17 10:17:49 Estará pre… <NULL>   <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Notíci… 2020-04-17 13:17:39 2020-04-17 10:21:00 Yanira Sor… "Os Est… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 1 x 8
+  authors date_download       date_publish description maintext text  title
+  <chr>   <dttm>              <list>       <list>      <chr>    <lis> <chr>
+1 Diário… 2020-04-17 13:17:44 <NULL>       <NULL>      "O mesm… <NUL… NewD…
+# … with 1 more variable: url <chr>
+# A tibble: 0 x 0
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <list>   <lis>
+1 Rita A… 2020-04-17 13:17:50 2020-04-17 10:23:00 A rainha f… <NULL>   <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Notíci… 2020-04-17 13:17:51 2020-04-17 09:21:23 Pandemia c… "O Cent… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Notíci… 2020-04-17 13:17:52 2020-04-17 09:50:00 Japoneses … "O mini… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 1 x 8
+  authors date_download       date_publish description maintext text  title
+  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
+1 Revist… 2020-04-17 13:17:57 <NULL>       Tatiana Fi… "Tatian… <NUL… Repó…
+# … with 1 more variable: url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Diana … 2020-04-17 13:17:57 2020-04-16 19:50:00 Menos comp… "Há doi… <NUL…
 # … with 2 more variables: title <chr>, url <chr>
 # A tibble: 0 x 0
 # A tibble: 1 x 8
   authors date_download       date_publish        description maintext text 
   <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Filipa… 2020-04-17 02:22:47 2020-04-16 22:12:00 O Presiden… "O Pres… <NUL…
+1 Global… 2020-04-17 13:18:00 2020-04-17 09:49:00 Em todo o … "Maria … <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Rádio … 2020-04-17 13:18:04 2020-04-17 10:04:43 Os sete pa… "Covid-… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 0 x 0
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Jn Agê… 2020-04-17 13:18:06 2020-04-17 10:06:00 Os EUA reg… "JN/Agê… <NUL…
 # … with 2 more variables: title <chr>, url <chr>
 # A tibble: 1 x 8
   authors date_download       date_publish        description maintext text 
   <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Filipa… 2020-04-17 02:22:49 2020-04-16 21:54:33 A Ministra… "O poss… <NUL…
+1 Global… 2020-04-17 13:18:07 2020-04-17 10:11:00 Indivíduo … "Alexan… <NUL…
 # … with 2 more variables: title <chr>, url <chr>
-# A tibble: 2 x 8
+# A tibble: 1 x 8
   authors date_download       date_publish        description maintext text 
   <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-04-17 02:22:50 2020-04-16 22:37:00 "Antes de … "Antes … <NUL…
-2 Carlos… 2020-04-17 02:22:50 2020-04-16 22:37:00 "Antes de … "Antes … <NUL…
+1 Global… 2020-04-17 13:18:08 2020-04-17 10:22:00 Há mais de… "Arnald… <NUL…
 # … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Global… 2020-04-17 13:18:09 2020-04-17 09:39:00 Desde que … "Delfim… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
 Joining, by = c("titleArticle", "urlArticle")
+Request failed [403]. Retrying in 15 seconds...
+Request failed [403]. Retrying in 15 seconds...
+
+Parsing error.
+Joining, by = "doc_id"
+  |                                                                              |======================================================================| 100%
+Request failed [403]. Retrying in 15 seconds...
 No encoding supplied: defaulting to UTF-8.
-# A tibble: 2 x 8
+
+No entities.
+NULL
+Joining, by = "doc_id"
+  |                                                                              |======================================================================| 100%
+No encoding supplied: defaulting to UTF-8.
+# A tibble: 1 x 8
   URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
   <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
-1 http… 107     Wiki… a viagem    1321   0.708315977519… 0.4109228971962… fooh  
-2 http… 126     Wiki… dislexia    1562   1.0             0.0              fooh  
-Joining, by = c("entity_count_Disease", "entity_count_TelevisionShow", "entity_count_Work", "doc_id")
+1 http… 594     Http… Donald Tru… 1229   1.0             0.0              fooh  
+Joining, by = c("entity_count_Agent", "entity_count_Person", "doc_id")
+  |                                                                              |======================================================================| 100%
+No encoding supplied: defaulting to UTF-8.
+# A tibble: 15 x 8
+   URI   support types surfaceForm offset similarityScore percentageOfSec…
+   <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>           
+ 1 http… 2042    Wiki… Sporting    2      1.0             3.1442659712832…
+ 2 http… 35      Http… Salgado Ze… 129    1.0             0.0             
+ 3 http… 2042    Wiki… Sporting    171    1.0             3.1442659712832…
+ 4 http… 47      Wiki… a notícia   192    0.948068418674… 0.0547759167043…
+ 5 http… 11      Http… Rúben Amor… 249    0.999999957477… 0.0             
+ 6 http… 523     Wiki… Braga       265    0.801141326869… 0.2482192072437…
+ 7 http… 47      Wiki… a notícia   284    0.948068418674… 0.0547759167043…
+ 8 http… 2042    Wiki… Sporting    315    1.0             3.1442659712832…
+ 9 http… 2042    Wiki… Sporting    746    1.0             3.1442659712832…
+10 http… 35      Http… Salgado Ze… 904    1.0             0.0             
+11 http… 2764    Wiki… Benfica     1215   1.0             2.3984035182569…
+12 http… 523     Wiki… Braga       1343   0.801141326869… 0.2482192072437…
+13 http… 12786   Http… Salvador    1483   0.999991510726… 8.4893052349246…
+14 http… 2623    Wiki… Barcelona   1558   0.999983138805… 1.6437507251358…
+15 http… 193     Http… Galeno      1638   0.994940013349… 0.0             
+# … with 1 more variable: doc_id <chr>
+Joining, by = c("entity_count_Agent", "entity_count_Athlete", "entity_count_Newspaper", "entity_count_Organisation", "entity_count_PeriodicalLiterature", "entity_count_Person", "entity_count_Politician", "entity_count_SoccerClub", "entity_count_SoccerPlayer", "entity_count_SportsTeam", "entity_count_Work", "entity_count_WrittenWork", "doc_id")
   |                                                                              |======================================================================| 100%
 No encoding supplied: defaulting to UTF-8.
 # A tibble: 6 x 8
   URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
   <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
-1 http… 1025    Wiki… Estados-me… 74     1.0             1.3142526039067… fooh  
-2 http… 1025    Wiki… Estados-me… 1135   1.0             1.3142526039067… fooh  
-3 http… 1025    Wiki… Estados-me… 1675   1.0             1.3142526039067… fooh  
-4 http… 1025    Wiki… Estados-me… 2079   1.0             1.3142526039067… fooh  
-5 http… 796     Wiki… Fundo Mone… 2795   0.999999999994… 0.0              fooh  
-6 http… 796     Wiki… FMI         2825   0.998754906184… 0.0              fooh  
-Joining, by = c("entity_count_Agent", "entity_count_Organisation", "doc_id")
+1 http… 205     Wiki… AEK         159    1.0             3.1599086620784… fooh  
+2 http… 205     Wiki… AEK         479    1.0             3.1599086620784… fooh  
+3 http… 40      Http… Paulinho    528    0.999998962431… 4.6453706210608… fooh  
+4 http… 14      Http… Nélson Oli… 552    0.999999854138… 0.0              fooh  
+5 http… 7       Http… Bruno Gama  982    0.999999999203… 0.0              fooh  
+6 http… 205     Wiki… AEK         1048   1.0             3.1599086620784… fooh  
+Joining, by = c("entity_count_Agent", "entity_count_Athlete", "entity_count_Organisation", "entity_count_Person", "entity_count_SoccerClub", "entity_count_SoccerPlayer", "entity_count_SportsTeam", "doc_id")
+  |                                                                              |======================================================================| 100%
+No encoding supplied: defaulting to UTF-8.
+# A tibble: 4 x 8
+  URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
+  <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
+1 http… 591     Http… Cristiano … 155    1.0             0.0              fooh  
+2 http… 714     Wiki… Instagram   255    1.0             0.0              fooh  
+3 http… 1237    Wiki… Juventus    314    0.999999999997… 2.7147528358845… fooh  
+4 http… 714     Wiki… Instagram   975    1.0             0.0              fooh  
+Joining, by = c("entity_count_Agent", "entity_count_Athlete", "entity_count_Organisation", "entity_count_Person", "entity_count_SoccerClub", "entity_count_SoccerPlayer", "entity_count_Software", "entity_count_SportsTeam", "entity_count_Work", "doc_id")
   |                                                                              |======================================================================| 100%
 No encoding supplied: defaulting to UTF-8.
 # A tibble: 2 x 8
   URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
   <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
-1 http… 238     Wiki… Photoshop   414    1.0             0.0              fooh  
-2 http… 4       Http… Nuno Ribei… 851    0.999949545018… 0.0              fooh  
-Joining, by = c("entity_count_Agent", "entity_count_Athlete", "entity_count_Cyclist", "entity_count_Person", "entity_count_Software", "entity_count_Work", "doc_id")
+1 http… 68      Wiki… estrábico   868    0.999999999972… 0.0              fooh  
+2 http… 170     Wiki… ácido úrico 910    0.999999615705… 0.0              fooh  
+Joining, by = c("entity_count_ChemicalCompound", "entity_count_ChemicalSubstance", "entity_count_Disease", "doc_id")
   |                                                                              |======================================================================| 100%
+Request failed [403]. Retrying in 15 seconds...
 No encoding supplied: defaulting to UTF-8.
-
-No entities.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |======================================================================| 100%
-No encoding supplied: defaulting to UTF-8.
-# A tibble: 14 x 8
-   URI   support types surfaceForm offset similarityScore percentageOfSec…
-   <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>           
- 1 http… 4002    Wiki… PSD         203    0.930407477057… 0.0701162008661…
- 2 http… 341     Wiki… BE          207    1.0             0.0             
- 3 http… 646     Wiki… CDS-PP      210    0.998482887136… 0.0             
- 4 http… 150     Wiki… PEV         289    1.0             0.0             
- 5 http… 603     Wiki… PCP         316    0.990656245611… 0.0072003618272…
- 6 http… 603     Wiki… PCP         536    0.990656245611… 0.0072003618272…
- 7 http… 4002    Wiki… PSD         610    0.930407477057… 0.0701162008661…
- 8 http… 341     Wiki… BE          614    1.0             0.0             
- 9 http… 646     Wiki… CDS-PP      617    0.998482887136… 0.0             
-10 http… 603     Wiki… PCP         889    0.990656245611… 0.0072003618272…
-11 http… 150     Wiki… PEV         893    1.0             0.0             
-12 http… 603     Wiki… PCP         1129   0.992851112747… 0.0072003618272…
-13 http… 150     Wiki… PEV         1133   1.0             0.0             
-14 http… 210     Http… Marcelo Re… 1400   1.0             0.0             
-# … with 1 more variable: doc_id <chr>
-Joining, by = c("entity_count_Agent", "entity_count_Organisation", "entity_count_Person", "entity_count_PoliticalParty", "entity_count_Politician", "doc_id")
+# A tibble: 2 x 8
+  URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
+  <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
+1 http… 136     Wiki… Liga Portu… 1631   1.0             0.0              fooh  
+2 http… 6       Wiki… recomeçar   1839   0.635902813336… 0.0              fooh  
+Joining, by = c("entity_count_Agent", "entity_count_Album", "entity_count_MusicalWork", "entity_count_Organisation", "entity_count_Work", "doc_id")
   |                                                                              |======================================================================| 100%
 No encoding supplied: defaulting to UTF-8.
 # A tibble: 2 x 8
   URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
   <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
-1 http… 151     Http… Jair Bolso… 32     1.0             0.0              fooh  
-2 http… 662     Http… Henrique    341    0.789845377777… 0.2545629930134… fooh  
-Joining, by = c("entity_count_Agent", "entity_count_Person", "entity_count_Politician", "entity_count_Royalty", "doc_id")
-  |                                                                              |======================================================================| 100%
-No encoding supplied: defaulting to UTF-8.
-# A tibble: 1 x 8
-  URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
-  <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
-1 http… 148     Http… António Co… 650    0.999999185014… 0.0              fooh  
-Joining, by = c("entity_count_Agent", "entity_count_Person", "entity_count_Politician", "doc_id")
-  |                                                                              |======================================================================| 100%
-No encoding supplied: defaulting to UTF-8.
-# A tibble: 1 x 8
-  URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
-  <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
-1 http… 2962    Wiki… Facebook    1435   1.0             0.0              fooh  
-Joining, by = c("entity_count_Agent", "entity_count_Company", "entity_count_Organisation", "doc_id")
-  |                                                                              |======================================================================| 100%
-No encoding supplied: defaulting to UTF-8.
-# A tibble: 1 x 8
-  URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
-  <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
-1 http… 14      Wiki… Anadia      494    0.790841109587… 0.2601408198576… fooh  
-Joining, by = c("entity_count_Agent", "entity_count_Organisation", "entity_count_SoccerClub", "entity_count_SportsTeam", "doc_id")
-  |                                                                              |======================================================================| 100%
-No encoding supplied: defaulting to UTF-8.
-# A tibble: 2 x 8
-  URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
-  <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
-1 http… 148     Http… António Co… 141    0.999999185014… 0.0              fooh  
-2 http… 148     Http… António Co… 532    0.999999185014… 0.0              fooh  
-Joining, by = c("entity_count_Agent", "entity_count_Person", "entity_count_Politician", "doc_id")
-  |                                                                              |======================================================================| 100%
-No encoding supplied: defaulting to UTF-8.
-# A tibble: 3 x 8
-  URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
-  <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
-1 http… 151     Http… Jair Bolso… 24     1.0             0.0              fooh  
-2 http… 662     Http… Henrique    97     0.964509511897… 0.0302575087170… fooh  
-3 http… 151     Http… Jair Bolso… 282    1.0             0.0              fooh  
-Joining, by = c("entity_count_Agent", "entity_count_Person", "entity_count_Politician", "entity_count_Royalty", "doc_id")
-  |                                                                              |======================================================================| 100%
-No encoding supplied: defaulting to UTF-8.
-
-No entities.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |======================================================================| 100%
-No encoding supplied: defaulting to UTF-8.
-
-No entities.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |======================================================================| 100%
-No encoding supplied: defaulting to UTF-8.
-# A tibble: 1 x 8
-  URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
-  <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
-1 http… 57      Http… Billie Jea… 393    1.0             0.0              fooh  
-Joining, by = c("entity_count_Agent", "entity_count_Athlete", "entity_count_Person", "entity_count_TennisPlayer", "doc_id")
-  |                                                                              |======================================================================| 100%
-No encoding supplied: defaulting to UTF-8.
-# A tibble: 1 x 8
-  URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
-  <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
-1 http… 97      Wiki… CLA         1556   0.652763500602… 0.4948453608247… fooh  
-Joining, by = c("entity_count_Agent", "entity_count_MilitaryUnit", "entity_count_Organisation", "doc_id")
-  |                                                                              |======================================================================| 100%
-No encoding supplied: defaulting to UTF-8.
-# A tibble: 4 x 8
-  URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
-  <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
-1 http… 234     Wiki… League of … 2675   1.0             0.0              fooh  
-2 http… 420     Http… Edge        2728   1.0             9.7520744894927… fooh  
-3 http… 242     Wiki… World of W… 2741   1.0             0.0              fooh  
-4 http… 242     Wiki… World of W… 3165   1.0             0.0              fooh  
-Joining, by = c("entity_count_Agent", "entity_count_Artist", "entity_count_MusicalArtist", "entity_count_Person", "entity_count_Software", "entity_count_VideoGame", "entity_count_Work", "doc_id")
-  |                                                                              |======================================================================| 100%
-No encoding supplied: defaulting to UTF-8.
-# A tibble: 7 x 8
-  URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
-  <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
-1 http… 10      Wiki… tudo pode … 318    1.0             0.0              fooh  
-2 http… 2198    Wiki… Apple       613    1.0             4.1887801504643… fooh  
-3 http… 2198    Wiki… Apple       1789   1.0             4.1887801504643… fooh  
-4 http… 9       Wiki… Spectrum    2148   0.760419546026… 0.0              fooh  
-5 http… 2198    Wiki… Apple       2263   1.0             4.1887801504643… fooh  
-6 http… 2962    Wiki… Facebook    2336   1.0             0.0              fooh  
-7 http… 714     Wiki… Instagram   2345   1.0             0.0              fooh  
-Joining, by = c("entity_count_Agent", "entity_count_Company", "entity_count_MusicalWork", "entity_count_Organisation", "entity_count_Single", "entity_count_Software", "entity_count_Work", "doc_id")
-  |                                                                              |======================================================================| 100%
-No encoding supplied: defaulting to UTF-8.
-# A tibble: 8 x 8
-  URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
-  <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
-1 http… 2198    Wiki… Apple       1367   1.0             1.3289511468627… fooh  
-2 http… 2198    Wiki… Apple       1620   1.0             1.3289511468627… fooh  
-3 http… 81      Wiki… Bionic      1829   1.0             8.0239166509176… fooh  
-4 http… 2198    Wiki… Apple       2025   1.0             1.3289511468627… fooh  
-5 http… 9       Wiki… Spectrum    2330   0.760419546026… 0.0              fooh  
-6 http… 2198    Wiki… Apple       2445   1.0             1.3289511468627… fooh  
-7 http… 2962    Wiki… Facebook    2518   1.0             0.0              fooh  
-8 http… 714     Wiki… Instagram   2527   1.0             0.0              fooh  
-Joining, by = c("entity_count_Agent", "entity_count_Album", "entity_count_Company", "entity_count_MusicalWork", "entity_count_Organisation", "entity_count_Single", "entity_count_Software", "entity_count_Work", "doc_id")
-  |                                                                              |======================================================================| 100%
-No encoding supplied: defaulting to UTF-8.
-# A tibble: 4 x 8
-  URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
-  <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
-1 http… 146     Wiki… Creed       741    1.0             5.0554204888846… fooh  
-2 http… 655     Wiki… Samsung     782    1.0             0.0              fooh  
-3 http… 2962    Wiki… Facebook    2183   1.0             0.0              fooh  
-4 http… 714     Wiki… Instagram   2192   1.0             0.0              fooh  
-Joining, by = c("entity_count_Agent", "entity_count_Band", "entity_count_Company", "entity_count_Group", "entity_count_Organisation", "entity_count_Software", "entity_count_Work", "doc_id")
-  |                                                                              |======================================================================| 100%
-No encoding supplied: defaulting to UTF-8.
-# A tibble: 7 x 8
-  URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
-  <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
-1 http… 4863    Wiki… Google      165    1.0             7.1824601042821… fooh  
-2 http… 2198    Wiki… Apple       176    0.999999999999… 5.1073084404209… fooh  
-3 http… 92      Wiki… Qualcomm    765    1.0             0.0              fooh  
-4 http… 959     Wiki… febre       1877   1.0             0.0              fooh  
-5 http… 9       Wiki… Spectrum    2073   0.760419546026… 0.0              fooh  
-6 http… 2962    Wiki… Facebook    2264   1.0             0.0              fooh  
-7 http… 714     Wiki… Instagram   2273   1.0             0.0              fooh  
-Joining, by = c("entity_count_Agent", "entity_count_Company", "entity_count_Disease", "entity_count_MusicalWork", "entity_count_Organisation", "entity_count_Single", "entity_count_Software", "entity_count_Work", "doc_id")
-  |                                                                              |======================================================================| 100%
-No encoding supplied: defaulting to UTF-8.
-# A tibble: 4 x 8
-  URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
-  <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
-1 http… 662     Http… Henrique    5      0.998652470662… 0.0013310060411… fooh  
-2 http… 151     Http… Jair Bolso… 189    1.0             0.0              fooh  
-3 http… 662     Http… Henrique    260    0.998652470662… 0.0013310060411… fooh  
-4 http… 151     Http… Jair Bolso… 451    1.0             0.0              fooh  
-Joining, by = c("entity_count_Agent", "entity_count_Person", "entity_count_Politician", "entity_count_Royalty", "doc_id")
-  |                                                                              |======================================================================| 100%
-No encoding supplied: defaulting to UTF-8.
-# A tibble: 1 x 8
-  URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
-  <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
-1 http… 210     Http… Marcelo Re… 232    1.0             0.0              fooh  
-Joining, by = c("entity_count_Agent", "entity_count_Person", "entity_count_Politician", "doc_id")
-  |                                                                              |======================================================================| 100%
-No encoding supplied: defaulting to UTF-8.
-# A tibble: 3 x 8
-  URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
-  <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
-1 http… 210     Http… Marcelo Re… 26     1.0             0.0              fooh  
-2 http… 71      Wiki… TSF         59     0.970442983293… 0.0              fooh  
-3 http… 13      Wiki… desperdiçou 2506   0.929797165356… 0.0              fooh  
-Joining, by = c("entity_count_Agent", "entity_count_Broadcaster", "entity_count_MusicalWork", "entity_count_Organisation", "entity_count_Person", "entity_count_Politician", "entity_count_RadioStation", "entity_count_Single", "entity_count_Work", "doc_id")
-  |                                                                              |======================================================================| 100%
-No encoding supplied: defaulting to UTF-8.
-# A tibble: 4 x 8
-  URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
-  <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
-1 http… 210     Http… Marcelo Re… 26     1.0             0.0              fooh  
-2 http… 127     Wiki… Santander   132    1.0             6.4173497777986… fooh  
-3 http… 25      Wiki… Novo Banco  148    1.0             0.0              fooh  
-4 http… 82      Wiki… BCP         161    0.926097144925… 0.0              fooh  
-Joining, by = c("entity_count_Agent", "entity_count_Company", "entity_count_Organisation", "entity_count_Person", "entity_count_Politician", "doc_id")
-  |                                                                              |======================================================================| 100%
-No encoding supplied: defaulting to UTF-8.
-# A tibble: 5 x 8
-  URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
-  <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
-1 http… 210     Http… Marcelo Re… 0      1.0             0.0              fooh  
-2 http… 14      Http… Francisco … 49     0.999999999466… 0.0              fooh  
-3 http… 210     Http… Marcelo Re… 315    1.0             0.0              fooh  
-4 http… 210     Http… Marcelo Re… 2782   1.0             0.0              fooh  
-5 http… 148     Http… António Co… 3148   0.999999185014… 0.0              fooh  
-Joining, by = c("entity_count_Actor", "entity_count_Agent", "entity_count_Artist", "entity_count_Person", "entity_count_Politician", "doc_id")
-  |                                                                              |======================================================================| 100%
-No encoding supplied: defaulting to UTF-8.
-# A tibble: 1 x 8
-  URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
-  <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
-1 http… 2962    Wiki… Facebook    312    1.0             0.0              fooh  
-Joining, by = c("entity_count_Agent", "entity_count_Company", "entity_count_Organisation", "doc_id")
-  |                                                                              |======================================================================| 100%
-No encoding supplied: defaulting to UTF-8.
-# A tibble: 1 x 8
-  URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
-  <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
-1 http… 207     Http… Angus       702    0.997153761581… 0.0028532709699… fooh  
+1 http… 510     Http… Amália Rod… 46     0.999999984851… 0.0              fooh  
+2 http… 510     Http… Amália Rod… 216    0.999999984851… 0.0              fooh  
 Joining, by = c("entity_count_Agent", "entity_count_Artist", "entity_count_MusicalArtist", "entity_count_Person", "doc_id")
   |                                                                              |======================================================================| 100%
 No encoding supplied: defaulting to UTF-8.
-
-No entities.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |======================================================================| 100%
-No encoding supplied: defaulting to UTF-8.
-# A tibble: 2 x 8
+# A tibble: 1 x 8
   URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
   <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
-1 http… 434     Wiki… serotonina  989    1.0             0.0              fooh  
-2 http… 327     Wiki… dopamina    1004   1.0             0.0              fooh  
-Joining, by = c("entity_count_ChemicalCompound", "entity_count_ChemicalSubstance", "doc_id")
+1 http… 222     Wiki… Financial … 1230   1.0             0.0              fooh  
+Joining, by = c("entity_count_Newspaper", "entity_count_PeriodicalLiterature", "entity_count_Work", "entity_count_WrittenWork", "doc_id")
   |                                                                              |======================================================================| 100%
 No encoding supplied: defaulting to UTF-8.
 # A tibble: 1 x 8
   URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
   <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
-1 http… 210     Http… Marcelo Re… 317    1.0             0.0              fooh  
-Joining, by = c("entity_count_Agent", "entity_count_Person", "entity_count_Politician", "doc_id")
+1 http… 11      Http… Paulo Alme… 2080   0.999999996856… 0.0              fooh  
+Joining, by = c("entity_count_Agent", "entity_count_Athlete", "entity_count_Person", "entity_count_SoccerPlayer", "doc_id")
   |                                                                              |======================================================================| 100%
 No encoding supplied: defaulting to UTF-8.
-# A tibble: 2 x 8
+# A tibble: 5 x 8
   URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
   <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
-1 http… 69      Wiki… NOVO        19     0.999997597551… 0.0              fooh  
-2 http… 234     Wiki… abr         41     0.995822888869… 0.0              fooh  
-Joining, by = c("entity_count_Agent", "entity_count_Organisation", "entity_count_PoliticalParty", "entity_count_Website", "entity_count_Work", "doc_id")
+1 http… 2764    Wiki… Benfica     97     0.999999999981… 1.3499610835661… fooh  
+2 http… 161     Http… Pedrinho    199    0.781380238308… 0.2797054231681… fooh  
+3 http… 331     Wiki… CSA         509    0.999999997724… 2.2753853521117… fooh  
+4 http… 161     Http… Pedrinho    535    0.781380238281… 0.2797054231681… fooh  
+5 http… 7068    Wiki… Corinthians 1028   0.999999999989… 6.2895148305159… fooh  
+Joining, by = c("entity_count_Agent", "entity_count_FictionalCharacter", "entity_count_Organisation", "entity_count_Person", "entity_count_SoccerClub", "entity_count_SportsTeam", "doc_id")
   |                                                                              |======================================================================| 100%
 No encoding supplied: defaulting to UTF-8.
 # A tibble: 10 x 8
    URI   support types surfaceForm offset similarityScore percentageOfSec…
    <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>           
- 1 http… 151     Http… Jair Bolso… 23     1.0             0.0             
- 2 http… 662     Http… Henrique    89     0.911285105755… 0.0960651287447…
- 3 http… 151     Http… Jair Bolso… 264    1.0             0.0             
- 4 http… 662     Http… Henrique    497    0.911285105757… 0.0960651287447…
- 5 http… 151     Http… Jair Bolso… 543    1.0             0.0             
- 6 http… 662     Http… Henrique    745    0.911285105757… 0.0960651287447…
- 7 http… 2102    Http… São Paulo   800    0.999997715045… 1.1715450914221…
- 8 http… 151     Http… Jair Bolso… 827    1.0             0.0             
- 9 http… 662     Http… Henrique    1025   0.911285105757… 0.0960651287447…
-10 http… 2102    Http… São Paulo   1636   0.999997715045… 1.1715450914221…
+ 1 http… 426     Wiki… OCDE        423    0.997701202693… 0.0             
+ 2 http… 177     Http… Pedro Pass… 571    1.0             0.0             
+ 3 http… 426     Wiki… OCDE        821    0.997701202693… 0.0             
+ 4 http… 1025    Wiki… Estados-me… 1912   1.0             1.1135784496551…
+ 5 http… 16      Http… Álvaro San… 2904   0.999999997372… 0.0             
+ 6 http… 16      Http… Álvaro San… 3423   0.999999997372… 0.0             
+ 7 http… 16      Http… Álvaro San… 3918   0.999999997372… 0.0             
+ 8 http… 796     Wiki… Fundo Mone… 4382   0.999999999994… 0.0             
+ 9 http… 796     Wiki… FMI         4412   0.998754906184… 0.0             
+10 http… 796     Wiki… FMI         4618   0.998754906184… 0.0             
 # … with 1 more variable: doc_id <chr>
-Joining, by = c("entity_count_Agent", "entity_count_Cleric", "entity_count_Person", "entity_count_Politician", "entity_count_Royalty", "entity_count_Saint", "doc_id")
+Joining, by = c("entity_count_Agent", "entity_count_Organisation", "entity_count_Person", "entity_count_Politician", "doc_id")
   |                                                                              |======================================================================| 100%
 No encoding supplied: defaulting to UTF-8.
 # A tibble: 1 x 8
   URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
   <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
-1 http… 132     Wiki… him         770    0.999999964912… 0.0              fooh  
-Joining, by = c("entity_count_Agent", "entity_count_Band", "entity_count_Group", "entity_count_Organisation", "doc_id")
-  |                                                                              |======================================================================| 100%
-No encoding supplied: defaulting to UTF-8.
-# A tibble: 4 x 8
-  URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
-  <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
-1 http… 33      Http… Abdelaziz … 625    1.0             0.0              fooh  
-2 http… 62      Http… Omar al-Ba… 1352   1.0             0.0              fooh  
-3 http… 473     Wiki… coma        2975   0.999999999999… 6.2870163999274… fooh  
-4 http… 473     Wiki… coma        3550   0.999999999999… 6.2870163999274… fooh  
-Joining, by = c("entity_count_Agent", "entity_count_Disease", "entity_count_Person", "entity_count_Politician", "entity_count_President", "doc_id")
-  |                                                                              |======================================================================| 100%
-No encoding supplied: defaulting to UTF-8.
-# A tibble: 11 x 8
-   URI   support types surfaceForm offset similarityScore percentageOfSec…
-   <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>           
- 1 http… 603     Wiki… PCP         380    0.990656245611… 0.0072003618272…
- 2 http… 150     Wiki… PEV         470    1.0             0.0             
- 3 http… 148     Http… António Co… 570    0.999999185014… 0.0             
- 4 http… 603     Wiki… PCP         1505   0.990656245611… 0.0072003618272…
- 5 http… 4002    Wiki… PSD         1797   0.999993468802… 4.6888540249354…
- 6 http… 28      Http… Rui Rio     1801   1.0             0.0             
- 7 http… 603     Wiki… PCP         2346   0.990656245611… 0.0072003618272…
- 8 http… 150     Wiki… PEV         2752   1.0             0.0             
- 9 http… 17      Http… André Silva 3079   0.735364637821… 0.3148788927336…
-10 http… 1104    Wiki… álcool      3358   0.999237613298… 7.6296837849661…
-11 http… 646     Wiki… CDS         3390   0.998467270769… 0.0             
-# … with 1 more variable: doc_id <chr>
-Joining, by = c("entity_count_Agent", "entity_count_Athlete", "entity_count_ChemicalCompound", "entity_count_ChemicalSubstance", "entity_count_Organisation", "entity_count_Person", "entity_count_PoliticalParty", "entity_count_Politician", "entity_count_SoccerPlayer", "doc_id")
-  |                                                                              |======================================================================| 100%
-No encoding supplied: defaulting to UTF-8.
-# A tibble: 18 x 8
-   URI   support types surfaceForm offset similarityScore percentageOfSec…
-   <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>           
- 1 http… 234     Wiki… Abr         27     0.995822888868… 0.0             
- 2 http… 172     Http… Helena      988    0.999994692710… 5.3073178956001…
- 3 http… 172     Http… Helena      1289   0.999994692710… 5.3073178956001…
- 4 http… 172     Http… Helena      1778   0.999994692710… 5.3073178956001…
- 5 http… 172     Http… Pascal      2033   0.999999998490… 1.5086886588264…
- 6 http… 227     Http… Susana      2468   1.0             1.6151918548205…
- 7 http… 12786   Http… Salvador    2484   1.0             7.5908554335178…
- 8 http… 1118    Http… Filipe      2544   0.999999939950… 6.0049614123893…
- 9 http… 191     Http… Belchior    2551   1.0             2.4129855218123…
-10 http… 227     Http… Susana      2760   1.0             1.6151918548205…
-11 http… 12786   Http… Salvador    2776   1.0             7.5908554335178…
-12 http… 1118    Http… Filipe      2836   0.999999939950… 6.0049614123893…
-13 http… 191     Http… Belchior    2843   1.0             2.4129855218123…
-14 http… 27      Http… Maria Simõ… 3480   1.0             0.0             
-15 http… 227     Http… Susana      4184   1.0             1.6151918548205…
-16 http… 12786   Http… Salvador    4200   1.0             7.5908554335178…
-17 http… 227     Http… Susana      4444   1.0             1.6151918548205…
-18 http… 12786   Http… Salvador    4460   1.0             7.5908554335178…
-# … with 1 more variable: doc_id <chr>
-Joining, by = c("entity_count_Actor", "entity_count_Agent", "entity_count_Artist", "entity_count_Cleric", "entity_count_MusicalArtist", "entity_count_Person", "entity_count_Royalty", "entity_count_Saint", "entity_count_Scientist", "entity_count_Website", "entity_count_Work", "doc_id")
-  |                                                                              |======================================================================| 100%
-No encoding supplied: defaulting to UTF-8.
-# A tibble: 2 x 8
-  URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
-  <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
-1 http… 1394    Http… Isabel II   259    0.999932694262… 5.7961539539527… fooh  
-2 http… 448     Wiki… People      464    0.999999999982… 1.7808975025160… fooh  
-Joining, by = c("entity_count_Agent", "entity_count_Magazine", "entity_count_PeriodicalLiterature", "entity_count_Person", "entity_count_Royalty", "entity_count_Work", "entity_count_WrittenWork", "doc_id")
-  |                                                                              |======================================================================| 100%
-No encoding supplied: defaulting to UTF-8.
-# A tibble: 2 x 8
-  URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
-  <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
-1 http… 465     Http… príncipe    39     0.843205619686… 0.1741826426700… fooh  
-2 http… 1394    Http… Isabel II   288    0.999997721575… 2.2778568197901… fooh  
-Joining, by = c("entity_count_Agent", "entity_count_Person", "entity_count_Royalty", "doc_id")
-  |                                                                              |======================================================================| 100%
-No encoding supplied: defaulting to UTF-8.
-# A tibble: 2 x 8
-  URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
-  <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
-1 http… 151     Http… Jair Bolso… 645    1.0             0.0              fooh  
-2 http… 151     Http… Jair Bolso… 811    1.0             0.0              fooh  
-Joining, by = c("entity_count_Agent", "entity_count_Person", "entity_count_Politician", "doc_id")
-  |                                                                              |======================================================================| 100%
-No encoding supplied: defaulting to UTF-8.
-# A tibble: 10 x 8
-   URI   support types surfaceForm offset similarityScore percentageOfSec…
-   <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>           
- 1 http… 95      Http… Eunice Muñ… 12     0.999999983775… 0.0             
- 2 http… 227     Http… Susana      164    0.997875293012… 0.0021292309794…
- 3 http… 29      Wiki… NOVA GENTE  183    0.999999999982… 0.0             
- 4 http… 95      Http… Eunice Muñ… 839    0.999999983775… 0.0             
- 5 http… 2778    Wiki… TVI         1706   1.0             0.0             
- 6 http… 123     Http… Cacilda     1746   1.0             0.0             
- 7 http… 123     Http… Cacilda     1919   1.0             0.0             
- 8 http… 26      Http… Maria José… 1963   0.999999981051… 0.0             
- 9 http… 29      Wiki… Nova Gente  2133   0.999999999982… 0.0             
-10 http… 714     Wiki… Instagram   2147   1.0             0.0             
-# … with 1 more variable: doc_id <chr>
-Joining, by = c("entity_count_Actor", "entity_count_Agent", "entity_count_Artist", "entity_count_Broadcaster", "entity_count_Magazine", "entity_count_Organisation", "entity_count_PeriodicalLiterature", "entity_count_Person", "entity_count_Software", "entity_count_TelevisionStation", "entity_count_Work", "entity_count_WrittenWork", "doc_id")
-  |                                                                              |======================================================================| 100%
-No encoding supplied: defaulting to UTF-8.
-# A tibble: 4 x 8
-  URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
-  <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
-1 http… 273     Wiki… Google Pla… 2      1.0             0.0              fooh  
-2 http… 273     Wiki… Play Store  484    1.0             0.0              fooh  
-3 http… 273     Wiki… Google Pla… 743    1.0             0.0              fooh  
-4 http… 4863    Wiki… Google      1080   0.999999999999… 9.1773800180739… fooh  
-Joining, by = c("entity_count_Agent", "entity_count_Company", "entity_count_Organisation", "entity_count_Website", "entity_count_Work", "doc_id")
+1 http… 222     Wiki… Financial … 1087   1.0             0.0              fooh  
+Joining, by = c("entity_count_Newspaper", "entity_count_PeriodicalLiterature", "entity_count_Work", "entity_count_WrittenWork", "doc_id")
   |                                                                              |======================================================================| 100%
 No encoding supplied: defaulting to UTF-8.
 # A tibble: 6 x 8
   URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
   <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
-1 http… 9       Http… Mário Cent… 84     0.999993595003… 0.0              fooh  
-2 http… 9       Http… Mário Cent… 332    0.999993595003… 0.0              fooh  
-3 http… 9       Http… Mário Cent… 516    0.999993595003… 0.0              fooh  
-4 http… 770     Wiki… PSD         650    0.808988379437… 0.2360818377973… fooh  
-5 http… 88      Http… Duarte Pac… 654    1.0             0.0              fooh  
-6 http… 148     Http… António Co… 1217   0.999999185014… 0.0              fooh  
-Joining, by = c("entity_count_Agent", "entity_count_Organisation", "entity_count_Person", "entity_count_PoliticalParty", "entity_count_Politician", "doc_id")
-  |                                                                              |======================================================================| 100%
-No encoding supplied: defaulting to UTF-8.
-# A tibble: 7 x 8
-  URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
-  <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
-1 http… 112     Http… Manuel Luí… 0      0.999999999680… 0.0              fooh  
-2 http… 54      Wiki… Media Capi… 643    0.999999999999… 0.0              fooh  
-3 http… 112     Http… Manuel Luí… 787    0.999999999680… 0.0              fooh  
-4 http… 714     Wiki… Instagram   966    1.0             0.0              fooh  
-5 http… 2778    Wiki… TVI         1215   1.0             0.0              fooh  
-6 http… 29      Wiki… Nova Gente  1403   0.999999999623… 0.0              fooh  
-7 http… 714     Wiki… Instagram   1417   1.0             0.0              fooh  
-Joining, by = c("entity_count_Agent", "entity_count_Broadcaster", "entity_count_Company", "entity_count_Magazine", "entity_count_Organisation", "entity_count_PeriodicalLiterature", "entity_count_Person", "entity_count_Software", "entity_count_TelevisionStation", "entity_count_Work", "entity_count_WrittenWork", "doc_id")
-  |                                                                              |======================================================================| 100%
-No encoding supplied: defaulting to UTF-8.
-# A tibble: 6 x 8
-  URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
-  <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
-1 http… 5       Wiki… Prozis      987    0.999999999987… 0.0              fooh  
-2 http… 5       Wiki… Prozis      1158   0.999999999987… 0.0              fooh  
-3 http… 5       Wiki… Prozis      1231   1.0             0.0              fooh  
-4 http… 5       Wiki… Prozis      1922   0.999999999987… 0.0              fooh  
-5 http… 5       Wiki… Prozis      2097   1.0             0.0              fooh  
-6 http… 5       Wiki… Prozis      2480   0.999999999987… 0.0              fooh  
-Joining, by = c("entity_count_Agent", "entity_count_Company", "entity_count_Organisation", "doc_id")
-  |                                                                              |======================================================================| 100%
-No encoding supplied: defaulting to UTF-8.
-
-No entities.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |======================================================================| 100%
-No encoding supplied: defaulting to UTF-8.
-# A tibble: 5 x 8
-  URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
-  <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
-1 http… 1025    Wiki… Estados-me… 918    1.0             6.0460872418417… fooh  
-2 http… 1025    Wiki… Estados-me… 1859   1.0             6.0460872418417… fooh  
-3 http… 1025    Wiki… Estados-me… 2175   1.0             6.0460872418417… fooh  
-4 http… 1025    Wiki… Estados-me… 2357   1.0             6.0460872418417… fooh  
-5 http… 1293    Wiki… doenças in… 3350   0.729898652258… 0.3700527926291… fooh  
-Joining, by = c("entity_count_Agent", "entity_count_Disease", "entity_count_Organisation", "doc_id")
-  |                                                                              |======================================================================| 100%
-No encoding supplied: defaulting to UTF-8.
-# A tibble: 4 x 8
-  URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
-  <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
-1 http… 1345    Wiki… Inter de M… 50     1.0             0.0              fooh  
-2 http… 1345    Wiki… Inter de M… 232    1.0             0.0              fooh  
-3 http… 1345    Wiki… Inter de M… 610    1.0             0.0              fooh  
-4 http… 7       Wiki… a tendência 860    0.999998481520… 0.0              fooh  
-Joining, by = c("entity_count_Agent", "entity_count_MusicalWork", "entity_count_Organisation", "entity_count_Single", "entity_count_SoccerClub", "entity_count_SportsTeam", "entity_count_Work", "doc_id")
-  |                                                                              |======================================================================| 100%
-No encoding supplied: defaulting to UTF-8.
-# A tibble: 10 x 8
-   URI   support types surfaceForm offset similarityScore percentageOfSec…
-   <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>           
- 1 http… 591     Http… Cristiano … 122    1.0             0.0             
- 2 http… 591     Http… Cristiano … 739    1.0             0.0             
- 3 http… 3       Http… Alexandre … 913    0.999613897237… 0.0             
- 4 http… 12      Wiki… má educação 1096   0.999999998168… 0.0             
- 5 http… 3       Http… Alexandre … 1411   0.999613897237… 0.0             
- 6 http… 29      Wiki… NOVA GENTE  1682   1.0             0.0             
- 7 http… 481     Wiki… Reuters     1821   1.0             0.0             
- 8 http… 29      Wiki… NOVA GENTE  1858   0.999999999998… 0.0             
- 9 http… 29      Wiki… Nova Gente  2553   0.999999999998… 0.0             
-10 http… 714     Wiki… Instagram   2567   1.0             0.0             
-# … with 1 more variable: doc_id <chr>
-Joining, by = c("entity_count_Agent", "entity_count_Athlete", "entity_count_Company", "entity_count_Film", "entity_count_Magazine", "entity_count_Organisation", "entity_count_PeriodicalLiterature", "entity_count_Person", "entity_count_SoccerPlayer", "entity_count_Software", "entity_count_Wikidata", "entity_count_Work", "entity_count_WrittenWork", "doc_id")
-  |                                                                              |======================================================================| 100%
-No encoding supplied: defaulting to UTF-8.
-# A tibble: 12 x 8
-   URI   support types surfaceForm offset similarityScore percentageOfSec…
-   <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>           
- 1 http… 44      Wiki… Huawei      2      1.0             0.0             
- 2 http… 44      Wiki… Huawei      254    1.0             0.0             
- 3 http… 44      Wiki… Huawei      345    1.0             0.0             
- 4 http… 44      Wiki… Huawei      423    1.0             0.0             
- 5 http… 44      Wiki… Huawei      487    1.0             0.0             
- 6 http… 44      Wiki… Huawei      663    1.0             0.0             
- 7 http… 44      Wiki… Huawei      885    1.0             0.0             
- 8 http… 44      Wiki… Huawei      1049   1.0             0.0             
- 9 http… 44      Wiki… Huawei      3696   1.0             0.0             
-10 http… 44      Wiki… Huawei      3972   1.0             0.0             
-11 http… 655     Wiki… Samsung     4392   1.0             0.0             
-12 http… 7       Wiki… a tendência 4845   0.999998481521… 0.0             
-# … with 1 more variable: doc_id <chr>
-Joining, by = c("entity_count_Agent", "entity_count_Company", "entity_count_MusicalWork", "entity_count_Organisation", "entity_count_Single", "entity_count_Work", "doc_id")
-  |                                                                              |======================================================================| 100%
-No encoding supplied: defaulting to UTF-8.
-# A tibble: 5 x 8
-  URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
-  <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
-1 http… 655     Wiki… Samsung     422    1.0             0.0              fooh  
-2 http… 655     Wiki… Samsung     1277   1.0             0.0              fooh  
-3 http… 48      Wiki… SnapChat    1314   1.0             0.0              fooh  
-4 http… 4863    Wiki… Google      1348   1.0             6.7825359046874… fooh  
-5 http… 655     Wiki… Samsung     1652   1.0             0.0              fooh  
-Joining, by = c("entity_count_Agent", "entity_count_Company", "entity_count_Organisation", "entity_count_Software", "entity_count_Work", "doc_id")
-  |                                                                              |======================================================================| 100%
-No encoding supplied: defaulting to UTF-8.
-# A tibble: 11 x 8
-   URI   support types surfaceForm offset similarityScore percentageOfSec…
-   <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>           
- 1 http… 21      Http… Gustavo Sa… 0      0.999997592380… 0.0             
- 2 http… 55      Http… Fátima Lop… 37     0.925266289776… 0.0685314685314…
- 3 http… 2778    Wiki… TVI         97     1.0             0.0             
- 4 http… 9       Wiki… Querido Mu… 313    1.0             0.0             
- 5 http… 34      Wiki… 48 horas    488    1.0             0.0             
- 6 http… 34      Wiki… 48 horas    605    1.0             0.0             
- 7 http… 12786   Http… Salvador    695    0.999999999986… 8.4695366174051…
- 8 http… 135     Http… Joana       787    0.844003640460… 0.0944857907138…
- 9 http… 29      Wiki… NOVA GENTE  826    1.0             0.0             
-10 http… 29      Wiki… Nova Gente  1521   1.0             0.0             
-11 http… 714     Wiki… Instagram   1535   1.0             0.0             
-# … with 1 more variable: doc_id <chr>
-Joining, by = c("entity_count_Actor", "entity_count_Agent", "entity_count_Artist", "entity_count_Broadcaster", "entity_count_Film", "entity_count_Magazine", "entity_count_Organisation", "entity_count_PeriodicalLiterature", "entity_count_Person", "entity_count_Royalty", "entity_count_Software", "entity_count_TelevisionShow", "entity_count_TelevisionStation", "entity_count_Wikidata", "entity_count_Work", "entity_count_WrittenWork", "doc_id")
+1 http… 426     Wiki… OCDE        242    0.997701202693… 0.0              fooh  
+2 http… 16      Http… Álvaro San… 999    0.999999997372… 0.0              fooh  
+3 http… 177     Http… Passos      1393   0.999999986109… 1.3889977997133… fooh  
+4 http… 796     Wiki… Fundo Mone… 2153   0.999999999994… 0.0              fooh  
+5 http… 796     Wiki… FMI         2183   0.998754906184… 0.0              fooh  
+6 http… 796     Wiki… FMI         2389   0.998754906184… 0.0              fooh  
+Joining, by = c("entity_count_Agent", "entity_count_Organisation", "entity_count_Person", "entity_count_Politician", "doc_id")
   |                                                                              |======================================================================| 100%
 No encoding supplied: defaulting to UTF-8.
 # A tibble: 9 x 8
   URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
   <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
-1 http… 290     Http… Kepler      2      1.0             1.4355908820212… fooh  
-2 http… 1124    Wiki… Forbes      212    0.999999999909… 9.0113760447987… fooh  
-3 http… 290     Http… Kepler      469    1.0             1.4355908820212… fooh  
-4 http… 290     Http… Kepler      628    1.0             1.4355908820212… fooh  
-5 http… 290     Http… Kepler      641    1.0             1.4355908820212… fooh  
-6 http… 290     Http… Kepler      704    1.0             1.4355908820212… fooh  
-7 http… 290     Http… Kepler      1247   1.0             1.4355908820212… fooh  
-8 http… 290     Http… Kepler      1581   1.0             1.4355908820212… fooh  
-9 http… 4863    Wiki… NASA        1637   1.0             0.0              fooh  
-Joining, by = c("entity_count_Agent", "entity_count_Magazine", "entity_count_Organisation", "entity_count_PeriodicalLiterature", "entity_count_Person", "entity_count_Scientist", "entity_count_Work", "entity_count_WrittenWork", "doc_id")
+1 http… 426     Wiki… OCDE        160    0.997701202693… 0.0              fooh  
+2 http… 796     Wiki… Fundo Mone… 189    0.999999999994… 0.0              fooh  
+3 http… 796     Wiki… FMI         219    0.998754906184… 0.0              fooh  
+4 http… 426     Wiki… OCDE        361    0.997701202693… 0.0              fooh  
+5 http… 796     Wiki… FMI         422    0.998754906184… 0.0              fooh  
+6 http… 177     Http… Pedro Pass… 676    1.0             0.0              fooh  
+7 http… 426     Wiki… OCDE        2948   0.997701202693… 0.0              fooh  
+8 http… 796     Wiki… FMI         3040   0.998754906184… 0.0              fooh  
+9 http… 796     Wiki… FMI         3399   0.998754906184… 0.0              fooh  
+Joining, by = c("entity_count_Agent", "entity_count_Organisation", "entity_count_Person", "entity_count_Politician", "doc_id")
   |                                                                              |======================================================================| 100%
 No encoding supplied: defaulting to UTF-8.
-# A tibble: 4 x 8
+
+No entities.
+NULL
+Joining, by = "doc_id"
+  |                                                                              |======================================================================| 100%
+No encoding supplied: defaulting to UTF-8.
+# A tibble: 5 x 8
   URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
   <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
-1 http… 4       Http… Fernando P… 1530   1.0             0.0              fooh  
-2 http… 6       Http… Emanuel Si… 1547   0.999999999999… 0.0              fooh  
-3 http… 12786   Http… Messias     1574   0.990941194390… 0.0091416177477… fooh  
-4 http… 533     Wiki… Portela     1613   0.965358338875… 0.0358847203922… fooh  
-Joining, by = c("entity_count_Agent", "entity_count_Athlete", "entity_count_Organisation", "entity_count_Person", "entity_count_SambaSchool", "doc_id")
+1 http… 299     Wiki… tosse       204    1.0             0.0              fooh  
+2 http… 959     Wiki… febre       227    1.0             0.0              fooh  
+3 http… 16      Wiki… Respirar    636    0.999999999629… 2.6451964627496… fooh  
+4 http… 431     Http… Jefferson   1049   0.999761169259… 2.3888770094814… fooh  
+5 http… 1483    Wiki… Universida… 1134   1.0             1.7800569972092… fooh  
+Joining, by = c("entity_count_Agent", "entity_count_Album", "entity_count_Disease", "entity_count_EducationalInstitution", "entity_count_MusicalWork", "entity_count_Organisation", "entity_count_Person", "entity_count_Politician", "entity_count_President", "entity_count_University", "entity_count_Work", "doc_id")
   |                                                                              |======================================================================| 100%
 No encoding supplied: defaulting to UTF-8.
-# A tibble: 22 x 8
-   URI   support types surfaceForm offset similarityScore percentageOfSec…
-   <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>           
- 1 http… 35      Http… Salgado Ze… 70     1.0             0.0             
- 2 http… 2042    Wiki… Sporting    126    1.0             6.0901495861305…
- 3 http… 2042    Wiki… Alvalade    177    1.0             1.1952635032266…
- 4 http… 11      Http… Rúben Amor… 277    0.999999957477… 0.0             
- 5 http… 523     Wiki… Braga       293    0.999810748594… 1.8928722890212…
- 6 http… 11      Http… Rúben Amor… 363    0.999999957477… 0.0             
- 7 http… 2042    Wiki… Sporting    396    1.0             6.0901495861305…
- 8 http… 523     Wiki… Braga       471    0.999810748594… 1.8928722890212…
- 9 http… 35      Http… Salgado Ze… 1020   1.0             0.0             
-10 http… 2042    Wiki… Alvalade    1086   1.0             1.1952635032266…
-# … with 12 more rows, and 1 more variable: doc_id <chr>
-Joining, by = c("entity_count_Agent", "entity_count_Athlete", "entity_count_Company", "entity_count_Organisation", "entity_count_Person", "entity_count_Politician", "entity_count_SoccerClub", "entity_count_SoccerManager", "entity_count_SoccerPlayer", "entity_count_SportsManager", "entity_count_SportsTeam", "doc_id")
+
+No entities.
+NULL
+Joining, by = "doc_id"
   |                                                                              |======================================================================| 100%
 No encoding supplied: defaulting to UTF-8.
-# A tibble: 13 x 8
-   URI   support types surfaceForm offset similarityScore percentageOfSec…
-   <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>           
- 1 http… 78      Http… Cristina F… 404    1.0             0.0             
- 2 http… 46      Http… Sónia Araú… 424    0.999999987272… 0.0             
- 3 http… 78      Http… Cristina F… 564    1.0             0.0             
- 4 http… 27      Wiki… SIC         658    0.999980343609… 1.9611028030538…
- 5 http… 714     Wiki… Instagram   719    1.0             0.0             
- 6 http… 10      Wiki… O vestido   890    0.999999156651… 0.0             
- 7 http… 182     Wiki… Belíssima   973    0.994635830469… 0.0             
- 8 http… 78      Http… Cristina F… 1071   1.0             0.0             
- 9 http… 27      Wiki… SIC         1204   0.999980343609… 1.9611028030538…
-10 http… 46      Http… Sónia Araú… 1270   0.999999987272… 0.0             
-11 http… 29      Wiki… NOVA GENTE  2129   1.0             0.0             
-12 http… 29      Wiki… Nova Gente  2824   1.0             0.0             
-13 http… 714     Wiki… Instagram   2838   1.0             0.0             
-# … with 1 more variable: doc_id <chr>
-Joining, by = c("entity_count_Agent", "entity_count_Broadcaster", "entity_count_Film", "entity_count_Magazine", "entity_count_Organisation", "entity_count_PeriodicalLiterature", "entity_count_Person", "entity_count_Software", "entity_count_TelevisionShow", "entity_count_TelevisionStation", "entity_count_Wikidata", "entity_count_Work", "entity_count_WrittenWork", "doc_id")
+
+No entities.
+NULL
+Joining, by = "doc_id"
+  |                                                                              |======================================================================| 100%
+No encoding supplied: defaulting to UTF-8.
+
+No entities.
+NULL
+Joining, by = "doc_id"
   |                                                                              |======================================================================| 100%
 No encoding supplied: defaulting to UTF-8.
 # A tibble: 6 x 8
   URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
   <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
-1 http… 95      Http… Eunice Muñ… 8      0.999999983775… 0.0              fooh  
-2 http… 971     Http… Maria II    303    0.995472385737… 0.0045482067886… fooh  
-3 http… 95      Http… Eunice Muñ… 550    0.999999983775… 0.0              fooh  
-4 http… 95      Http… Eunice Muñ… 716    0.999999983775… 0.0              fooh  
-5 http… 29      Wiki… Nova Gente  863    0.999999999924… 0.0              fooh  
-6 http… 714     Wiki… Instagram   877    0.999999999999… 0.0              fooh  
-Joining, by = c("entity_count_Actor", "entity_count_Agent", "entity_count_Artist", "entity_count_Magazine", "entity_count_PeriodicalLiterature", "entity_count_Person", "entity_count_Royalty", "entity_count_Software", "entity_count_Work", "entity_count_WrittenWork", "doc_id")
+1 http… 4863    Wiki… NASA        2      1.0             0.0              fooh  
+2 http… 4863    Wiki… NASA        121    1.0             0.0              fooh  
+3 http… 11      Http… Oleg Skrip… 128    1.0             0.0              fooh  
+4 http… 208     Wiki… Roscosmos   147    0.995303202358… 0.0              fooh  
+5 http… 4863    Wiki… NASA        323    1.0             0.0              fooh  
+6 http… 11      Http… Oleg Skrip… 1017   1.0             0.0              fooh  
+Joining, by = c("entity_count_Agent", "entity_count_Company", "entity_count_Organisation", "entity_count_Person", "doc_id")
   |                                                                              |======================================================================| 100%
 No encoding supplied: defaulting to UTF-8.
-# A tibble: 14 x 8
-   URI   support types surfaceForm offset similarityScore percentageOfSec…
-   <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>           
- 1 http… 4002    Wiki… PSD         204    0.983190977511… 0.0166468469867…
- 2 http… 341     Wiki… BE          208    1.0             0.0             
- 3 http… 646     Wiki… CDS-PP      211    0.998482887136… 0.0             
- 4 http… 150     Wiki… PEV         290    1.0             0.0             
- 5 http… 603     Wiki… PCP         317    0.990656245611… 0.0072003618272…
- 6 http… 603     Wiki… PCP         541    0.990656245611… 0.0072003618272…
- 7 http… 4002    Wiki… PSD         639    0.983190977511… 0.0166468469867…
- 8 http… 341     Wiki… BE          643    1.0             0.0             
- 9 http… 646     Wiki… CDS-PP      646    0.998482887136… 0.0             
-10 http… 603     Wiki… PCP         918    0.990656245611… 0.0072003618272…
-11 http… 150     Wiki… PEV         922    1.0             0.0             
-12 http… 603     Wiki… PCP         1158   0.992851112747… 0.0072003618272…
-13 http… 150     Wiki… PEV         1162   1.0             0.0             
-14 http… 210     Http… Marcelo Re… 1429   1.0             0.0             
-# … with 1 more variable: doc_id <chr>
-Joining, by = c("entity_count_Agent", "entity_count_Organisation", "entity_count_Person", "entity_count_PoliticalParty", "entity_count_Politician", "doc_id")
+
+No entities.
+NULL
+Joining, by = "doc_id"
   |                                                                              |======================================================================| 100%
 No encoding supplied: defaulting to UTF-8.
-# A tibble: 2 x 8
-  URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
-  <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
-1 http… 148     Http… António Co… 336    0.999999185014… 0.0              fooh  
-2 http… 148     Http… António Co… 752    0.999999185014… 0.0              fooh  
-Joining, by = c("entity_count_Agent", "entity_count_Person", "entity_count_Politician", "doc_id")
+
+No entities.
+NULL
+Joining, by = "doc_id"
+  |                                                                              |======================================================================| 100%
+No encoding supplied: defaulting to UTF-8.
+
+No entities.
+NULL
+Joining, by = "doc_id"
   |                                                                              |======================================================================| 100%
 No encoding supplied: defaulting to UTF-8.
 # A tibble: 1 x 8
   URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
   <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
-1 http… 161     Wiki… a tarde     387    1.0             0.0              fooh  
+1 http… 321     Wiki… GNR         936    1.0             5.7435959617476… fooh  
+Joining, by = c("entity_count_Agent", "entity_count_MilitaryUnit", "entity_count_Organisation", "doc_id")
+  |                                                                              |======================================================================| 100%
+No encoding supplied: defaulting to UTF-8.
+# A tibble: 3 x 8
+  URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
+  <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
+1 http… 16      Http… Álvaro San… 21     0.999999997372… 0.0              fooh  
+2 http… 426     Wiki… OCDE        650    0.997701202694… 0.0              fooh  
+3 http… 177     Http… Pedro Pass… 798    1.0             0.0              fooh  
+Joining, by = c("entity_count_Agent", "entity_count_Organisation", "entity_count_Person", "entity_count_Politician", "doc_id")
+  |                                                                              |======================================================================| 100%
+No encoding supplied: defaulting to UTF-8.
+
+No entities.
+NULL
+Joining, by = "doc_id"
+  |                                                                              |======================================================================| 100%
+No encoding supplied: defaulting to UTF-8.
+# A tibble: 6 x 8
+  URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
+  <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
+1 http… 16      Http… Álvaro San… 21     0.999999997372… 0.0              fooh  
+2 http… 426     Wiki… OCDE        381    0.997701202694… 0.0              fooh  
+3 http… 796     Wiki… Fundo Mone… 410    0.999999999994… 0.0              fooh  
+4 http… 796     Wiki… FMI         440    0.998754906184… 0.0              fooh  
+5 http… 426     Wiki… OCDE        582    0.997701202694… 0.0              fooh  
+6 http… 796     Wiki… FMI         643    0.998754906184… 0.0              fooh  
+Joining, by = c("entity_count_Agent", "entity_count_Organisation", "entity_count_Person", "entity_count_Politician", "doc_id")
+  |                                                                              |======================================================================| 100%
+No encoding supplied: defaulting to UTF-8.
+# A tibble: 2 x 8
+  URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
+  <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
+1 http… 16      Http… Álvaro San… 21     0.999999997372… 0.0              fooh  
+2 http… 426     Wiki… OCDE        486    0.997701202694… 0.0              fooh  
+Joining, by = c("entity_count_Agent", "entity_count_Organisation", "entity_count_Person", "entity_count_Politician", "doc_id")
+  |                                                                              |======================================================================| 100%
+No encoding supplied: defaulting to UTF-8.
+
+No entities.
+NULL
+Joining, by = "doc_id"
+  |                                                                              |======================================================================| 100%
+No encoding supplied: defaulting to UTF-8.
+# A tibble: 8 x 8
+  URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
+  <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
+1 http… 2       Http… Tiago Bran… 1510   0.999999999878… 0.0              fooh  
+2 http… 109     Wiki… lado a lado 2015   1.0             5.2701769583163… fooh  
+3 http… 2962    Wiki… Facebook    2791   1.0             0.0              fooh  
+4 http… 95      Http… Mark Zucke… 2985   1.0             0.0              fooh  
+5 http… 10      Wiki… Universida… 3112   1.0             0.0              fooh  
+6 http… 9       Http… Sadiq Khan  4374   1.0             0.0              fooh  
+7 http… 337     Wiki… O economis… 4770   1.0             0.0              fooh  
+8 http… 16      Http… Álvaro San… 4783   0.999999997372… 0.0              fooh  
+Joining, by = c("entity_count_Agent", "entity_count_Company", "entity_count_EducationalInstitution", "entity_count_Magazine", "entity_count_Organisation", "entity_count_PeriodicalLiterature", "entity_count_Person", "entity_count_Politician", "entity_count_TelevisionShow", "entity_count_University", "entity_count_Work", "entity_count_WrittenWork", "doc_id")
+  |                                                                              |======================================================================| 100%
+No encoding supplied: defaulting to UTF-8.
+# A tibble: 1 x 8
+  URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
+  <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
+1 http… 681     Wiki… The Times   211    1.0             0.0              fooh  
 Joining, by = c("entity_count_Newspaper", "entity_count_PeriodicalLiterature", "entity_count_Work", "entity_count_WrittenWork", "doc_id")
   |                                                                              |======================================================================| 100%
 No encoding supplied: defaulting to UTF-8.
 # A tibble: 2 x 8
   URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
   <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
-1 http… 172     Http… Helena      1146   0.999275275795… 7.2524884873828… fooh  
-2 http… 444     Http… Teodósio    1153   0.794108765093… 0.2415947862756… fooh  
-Joining, by = c("entity_count_Agent", "entity_count_Cleric", "entity_count_Monarch", "entity_count_Person", "entity_count_Saint", "doc_id")
-  |                                                                              |======================================================================| 100%
-No encoding supplied: defaulting to UTF-8.
-# A tibble: 4 x 8
-  URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
-  <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
-1 http… 27      Wiki… Grupo Pest… 780    1.0             0.0              fooh  
-2 http… 7       Wiki… room servi… 1593   0.999995259813… 0.0              fooh  
-3 http… 27      Wiki… Grupo Pest… 1995   1.0             0.0              fooh  
-4 http… 27      Wiki… Grupo Pest… 4098   1.0             0.0              fooh  
-Joining, by = c("entity_count_Agent", "entity_count_Album", "entity_count_Company", "entity_count_MusicalWork", "entity_count_Organisation", "entity_count_Work", "doc_id")
-  |                                                                              |======================================================================| 100%
-No encoding supplied: defaulting to UTF-8.
-
-No entities.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |======================================================================| 100%
-No encoding supplied: defaulting to UTF-8.
-# A tibble: 1 x 8
-  URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
-  <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
-1 http… 148     Http… António Co… 369    0.999999185014… 0.0              fooh  
-Joining, by = c("entity_count_Agent", "entity_count_Person", "entity_count_Politician", "doc_id")
-  |                                                                              |======================================================================| 100%
-No encoding supplied: defaulting to UTF-8.
-# A tibble: 2 x 8
-  URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
-  <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
-1 http… 796     Wiki… Fundo Mone… 2011   0.999999999994… 0.0              fooh  
-2 http… 796     Wiki… FMI         2041   0.998754906184… 0.0              fooh  
-Joining, by = c("entity_count_Agent", "entity_count_Organisation", "doc_id")
-  |                                                                              |======================================================================| 100%
-No encoding supplied: defaulting to UTF-8.
-# A tibble: 2 x 8
-  URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
-  <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
-1 http… 5051    Wiki… You Tube    958    1.0             0.0              fooh  
-2 http… 2816    Http… São Pedro   1169   0.984617631889… 0.0056421265268… fooh  
-Joining, by = c("entity_count_Agent", "entity_count_Cleric", "entity_count_Person", "entity_count_Pope", "entity_count_Website", "entity_count_Work", "doc_id")
-  |                                                                              |======================================================================| 100%
-No encoding supplied: defaulting to UTF-8.
-# A tibble: 2 x 8
-  URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
-  <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
-1 http… 2967    Wiki… Universida… 1532   0.999999988426… 1.1289965354130… fooh  
-2 http… 834     Http… Carmen      1559   0.935243215916… 0.0692330150735… fooh  
-Joining, by = c("entity_count_Agent", "entity_count_Artist", "entity_count_EducationalInstitution", "entity_count_MusicalArtist", "entity_count_Organisation", "entity_count_Person", "entity_count_University", "doc_id")
-  |                                                                              |======================================================================| 100%
-No encoding supplied: defaulting to UTF-8.
-
-No entities.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |======================================================================| 100%
-No encoding supplied: defaulting to UTF-8.
-# A tibble: 1 x 8
-  URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
-  <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
-1 http… 210     Http… Marcelo Re… 322    1.0             0.0              fooh  
-Joining, by = c("entity_count_Agent", "entity_count_Person", "entity_count_Politician", "doc_id")
-  |                                                                              |======================================================================| 100%
-No encoding supplied: defaulting to UTF-8.
-
-No entities.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |======================================================================| 100%
-No encoding supplied: defaulting to UTF-8.
-# A tibble: 2 x 8
-  URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
-  <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
-1 http… 210     Http… Marcelo Re… 345    1.0             0.0              fooh  
-2 http… 148     Http… António Co… 692    0.999999185014… 0.0              fooh  
-Joining, by = c("entity_count_Agent", "entity_count_Person", "entity_count_Politician", "doc_id")
-  |                                                                              |======================================================================| 100%
-No encoding supplied: defaulting to UTF-8.
-# A tibble: 1 x 8
-  URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
-  <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
-1 http… 8       Wiki… porta aber… 1727   0.999998789234… 1.2103105339028… fooh  
-Joining, by = c("entity_count_Album", "entity_count_MusicalWork", "entity_count_Work", "doc_id")
-  |                                                                              |======================================================================| 100%
-No encoding supplied: defaulting to UTF-8.
-# A tibble: 1 x 8
-  URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
-  <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
-1 http… 300     Http… Paulo Coel… 1162   1.0             0.0              fooh  
-Joining, by = c("entity_count_Agent", "entity_count_Person", "entity_count_Writer", "doc_id")
-  |                                                                              |======================================================================| 100%
-No encoding supplied: defaulting to UTF-8.
-# A tibble: 5 x 8
-  URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
-  <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
-1 http… 356     Wiki… GAL         24     0.621431560009… 0.3792134831460… fooh  
-2 http… 356     Wiki… GAL         431    0.621431560009… 0.3792134831460… fooh  
-3 http… 356     Wiki… GAL         887    0.621431560009… 0.3792134831460… fooh  
-4 http… 356     Wiki… GAL         962    0.621431560009… 0.3792134831460… fooh  
-5 http… 356     Wiki… GAL         1908   0.621431560009… 0.3792134831460… fooh  
-Joining, by = c("entity_count_Agent", "entity_count_Organisation", "entity_count_SoccerClub", "entity_count_SportsTeam", "doc_id")
-  |                                                                              |======================================================================| 100%
-No encoding supplied: defaulting to UTF-8.
-
-No entities.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |======================================================================| 100%
-No encoding supplied: defaulting to UTF-8.
-# A tibble: 1 x 8
-  URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
-  <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
-1 http… 20      Wiki… Os profiss… 832    0.999999998892… 0.0              fooh  
-Joining, by = c("entity_count_Film", "entity_count_Wikidata", "entity_count_Work", "doc_id")
-  |                                                                              |======================================================================| 100%
-No encoding supplied: defaulting to UTF-8.
-# A tibble: 1 x 8
-  URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
-  <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
-1 http… 1453    Wiki… TIME        298    0.999137809854… 0.0              fooh  
-Joining, by = c("entity_count_Magazine", "entity_count_PeriodicalLiterature", "entity_count_Work", "entity_count_WrittenWork", "doc_id")
-  |                                                                              |======================================================================| 100%
-No encoding supplied: defaulting to UTF-8.
-# A tibble: 24 x 8
-   URI   support types surfaceForm offset similarityScore percentageOfSec…
-   <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>           
- 1 http… 11      Http… Luis Sepúl… 200    0.999994861850… 0.0             
- 2 http… 11      Http… Luis Sepúl… 708    0.999994861850… 0.0             
- 3 http… 72      Wiki… Cesena      1334   0.677179669544… 0.4767129684686…
- 4 http… 538     Wiki… Olympique … 1622   1.0             0.0             
- 5 http… 22      Wiki… anunciadas  1753   0.957289900882… 0.0             
- 6 http… 28      Http… Manu Diban… 1848   1.0             0.0             
- 7 http… 57      Http… Marianne F… 2687   1.0             0.0             
- 8 http… 51      Wiki… Brest       2971   1.0             4.4741021320301…
- 9 http… 24      Http… Boris John… 3122   1.0             0.0             
-10 http… 27      Http… David Frost 3557   1.0             0.0             
-# … with 14 more rows, and 1 more variable: doc_id <chr>
-Joining, by = c("entity_count_Actor", "entity_count_Agent", "entity_count_Artist", "entity_count_Athlete", "entity_count_MusicalArtist", "entity_count_Organisation", "entity_count_Person", "entity_count_Politician", "entity_count_Royalty", "entity_count_SoccerClub", "entity_count_SoccerPlayer", "entity_count_SportsTeam", "doc_id")
-  |                                                                              |======================================================================| 100%
-No encoding supplied: defaulting to UTF-8.
-
-No entities.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |======================================================================| 100%
-Request failed [400]. Retrying in 15 seconds...
-Request failed [400]. Retrying in 15 seconds...
-
-Parsing error.
-Joining, by = "doc_id"
-  |                                                                              |======================================================================| 100%
-No encoding supplied: defaulting to UTF-8.
-# A tibble: 1 x 8
-  URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
-  <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
-1 http… 9       Http… Mário Cent… 409    0.999993595003… 0.0              fooh  
-Joining, by = c("entity_count_Agent", "entity_count_Person", "entity_count_Politician", "doc_id")
-  |                                                                              |======================================================================| 100%
-No encoding supplied: defaulting to UTF-8.
-# A tibble: 7 x 8
-  URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
-  <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
-1 http… 465     Http… Ronaldinho… 256    0.993286531076… 0.0067588325652… fooh  
-2 http… 107     Wiki… a viagem    819    0.708315977519… 0.4109228971962… fooh  
-3 http… 465     Http… Ronaldinho  831    0.997893598929… 0.0              fooh  
-4 http… 465     Http… Ronaldinho  1367   0.997893598929… 0.0              fooh  
-5 http… 465     Http… Ronaldinho  2833   0.997893598929… 0.0              fooh  
-6 http… 465     Http… Ronaldinho  3160   0.997893598929… 0.0              fooh  
-7 http… 151     Http… Jair Bolso… 3303   1.0             0.0              fooh  
-Joining, by = c("entity_count_Agent", "entity_count_Athlete", "entity_count_Person", "entity_count_Politician", "entity_count_SoccerPlayer", "entity_count_TelevisionShow", "entity_count_Work", "doc_id")
-  |                                                                              |======================================================================| 100%
-No encoding supplied: defaulting to UTF-8.
-# A tibble: 2 x 8
-  URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
-  <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
-1 http… 148     Http… António Co… 517    0.999999185014… 0.0              fooh  
-2 http… 148     Http… António Co… 919    0.999999185014… 0.0              fooh  
-Joining, by = c("entity_count_Agent", "entity_count_Person", "entity_count_Politician", "doc_id")
+1 http… 348     Http… Angelina J… 82     1.0             0.0              fooh  
+2 http… 714     Wiki… Instagram   435    0.999999999994… 0.0              fooh  
+Joining, by = c("entity_count_Actor", "entity_count_Agent", "entity_count_Artist", "entity_count_Person", "entity_count_Software", "entity_count_Work", "doc_id")
   |                                                                              |======================================================================| 100%
 No encoding supplied: defaulting to UTF-8.
 # A tibble: 3 x 8
   URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
   <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
-1 http… 15      Http… Jackson Ma… 201    0.999993369296… 0.0              fooh  
-2 http… 56      Http… Ricardo Qu… 218    1.0             0.0              fooh  
-3 http… 42      Wiki… Eleven      850    0.999972583563… 1.9353278443627… fooh  
-Joining, by = c("entity_count_Agent", "entity_count_Athlete", "entity_count_Broadcaster", "entity_count_Organisation", "entity_count_Person", "entity_count_SoccerPlayer", "entity_count_TelevisionStation", "doc_id")
-  |                                                                              |======================================================================| 100%
-No encoding supplied: defaulting to UTF-8.
-# A tibble: 10 x 8
-   URI   support types surfaceForm offset similarityScore percentageOfSec…
-   <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>           
- 1 http… 46      Http… Nancy Pelo… 61     1.0             0.0             
- 2 http… 594     Http… Donald Tru… 99     1.0             0.0             
- 3 http… 594     Http… Donald Tru… 244    1.0             0.0             
- 4 http… 46      Http… Nancy Pelo… 440    1.0             0.0             
- 5 http… 862     Wiki… Yahoo       519    0.970611386277… 0.0217517401392…
- 6 http… 3432    Wiki… Twitter     601    1.0             0.0             
- 7 http… 46      Http… Nancy Pelo… 680    1.0             0.0             
- 8 http… 3432    Wiki… Twitter     721    1.0             0.0             
- 9 http… 46      Http… Nancy Pelo… 1120   1.0             0.0             
-10 http… 3432    Wiki… Twitter     1155   1.0             0.0             
-# … with 1 more variable: doc_id <chr>
-Joining, by = c("entity_count_Agent", "entity_count_Company", "entity_count_Organisation", "entity_count_Person", "entity_count_Politician", "entity_count_Website", "entity_count_Work", "doc_id")
-  |                                                                              |======================================================================| 100%
-No encoding supplied: defaulting to UTF-8.
-
-No entities.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |======================================================================| 100%
-No encoding supplied: defaulting to UTF-8.
-# A tibble: 2 x 8
-  URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
-  <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
-1 http… 4       Http… Nuno Resen… 93     0.999999999991… 0.0              fooh  
-2 http… 4       Http… Nuno Resen… 413    0.999999999991… 0.0              fooh  
-Joining, by = c("entity_count_Agent", "entity_count_Artist", "entity_count_MusicalArtist", "entity_count_Person", "doc_id")
-  |                                                                              |======================================================================| 100%
-No encoding supplied: defaulting to UTF-8.
-# A tibble: 3 x 8
-  URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
-  <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
-1 http… 151     Http… Jair Bolso… 32     1.0             0.0              fooh  
-2 http… 662     Http… Henrique    90     0.993472485573… 0.0049922333460… fooh  
-3 http… 151     Http… Jair Bolso… 281    1.0             0.0              fooh  
-Joining, by = c("entity_count_Agent", "entity_count_Person", "entity_count_Politician", "entity_count_Royalty", "doc_id")
-  |                                                                              |======================================================================| 100%
-No encoding supplied: defaulting to UTF-8.
-# A tibble: 1 x 8
-  URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
-  <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
-1 http… 389     Http… Camilo Cas… 778    1.0             0.0              fooh  
-Joining, by = c("entity_count_Agent", "entity_count_Person", "entity_count_Writer", "doc_id")
+1 http… 225     Wiki… Rua Sésamo  2      1.0             2.9807300739626… fooh  
+2 http… 14      Wiki… Lidl        294    0.999999999999… 0.0              fooh  
+3 http… 14      Wiki… Lidl        882    0.999999999999… 0.0              fooh  
+Joining, by = c("entity_count_Agent", "entity_count_Company", "entity_count_Organisation", "entity_count_TelevisionShow", "entity_count_Work", "doc_id")
   |                                                                              |======================================================================| 100%
 No encoding supplied: defaulting to UTF-8.
 # A tibble: 6 x 8
   URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
   <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
-1 http… 83      Http… Jorge Andr… 0      0.999999999971… 2.6040093933129… fooh  
-2 http… 27      Http… Pedro Eman… 766    1.0             0.0              fooh  
-3 http… 12      Http… Ricardo Si… 780    0.972958135657… 0.0277777777777… fooh  
-4 http… 37      Http… Ricardo Ca… 794    0.999997527082… 0.0              fooh  
-5 http… 9       Http… Ricardo Co… 811    0.999998257093… 1.7405313706011… fooh  
-6 http… 21      Http… Jorge Costa 829    0.999999999997… 2.1184151002798… fooh  
-Joining, by = c("entity_count_Actor", "entity_count_Agent", "entity_count_Artist", "entity_count_Athlete", "entity_count_Person", "entity_count_SoccerManager", "entity_count_SoccerPlayer", "entity_count_SportsManager", "doc_id")
+1 http… 915     Wiki… pneumonia   104    1.0             2.1104056051604… fooh  
+2 http… 473     Wiki… coma        156    0.999999999994… 5.9160860715246… fooh  
+3 http… 915     Wiki… pneumonia   346    1.0             2.1104056051604… fooh  
+4 http… 473     Wiki… coma        416    0.999999999994… 5.9160860715246… fooh  
+5 http… 869     Wiki… CNN         471    0.999999999999… 0.0              fooh  
+6 http… 473     Wiki… coma        530    0.999999999994… 5.9160860715246… fooh  
+Joining, by = c("entity_count_Agent", "entity_count_Broadcaster", "entity_count_Disease", "entity_count_Organisation", "entity_count_TelevisionStation", "doc_id")
   |                                                                              |======================================================================| 100%
 No encoding supplied: defaulting to UTF-8.
 # A tibble: 3 x 8
   URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
   <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
-1 http… 2764    Wiki… Benfica     99     0.999998910644… 1.0889021275478… fooh  
-2 http… 2764    Wiki… Benfica     248    0.999998910644… 1.0889021275478… fooh  
-3 http… 2764    Wiki… Benfica     790    0.999998910644… 1.0889021275478… fooh  
-Joining, by = c("entity_count_Agent", "entity_count_Organisation", "entity_count_SoccerClub", "entity_count_SportsTeam", "doc_id")
-  |                                                                              |======================================================================| 100%
-No encoding supplied: defaulting to UTF-8.
-# A tibble: 8 x 8
-  URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
-  <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
-1 http… 7       Http… Serge Auri… 44     1.0             0.0              fooh  
-2 http… 767     Wiki… Tottenham   60     0.999999533755… 4.6624442433639… fooh  
-3 http… 7       Http… Serge Auri… 166    1.0             0.0              fooh  
-4 http… 767     Wiki… Tottenham   182    0.999999533755… 4.6624442433639… fooh  
-5 http… 876     Wiki… Ajax        415    0.999999999852… 1.4762285439890… fooh  
-6 http… 7       Http… Aurier      676    0.999999999994… 0.0              fooh  
-7 http… 7       Http… Aurier      829    0.999999999994… 0.0              fooh  
-8 http… 853     Wiki… Atlético d… 1059   0.999746129517… 2.5393493340556… fooh  
-Joining, by = c("entity_count_Agent", "entity_count_Athlete", "entity_count_Organisation", "entity_count_Person", "entity_count_SoccerClub", "entity_count_SoccerPlayer", "entity_count_SportsTeam", "doc_id")
-  |                                                                              |======================================================================| 100%
-No encoding supplied: defaulting to UTF-8.
-# A tibble: 7 x 8
-  URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
-  <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
-1 http… 853     Wiki… Atlético d… 475    0.999746129517… 2.5393493340556… fooh  
-2 http… 2623    Wiki… Barcelona   633    0.998172022829… 0.0018313238555… fooh  
-3 http… 256     Wiki… Real Socie… 665    0.999998573432… 0.0              fooh  
-4 http… 853     Wiki… Atlético d… 733    0.999746129517… 2.5393493340556… fooh  
-5 http… 256     Wiki… Real Socie… 871    0.999998573432… 0.0              fooh  
-6 http… 256     Wiki… Real Socie… 955    0.999998573432… 0.0              fooh  
-7 http… 256     Wiki… Real Socie… 1035   0.999998573432… 0.0              fooh  
-Joining, by = c("entity_count_Agent", "entity_count_Organisation", "entity_count_SoccerClub", "entity_count_SportsTeam", "doc_id")
-  |                                                                              |======================================================================| 100%
-No encoding supplied: defaulting to UTF-8.
-# A tibble: 10 x 8
-   URI   support types surfaceForm offset similarityScore percentageOfSec…
-   <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>           
- 1 http… 151     Http… Jair Bolso… 23     1.0             0.0             
- 2 http… 662     Http… Henrique    89     0.911285105755… 0.0960651287447…
- 3 http… 151     Http… Jair Bolso… 264    1.0             0.0             
- 4 http… 662     Http… Henrique    497    0.911285105757… 0.0960651287447…
- 5 http… 151     Http… Jair Bolso… 543    1.0             0.0             
- 6 http… 662     Http… Henrique    745    0.911285105757… 0.0960651287447…
- 7 http… 2102    Http… São Paulo   800    0.999997715045… 1.1715450914221…
- 8 http… 151     Http… Jair Bolso… 827    1.0             0.0             
- 9 http… 662     Http… Henrique    1025   0.911285105757… 0.0960651287447…
-10 http… 2102    Http… São Paulo   1636   0.999997715045… 1.1715450914221…
-# … with 1 more variable: doc_id <chr>
-Joining, by = c("entity_count_Agent", "entity_count_Cleric", "entity_count_Person", "entity_count_Politician", "entity_count_Royalty", "entity_count_Saint", "doc_id")
-  |                                                                              |======================================================================| 100%
-No encoding supplied: defaulting to UTF-8.
-# A tibble: 5 x 8
-  URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
-  <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
-1 http… 55      Http… Fátima Lop… 25     0.925266289776… 0.0685314685314… fooh  
-2 http… 21      Http… Gustavo Sa… 60     0.999997592380… 0.0              fooh  
-3 http… 2778    Wiki… TVI         97     1.0             0.0              fooh  
-4 http… 28      Wiki… A Tarde é … 101    0.662162162162… 0.5102040816326… fooh  
-5 http… 21      Http… Gustavo Sa… 777    0.999997592380… 0.0              fooh  
-Joining, by = c("entity_count_Actor", "entity_count_Agent", "entity_count_Artist", "entity_count_Broadcaster", "entity_count_Organisation", "entity_count_Person", "entity_count_TelevisionShow", "entity_count_TelevisionStation", "entity_count_Work", "doc_id")
-  |                                                                              |======================================================================| 100%
-No encoding supplied: defaulting to UTF-8.
-# A tibble: 3 x 8
-  URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
-  <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
-1 http… 529     Wiki… FIA         272    0.997405660940… 0.0              fooh  
-2 http… 529     Wiki… FIA         416    0.997405660940… 0.0              fooh  
-3 http… 529     Wiki… FIA         762    0.997405660940… 0.0              fooh  
+1 http… 796     Wiki… FMI         240    0.998754906184… 0.0              fooh  
+2 http… 796     Wiki… FMI         339    0.998754906184… 0.0              fooh  
+3 http… 796     Wiki… FMI         450    0.998754906184… 0.0              fooh  
 Joining, by = c("entity_count_Agent", "entity_count_Organisation", "doc_id")
-  |                                                                              |======================================================================| 100%
-No encoding supplied: defaulting to UTF-8.
-# A tibble: 14 x 8
-   URI   support types surfaceForm offset similarityScore percentageOfSec…
-   <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>           
- 1 http… 2       Http… Hugo Macha… 12     0.999978237105… 0.0             
- 2 http… 2764    Wiki… Benfica     205    1.0             1.2832095288281…
- 3 http… 40      Http… Paulinho    273    0.999899761338… 9.5381850984122…
- 4 http… 2       Http… Hugo Macha… 300    0.999978237105… 0.0             
- 5 http… 40      Http… Paulinho    616    0.999899761338… 9.5381850984122…
- 6 http… 2       Http… Hugo Macha… 718    0.999999997617… 0.0             
- 7 http… 2       Http… Rui Fonte   812    0.999986316364… 0.0             
- 8 http… 76      Http… Eduardo Br… 831    0.999999999999… 0.0             
- 9 http… 54      Http… Costinha    845    0.910388972664… 0.0613652868554…
-10 http… 179     Http… Santana     863    0.992105755019… 0.0077302889201…
-11 http… 50      Wiki… Santa Clara 871    0.999999999600… 3.9965781253164…
-12 http… 68      Http… Silas       976    0.660128473254… 0.4862132352941…
-13 http… 2042    Wiki… Sporting    1002   1.0             5.1652656582346…
-14 http… 15      Wiki… Sacavenense 1081   1.0             0.0             
-# … with 1 more variable: doc_id <chr>
-Joining, by = c("entity_count_Actor", "entity_count_Agent", "entity_count_Artist", "entity_count_Athlete", "entity_count_Cyclist", "entity_count_Organisation", "entity_count_Person", "entity_count_Politician", "entity_count_SoccerClub", "entity_count_SoccerManager", "entity_count_SoccerPlayer", "entity_count_SportsManager", "entity_count_SportsTeam", "doc_id")
-  |                                                                              |======================================================================| 100%
-No encoding supplied: defaulting to UTF-8.
-# A tibble: 4 x 8
-  URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
-  <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
-1 http… 42      Wiki… Eleven      40     0.999999834675… 1.1669973718580… fooh  
-2 http… 407     Wiki… Vitória de… 146    0.999999999719… 0.0              fooh  
-3 http… 407     Wiki… Vitória de… 312    0.999999999719… 0.0              fooh  
-4 http… 42      Wiki… Eleven      497    0.999999834675… 1.1669973718580… fooh  
-Joining, by = c("entity_count_Agent", "entity_count_Broadcaster", "entity_count_Organisation", "entity_count_SoccerClub", "entity_count_SportsTeam", "entity_count_TelevisionStation", "doc_id")
-  |                                                                              |======================================================================| 100%
-No encoding supplied: defaulting to UTF-8.
-# A tibble: 3 x 8
-  URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
-  <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
-1 http… 148     Http… António Co… 0      0.999999185014… 0.0              fooh  
-2 http… 148     Http… António Co… 919    0.999999185014… 0.0              fooh  
-3 http… 148     Http… António Co… 2619   0.999999185014… 0.0              fooh  
-Joining, by = c("entity_count_Agent", "entity_count_Person", "entity_count_Politician", "doc_id")
   |                                                                              |======================================================================| 100%
 No encoding supplied: defaulting to UTF-8.
 
@@ -1849,135 +791,77 @@ No encoding supplied: defaulting to UTF-8.
 # A tibble: 3 x 8
   URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
   <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
-1 http… 4       Http… Nuno Resen… 199    0.999999999991… 0.0              fooh  
-2 http… 105     Http… Resende     802    0.816753501386… 0.2243596119133… fooh  
-3 http… 4       Http… Nuno Resen… 1452   0.999999999991… 0.0              fooh  
-Joining, by = c("entity_count_Agent", "entity_count_Artist", "entity_count_MusicalArtist", "entity_count_Person", "doc_id")
+1 http… 70      Http… Shinzo Abe  693    0.999999989169… 0.0              fooh  
+2 http… 85      Wiki… Osaka       1031   0.982841459044… 0.0174445620517… fooh  
+3 http… 13      Wiki… a grande c… 1037   0.999999999916… 0.0              fooh  
+Joining, by = c("entity_count_Agent", "entity_count_Film", "entity_count_Organisation", "entity_count_Person", "entity_count_Politician", "entity_count_SoccerClub", "entity_count_SportsTeam", "entity_count_Wikidata", "entity_count_Work", "doc_id")
+  |                                                                              |======================================================================| 100%
+No encoding supplied: defaulting to UTF-8.
+# A tibble: 7 x 8
+  URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
+  <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
+1 http… 3       Http… Tatiana Fi… 0      0.999999999999… 0.0              fooh  
+2 http… 2778    Wiki… TVI         31     1.0             0.0              fooh  
+3 http… 714     Wiki… Instagram   99     1.0             0.0              fooh  
+4 http… 2778    Wiki… TVI         671    1.0             0.0              fooh  
+5 http… 29      Wiki… NOVA GENTE  747    1.0             0.0              fooh  
+6 http… 29      Wiki… Nova Gente  1442   1.0             0.0              fooh  
+7 http… 714     Wiki… Instagram   1456   1.0             0.0              fooh  
+Joining, by = c("entity_count_Agent", "entity_count_Athlete", "entity_count_Broadcaster", "entity_count_Magazine", "entity_count_Organisation", "entity_count_PeriodicalLiterature", "entity_count_Person", "entity_count_Software", "entity_count_TelevisionStation", "entity_count_Work", "entity_count_WrittenWork", "doc_id")
   |                                                                              |======================================================================| 100%
 No encoding supplied: defaulting to UTF-8.
 # A tibble: 1 x 8
   URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
   <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
-1 http… 210     Http… Marcelo Re… 291    1.0             0.0              fooh  
-Joining, by = c("entity_count_Agent", "entity_count_Person", "entity_count_Politician", "doc_id")
+1 http… 594     Http… Donald Tru… 164    1.0             0.0              fooh  
+Joining, by = c("entity_count_Agent", "entity_count_Person", "doc_id")
   |                                                                              |======================================================================| 100%
 No encoding supplied: defaulting to UTF-8.
-# A tibble: 5 x 8
-  URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
-  <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
-1 http… 9       Http… Mário Cent… 0      1.0             0.0              fooh  
-2 http… 9       Http… Mário Cent… 191    0.999993595003… 0.0              fooh  
-3 http… 9       Http… Mário Cent… 676    0.999993595003… 0.0              fooh  
-4 http… 9       Http… Mário Cent… 860    0.999993595003… 0.0              fooh  
-5 http… 148     Http… António Co… 1676   0.999999185014… 0.0              fooh  
-Joining, by = c("entity_count_Agent", "entity_count_Person", "entity_count_Politician", "doc_id")
+
+No entities.
+NULL
+Joining, by = "doc_id"
   |                                                                              |======================================================================| 100%
 No encoding supplied: defaulting to UTF-8.
 # A tibble: 1 x 8
   URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
   <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
-1 http… 210     Http… Marcelo Re… 330    1.0             0.0              fooh  
-Joining, by = c("entity_count_Agent", "entity_count_Person", "entity_count_Politician", "doc_id")
-  |                                                                              |======================================================================| 100%
-No encoding supplied: defaulting to UTF-8.
-# A tibble: 3 x 8
-  URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
-  <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
-1 http… 2962    Wiki… Facebook    554    1.0             0.0              fooh  
-2 http… 6       Wiki… recomeçar   756    0.635902813336… 0.0              fooh  
-3 http… 2962    Wiki… Facebook    812    1.0             0.0              fooh  
-Joining, by = c("entity_count_Agent", "entity_count_Album", "entity_count_Company", "entity_count_MusicalWork", "entity_count_Organisation", "entity_count_Work", "doc_id")
-  |                                                                              |======================================================================| 100%
-No encoding supplied: defaulting to UTF-8.
-# A tibble: 11 x 8
-   URI   support types surfaceForm offset similarityScore percentageOfSec…
-   <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>           
- 1 http… 151     Http… Jair Bolso… 41     1.0             0.0             
- 2 http… 1028    Http… Henrique    87     0.992862067451… 0.0071738262811…
- 3 http… 151     Http… Jair Bolso… 327    1.0             0.0             
- 4 http… 3432    Wiki… Twitter     403    1.0             0.0             
- 5 http… 2102    Http… São Paulo   1381   1.0             3.6394006564556…
- 6 http… 951     Wiki… Fantástico  2051   0.998968946373… 0.0             
- 7 http… 17154   Wiki… TV Globo    2065   0.999999991481… 8.5185102388825…
- 8 http… 2102    Http… São Paulo   3253   1.0             3.6394006564556…
- 9 http… 103     Http… João Doria  3775   0.944947057399… 0.0582524271844…
-10 http… 2102    Http… São Paulo   3789   1.0             3.6394006564556…
-11 http… 41      Http… Ronaldo Ca… 3801   1.0             0.0             
-# … with 1 more variable: doc_id <chr>
-Joining, by = c("entity_count_Agent", "entity_count_Broadcaster", "entity_count_Cleric", "entity_count_Organisation", "entity_count_Person", "entity_count_Politician", "entity_count_Royalty", "entity_count_Saint", "entity_count_TelevisionShow", "entity_count_TelevisionStation", "entity_count_Website", "entity_count_Work", "doc_id")
-  |                                                                              |======================================================================| 100%
-No encoding supplied: defaulting to UTF-8.
-# A tibble: 6 x 8
-  URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
-  <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
-1 http… 151     Http… Jair Bolso… 161    1.0             0.0              fooh  
-2 http… 3432    Wiki… Twitter     357    1.0             0.0              fooh  
-3 http… 151     Http… Jair Bolso… 394    1.0             0.0              fooh  
-4 http… 151     Http… Jair Bolso… 1772   1.0             0.0              fooh  
-5 http… 941     Wiki… malária     2568   0.998958000791… 0.0              fooh  
-6 http… 151     Http… Jair Bolso… 2603   1.0             0.0              fooh  
-Joining, by = c("entity_count_Agent", "entity_count_Disease", "entity_count_Person", "entity_count_Politician", "entity_count_Website", "entity_count_Work", "doc_id")
+1 http… 594     Http… Donald Tru… 195    1.0             0.0              fooh  
+Joining, by = c("entity_count_Agent", "entity_count_Person", "doc_id")
   |                                                                              |======================================================================| 100%
 No encoding supplied: defaulting to UTF-8.
 # A tibble: 2 x 8
   URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
   <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
-1 http… 1345    Wiki… Inter de M… 196    1.0             0.0              fooh  
-2 http… 7       Wiki… a tendência 815    0.999998481520… 0.0              fooh  
-Joining, by = c("entity_count_Agent", "entity_count_MusicalWork", "entity_count_Organisation", "entity_count_Single", "entity_count_SoccerClub", "entity_count_SportsTeam", "entity_count_Work", "doc_id")
+1 http… 257     Wiki… Universida… 192    1.0             0.0              fooh  
+2 http… 594     Http… Donald Tru… 1145   1.0             0.0              fooh  
+Joining, by = c("entity_count_Agent", "entity_count_EducationalInstitution", "entity_count_Organisation", "entity_count_Person", "entity_count_University", "doc_id")
   |                                                                              |======================================================================| 100%
 No encoding supplied: defaulting to UTF-8.
 # A tibble: 4 x 8
   URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
   <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
-1 http… 4       Http… Fernando P… 1622   1.0             0.0              fooh  
-2 http… 6       Http… Emanuel Si… 1639   0.999999999999… 0.0              fooh  
-3 http… 12786   Http… Messias     1666   0.974675629469… 0.0259823573761… fooh  
-4 http… 533     Wiki… Portela     1705   0.915862220351… 0.0918671646131… fooh  
-Joining, by = c("entity_count_Agent", "entity_count_Athlete", "entity_count_Organisation", "entity_count_Person", "entity_count_SambaSchool", "doc_id")
+1 http… 20      Wiki… Os profiss… 1690   1.0             0.0              fooh  
+2 http… 861     Wiki… álcool      3505   0.969230183818… 0.0317466549174… fooh  
+3 http… 321     Wiki… GNR         3772   1.0             1.1880476074290… fooh  
+4 http… 861     Wiki… álcool      3864   0.969230183818… 0.0317466549174… fooh  
+Joining, by = c("entity_count_Agent", "entity_count_Disease", "entity_count_Film", "entity_count_MilitaryUnit", "entity_count_Organisation", "entity_count_Wikidata", "entity_count_Work", "doc_id")
   |                                                                              |======================================================================| 100%
 No encoding supplied: defaulting to UTF-8.
-# A tibble: 16 x 8
-   URI   support types surfaceForm offset similarityScore percentageOfSec…
-   <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>           
- 1 http… 210     Http… Marcelo Re… 26     1.0             0.0             
- 2 http… 4002    Wiki… PSD         374    0.999989928639… 1.0062862315449…
- 3 http… 341     Wiki… BE          378    1.0             0.0             
- 4 http… 646     Wiki… CDS         381    0.998467270769… 0.0             
- 5 http… 603     Wiki… PCP         403    0.990656245611… 0.0072003618272…
- 6 http… 150     Wiki… Os Verdes   434    1.0             5.4918118124320…
- 7 http… 340     Http… Pedro V     1664   1.0             0.0             
- 8 http… 151     Http… Jair Bolso… 2010   1.0             0.0             
- 9 http… 591     Http… Cristiano … 2749   1.0             0.0             
-10 http… 714     Wiki… Instagram   3071   1.0             0.0             
-11 http… 341     Wiki… BE          3154   1.0             0.0             
-12 http… 17      Http… Catarina M… 3157   1.0             0.0             
-13 http… 168     Wiki… EDP         3220   1.0             0.0             
-14 http… 646     Wiki… CDS-PP      3799   0.999999999999… 0.0             
-15 http… 9       Http… Tiago Lopes 4342   1.0             0.0             
-16 http… 465     Http… príncipe    4568   0.875476531658… 0.1422348713692…
-# … with 1 more variable: doc_id <chr>
-Joining, by = c("entity_count_Agent", "entity_count_Athlete", "entity_count_Company", "entity_count_Organisation", "entity_count_Person", "entity_count_PoliticalParty", "entity_count_Politician", "entity_count_Royalty", "entity_count_SoccerPlayer", "entity_count_Software", "entity_count_TennisPlayer", "entity_count_Work", "doc_id")
+# A tibble: 3 x 8
+  URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
+  <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
+1 http… 47      Wiki… OMD         224    1.0             0.0              fooh  
+2 http… 2       Http… Orlando Mo… 619    0.999983218056… 0.0              fooh  
+3 http… 135     Http… Joana       3134   0.912459512222… 0.0910551094549… fooh  
+Joining, by = c("entity_count_Agent", "entity_count_Athlete", "entity_count_Band", "entity_count_Group", "entity_count_Organisation", "entity_count_Person", "entity_count_Royalty", "entity_count_SoccerPlayer", "doc_id")
   |                                                                              |======================================================================| 100%
 No encoding supplied: defaulting to UTF-8.
 # A tibble: 1 x 8
   URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
   <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
-1 http… 210     Http… Marcelo Re… 13     1.0             0.0              fooh  
+1 http… 12      Http… Leonor Bel… 2177   1.0             0.0              fooh  
 Joining, by = c("entity_count_Agent", "entity_count_Person", "entity_count_Politician", "doc_id")
   |                                                                              |======================================================================| 100%
-No encoding supplied: defaulting to UTF-8.
-# A tibble: 1 x 8
-  URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
-  <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
-1 http… 321     Wiki… GNR         1414   1.0             1.5376734696906… fooh  
-Joining, by = c("entity_count_Agent", "entity_count_MilitaryUnit", "entity_count_Organisation", "doc_id")
-  |                                                                              |======================================================================| 100%
-Request failed [403]. Retrying in 15 seconds...
-Request failed [403]. Retrying in 15 seconds...
-
-Parsing error.
-Joining, by = "doc_id"
-  |                                                                              |======================================================================| 100%
-There were 50 or more warnings (use warnings() to see the first 50)
+There were 46 warnings (use warnings() to see them)
 Joining, by = "url"
