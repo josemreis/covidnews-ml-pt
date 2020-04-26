@@ -71,33 +71,6 @@ Warning message:
 In if (class(gdelt_pt_all) == "try-error") { :
   the condition has length > 1 and only the first element will be used
 # A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Cláudi… 2020-04-26 11:15:23 2020-04-26 07:32:00 O Stay IN … "Em tem… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 4 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Maria … 2020-04-26 11:15:24 2020-04-26 07:16:00 Com a mesm… "Cátia … <NUL…
-2 Adrian… 2020-04-26 11:15:24 2020-04-26 07:16:00 Com a mesm… "Cátia … <NUL…
-3 Texto   2020-04-26 11:15:24 2020-04-26 07:16:00 Com a mesm… "Cátia … <NUL…
-4 Fotos   2020-04-26 11:15:24 2020-04-26 07:16:00 Com a mesm… "Cátia … <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Cláudi… 2020-04-26 11:15:25 2020-04-26 07:41:00 Para dar m… "Todas … <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Rádio … 2020-04-26 11:15:30 2020-04-26 08:19:35 A China an… "A cont… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 0 x 0
 # A tibble: 0 x 0
 # A tibble: 0 x 0
 # A tibble: 0 x 0
@@ -105,67 +78,34 @@ In if (class(gdelt_pt_all) == "try-error") { :
 # A tibble: 1 x 8
   authors date_download       date_publish        description maintext text 
   <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Rádio … 2020-04-26 11:15:43 2020-04-26 08:19:05 O Presiden… "A nova… <NUL…
+1 Vítor … 2020-04-26 12:15:36 2020-04-26 08:18:00 Não saber … "Estamo… <NUL…
 # … with 2 more variables: title <chr>, url <chr>
 # A tibble: 1 x 8
   authors date_download       date_publish        description maintext text 
   <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Rádio … 2020-04-26 11:15:43 2020-04-26 08:20:35 O Brasil r… "No tot… <NUL…
+1 Rádio … 2020-04-26 12:15:37 2020-04-26 10:12:48 Acompanham… "Acompa… <NUL…
 # … with 2 more variables: title <chr>, url <chr>
 # A tibble: 0 x 0
 # A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Rádio … 2020-04-26 11:15:48 2020-04-26 08:19:54 Os Estados… "No tot… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Rádio … 2020-04-26 11:15:49 2020-04-26 08:20:18 "O Preside… "Numa m… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
 # A tibble: 0 x 0
 # A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 3 x 8
+  authors date_download       date_publish description maintext text  title
+  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
+1 Destak  2020-04-26 12:15:53 <NULL>       As últimas… "Actual… <NUL… Sepa…
+2 Leitor… 2020-04-26 12:15:53 <NULL>       As últimas… "Actual… <NUL… Sepa…
+3 Destak… 2020-04-26 12:15:53 <NULL>       As últimas… "Actual… <NUL… Sepa…
+# … with 1 more variable: url <chr>
 Joining, by = c("titleArticle", "urlArticle")
 No encoding supplied: defaulting to UTF-8.
-
-No entities.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |======================================================================| 100%
-No encoding supplied: defaulting to UTF-8.
-
-No entities.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |======================================================================| 100%
-No encoding supplied: defaulting to UTF-8.
-
-No entities.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |======================================================================| 100%
-No encoding supplied: defaulting to UTF-8.
-
-No entities.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |======================================================================| 100%
-No encoding supplied: defaulting to UTF-8.
-# A tibble: 2 x 8
+# A tibble: 1 x 8
   URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
   <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
-1 http… 128     Wiki… Santa Fé    641    0.913026988786… 0.0952578754863… fooh  
-2 http… 3       Wiki… outra meta… 741    0.998998541728… 0.0              fooh  
-Joining, by = c("entity_count_Agent", "entity_count_Album", "entity_count_MusicalWork", "entity_count_Organisation", "entity_count_SoccerClub", "entity_count_SportsTeam", "entity_count_Work", "doc_id")
-  |                                                                              |======================================================================| 100%
-No encoding supplied: defaulting to UTF-8.
-# A tibble: 2 x 8
-  URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
-  <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
-1 http… 2102    Http… São Paulo   1090   0.999998745950… 6.4297751559492… fooh  
-2 http… 2102    Http… São Paulo   1298   0.999998745950… 6.4297751559492… fooh  
-Joining, by = c("entity_count_Agent", "entity_count_Cleric", "entity_count_Person", "entity_count_Saint", "doc_id")
+1 http… 36      Http… Zygmunt Ba… 989    1.0             0.0              fooh  
+Joining, by = c("entity_count_Agent", "entity_count_Person", "doc_id")
   |                                                                              |======================================================================| 100%
 No encoding supplied: defaulting to UTF-8.
 
@@ -174,13 +114,10 @@ NULL
 Joining, by = "doc_id"
   |                                                                              |======================================================================| 100%
 No encoding supplied: defaulting to UTF-8.
-# A tibble: 3 x 8
-  URI   support types surfaceForm offset similarityScore percentageOfSec… doc_id
-  <chr> <chr>   <chr> <chr>       <chr>  <chr>           <chr>            <chr> 
-1 http… 258     Http… Santo Antão 327    0.563383952130… 0.6801894918172… fooh  
-2 http… 159     Http… São Nicolau 342    1.0             5.1727361229520… fooh  
-3 http… 14      Http… Jorge Carl… 1492   1.0             0.0              fooh  
-Joining, by = c("entity_count_Agent", "entity_count_Cleric", "entity_count_Person", "entity_count_Politician", "entity_count_Saint", "doc_id")
+
+No entities.
+NULL
+Joining, by = "doc_id"
   |                                                                              |======================================================================| 100%
 Warning messages:
 1: In if (class(res) == "try-error") { :
@@ -188,15 +125,5 @@ Warning messages:
 2: In if (class(res) == "try-error") { :
   the condition has length > 1 and only the first element will be used
 3: In if (class(res) == "try-error") { :
-  the condition has length > 1 and only the first element will be used
-4: In if (class(res) == "try-error") { :
-  the condition has length > 1 and only the first element will be used
-5: In if (class(res) == "try-error") { :
-  the condition has length > 1 and only the first element will be used
-6: In if (class(res) == "try-error") { :
-  the condition has length > 1 and only the first element will be used
-7: In if (class(res) == "try-error") { :
-  the condition has length > 1 and only the first element will be used
-8: In if (class(res) == "try-error") { :
   the condition has length > 1 and only the first element will be used
 Joining, by = "url"
