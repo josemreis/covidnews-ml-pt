@@ -71,12 +71,57 @@ Warning message:
 In if (class(gdelt_pt_all) == "try-error") { :
   the condition has length > 1 and only the first element will be used
 # A tibble: 0 x 0
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Cristi… 2020-04-30 11:15:28 2020-04-30 07:08:00 Reunião vi… "O mini… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Rádio … 2020-04-30 11:15:29 2020-04-30 08:47:37 Acompanham… "Acompa… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Rádio … 2020-04-30 11:15:30 2020-04-30 08:36:48 O primeiro… "Antóni… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 4 x 8
+  authors date_download       date_publish description maintext text  title
+  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
+1 Destak  2020-04-30 11:15:31 <NULL>       As últimas… "Incênd… <NUL… Praz…
+2 Leitor… 2020-04-30 11:15:31 <NULL>       As últimas… "Incênd… <NUL… Praz…
+3 Zé Da … 2020-04-30 11:15:31 <NULL>       As últimas… "Incênd… <NUL… Praz…
+4 Destak… 2020-04-30 11:15:31 <NULL>       As últimas… "Incênd… <NUL… Praz…
+# … with 1 more variable: url <chr>
+# A tibble: 3 x 8
+  authors date_download       date_publish description maintext text  title
+  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
+1 Destak  2020-04-30 11:15:32 <NULL>       As últimas… "Covid-… <NUL… ONU …
+2 Leitor… 2020-04-30 11:15:32 <NULL>       As últimas… "Covid-… <NUL… ONU …
+3 Destak… 2020-04-30 11:15:32 <NULL>       As últimas… "Covid-… <NUL… ONU …
+# … with 1 more variable: url <chr>
+# A tibble: 3 x 8
+  authors date_download       date_publish description maintext text  title
+  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
+1 Destak  2020-04-30 11:15:32 <NULL>       As últimas… "Covid-… <NUL… Ativ…
+2 Leitor… 2020-04-30 11:15:32 <NULL>       As últimas… "Covid-… <NUL… Ativ…
+3 Destak… 2020-04-30 11:15:32 <NULL>       As últimas… "Covid-… <NUL… Ativ…
+# … with 1 more variable: url <chr>
+# A tibble: 3 x 8
+  authors date_download       date_publish description maintext text  title
+  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
+1 Destak  2020-04-30 11:15:33 <NULL>       As últimas… "Incênd… <NUL… GNR …
+2 Leitor… 2020-04-30 11:15:33 <NULL>       As últimas… "Incênd… <NUL… GNR …
+3 Destak… 2020-04-30 11:15:33 <NULL>       As últimas… "Incênd… <NUL… GNR …
+# … with 1 more variable: url <chr>
+# A tibble: 0 x 0
 # A tibble: 0 x 0
 # A tibble: 0 x 0
 # A tibble: 1 x 8
   authors date_download       date_publish        description maintext text 
   <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Notíci… 2020-04-30 10:15:33 2020-04-30 08:00:00 Divirta-se… "As mel… <NUL…
+1 Notíci… 2020-04-30 11:15:41 2020-04-30 08:00:00 Divirta-se… "As mel… <NUL…
 # … with 2 more variables: title <chr>, url <chr>
 # A tibble: 0 x 0
 # A tibble: 0 x 0
@@ -84,44 +129,16 @@ In if (class(gdelt_pt_all) == "try-error") { :
 # A tibble: 0 x 0
 # A tibble: 0 x 0
 # A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Rádio … 2020-04-30 10:15:51 2020-04-30 08:07:18 "O Orçamen… "De aco… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Rádio … 2020-04-30 10:15:52 2020-04-30 07:43:14 "O ministr… "\", af… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Rádio … 2020-04-30 10:15:53 2020-04-30 07:43:14 "O ministr… "\", af… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Rádio … 2020-04-30 10:15:57 2020-04-30 07:26:35 "O candida… "O anti… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Rádio … 2020-04-30 10:15:58 2020-04-30 07:17:59 "O Conselh… "Numa c… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 2 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Pedro … 2020-04-30 10:16:06 2020-04-23 00:27:00 Em entrevi… "O que … <NUL…
-2 João P… 2020-04-30 10:16:06 2020-04-23 00:27:00 Em entrevi… "O que … <NUL…
-# … with 2 more variables: title <chr>, url <chr>
 Joining, by = c("titleArticle", "urlArticle")
+Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
+Request failed [ERROR]. Retrying in 15 seconds...
+Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
+Request failed [ERROR]. Retrying in 15 seconds...
+
+Request refused.
+NULL
+Joining, by = "doc_id"
+  |                                                                              |======================================================================| 100%
 Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
 Request failed [ERROR]. Retrying in 15 seconds...
 Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
