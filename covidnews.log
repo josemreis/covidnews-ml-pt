@@ -63,621 +63,509 @@ cols(
   author = col_character()
 )
   |                                                                              |=======                                                               |  10%  |                                                                              |==============                                                        |  20%  |                                                                              |=====================                                                 |  30%  |                                                                              |============================                                          |  40%  |                                                                              |===================================                                   |  50%  |                                                                              |==========================================                            |  60%  |                                                                              |=================================================                     |  70%  |                                                                              |========================================================              |  80%  |                                                                              |===============================================================       |  90%  |                                                                              |======================================================================| 100%
-Parsing: https://api.gdeltproject.org/api/v2/doc/doc?query=%20sourcecountry:po&sourcelang:por&mode=artlist&format=json&timespan=100&maxrecords=250&sort=datedesc
+Parsing: https://api.gdeltproject.org/api/v2/doc/doc?query=%20sourcecountry:po&sourcelang:por&mode=artlist&format=json&timespan=240&maxrecords=250&sort=datedesc
 
 Joining, by = "urlGDELTV2FTAPI"
 >> GDELT query --> done.
 Warning message:
 In if (class(gdelt_pt_all) == "try-error") { :
   the condition has length > 1 and only the first element will be used
+# A tibble: 3 x 8
+  authors date_download       date_publish description maintext text  title
+  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
+1 Destak  2020-04-30 06:15:29 <NULL>       As últimas… "Covid-… <NUL… Órgã…
+2 Leitor… 2020-04-30 06:15:29 <NULL>       As últimas… "Covid-… <NUL… Órgã…
+3 Destak… 2020-04-30 06:15:29 <NULL>       As últimas… "Covid-… <NUL… Órgã…
+# … with 1 more variable: url <chr>
+# A tibble: 3 x 8
+  authors date_download       date_publish description maintext text  title
+  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
+1 Destak  2020-04-30 06:15:30 <NULL>       As últimas… "Actual… <NUL… Emba…
+2 Leitor… 2020-04-30 06:15:30 <NULL>       As últimas… "Actual… <NUL… Emba…
+3 Destak… 2020-04-30 06:15:30 <NULL>       As últimas… "Actual… <NUL… Emba…
+# … with 1 more variable: url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Agênci… 2020-04-30 06:15:31 2020-04-30 03:10:00 Boeing rev… "A Boei… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
 # A tibble: 0 x 0
 # A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Global… 2020-04-30 06:16:07 2020-04-30 00:27:00 Nesta prim… "Rio di… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Global… 2020-04-30 06:16:29 2020-04-30 03:48:00 Os Embaixa… "Joaqui… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Lucind… 2020-04-30 06:17:05 2020-04-29 22:01:00 Há dois an… "Seduto… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Agênci… 2020-04-30 06:17:07 2020-04-21 15:16:00 "República… "A Repú… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Sérgio… 2020-04-30 06:17:09 2020-04-29 22:42:52 Reserva Fe… "A Rese… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 2 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Global… 2020-04-30 06:17:18 2020-04-30 03:27:00 O ministro… "Pedro … <NUL…
+2 Cátia … 2020-04-30 06:17:18 2020-04-30 03:27:00 O ministro… "Pedro … <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Global… 2020-04-30 06:17:20 2020-04-30 02:47:00 José Luís … "José L… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Notíci… 2020-04-30 06:17:30 2020-04-30 01:52:00 Existem 33… "Apesar… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Global… 2020-04-30 06:17:32 2020-04-30 02:24:00 Na perspet… "Franci… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Global… 2020-04-30 06:17:43 2020-04-30 01:59:00 A Facebook… "No mes… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Global… 2020-04-30 06:17:45 2020-04-30 02:33:00 André Silv… "André … <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Antóni… 2020-04-30 06:17:46 2020-04-29 23:59:00 Esta quint… "O Capi… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Global… 2020-04-30 06:17:47 2020-04-30 01:18:00 "A Associa… "Alunos… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 0 x 0
+# A tibble: 2 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Ana Ri… 2020-04-30 06:17:55 2020-04-29 18:05:11 À semelhan… "A pand… <NUL…
+2 Médica… 2020-04-30 06:17:55 2020-04-29 18:05:11 À semelhan… "A pand… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 0 x 0
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Luís R… 2020-04-30 06:18:03 2020-04-30 02:02:00 "Participa… "O Orça… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Global… 2020-04-30 06:18:04 2020-04-30 02:40:00 Na perspet… "João C… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Rádio … 2020-04-30 06:18:09 2020-04-27 22:16:47 Os ginásio… "Os tre… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Global… 2020-04-30 06:18:14 2020-04-30 02:01:00 Os efeitos… "franci… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 0 x 0
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Global… 2020-04-30 06:18:17 2020-04-30 00:56:00 "O Preside… "EUA ul… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Rui Go… 2020-04-30 06:18:18 2020-04-30 02:00:00 "Não, não … "Rui Go… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Vítor … 2020-04-30 06:18:40 2020-04-30 02:02:00 Saberemos … "Vítor … <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Global… 2020-04-30 06:18:41 2020-04-30 02:00:00 1. A incer… "1. A i… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 0 x 0
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Global… 2020-04-30 06:18:48 2020-04-30 00:58:00 Investigad… "JN Ont… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Jn Agê… 2020-04-30 06:18:49 2020-04-30 01:46:00 Uma menina… "JN/Agê… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 0 x 0
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Jn Agê… 2020-04-30 06:18:54 2020-04-30 01:09:00 "O preside… "JN/Agê… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Jn Agê… 2020-04-30 06:19:09 2020-04-30 00:50:00 O Brasil r… "JN/Agê… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Global… 2020-04-30 06:19:11 2020-04-30 02:08:00 Se não foi… "A. F. … <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Jn Agê… 2020-04-30 06:19:12 2020-04-30 00:42:00 A pandemia… "JN/Agê… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Global… 2020-04-30 06:19:13 2020-04-30 01:05:00 Miguel Lar… "JN/Agê… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Global… 2020-04-30 06:19:15 2020-04-30 01:03:00 O V. Guima… "JN/Agê… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 0 x 0
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Agênci… 2020-04-30 06:19:17 2020-04-30 03:10:00 CIP enviou… "A Wort… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Jn Agê… 2020-04-30 06:19:18 2020-04-30 01:16:00 "A Associa… "JN/Agê… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish description maintext text  title
+  <chr>   <dttm>              <list>       <list>      <chr>    <lis> <chr>
+1 Notíci… 2020-04-30 06:19:20 <NULL>       <NULL>      "A unid… <NUL… Unid…
+# … with 1 more variable: url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Teixei… 2020-04-30 06:19:21 2020-04-30 01:21:00 Depois de … "Teixei… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 0 x 0
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Agênci… 2020-04-30 06:19:27 2020-04-13 11:13:00 Cláudia Sa… "Cláudi… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 2 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Global… 2020-04-30 06:19:29 2020-04-29 22:01:00 Paulo Mach… "Paulo … <NUL…
+2 André … 2020-04-30 06:19:29 2020-04-29 22:01:00 Paulo Mach… "Paulo … <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Global… 2020-04-30 06:19:30 2020-04-29 23:27:00 As medidas… "As med… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 2 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Global… 2020-04-30 06:19:31 2020-04-29 22:13:00 O francês … "Beunar… <NUL…
+2 João M… 2020-04-30 06:19:31 2020-04-29 22:13:00 O francês … "Beunar… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Global… 2020-04-30 06:19:41 2020-04-30 00:14:00 "Segundo o… "Segund… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Global… 2020-04-30 06:19:44 2020-04-30 00:51:00 Chega diz … "Chega … <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 2 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Global… 2020-04-30 06:19:45 2020-04-29 22:34:00 O FC Porto… "FC Por… <NUL…
+2 Redaçã… 2020-04-30 06:19:45 2020-04-29 22:34:00 O FC Porto… "FC Por… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Global… 2020-04-30 06:19:46 2020-04-29 23:23:00 Estão a se… "Portug… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish description maintext text  title
+  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
+1 Revist… 2020-04-30 06:19:48 <NULL>       Maria Bote… "Maria … <NUL… Os t…
+# … with 1 more variable: url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Global… 2020-04-30 06:19:49 2020-04-29 22:48:00 Paulo Mach… "Paulo … <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 0 x 0
+# A tibble: 1 x 8
+  authors date_download       date_publish description maintext text  title
+  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
+1 Revist… 2020-04-30 06:19:56 <NULL>       Rosa Villa… "Rosa V… <NUL… O ví…
+# … with 1 more variable: url <chr>
 # A tibble: 0 x 0
 # A tibble: 0 x 0
 # A tibble: 1 x 8
   authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <list>      <chr>    <lis> <chr>
-1 Sibs A… 2020-04-29 21:16:23 <NULL>       <NULL>      "Os dad… <NUL… NewD…
+  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
+1 Revist… 2020-04-30 06:20:07 <NULL>       Leonor Poe… "Leonor… <NUL… "Faz…
 # … with 1 more variable: url <chr>
-# A tibble: 2 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-04-29 21:16:50 2020-04-29 18:58:00 O Governo … "© Antó… <NUL…
-2 Tsf Lu… 2020-04-29 21:16:50 2020-04-29 18:58:00 O Governo … "© Antó… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 2 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-04-29 21:16:51 2020-04-29 18:28:00 Pagamentos… "Ana Me… <NUL…
-2 Lusa T… 2020-04-29 21:16:51 2020-04-29 18:28:00 Pagamentos… "Ana Me… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 2 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-04-29 21:17:00 2020-04-29 18:44:00 Juiz Paulo… "O advo… <NUL…
-2 Lusa T… 2020-04-29 21:17:00 2020-04-29 18:44:00 Juiz Paulo… "O advo… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
 # A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Rádio … 2020-04-29 21:17:16 2020-04-29 19:23:20 Portugal e… "Em res… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Rádio … 2020-04-29 21:17:17 2020-04-29 19:22:55 "O escrito… "O júri… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
+  authors date_download       date_publish description maintext text  title
+  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
+1 Revist… 2020-04-30 06:20:08 <NULL>       Soraia Mor… "Soraia… <NUL… Ante…
+# … with 1 more variable: url <chr>
 # A tibble: 0 x 0
 # A tibble: 2 x 8
   authors date_download       date_publish        description maintext text 
   <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-04-29 21:17:34 2020-04-29 19:06:00 A FIFA per… "© Orla… <NUL…
-2 Tsf Lu… 2020-04-29 21:17:34 2020-04-29 19:06:00 A FIFA per… "© Orla… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-04-29 21:18:10 2020-04-29 18:40:00 A maior pa… "Uefa d… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 2 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-04-29 21:18:20 2020-04-29 18:41:00 As autorid… "© Orla… <NUL…
-2 Tsf Lu… 2020-04-29 21:18:20 2020-04-29 18:41:00 As autorid… "© Orla… <NUL…
+1 Global… 2020-04-30 06:20:16 2020-04-29 22:21:00 Paulo Mach… "Paulo … <NUL…
+2 André … 2020-04-30 06:20:16 2020-04-29 22:21:00 Paulo Mach… "Paulo … <NUL…
 # … with 2 more variables: title <chr>, url <chr>
 # A tibble: 0 x 0
 # A tibble: 1 x 8
   authors date_download       date_publish        description maintext text 
   <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Rádio … 2020-04-29 21:18:23 2020-04-29 15:57:47 O ministro… "\"Não … <NUL…
+1 Agênci… 2020-04-30 06:20:23 2020-04-30 05:10:00 Forças Arm… "As For… <NUL…
 # … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 # A tibble: 1 x 8
+# A tibble: 0 x 0
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Bruno … 2020-04-30 06:20:30 2020-04-30 03:10:00 Dybala anu… "“Tinha… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Global… 2020-04-30 06:20:31 2020-04-30 01:15:00 O presiden… "O pres… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 1 x 8
   authors date_download       date_publish        description maintext text 
   <chr>   <dttm>              <dttm>              <chr>       <list>   <lis>
-1 Rita A… 2020-04-29 21:14:54 2020-04-29 17:27:00 O ator par… <NULL>   <NUL…
+1 Notíci… 2020-04-30 06:20:33 2020-04-30 01:01:00 Menina ain… <NULL>   <NUL…
 # … with 2 more variables: title <chr>, url <chr>
 # A tibble: 1 x 8
   authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>   # A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Ana Br… 2020-04-29 21:18:55 2020-04-29 13:58:17 Empresa fa… "O secr… <NUL…
-# … with 2 more variables: # A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Luís J… 2020-04-29 21:20:31 2020-04-29 16:07:06 A capital … "A capi… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 1 x 8
-  au# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Notíci… 2020-04-29 21:23:20 2020-04-29 18:31:00 Desde o in… "As aut… <NUL…
-# … with 2 more variables: title <chr>, url <c# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Nuno B… 2020-04-29 21:34:22 2020-04-29 15:51:14 Os organiz… "Motore… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Agênci… 2020-04-29 21:34:24 2020-04-29 20:30:00 "Nove líde… "Os nov… <NUL…
-# … with 2 more variables: title <ch# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Rádio … 2020-04-29 21:46:27 2020-04-29 18:50:52 O primeiro… "Fonte … <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-04-29 21:46:29 2020-04-29 17:34:00 "O municíp… "Alexan… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 1 x 8
-  authors date_dow# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Maria … 2020-04-29 21:48:20 2020-04-29 15:00:12 A Huawei j… "Os sma… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-04-29 21:48:21 2020-04-29 16:22:00 A Comissão… "Por Lu… <NUL…
+  <chr>   <dttm>              <dttm>              <chr>       <list>   <lis>
+1 Notíci… 2020-04-30 06:20:34 2020-04-29 23:41:00 Militares … <NULL>   <NUL…
 # … with 2 more variables: title <chr>, url <chr>
 # A tibble: 0 x 0
 # A tibble: 1 x 8
   authors date_download       date_publish        description maintext text 
   <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-04-29 21:48:28 2020-04-29 16:44:00 "O vereado… "Luís M… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
-1 Jornal… 2020-04-29 21:48:29 <NULL>       Portugal r… "Covid-… <NUL… Covi…
-# … with 1 more variable: url <chr>
-# A tibble: 2 x 8
-  authors date_do# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Notíci… 2020-04-29 21:51:22 2020-04-29 19:05:00 203.591 pe… "A Prot… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish       # A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 2 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-04-29 22:30:31 2020-04-29 16:35:00 Foi ainda … "© Phot… <NUL…
-2 Sara B… 2020-04-29 22:30:31 2020-04-29 16:35:00 Foi ainda … "© Phot… <NUL…
+1 Notíci… 2020-04-30 06:20:39 2020-04-30 01:45:00 Anúncio fe… "O mini… <NUL…
 # … with 2 more variables: title <chr>, url <chr>
 # A tibble: 0 x 0
 # A tibble: 0 x 0
 # A tibble: 0 x 0
 # A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
-1 Jornal… 2020-04-29 22:49:11 <NULL>       Cerca de 3… "Covid-… <NUL… Covi…
-# … with 1 more variable: url <chr>
+# A tibble: 0 x 0
 # A tibble: 0 x 0
 # A tibble: 1 x 8
   authors date_download       date_publish        description maintext text 
   <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-04-29 22:53:51 2020-04-29 16:16:00 O mentor d… "Aluno … <NUL…
+1 Miguel… 2020-04-30 06:20:55 2020-04-30 01:00:00 Relatório … "A Stra… <NUL…
 # … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
-1 Jornal… 2020-04-29 22:53:54 <NULL>       Faça o log… "Editor… <NUL… AbbV…
-# … with 1 more variable: url <chr>
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
-1 Jornal… 2020-04-29 23:07:57 <NULL>       A Faculdad… "Covid-… <NUL… Covi…
-# … with 1 more variable: url <chr>
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 2 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-04-29 23:35:59 2020-04-29 16:36:00 Walter Fir… "© Nuno… <NUL…
-2 Tsf Lu… 2020-04-29 23:35:59 2020-04-29 16:36:00 Walter Fir… "© Nuno… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-04-29 23:36:02 2020-04-29 16:19:00 Os líderes… "Indepe… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 3 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
-1 Destak  2020-04-29 23:36:03 <NULL>       As últimas… "Açores… <NUL… Brux…
-2 Leitor… 2020-04-29 23:36:03 <NULL>       As últimas… "Açores… <NUL… Brux…
-3 Destak… 2020-04-29 23:36:03 <NULL>       As últimas… "Açores… <NUL… Brux…
-# … with 1 more variable: url <chr>
 # A tibble: 0 x 0
 # A tibble: 1 x 8
   authors date_download       date_publish description maintext text  title
   <chr>   <dttm>              <list>       <list>      <chr>    <lis> <chr>
-1 Notíci… 2020-04-29 23:40:42 <NULL>       <NULL>      "O Sind… <NUL… Médi…
+1 Diário… 2020-04-30 06:21:06 <NULL>       <NULL>      "A rece… <NUL… NewD…
 # … with 1 more variable: url <chr>
-# A tibble: 3 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
-1 Destak  2020-04-29 23:40:43 <NULL>       As últimas… "Covid-… <NUL… Berl…
-2 Leitor… 2020-04-29 23:40:43 <NULL>       As últimas… "Covid-… <NUL… Berl…
-3 Destak… 2020-04-29 23:40:43 <NULL>       As últimas… "Covid-… <NUL… Berl…
-# … with 1 more variable: url <chr>
-# A tibble: 3 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
-1 Destak  2020-04-29 23:40:44 <NULL>       As últimas… "Covid-… <NUL… Brux…
-2 Leitor… 2020-04-29 23:40:44 <NULL>       As últimas… "Covid-… <NUL… Brux…
-3 Destak… 2020-04-29 23:40:44 <NULL>       As últimas… "Covid-… <NUL… Brux…
-# … with 1 more variable: url <chr>
-# A tibble: 0 x 0
-# A tibble: 3 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
-1 Destak  2020-04-29 23:45:23 <NULL>       As últimas… "Covid-… <NUL… Brux…
-2 Leitor… 2020-04-29 23:45:23 <NULL>       As últimas… "Covid-… <NUL… Brux…
-3 Destak… 2020-04-29 23:45:23 <NULL>       As últimas… "Covid-… <NUL… Brux…
-# … with 1 more variable: url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <list>      <chr>    <lis> <chr>
-1 Notíci… 2020-04-29 23:45:24 <NULL>       <NULL>      "A Acad… <NUL… Acad…
-# … with 1 more variable: url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-04-29 23:45:25 2020-04-29 16:28:0# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Diogo … 2020-04-29 23:50:56 2020-04-29 17:44:35 Médicos e … "É redu… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
-1 Carlos… 2020-04-29 23:59:56 <NULL>       Na região … "Na reg… <NUL… Covi…
-# … with 1 more variable: url <chr>
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-04-29 23:59:59 2020-04-29 18:54:00 A Direção-… "JN/Agê… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
 # A tibble: 0 x 0
 # A tibble: 1 x 8
   authors date_download       date_publish        description maintext text 
   <chr>   <dttm>              <dttm>              <chr>       <list>   <lis>
-1 Notíci… 2020-04-30 00:04:39 2020-04-29 18:35:00 “Não distr… <NULL>   <NUL…
+1 Notíci… 2020-04-30 06:21:10 2020-04-30 01:52:53 Yolanda Ha… <NULL>   <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish description maintext text  title
+  <chr>   <dttm>              <list>       <list>      <chr>    <lis> <chr>
+1 Diário… 2020-04-30 06:21:12 <NULL>       <NULL>      "O Grup… <NUL… NewD…
+# … with 1 more variable: url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Notíci… 2020-04-30 06:21:16 2020-04-30 01:30:00 Restaurant… "Atençã… <NUL…
 # … with 2 more variables: title <chr>, url <chr>
 # A tibble: 0 x 0
 # A tibble: 0 x 0
 # A tibble: 1 x 8
   authors date_download       date_publish        description maintext text 
   <chr>   <dttm>              <dttm>              <chr>       <list>   <lis>
-1 Notíci… 2020-04-30 00:18:21 2020-04-29 18:50:00 O atual es… <NULL>   <NUL…
+1 Marina… 2020-04-30 06:21:26 2020-04-30 01:39:45 Uma medida… <NULL>   <NUL…
 # … with 2 more variables: title <chr>, url <chr>
 # A tibble: 1 x 8
   authors date_download       date_publish        description maintext text 
   <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Notíci… 2020-04-30 00:22:45 2020-04-29 18:32:00 Shinzo Abe… "O prim… <NUL…
+1 Notíci… 2020-04-30 06:21:28 2020-04-30 00:59:54 Julia Dewi… "Da Bél… <NUL…
 # … with 2 more variables: title <chr>, url <chr>
 # A tibble: 0 x 0
 # A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 2 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-04-30 00:29:09 2020-04-29 17:18:00 O impacto … "© Mari… <NUL…
-2 Tsf Lu… 2020-04-30 00:29:09 2020-04-29 17:18:00 O impacto … "© Mari… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-04-30 00:29:10 2020-04-29 17:33:00 Valor repr… "© Nuno… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 2 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-04-30 00:29:11 2020-04-29 16:46:00 Os Governo… "A fron… <NUL…
-2 Afonso… 2020-04-30 00:29:11 2020-04-29 16:46:00 Os Governo… "A fron… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 2 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-04-30 00:29:12 2020-04-29 17:11:00 Esta quart… "© Phot… <NUL…
-2 Nuno G… 2020-04-30 00:29:12 2020-04-29 17:11:00 Esta quart… "© Phot… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 2 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-04-30 00:29:13 2020-04-29 17:09:00 O contrato… "© Home… <NUL…
-2 Tsf Lu… 2020-04-30 00:29:13 2020-04-29 17:09:00 O contrato… "© Home… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 2 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-04-30 00:29:15 2020-04-29 17:36:00 A organiza… "Jair B… <NUL…
-2 Tsf Lu… 2020-04-30 00:29:15 2020-04-29 17:36:00 A organiza… "Jair B… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 2 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-04-30 00:29:16 2020-04-29 17:59:00 O Executiv… "© Paul… <NUL…
-2 Tsf Lu… 2020-04-30 00:29:16 2020-04-29 17:59:00 O Executiv… "© Paul… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 2 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-04-30 00:29:18 2020-04-29 18:24:00 Cerca de 4… "© Joel… <NUL…
-2 Tsf Lu… 2020-04-30 00:29:18 2020-04-29 18:24:00 Cerca de 4… "© Joel… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-04-30 00:29:19 2020-04-29 18:00:00 TSF - A rá… "O prog… <NUL…
-# … with 2 more variables: title <ch# A tibble: 0 x 0
 # A tibble: 0 x 0
 # A tibble: 1 x 8
   authors date_download       date_publish        description maintext text 
   <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-04-30 00:32:05 2020-04-29 15:06:00 Os testes … "Hoje à… <NUL…
+1 Global… 2020-04-30 06:21:36 2020-04-30 00:34:00 Ministro d… "Ação d… <NUL…
 # … with 2 more variables: title <chr>, url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-04-30 00:32:06 2020-04-29 14:36:00 Um homem, … "Reis P… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-04-30 00:32:07 2020-04-29 16:10:00 Pássaros q… "Pedro … <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <list>      <chr>    <lis> <chr>
-1 Notíci… 2020-04-30 00:32:08 <NULL>       <NULL>      "Miguel… <NUL… Inve…
-# … with 1 more variable: url <chr>
-Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+# A tibble: 0 x 0
+# A tibble: 0 x 0
 # A tibble: 0 x 0
 # A tibble: 1 x 8
   authors date_download       date_publish        description maintext text 
   <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-04-30 00:32:15 2020-04-29 14:48:00 O Institut… "Hoje à… <NUL…
+1 Nuno M… 2020-04-30 06:21:46 2020-04-29 21:24:13 O novo Cor… "O novo… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Silvio… 2020-04-30 06:21:47 2020-04-29 21:09:31 Novo Audi … "Novo A… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Leonet… 2020-04-30 06:22:34 2020-04-29 21:49:56 Presidente… "Depois… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Rádio … 2020-04-30 06:23:01 2020-04-30 00:40:03 A Madeira … "\"Trat… <NUL…
 # … with 2 more variables: title <chr>, url <chr>
 # A tibble: 3 x 8
   authors date_download       date_publish description maintext text  title
   <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
-1 Destak  2020-04-30 00:32:24 <NULL>       As últimas… "Actual… <NUL… ONU …
-2 Leitor… 2020-04-30 00:32:24 <NULL>       As últimas… "Actual… <NUL… ONU …
-3 Destak… 2020-04-30 00:32:24 <NULL>       As últimas… "Actual… <NUL… ONU …
+1 Destak  2020-04-30 06:23:02 <NULL>       As últimas… "Covid-… <NUL… Vitó…
+2 Leitor… 2020-04-30 06:23:02 <NULL>       As últimas… "Covid-… <NUL… Vitó…
+3 Destak… 2020-04-30 06:23:02 <NULL>       As últimas… "Covid-… <NUL… Vitó…
 # … with 1 more variable: url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <list>      <chr>    <lis> <chr>
-1 Notíci… 2020-04-30 00:32:25 <NULL>       <NULL>      "Miguel… <NUL… Médi…
-# … with 1 more variable: url <chr>
-# A tibble: 3 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
-1 Destak  2020-04-30 00:32:26 <NULL>       As últimas… "Covid-… <NUL… Econ…
-2 Leitor… 2020-04-30 00:32:26 <NULL>       As últimas… "Covid-… <NUL… Econ…
-3 Destak… 2020-04-30 00:32:26 <NULL>       As últimas… "Covid-… <NUL… Econ…
-# … with 1 more variable: url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <list>      <chr>    <lis> <chr>
-1 Notíci… 2020-04-30 00:32:27 <NULL>       <NULL>      "Cerca … <NUL… Trab…
-# … with 1 more variable: url <chr>
-# A tibble: 0 x 0
 # A tibble: 0 x 0
 # A tibble: 0 x 0
 # A tibble: 3 x 8
   authors date_download       date_publish description maintext text  title
   <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
-1 Destak  2020-04-30 00:41:46 <NULL>       As últimas… "Açores… <NUL… Brux…
-2 Leitor… 2020-04-30 00:41:46 <NULL>       As últimas… "Açores… <NUL… Brux…
-3 Destak… 2020-04-30 00:41:46 <NULL>       As últimas… "Açores… <NUL… Brux…
+1 Destak  2020-04-30 06:23:06 <NULL>       As últimas… "Covid-… <NUL… Made…
+2 Leitor… 2020-04-30 06:23:06 <NULL>       As últimas… "Covid-… <NUL… Made…
+3 Destak… 2020-04-30 06:23:06 <NULL>       As últimas… "Covid-… <NUL… Made…
 # … with 1 more variable: url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-04-30 00:41:47 2020-04-29 16:18:00 Mais de du… "Hoje à… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <list>      <chr>    <lis> <chr>
-1 Notíci… 2020-04-30 00:41:48 <NULL>       <NULL>      "A dire… <NUL… “Não…
-# … with 1 more variable: url <chr>
+# A tibble: 0 x 0
+# A tibble: 0 x 0
 # A tibble: 3 x 8
   authors date_download       date_publish description maintext text  title
   <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
-1 Destak  2020-04-30 00:41:50 <NULL>       As últimas… "Açores… <NUL… Brux…
-2 Leitor… 2020-04-30 00:41:50 <NULL>       As últimas… "Açores… <NUL… Brux…
-3 Destak… 2020-04-30 00:41:50 <NULL>       As últimas… "Açores… <NUL… Brux…
-# … with 1 more variable: url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <list>      <chr>    <lis> <chr>
-1 Notíci… 2020-04-30 00:41:50 <NULL>       <NULL>      "O rela… <NUL… Comi…
-# … with 1 more variable: url <chr>
-# A tibble: 3 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
-1 Destak  2020-04-30 00:41:52 <NULL>       As últimas… "Açores… <NUL… Brux…
-2 Leitor… 2020-04-30 00:41:52 <NULL>       As últimas… "Açores… <NUL… Brux…
-3 Destak… 2020-04-30 00:41:52 <NULL>       As últimas… "Açores… <NUL… Brux…
+1 Destak  2020-04-30 06:23:10 <NULL>       As últimas… "Covid-… <NUL… Bras…
+2 Leitor… 2020-04-30 06:23:10 <NULL>       As últimas… "Covid-… <NUL… Bras…
+3 Destak… 2020-04-30 06:23:10 <NULL>       As últimas… "Covid-… <NUL… Bras…
 # … with 1 more variable: url <chr>
 # A tibble: 1 x 8
   authors date_download       date_publish        description maintext text 
   <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-04-30 00:41:52 2020-04-29 14:36:00 A confirma… "Hoje à… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <list>      <chr>    <lis> <chr>
-1 Notíci… 2020-04-30 00:41:53 <NULL>       <NULL>      "O secr… <NUL… 5G: …
-# … with 1 more variable: url <chr>
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <list>      <chr>    <lis> <chr>
-1 Notíci… 2020-04-30 00:46:33 <NULL>       <NULL>      "O Pres… <NUL… PR p…
-# … with 1 more variable: url <chr>
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Meliss… 2020-04-30 01:00:39 2020-04-29 15:17:27 "Secretári… "Antóni… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <list>      <chr>    <lis> <chr>
-1 Notíci… 2020-04-30 01:05:02 <NULL>       <NULL>      "O secr… <NUL… Gove…
-# … with 1 more variable: url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <list>      <chr>    <lis> <chr>
-1 Notíci… 2020-04-30 01:05:04 <NULL>       <NULL>      "O desc… <NUL… Desc…
-# … with 1 more variable: url <chr>
-# A tibble: 3 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
-1 Destak  2020-04-30 01:05:05 <NULL>       As últimas… "Covid-… <NUL… Brux…
-2 Leitor… 2020-04-30 01:05:05 <NULL>       As últimas… "Covid-… <NUL… Brux…
-3 Destak… 2020-04-30 01:05:05 <NULL>       As últimas… "Covid-… <NUL… Brux…
-# … with 1 more variable: url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <list>      <chr>    <lis> <chr>
-1 Notíci… 2020-04-30 01:05:05 <NULL>       <NULL>      "As aut… <NUL… Muni…
-# … with 1 more variable: url <chr>
-# A tibble: 3 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
-1 Destak  2020-04-30 01:05:06 <NULL>       As últimas… "Covid-… <NUL… Berl…
-2 Leitor… 2020-04-30 01:05:06 <NULL>       As últimas… "Covid-… <NUL… Berl…
-3 Destak… 2020-04-30 01:05:06 <NULL>       As últimas… "Covid-… <NUL… Berl…
-# … with 1 more variable: url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Sandra… 2020-04-30 01:05:07 2020-04-29 15:41:00 A maioria … "Sandra… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <list>      <chr>    <lis> <chr>
-1 Notíci… 2020-04-30 01:05:08 <NULL>       <NULL>      "O Inst… <NUL… Mais…
-# … with 1 more variable: url <chr>
-# A tibble: 3 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
-1 Destak  2020-04-30 01:05:10 <NULL>       As últimas… "Covid-… <NUL… Brux…
-2 Leitor… 2020-04-30 01:05:10 <NULL>       As últimas… "Covid-… <NUL… Brux…
-3 Destak… 2020-04-30 01:05:10 <NULL>       As últimas… "Covid-… <NUL… Brux…
-# … with 1 more variable: url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Nuno M… 2020-04-30 01:05:10 2020-04-29 12:42:33 Parece que… "Parece… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-04-30 01:05:11 2020-04-29 16:27:00 A portugue… "Hoje à… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Gonçal… 2020-04-30 01:05:13 2020-04-29 16:44:54 Noticiário… "A Câma… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <list>      <chr>    <lis> <chr>
-1 Notíci… 2020-04-30 01:05:14 <NULL>       <NULL>      "Portug… <NUL… Coim…
-# … with 1 more variable: url <chr>
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Rádio … 2020-04-30 01:05:33 2020-04-29 16:19:49 O partido … "\"Em c… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-04-30 01:05:36 2020-04-29 14:54:00 "O Sindica… "JN/Agê… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Rádio … 2020-04-30 01:06:47 2020-04-29 16:22:03 Redação, 2… "De aco… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-04-30 01:07:02 2020-04-29 16:09:00 O Hospital… "Antóni… <NUL…
+1 Rádio … 2020-04-30 06:23:11 2020-04-30 00:12:11 "Washingto… "Em con… <NUL…
 # … with 2 more variables: title <chr>, url <chr>
 # A tibble: 0 x 0
 # A tibble: 0 x 0
@@ -709,870 +597,6 @@ Request refused.
 NULL
 Joining, by = "doc_id"
   |                                                                              |======================================================================| 100%
-Error # A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <list>   <lis>
-1 Rita A… 2020-04-30 01:05:17 2020-04-29 17:27:00 O ator par… <NULL>   <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-Joining, by = c("titleArticle", "urlArticle")
-Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |==========================================================
-Request refused.
-NError in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |==========================================================
-Request refused.
-NError in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |==========================================================
-Request refused.
-NError in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |==========================================================
-Request refused.
-NError in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |==========================================================
-Request refused.
-NError in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |==========================================================
-Request refused.
-NError in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |==========================================================
-Request refused.
-NError in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |==========================================================
-Request refused.
-NError in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |==========================================================
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |===========================================================Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |==========================================================
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |===========================================================Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |==========================================================
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |===========================================================Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |==========================================================
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |===========================================================Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |==========================================================
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |===========================================================Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |==========================================================
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |===========================================================Error in curl::curError in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying
-Request refused.
-Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |===========================================================Error in curl::curError in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying
-Request refused.
-Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |===========================================================Error in curl::curError in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying
-Request refused.
-Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |===========================================================Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |==========================================================
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |===========================================================Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |==========================================================
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |===========================================================Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |==========================================================
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |===========================================================Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |==========================================================
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |===========================================================Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |==========================================================
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |===========================================================Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |==========================================================
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |===========================================================Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |==========================================================
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |===========================================================Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |==========================================================
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |===========================================================Error in curl::curError in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying
-Request refused.
-Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |===========================================================Error in curl::curError in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying
-Request refused.
-Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |===========================================================Error in curl::curError in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying
-Request refused.
-Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |===========================================================Error in curl::curError in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying
-Request refused.
-Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |===========================================================Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |==========================================================
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |===========================================================Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |==========================================================
-Request refused.
-NError in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |==========================================================
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |===========================================================Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |==========================================================
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |===========================================================Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |==========================================================
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |===========================================================Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |==========================================================
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |===========================================================Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |==========================================================
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |===========================================================Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |==========================================================
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |===========================================================Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |==========================================================
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |===========================================================Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |==========================================================
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |===========================================================Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |==========================================================
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |===========================================================Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |==========================================================
-Request refused.
-NError in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |==========================================================
-Request refused.
-NError in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |==========================================================
-Request refused.
-NError in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |==========================================================
-Request refused.
-NError in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |==========================================================
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |===========================================================Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |==========================================================
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |===========================================================Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |==========================================================
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |===========================================================Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |==========================================================
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |===========================================================Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |==========================================================
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |===========================================================Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |==========================================================
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |===========================================================Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |==========================================================
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |===========================================================Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |==========================================================
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |===========================================================Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |==========================================================
-Request refused.
-NError in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |==========================================================
-Request refused.
-NError in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |==========================================================
-Request refused.
-NError in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |==========================================================
-Request refused.
-NError in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |==========================================================
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |===========================================================Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |==========================================================
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |===========================================================Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |==========================================================
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |===========================================================Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |==========================================================
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |===========================================================Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |==========================================================
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |===========================================================Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |==========================================================
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |===========================================================Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |==========================================================
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |===========================================================Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |==========================================================
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |===========================================================Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |==========================================================
-Request refused.
-NError in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |==========================================================
-Request refused.
-NError in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |==========================================================
-Request refused.
-NError in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |==========================================================
-Request refused.
-NError in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |==========================================================
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |===========================================================Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |==========================================================
-Request refused.
-NError in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |==========================================================
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |===========================================================Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |==========================================================
-Request refused.
-NError in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |==========================================================
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |===========================================================Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |==========================================================
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |===========================================================Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |==========================================================
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |===========================================================Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |==========================================================
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |===========================================================Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |==========================================================
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |===========================================================Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |==========================================================
-Request refused.
-NError in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |==========================================================
-Request refused.
-NError in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |==========================================================
-Request refused.
-NError in curl::curl_fetch_memory(url, handle = handle): Timeout was reached: [api.dbpedia-spotlight.org] Connection timed out after 10001 milliseconds
-Request failed [ERROR]. Retrying in 1Error in curlError in curl::curl_fetch_memory(url, handle = handle): Timeout was reached: [api.dbpedia-spotlight.org] Resolving timed out after 10000 milliseconds
-Request failed [ERROR]. Retrying in 1Error in curl
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |=========================================================
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |======================================================================| 100%
-Joining, by =Error iError in push(object = ".", credentials = cred_user_pass(username = "josemreis",  : 
-  Error in 'git2r_push': failed to resolve address for github.com: Name or service not known
-Calls: automate
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |======================================================================| 100%
-Error in curl::curl_fetch_memory(url, handle = handle): Timeout was reached: [api.dbpedia-spotlight.org] Resolving timed out after 10000 milliseconds
-Request failed [ERROR]. Retrying in 15 seconds...
-Error in curl::curl_fetch_memory(url, handle = handle): Timeout was reached: [api.dbpedia-spotlight.org] Resolving timed out after 10000 milliseconds
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |======================================================================| 100%
-Error in curl::curl_fetch_memory(url, handle = handle): Timeout was reached: [api.dbpedia-spotlight.org] Resolving timed out after 10000 milliseconds
-Request failed [ERROR]. Retrying in 15 seconds...
-Error in curl::curl_fetch_memory(url, handle = handle): Timeout was reached: [api.dbpedia-spotlight.org] Resolving timed out after 10000 milliseconds
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |======================================================================| 100%
-Error in curl::curl_fetch_memory(url, handle = handle): Timeout was reached: [api.dbpedia-spotlight.org] Resolving timed out after 10000 milliseconds
-Request failed [ERROR]. Retrying in 15 seconds...
-Error in curl::curl_fetch_memory(url, handle = handle): Timeout was reached: [api.dbpedia-spotlight.org] Resolving timed out after 10000 milliseconds
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |======================================================================| 100%
-Error in curl::curl_fetch_memory(url, handle = handle): Could not resolve host: api.dbpedia-spotlight.org
-Request failed [ERROR]. Retrying in 15 seconds...
-Error in curl::curl_fetch_memory(url, handle = handle): Could not resolve host: api.dbpedia-spotlight.org
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |======================================================================| 100%
-Error in curl::curl_fetch_memory(url, handle = handle): Could not resolve host: api.dbpedia-spotlight.org
-Request failed [ERROR]. Retrying in 15 seconds...
-Error in curl::curl_fetch_memory(url, handle = handle): Could not resolve host: api.dbpedia-spotlight.org
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |======================================================================| 100%
-Joining, by = "url"
-                                                                      |======================================================================| 100%
 Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
 Request failed [ERROR]. Retrying in 15 seconds...
 Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
@@ -1909,6 +933,249 @@ Joining, by = "doc_id"
 Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
 Request failed [ERROR]. Retrying in 15 seconds...
 Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
+Request failed [ERROR]. Retrying in 15 seconds...
+
+Request refused.
+NULL
+Joining, by = "doc_id"
+  |                                                                              |======================================================================| 100%
+Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
+Request failed [ERROR]. Retrying in 15 seconds...
+Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
+Request failed [ERROR]. Retrying in 15 seconds...
+
+Request refused.
+NULL
+Joining, by = "doc_id"
+  |                                                                              |======================================================================| 100%
+Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
+Request failed [ERROR]. Retrying in 15 seconds...
+Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
+Request failed [ERROR]. Retrying in 15 seconds...
+
+Request refused.
+NULL
+Joining, by = "doc_id"
+  |                                                                              |======================================================================| 100%
+Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
+Request failed [ERROR]. Retrying in 15 seconds...
+Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
+Request failed [ERROR]. Retrying in 15 seconds...
+
+Request refused.
+NULL
+Joining, by = "doc_id"
+  |                                                                              |======================================================================| 100%
+Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
+Request failed [ERROR]. Retrying in 15 seconds...
+Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
+Request failed [ERROR]. Retrying in 15 seconds...
+
+Request refused.
+NULL
+Joining, by = "doc_id"
+  |                                                                              |======================================================================| 100%
+Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
+Request failed [ERROR]. Retrying in 15 seconds...
+Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
+Request failed [ERROR]. Retrying in 15 seconds...
+
+Request refused.
+NULL
+Joining, by = "doc_id"
+  |                                                                              |======================================================================| 100%
+Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
+Request failed [ERROR]. Retrying in 15 seconds...
+Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
+Request failed [ERROR]. Retrying in 15 seconds...
+
+Request refused.
+NULL
+Joining, by = "doc_id"
+  |                                                                              |======================================================================| 100%
+Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
+Request failed [ERROR]. Retrying in 15 seconds...
+Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
+Request failed [ERROR]. Retrying in 15 seconds...
+
+Request refused.
+NULL
+Joining, by = "doc_id"
+  |                                                                              |======================================================================| 100%
+Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
+Request failed [ERROR]. Retrying in 15 seconds...
+Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
+Request failed [ERROR]. Retrying in 15 seconds...
+
+Request refused.
+NULL
+Joining, by = "doc_id"
+  |                                                                              |======================================================================| 100%
+Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
+Request failed [ERROR]. Retrying in 15 seconds...
+Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
+Request failed [ERROR]. Retrying in 15 seconds...
+
+Request refused.
+NULL
+Joining, by = "doc_id"
+  |                                                                              |======================================================================| 100%
+Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
+Request failed [ERROR]. Retrying in 15 seconds...
+Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
+Request failed [ERROR]. Retrying in 15 seconds...
+
+Request refused.
+NULL
+Joining, by = "doc_id"
+  |                                                                              |======================================================================| 100%
+Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
+Request failed [ERROR]. Retrying in 15 seconds...
+Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
+Request failed [ERROR]. Retrying in 15 seconds...
+
+Request refused.
+NULL
+Joining, by = "doc_id"
+  |                                                                              |======================================================================| 100%
+Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
+Request failed [ERROR]. Retrying in 15 seconds...
+Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
+Request failed [ERROR]. Retrying in 15 seconds...
+
+Request refused.
+NULL
+Joining, by = "doc_id"
+  |                                                                              |======================================================================| 100%
+Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
+Request failed [ERROR]. Retrying in 15 seconds...
+Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
+Request failed [ERROR]. Retrying in 15 seconds...
+
+Request refused.
+NULL
+Joining, by = "doc_id"
+  |                                                                              |======================================================================| 100%
+Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
+Request failed [ERROR]. Retrying in 15 seconds...
+Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
+Request failed [ERROR]. Retrying in 15 seconds...
+
+Request refused.
+NULL
+Joining, by = "doc_id"
+  |                                                                              |======================================================================| 100%
+Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
+Request failed [ERROR]. Retrying in 15 seconds...
+Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
+Request failed [ERROR]. Retrying in 15 seconds...
+
+Request refused.
+NULL
+Joining, by = "doc_id"
+  |                                                                              |======================================================================| 100%
+Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
+Request failed [ERROR]. Retrying in 15 seconds...
+Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
+Request failed [ERROR]. Retrying in 15 seconds...
+
+Request refused.
+NULL
+Joining, by = "doc_id"
+  |                                                                              |======================================================================| 100%
+Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
+Request failed [ERROR]. Retrying in 15 seconds...
+Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
+Request failed [ERROR]. Retrying in 15 seconds...
+
+Request refused.
+NULL
+Joining, by = "doc_id"
+  |                                                                              |======================================================================| 100%
+Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
+Request failed [ERROR]. Retrying in 15 seconds...
+Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
+Request failed [ERROR]. Retrying in 15 seconds...
+
+Request refused.
+NULL
+Joining, by = "doc_id"
+  |                                                                              |======================================================================| 100%
+Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
+Request failed [ERROR]. Retrying in 15 seconds...
+Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
+Request failed [ERROR]. Retrying in 15 seconds...
+
+Request refused.
+NULL
+Joining, by = "doc_id"
+  |                                                                              |======================================================================| 100%
+Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
+Request failed [ERROR]. Retrying in 15 seconds...
+Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
+Request failed [ERROR]. Retrying in 15 seconds...
+
+Request refused.
+NULL
+Joining, by = "doc_id"
+  |                                                                              |======================================================================| 100%
+Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
+Request failed [ERROR]. Retrying in 15 seconds...
+Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
+Request failed [ERROR]. Retrying in 15 seconds...
+
+Request refused.
+NULL
+Joining, by = "doc_id"
+  |                                                                              |======================================================================| 100%
+Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
+Request failed [ERROR]. Retrying in 15 seconds...
+Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
+Request failed [ERROR]. Retrying in 15 seconds...
+
+Request refused.
+NULL
+Joining, by = "doc_id"
+  |                                                                              |======================================================================| 100%
+Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
+Request failed [ERROR]. Retrying in 15 seconds...
+Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
+Request failed [ERROR]. Retrying in 15 seconds...
+
+Request refused.
+NULL
+Joining, by = "doc_id"
+  |                                                                              |======================================================================| 100%
+Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
+Request failed [ERROR]. Retrying in 15 seconds...
+Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
+Request failed [ERROR]. Retrying in 15 seconds...
+
+Request refused.
+NULL
+Joining, by = "doc_id"
+  |                                                                              |======================================================================| 100%
+Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
+Request failed [ERROR]. Retrying in 15 seconds...
+Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
+Request failed [ERROR]. Retrying in 15 seconds...
+
+Request refused.
+NULL
+Joining, by = "doc_id"
+  |                                                                              |======================================================================| 100%
+Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
+Request failed [ERROR]. Retrying in 15 seconds...
+Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
+Request failed [ERROR]. Retrying in 15 seconds...
+
+Request refused.
+NULL
+Joining, by = "doc_id"
+  |                                                                              |======================================================================| 100%
+Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
+Request failed [ERROR]. Retrying in 15 seconds...
+Error in curl::curl_fetch_memory(url, handle = handle): Timeout was reached: [api.dbpedia-spotlight.org] Connection timed out after 10001 milliseconds
 Request failed [ERROR]. Retrying in 15 seconds...
 
 Request refused.
@@ -1925,5 +1192,3 @@ NULL
 Joining, by = "doc_id"
   |                                                                              |======================================================================| 100%
 Joining, by = "url"
-
- Data pushed to remote github https://github.com/josemreis/covidnews-ml-pt
