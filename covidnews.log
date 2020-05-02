@@ -70,29 +70,66 @@ Joining, by = "urlGDELTV2FTAPI"
 Warning message:
 In if (class(gdelt_pt_all) == "try-error") { :
   the condition has length > 1 and only the first element will be used
+# A tibble: 3 x 8
+  authors date_download       date_publish description maintext text  title
+  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
+1 Destak  2020-05-02 10:15:21 <NULL>       As últimas… "Covid-… <NUL… Feir…
+2 Leitor… 2020-05-02 10:15:21 <NULL>       As últimas… "Covid-… <NUL… Feir…
+3 Destak… 2020-05-02 10:15:21 <NULL>       As últimas… "Covid-… <NUL… Feir…
+# … with 1 more variable: url <chr>
+# A tibble: 3 x 8
+  authors date_download       date_publish description maintext text  title
+  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
+1 Destak  2020-05-02 10:15:22 <NULL>       As últimas… "Covid-… <NUL… Meno…
+2 Leitor… 2020-05-02 10:15:22 <NULL>       As últimas… "Covid-… <NUL… Meno…
+3 Destak… 2020-05-02 10:15:22 <NULL>       As últimas… "Covid-… <NUL… Meno…
+# … with 1 more variable: url <chr>
+# A tibble: 3 x 8
+  authors date_download       date_publish description maintext text  title
+  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
+1 Destak  2020-05-02 10:15:23 <NULL>       As últimas… "Actual… <NUL… Polí…
+2 Leitor… 2020-05-02 10:15:23 <NULL>       As últimas… "Actual… <NUL… Polí…
+3 Destak… 2020-05-02 10:15:23 <NULL>       As últimas… "Actual… <NUL… Polí…
+# … with 1 more variable: url <chr>
+# A tibble: 3 x 8
+  authors date_download       date_publish description maintext text  title
+  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
+1 Destak  2020-05-02 10:15:23 <NULL>       As últimas… "Covid-… <NUL… Guin…
+2 Leitor… 2020-05-02 10:15:23 <NULL>       As últimas… "Covid-… <NUL… Guin…
+3 Destak… 2020-05-02 10:15:23 <NULL>       As últimas… "Covid-… <NUL… Guin…
+# … with 1 more variable: url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <list>      <chr>    <lis>
+1 Sean G… 2020-05-02 10:15:24 2020-05-02 06:48:45 <NULL>      "The de… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 0 x 0
 # A tibble: 2 x 8
   authors date_download       date_publish        description maintext text 
   <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-05-02 09:15:26 2020-05-02 05:12:00 É novament… "© Rui … <NUL…
-2 Rui Tu… 2020-05-02 09:15:26 2020-05-02 05:12:00 É novament… "© Rui … <NUL…
+1 Global… 2020-05-02 10:15:26 2020-05-02 05:12:00 É novament… "© Rui … <NUL…
+2 Rui Tu… 2020-05-02 10:15:26 2020-05-02 05:12:00 É novament… "© Rui … <NUL…
 # … with 2 more variables: title <chr>, url <chr>
 # A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Pedro … 2020-05-02 09:15:32 2020-04-26 02:07:00 Este é o t… "Atrave… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Bruno … 2020-05-02 09:15:34 2020-05-02 01:43:12 Uma plataf… "O perí… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 José M… 2020-05-02 09:15:35 2020-04-02 02:00:00 Não estand… "Tido c… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
 Joining, by = c("titleArticle", "urlArticle")
+Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
+Request failed [ERROR]. Retrying in 15 seconds...
+Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
+Request failed [ERROR]. Retrying in 15 seconds...
+
+Request refused.
+NULL
+Joining, by = "doc_id"
+  |                                                                              |======================================================================| 100%
+Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
+Request failed [ERROR]. Retrying in 15 seconds...
+Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
+Request failed [ERROR]. Retrying in 15 seconds...
+
+Request refused.
+NULL
+Joining, by = "doc_id"
+  |                                                                              |======================================================================| 100%
 Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
 Request failed [ERROR]. Retrying in 15 seconds...
 Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
