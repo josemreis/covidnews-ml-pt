@@ -63,7 +63,7 @@ cols(
   author = col_character()
 )
   |                                                                              |=======                                                               |  10%  |                                                                              |==============                                                        |  20%  |                                                                              |=====================                                                 |  30%  |                                                                              |============================                                          |  40%  |                                                                              |===================================                                   |  50%  |                                                                              |==========================================                            |  60%  |                                                                              |=================================================                     |  70%  |                                                                              |========================================================              |  80%  |                                                                              |===============================================================       |  90%  |                                                                              |======================================================================| 100%
-Parsing: https://api.gdeltproject.org/api/v2/doc/doc?query=%20sourcecountry:po&sourcelang:por&mode=artlist&format=json&timespan=100&maxrecords=250&sort=datedesc
+Parsing: https://api.gdeltproject.org/api/v2/doc/doc?query=%20sourcecountry:po&sourcelang:por&mode=artlist&format=json&timespan=240&maxrecords=250&sort=datedesc
 
 Joining, by = "urlGDELTV2FTAPI"
 >> GDELT query --> done.
@@ -73,263 +73,228 @@ In if (class(gdelt_pt_all) == "try-error") { :
 # A tibble: 1 x 8
   authors date_download       date_publish        description maintext text 
   <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-05-04 21:15:21 2020-05-04 18:58:00 Há pouco m… "O pres… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Agênci… 2020-05-04 21:15:23 2020-04-05 19:55:00 A Cozinha … "A Wort… <NUL…
+1 Global… 2020-05-05 06:15:22 2020-05-05 01:44:00 Os Prémios… "O pres… <NUL…
 # … with 2 more variables: title <chr>, url <chr>
 # A tibble: 0 x 0
 # A tibble: 0 x 0
 # A tibble: 1 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
-1 Jornal… 2020-05-04 21:15:34 <NULL>       Portugal r… "Covid-… <NUL… Covi…
-# … with 1 more variable: url <chr>
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 3 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
-1 Destak  2020-05-04 21:15:46 <NULL>       As últimas… "Covid-… <NUL… Ussu…
-2 Leitor… 2020-05-04 21:15:46 <NULL>       As últimas… "Covid-… <NUL… Ussu…
-3 Destak… 2020-05-04 21:15:46 <NULL>       As últimas… "Covid-… <NUL… Ussu…
-# … with 1 more variable: url <chr>
-# A tibble: 1 x 8
   authors date_download       date_publish        description maintext text 
   <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-05-04 21:15:47 2020-05-04 17:41:00 Uma equipa… "A long… <NUL…
+1 Helena… 2020-05-05 06:15:30 2020-05-02 02:09:00 A finlande… "Estáva… <NUL…
 # … with 2 more variables: title <chr>, url <chr>
 # A tibble: 0 x 0
 # A tibble: 0 x 0
-# A tibble: 3 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
-1 Destak  2020-05-04 21:15:54 <NULL>       As últimas… "Covid-… <NUL… Órgã…
-2 Leitor… 2020-05-04 21:15:54 <NULL>       As últimas… "Covid-… <NUL… Órgã…
-3 Destak… 2020-05-04 21:15:54 <NULL>       As últimas… "Covid-… <NUL… Órgã…
-# … with 1 more variable: url <chr>
-# A tibble: 3 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
-1 Destak  2020-05-04 21:15:55 <NULL>       As últimas… "Covid-… <NUL… Espe…
-2 Leitor… 2020-05-04 21:15:55 <NULL>       As últimas… "Covid-… <NUL… Espe…
-3 Destak… 2020-05-04 21:15:55 <NULL>       As últimas… "Covid-… <NUL… Espe…
-# … with 1 more variable: url <chr>
 # A tibble: 0 x 0
 # A tibble: 1 x 8
   authors date_download       date_publish        description maintext text 
   <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-05-04 21:16:01 2020-05-04 18:53:00 A Direção-… "DGS e … <NUL…
+1 Maria … 2020-05-05 06:15:46 2020-05-05 02:23:00 Nesta terç… "O músi… <NUL…
 # … with 2 more variables: title <chr>, url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
-1 Jornal… 2020-05-04 21:16:02 <NULL>       Especialis… "Covid-… <NUL… "Cov…
-# … with 1 more variable: url <chr>
-# A tibble: 3 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
-1 Destak  2020-05-04 21:16:03 <NULL>       As últimas… "Actual… <NUL… Ango…
-2 Leitor… 2020-05-04 21:16:03 <NULL>       As últimas… "Actual… <NUL… Ango…
-3 Destak… 2020-05-04 21:16:03 <NULL>       As últimas… "Actual… <NUL… Ango…
-# … with 1 more variable: url <chr>
-# A tibble: 1 x 8
+# A tibble: 9 x 8
   authors date_download       date_publish        description maintext text 
   <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-05-04 21:16:04 2020-05-04 18:46:00 Donald Tru… "A visi… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 3 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
-1 Destak  2020-05-04 21:16:05 <NULL>       As últimas… "Covid-… <NUL… Espe…
-2 Leitor… 2020-05-04 21:16:05 <NULL>       As últimas… "Covid-… <NUL… Espe…
-3 Destak… 2020-05-04 21:16:05 <NULL>       As últimas… "Covid-… <NUL… Espe…
-# … with 1 more variable: url <chr>
-# A tibble: 3 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
-1 Destak  2020-05-04 21:16:06 <NULL>       As últimas… "Covid-… <NUL… Espe…
-2 Leitor… 2020-05-04 21:16:06 <NULL>       As últimas… "Covid-… <NUL… Espe…
-3 Destak… 2020-05-04 21:16:06 <NULL>       As últimas… "Covid-… <NUL… Espe…
-# … with 1 more variable: url <chr>
-# A tibble: 3 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
-1 Destak  2020-05-04 21:16:06 <NULL>       As últimas… "Covid-… <NUL… Espe…
-2 Leitor… 2020-05-04 21:16:06 <NULL>       As últimas… "Covid-… <NUL… Espe…
-3 Destak… 2020-05-04 21:16:06 <NULL>       As últimas… "Covid-… <NUL… Espe…
-# … with 1 more variable: url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Manuel… 2020-05-04 21:16:07 2020-04-05 12:15:00 Cerca de 5… "Dois a… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 3 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
-1 Destak  2020-05-04 21:16:08 <NULL>       As últimas… "Covid-… <NUL… "Mer…
-2 Leitor… 2020-05-04 21:16:08 <NULL>       As últimas… "Covid-… <NUL… "Mer…
-3 Destak… 2020-05-04 21:16:08 <NULL>       As últimas… "Covid-… <NUL… "Mer…
-# … with 1 more variable: url <chr>
-# A tibble: 0 x 0
-# A tibble: 3 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
-1 Destak  2020-05-04 21:16:15 <NULL>       As últimas… "Covid-… <NUL… Guin…
-2 Leitor… 2020-05-04 21:16:15 <NULL>       As últimas… "Covid-… <NUL… Guin…
-3 Destak… 2020-05-04 21:16:15 <NULL>       As últimas… "Covid-… <NUL… Guin…
-# … with 1 more variable: url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-05-04 21:16:15 2020-05-04 17:58:00 Os números… "Número… <NUL…
+1 August… 2020-05-05 06:15:47 2020-05-05 01:12:00 Se hoje é … "1. Cad… <NUL…
+2 Graça … 2020-05-05 06:15:47 2020-05-05 01:12:00 Se hoje é … "1. Cad… <NUL…
+3 Manuel… 2020-05-05 06:15:47 2020-05-05 01:12:00 Se hoje é … "1. Cad… <NUL…
+4 Tiago … 2020-05-05 06:15:47 2020-05-05 01:12:00 Se hoje é … "1. Cad… <NUL…
+5 Minist… 2020-05-05 06:15:47 2020-05-05 01:12:00 Se hoje é … "1. Cad… <NUL…
+6 Minist… 2020-05-05 06:15:47 2020-05-05 01:12:00 Se hoje é … "1. Cad… <NUL…
+7 Minist… 2020-05-05 06:15:47 2020-05-05 01:12:00 Se hoje é … "1. Cad… <NUL…
+8 Tecnol… 2020-05-05 06:15:47 2020-05-05 01:12:00 Se hoje é … "1. Cad… <NUL…
+9 Minist… 2020-05-05 06:15:47 2020-05-05 01:12:00 Se hoje é … "1. Cad… <NUL…
 # … with 2 more variables: title <chr>, url <chr>
 # A tibble: 1 x 8
   authors date_download       date_publish        description maintext text 
   <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-05-04 21:16:16 2020-05-04 17:35:00 Investigad… "Invest… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 3 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
-1 Destak  2020-05-04 21:16:19 <NULL>       As últimas… "Covid-… <NUL… Espe…
-2 Leitor… 2020-05-04 21:16:19 <NULL>       As últimas… "Covid-… <NUL… Espe…
-3 Destak… 2020-05-04 21:16:19 <NULL>       As últimas… "Covid-… <NUL… Espe…
-# … with 1 more variable: url <chr>
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 3 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
-1 Destak  2020-05-04 21:16:22 <NULL>       As últimas… "Covid-… <NUL… Rein…
-2 Leitor… 2020-05-04 21:16:22 <NULL>       As últimas… "Covid-… <NUL… Rein…
-3 Destak… 2020-05-04 21:16:22 <NULL>       As últimas… "Covid-… <NUL… Rein…
-# … with 1 more variable: url <chr>
-# A tibble: 0 x 0
-# A tibble: 2 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-05-04 21:16:28 2020-05-04 19:20:00 Em maio es… "© Carl… <NUL…
-2 Tsf Lu… 2020-05-04 21:16:28 2020-05-04 19:20:00 Em maio es… "© Carl… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 3 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
-1 Destak  2020-05-04 21:16:29 <NULL>       As últimas… "Covid-… <NUL… Espe…
-2 Leitor… 2020-05-04 21:16:29 <NULL>       As últimas… "Covid-… <NUL… Espe…
-3 Destak… 2020-05-04 21:16:29 <NULL>       As últimas… "Covid-… <NUL… Espe…
-# … with 1 more variable: url <chr>
-# A tibble: 2 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-05-04 21:16:29 2020-05-04 18:03:00 A música s… "Vera D… <NUL…
-2 Teresa… 2020-05-04 21:16:29 2020-05-04 18:03:00 A música s… "Vera D… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 3 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
-1 Destak  2020-05-04 21:16:31 <NULL>       As últimas… "Covid-… <NUL… Espe…
-2 Leitor… 2020-05-04 21:16:31 <NULL>       As últimas… "Covid-… <NUL… Espe…
-3 Destak… 2020-05-04 21:16:31 <NULL>       As últimas… "Covid-… <NUL… Espe…
-# … with 1 more variable: url <chr>
-# A tibble: 3 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
-1 Destak  2020-05-04 21:16:31 <NULL>       As últimas… "Covid-… <NUL… Asso…
-2 Leitor… 2020-05-04 21:16:31 <NULL>       As últimas… "Covid-… <NUL… Asso…
-3 Destak… 2020-05-04 21:16:31 <NULL>       As últimas… "Covid-… <NUL… Asso…
-# … with 1 more variable: url <chr>
-# A tibble: 0 x 0
-# A tibble: 2 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-05-04 21:16:35 2020-05-04 18:43:00 Presidente… "Gonçal… <NUL…
-2 Filipe… 2020-05-04 21:16:35 2020-05-04 18:43:00 Presidente… "Gonçal… <NUL…
+1 Jacek … 2020-05-05 06:15:48 2020-05-04 22:28:00 Habituados… "Habitu… <NUL…
 # … with 2 more variables: title <chr>, url <chr>
 # A tibble: 1 x 8
   authors date_download       date_publish        description maintext text 
   <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Rádio … 2020-05-04 21:16:36 2020-05-04 12:49:46 O relatóri… "\"A Ch… <NUL…
+1 Paulo … 2020-05-05 06:15:48 2020-05-05 02:00:00 A generali… "A gene… <NUL…
 # … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 3 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
-1 Destak  2020-05-04 21:16:46 <NULL>       As últimas… "Covid-… <NUL… Espe…
-2 Leitor… 2020-05-04 21:16:46 <NULL>       As últimas… "Covid-… <NUL… Espe…
-3 Destak… 2020-05-04 21:16:46 <NULL>       As últimas… "Covid-… <NUL… Espe…
-# … with 1 more variable: url <chr>
 # A tibble: 1 x 8
   authors date_download       date_publish        description maintext text 
   <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-05-04 21:16:46 2020-05-04 18:27:00 Utilização… "Ferro … <NUL…
+1 Global… 2020-05-05 06:15:49 2020-05-05 03:08:00 Documento … "JN Hoj… <NUL…
 # … with 2 more variables: title <chr>, url <chr>
-# A tibble: 2 x 8
+# A tibble: 1 x 8
   authors date_download       date_publish        description maintext text 
   <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-05-04 21:16:48 2020-05-04 19:27:00 O país reg… "© Yuan… <NUL…
-2 Tsf Lu… 2020-05-04 21:16:48 2020-05-04 19:27:00 O país reg… "© Yuan… <NUL…
+1 Marian… 2020-05-05 06:15:50 2020-05-05 02:01:00 "Tudo se p… "Tudo s… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Susete… 2020-05-05 06:15:51 2020-05-05 02:22:00 A opinião … "A posi… <NUL…
 # … with 2 more variables: title <chr>, url <chr>
 # A tibble: 0 x 0
 # A tibble: 1 x 8
   authors date_download       date_publish        description maintext text 
   <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Agênci… 2020-05-04 21:16:53 2020-04-05 18:59:00 "Os textos… "Dois e… <NUL…
+1 Global… 2020-05-05 06:15:58 2020-05-05 03:19:00 Os casos e… "JN Hoj… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 0 x 0
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Victor… 2020-05-05 06:16:01 2020-05-05 02:00:00 "Reuniram-… "Reunir… <NUL…
 # … with 2 more variables: title <chr>, url <chr>
 # A tibble: 1 x 8
   authors date_download       date_publish        description maintext text 
   <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Fernan… 2020-05-04 21:16:55 2020-04-05 17:46:00 O que pode… "O que … <NUL…
+1 Maria … 2020-05-05 06:16:02 2020-05-05 02:26:00 A língua p… "Pergam… <NUL…
 # … with 2 more variables: title <chr>, url <chr>
-# A tibble: 5 x 8
+# A tibble: 0 x 0
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Rita R… 2020-05-05 06:16:05 2020-05-05 02:21:00 "Não se tr… "Na hor… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 0 x 0
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Global… 2020-05-05 06:16:07 2020-05-05 02:17:00 "Um dia hi… "Ainda … <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Antóni… 2020-05-05 06:16:08 2020-05-05 02:02:00 Com a cris… "Com a … <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Paula … 2020-05-05 06:16:17 2020-05-05 01:30:00 "\"Não rec… "EUA in… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 0 x 0
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Karla … 2020-05-05 06:16:25 2020-05-05 00:30:15 A nova int… "A Appl… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Jn Agê… 2020-05-05 06:16:29 2020-05-05 03:23:00 O Itinerár… "JN/Agê… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Catari… 2020-05-05 06:16:43 2020-05-05 00:25:00 Dois joven… "A clor… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Marisa… 2020-05-05 06:16:52 2020-05-04 23:00:55 Recentemen… "No mun… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Vítor … 2020-05-05 06:16:54 2020-05-05 00:00:59 A Apple po… "Após o… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 0 x 0
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Pedro … 2020-05-05 06:16:57 2020-05-05 02:30:52 A KB454995… "As últ… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 0 x 0
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Pedro … 2020-05-05 06:16:59 2020-05-05 01:30:35 A certeza … "Desde … <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 0 x 0
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Global… 2020-05-05 06:17:03 2020-05-05 02:42:00 A Polícia … "O aces… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Global… 2020-05-05 06:17:04 2020-05-05 02:46:00 O ex-minis… "A saíd… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 4 x 8
   authors date_download       date_publish description maintext text  title
   <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
-1 Destak  2020-05-04 21:16:56 <NULL>       As últimas… "Covid-… <NUL… Port…
-2 Leitor… 2020-05-04 21:16:56 <NULL>       As últimas… "Covid-… <NUL… Port…
-3 Lidia   2020-05-04 21:16:56 <NULL>       As últimas… "Covid-… <NUL… Port…
-4 Dono D… 2020-05-04 21:16:56 <NULL>       As últimas… "Covid-… <NUL… Port…
-5 Destak… 2020-05-04 21:16:56 <NULL>       As últimas… "Covid-… <NUL… Port…
+1 Destak  2020-05-05 06:17:05 <NULL>       As últimas… "Covid-… <NUL… Quas…
+2 Leitor… 2020-05-05 06:17:05 <NULL>       As últimas… "Covid-… <NUL… Quas…
+3 Dono D… 2020-05-05 06:17:05 <NULL>       As últimas… "Covid-… <NUL… Quas…
+4 Destak… 2020-05-05 06:17:05 <NULL>       As últimas… "Covid-… <NUL… Quas…
 # … with 1 more variable: url <chr>
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 2 x 8
+# A tibble: 1 x 8
   authors date_download       date_publish        description maintext text 
   <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-05-04 21:17:08 2020-05-04 17:50:00 António Gu… "Antóni… <NUL…
-2 Tsf Lu… 2020-05-04 21:17:08 2020-05-04 17:50:00 António Gu… "Antóni… <NUL…
+1 Salomã… 2020-05-05 06:17:05 2020-05-05 02:20:00 A PSP de O… "Salomã… <NUL…
 # … with 2 more variables: title <chr>, url <chr>
-# A tibble: 2 x 8
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 1 x 8
   authors date_download       date_publish        description maintext text 
   <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-05-04 21:17:10 2020-05-04 19:09:00 O Presiden… "© Migu… <NUL…
-2 Tsf Lu… 2020-05-04 21:17:10 2020-05-04 19:09:00 O Presiden… "© Migu… <NUL…
+1 Global… 2020-05-05 06:17:21 2020-05-05 02:34:00 O Departam… "Hoje à… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Rádio … 2020-05-05 06:17:28 2020-05-04 22:43:57 "Os contra… "O docu… <NUL…
 # … with 2 more variables: title <chr>, url <chr>
 # A tibble: 0 x 0
 # A tibble: 2 x 8
   authors date_download       date_publish        description maintext text 
   <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-05-04 21:17:15 2020-05-04 18:49:00 O composit… "© Pixa… <NUL…
-2 Franci… 2020-05-04 21:17:15 2020-05-04 18:49:00 O composit… "© Pixa… <NUL…
+1 Global… 2020-05-05 06:17:31 2020-05-05 01:31:00 Regresso a… "Regres… <NUL…
+2 Redaçã… 2020-05-05 06:17:31 2020-05-05 01:31:00 Regresso a… "Regres… <NUL…
 # … with 2 more variables: title <chr>, url <chr>
-# A tibble: 3 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
-1 Destak  2020-05-04 21:17:16 <NULL>       As últimas… "Actual… <NUL… Vice…
-2 Leitor… 2020-05-04 21:17:16 <NULL>       As últimas… "Actual… <NUL… Vice…
-3 Destak… 2020-05-04 21:17:16 <NULL>       As últimas… "Actual… <NUL… Vice…
-# … with 1 more variable: url <chr>
-# A tibble: 3 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
-1 Destak  2020-05-04 21:17:17 <NULL>       As últimas… "Actual… <NUL… Jacq…
-2 Leitor… 2020-05-04 21:17:17 <NULL>       As últimas… "Actual… <NUL… Jacq…
-3 Destak… 2020-05-04 21:17:17 <NULL>       As últimas… "Actual… <NUL… Jacq…
-# … with 1 more variable: url <chr>
+# A tibble: 0 x 0
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Global… 2020-05-05 06:17:33 2020-05-05 00:16:00 Jorge Luiz… "Jorge … <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Global… 2020-05-05 06:17:37 2020-05-05 00:44:00 "O investi… "O inve… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Rádio … 2020-05-05 06:17:43 2020-05-05 00:34:44 Brasília, … "O aume… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Rádio … 2020-05-05 06:17:44 2020-05-05 01:14:33 "São Tomé … "\"Conf… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 0 x 0
 # A tibble: 0 x 0
 # A tibble: 0 x 0
 # A tibble: 0 x 0
@@ -337,74 +302,192 @@ In if (class(gdelt_pt_all) == "try-error") { :
 # A tibble: 1 x 8
   authors date_download       date_publish        description maintext text 
   <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Jn Agê… 2020-05-04 21:17:30 2020-05-04 18:48:00 O secretár… "JN/Agê… <NUL…
+1 Notíci… 2020-05-05 06:17:55 2020-05-05 01:57:00 Condição f… "Os méd… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 4 x 8
+  authors date_download       date_publish description maintext text  title
+  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
+1 Destak  2020-05-05 06:18:00 <NULL>       As últimas… "Actual… <NUL… Circ…
+2 Leitor… 2020-05-05 06:18:00 <NULL>       As últimas… "Actual… <NUL… Circ…
+3 Dono D… 2020-05-05 06:18:00 <NULL>       As últimas… "Actual… <NUL… Circ…
+4 Destak… 2020-05-05 06:18:00 <NULL>       As últimas… "Actual… <NUL… Circ…
+# … with 1 more variable: url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <list>   <lis>
+1 Notíci… 2020-05-05 06:18:01 2020-05-05 01:31:02 Homem tent… <NULL>   <NUL…
 # … with 2 more variables: title <chr>, url <chr>
 # A tibble: 0 x 0
 # A tibble: 1 x 8
   authors date_download       date_publish        description maintext text 
   <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Jn Agê… 2020-05-04 21:17:37 2020-05-04 19:05:00 "O Preside… "JN/Agê… <NUL…
+1 Notíci… 2020-05-05 06:18:03 2020-05-05 01:50:29 A autarqui… "Num mo… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <list>   <lis>
+1 Notíci… 2020-05-05 06:18:11 2020-05-05 01:40:54 A imprensa… <NULL>   <NUL…
 # … with 2 more variables: title <chr>, url <chr>
 # A tibble: 3 x 8
+  authors date_download       date_publish description maintext text  title
+  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
+1 Destak  2020-05-05 06:18:13 <NULL>       As últimas… "Covid-… <NUL… Gove…
+2 Leitor… 2020-05-05 06:18:13 <NULL>       As últimas… "Covid-… <NUL… Gove…
+3 Destak… 2020-05-05 06:18:13 <NULL>       As últimas… "Covid-… <NUL… Gove…
+# … with 1 more variable: url <chr>
+# A tibble: 0 x 0
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Maria … 2020-05-05 06:18:15 2020-05-04 23:21:33 Presidente… "É prec… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Notíci… 2020-05-05 06:18:16 2020-05-05 01:20:00 A nova fer… "Com a … <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <list>   <lis>
+1 Silvia… 2020-05-05 06:18:21 2020-05-05 01:20:13 Esta segun… <NULL>   <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 João M… 2020-05-05 06:18:41 2020-05-05 01:05:00 Como se já… "A entr… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Franci… 2020-05-05 06:18:53 2020-08-04 10:54:00 A brutal d… "Termin… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Pedro … 2020-05-05 06:19:06 2020-04-06 01:15:00 O estado d… "Se o p… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Global… 2020-05-05 06:19:12 2020-05-05 01:01:00 O prestigi… "© EPA\… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Caroli… 2020-05-05 06:19:21 2020-05-05 04:09:00 A app vai … "A Wort… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Leoníd… 2020-05-05 06:19:40 2020-05-05 01:59:00 Entrevista… "Celebr… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Leoníd… 2020-05-05 06:19:46 2020-05-05 01:16:00 Gostava de… "Gostav… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Isaura… 2020-05-05 06:19:47 2020-05-05 00:32:00 Segundo o … "Cristi… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Global… 2020-05-05 06:19:48 2020-05-05 00:53:00 Ritmo está… "Desde … <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 1 x 8
+  authors date_download       date_publish description maintext text  title
+  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
+1 Revist… 2020-05-05 06:20:00 <NULL>       Chama-se M… "O Benf… <NUL… Trei…
+# … with 1 more variable: url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish description maintext text  title
+  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
+1 Revist… 2020-05-05 06:20:01 <NULL>       Georgina R… "Georgi… <NUL… Soli…
+# … with 1 more variable: url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish description maintext text  title
+  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
+1 Revist… 2020-05-05 06:20:02 <NULL>       O ator bra… "Flávio… <NUL… Ator…
+# … with 1 more variable: url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Revist… 2020-05-05 06:20:03 2020-05-04 20:24:12 Foram vári… "Aos lo… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish description maintext text  title
+  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
+1 Revist… 2020-05-05 06:20:04 <NULL>       O príncipe… "Kate M… <NUL… A pr…
+# … with 1 more variable: url <chr>
+# A tibble: 1 x 8
   authors date_download       date_publish        description maintext text 
   <chr>   <dttm>              <dttm>              <list>      <chr>    <lis>
-1 Rtp     2020-05-04 21:17:38 2020-05-04 19:10:15 <NULL>      "Nuno M… <NUL…
-2 Rádio … 2020-05-04 21:17:38 2020-05-04 19:10:15 <NULL>      "Nuno M… <NUL…
-3 Nuno M… 2020-05-04 21:17:38 2020-05-04 19:10:15 <NULL>      "Nuno M… <NUL…
+1 Sul In… 2020-05-05 06:20:05 2020-05-04 20:37:30 <NULL>      "O Prog… <NUL…
 # … with 2 more variables: title <chr>, url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish description maintext text  title
+  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
+1 Revist… 2020-05-05 06:20:06 <NULL>       Os 18 conc… "As pri… <NUL… Revi…
+# … with 1 more variable: url <chr>
 # A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
+# A tibble: 1 x 8
+  authors date_download       date_publish description maintext text  title
+  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
+1 Revist… 2020-05-05 06:20:09 <NULL>       Maria Bote… "Maria … <NUL… Arra…
+# … with 1 more variable: url <chr>
 # A tibble: 1 x 8
   authors date_download       date_publish        description maintext text 
   <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Notíci… 2020-05-04 21:17:51 2020-05-04 18:58:00 Jovem nort… "Domini… <NUL…
+1 Global… 2020-05-05 06:20:11 2020-05-05 00:29:00 O avançado… "JN Ont… <NUL…
 # … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
 # A tibble: 1 x 8
   authors date_download       date_publish        description maintext text 
   <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Rádio … 2020-05-04 21:18:08 2020-05-04 18:32:32 O presiden… "O gest… <NUL…
+1 Notíci… 2020-05-05 06:20:12 2020-05-05 00:55:23 O ator Mig… "Miguel… <NUL…
 # … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Gonçal… 2020-05-04 21:18:15 2020-05-04 16:36:54 Noticiário… "A Câma… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-05-04 21:18:22 2020-05-04 17:50:00 O medo é u… "rita c… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Jn Agê… 2020-05-04 21:18:35 2020-05-04 19:13:00 Um homem d… "JN/Agê… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
 # A tibble: 0 x 0
 # A tibble: 0 x 0
 # A tibble: 0 x 0
@@ -424,28 +507,14 @@ In if (class(gdelt_pt_all) == "try-error") { :
 # A tibble: 1 x 8
   authors date_download       date_publish        description maintext text 
   <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Notíci… 2020-05-04 21:20:10 2020-05-04 18:48:00 Estudo da … "As mul… <NUL…
+1 Mafald… 2020-05-05 06:21:03 2020-05-05 00:16:00 Depois das… "O que … <NUL…
 # … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
 # A tibble: 0 x 0
 # A tibble: 0 x 0
 # A tibble: 1 x 8
   authors date_download       date_publish        description maintext text 
   <chr>   <dttm>              <dttm>              <chr>       <list>   <lis>
-1 Catari… 2020-05-04 21:20:35 2020-05-04 18:50:57 O artista … <NULL>   <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Rádio … 2020-05-04 21:20:36 2020-05-04 18:32:32 O presiden… "O gest… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Notíci… 2020-05-04 21:20:38 2020-05-04 18:40:00 O casal ag… "Cristi… <NUL…
+1 Notíci… 2020-05-05 06:21:09 2020-05-05 01:05:52 "\"Lá era … <NULL>   <NUL…
 # … with 2 more variables: title <chr>, url <chr>
 # A tibble: 0 x 0
 # A tibble: 0 x 0
@@ -454,48 +523,7 @@ In if (class(gdelt_pt_all) == "try-error") { :
 # A tibble: 1 x 8
   authors date_download       date_publish        description maintext text 
   <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Edgar … 2020-05-04 21:21:02 2020-04-05 19:29:00 Oficialmen… "O novo… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Rádio … 2020-05-04 21:21:03 2020-05-04 18:38:14 Donald Tru… "Gettin… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Mafald… 2020-05-04 21:21:20 2020-05-04 18:45:00 A situação… "Alexan… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 2 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Rtp     2020-05-04 21:21:35 2020-05-04 20:21:35 Artistas U… "| Publ… <NUL…
-2 Rádio … 2020-05-04 21:21:35 2020-05-04 20:21:35 Artistas U… "| Publ… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Rádio … 2020-05-04 21:21:37 2020-05-04 18:57:45 O presiden… "\"O Pr… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <list>   <lis>
-1 Mafald… 2020-05-04 21:21:49 2020-05-04 18:53:00 Os dois ch… <NULL>   <NUL…
+1 Global… 2020-05-05 06:21:21 2020-05-05 00:44:00 Manuel, o … "Sara O… <NUL…
 # … with 2 more variables: title <chr>, url <chr>
 # A tibble: 0 x 0
 # A tibble: 0 x 0
@@ -503,564 +531,17 @@ In if (class(gdelt_pt_all) == "try-error") { :
 # A tibble: 1 x 8
   authors date_download       date_publish        description maintext text 
   <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Agênci… 2020-05-04 21:21:59 2020-04-05 20:11:00 Pacote apo… "O paco… <NUL…
+1 Notíci… 2020-05-05 06:21:30 2020-05-05 00:26:00 Morreram a… "Um avi… <NUL…
 # … with 2 more variables: title <chr>, url <chr>
 # A tibble: 0 x 0
 # A tibble: 0 x 0
 # A tibble: 1 x 8
   authors date_download       date_publish        description maintext text 
   <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Notíci… 2020-05-04 21:22:05 2020-05-04 18:50:00 A Sociedad… "A Soci… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Notíci… 2020-05-04 21:22:07 2020-05-04 18:25:36 "\"Nem em … "Em abr… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Rádio … 2020-05-04 21:22:08 2020-05-04 18:46:27 Um parecer… "Cláudi… <NUL…
+1 Rádio … 2020-05-05 06:21:38 2020-05-05 01:14:33 "São Tomé … "\"Conf… <NUL…
 # … with 2 more variables: title <chr>, url <chr>
 # A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Céu Ne… 2020-05-04 21:22:32 2020-05-04 15:24:00 Com o fim … "Portug… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-05-04 21:22:37 2020-05-04 17:40:00 "O pagamen… "Portug… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-05-04 21:22:38 2020-05-04 17:39:00 O mural da… "Hoje à… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-05-04 21:22:44 2020-05-04 15:23:00 Pela prime… "O reit… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-05-04 21:22:44 2020-05-04 16:52:00 Portugal r… "O conc… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-05-04 21:23:13 2020-05-04 18:33:00 Conor Burn… "O secr… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-05-04 21:23:16 2020-05-04 18:15:00 A Associaç… "RP Hoj… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Maria … 2020-05-04 21:23:30 2020-05-04 18:16:00 A edição d… "Inês V… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-05-04 21:23:31 2020-05-04 16:31:00 SAD promov… "Hoje à… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-05-04 21:23:32 2020-05-04 18:29:00 Os transpo… "Sofia … <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Jn Agê… 2020-05-04 21:24:03 2020-05-04 18:37:00 O chefe de… "JN/Agê… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-05-04 21:24:14 2020-05-04 18:08:00 "O composi… "Hoje à… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-05-04 21:24:15 2020-05-04 16:07:00 Um grupo d… "O trab… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Global… 2020-05-04 21:24:17 2020-05-04 18:29:00 A Comissão… "Hoje à… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 5 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
-1 Destak  2020-05-04 21:24:23 <NULL>       As últimas… "Covid-… <NUL… Fran…
-2 Leitor… 2020-05-04 21:24:23 <NULL>       As últimas… "Covid-… <NUL… Fran…
-3 Dono D… 2020-05-04 21:24:23 <NULL>       As últimas… "Covid-… <NUL… Fran…
-4 Povinho 2020-05-04 21:24:23 <NULL>       As últimas… "Covid-… <NUL… Fran…
-5 Destak… 2020-05-04 21:24:23 <NULL>       As últimas… "Covid-… <NUL… Fran…
-# … with 1 more variable: url <chr>
-# A tibble: 3 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
-1 Destak  2020-05-04 21:24:24 <NULL>       As últimas… "Covid-… <NUL… Guin…
-2 Leitor… 2020-05-04 21:24:24 <NULL>       As últimas… "Covid-… <NUL… Guin…
-3 Destak… 2020-05-04 21:24:24 <NULL>       As últimas… "Covid-… <NUL… Guin…
-# … with 1 more variable: url <chr>
-# A tibble: 3 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
-1 Destak  2020-05-04 21:24:24 <NULL>       As últimas… "Covid-… <NUL… Guin…
-2 Leitor… 2020-05-04 21:24:24 <NULL>       As últimas… "Covid-… <NUL… Guin…
-3 Destak… 2020-05-04 21:24:24 <NULL>       As últimas… "Covid-… <NUL… Guin…
-# … with 1 more variable: url <chr>
-# A tibble: 0 x 0
-# A tibble: 3 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
-1 Destak  2020-05-04 21:24:26 <NULL>       As últimas… "Covid-… <NUL… Ferr…
-2 Leitor… 2020-05-04 21:24:26 <NULL>       As últimas… "Covid-… <NUL… Ferr…
-3 Destak… 2020-05-04 21:24:26 <NULL>       As últimas… "Covid-… <NUL… Ferr…
-# … with 1 more variable: url <chr>
-# A tibble: 3 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
-1 Destak  2020-05-04 21:24:27 <NULL>       As últimas… "Covid-… <NUL… RTP …
-2 Leitor… 2020-05-04 21:24:27 <NULL>       As últimas… "Covid-… <NUL… RTP …
-3 Destak… 2020-05-04 21:24:27 <NULL>       As últimas… "Covid-… <NUL… RTP …
-# … with 1 more variable: url <chr>
-# A tibble: 3 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
-1 Destak  2020-05-04 21:24:27 <NULL>       As últimas… "Covid-… <NUL… Ferr…
-2 Leitor… 2020-05-04 21:24:27 <NULL>       As últimas… "Covid-… <NUL… Ferr…
-3 Destak… 2020-05-04 21:24:27 <NULL>       As últimas… "Covid-… <NUL… Ferr…
-# … with 1 more variable: url <chr>
-# A tibble: 3 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
-1 Destak  2020-05-04 21:24:28 <NULL>       As últimas… "Covid-… <NUL… Prom…
-2 Leitor… 2020-05-04 21:24:28 <NULL>       As últimas… "Covid-… <NUL… Prom…
-3 Destak… 2020-05-04 21:24:28 <NULL>       As últimas… "Covid-… <NUL… Prom…
-# … with 1 more variable: url <chr>
-# A tibble: 3 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
-1 Destak  2020-05-04 21:24:28 <NULL>       As últimas… "Actual… <NUL… "Mar…
-2 Leitor… 2020-05-04 21:24:28 <NULL>       As últimas… "Actual… <NUL… "Mar…
-3 Destak… 2020-05-04 21:24:28 <NULL>       As últimas… "Actual… <NUL… "Mar…
-# … with 1 more variable: url <chr>
-# A tibble: 3 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
-1 Destak  2020-05-04 21:24:29 <NULL>       As últimas… "Covid-… <NUL… Ferr…
-2 Leitor… 2020-05-04 21:24:29 <NULL>       As últimas… "Covid-… <NUL… Ferr…
-3 Destak… 2020-05-04 21:24:29 <NULL>       As últimas… "Covid-… <NUL… Ferr…
-# … with 1 more variable: url <chr>
-# A tibble: 3 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
-1 Destak  2020-05-04 21:24:30 <NULL>       As últimas… "Covid-… <NUL… Paga…
-2 Leitor… 2020-05-04 21:24:30 <NULL>       As últimas… "Covid-… <NUL… Paga…
-3 Destak… 2020-05-04 21:24:30 <NULL>       As últimas… "Covid-… <NUL… Paga…
-# … with 1 more variable: url <chr>
-# A tibble: 3 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
-1 Destak  2020-05-04 21:24:30 <NULL>       As últimas… "Covid-… <NUL… Ferr…
-2 Leitor… 2020-05-04 21:24:30 <NULL>       As últimas… "Covid-… <NUL… Ferr…
-3 Destak… 2020-05-04 21:24:30 <NULL>       As últimas… "Covid-… <NUL… Ferr…
-# … with 1 more variable: url <chr>
-# A tibble: 0 x 0
-# A tibble: 3 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
-1 Destak  2020-05-04 21:24:33 <NULL>       As últimas… "Covid-… <NUL… "Con…
-2 Leitor… 2020-05-04 21:24:33 <NULL>       As últimas… "Covid-… <NUL… "Con…
-3 Destak… 2020-05-04 21:24:33 <NULL>       As últimas… "Covid-… <NUL… "Con…
-# … with 1 more variable: url <chr>
-# A tibble: 3 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
-1 Destak  2020-05-04 21:24:34 <NULL>       As últimas… "Covid-… <NUL… Docu…
-2 Leitor… 2020-05-04 21:24:34 <NULL>       As últimas… "Covid-… <NUL… Docu…
-3 Destak… 2020-05-04 21:24:34 <NULL>       As últimas… "Covid-… <NUL… Docu…
-# … with 1 more variable: url <chr>
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 3 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
-1 Destak  2020-05-04 21:24:41 <NULL>       As últimas… "Covid-… <NUL… Fábr…
-2 Leitor… 2020-05-04 21:24:41 <NULL>       As últimas… "Covid-… <NUL… Fábr…
-3 Destak… 2020-05-04 21:24:41 <NULL>       As últimas… "Covid-… <NUL… Fábr…
-# … with 1 more variable: url <chr>
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 3 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
-1 Destak  2020-05-04 21:24:47 <NULL>       As últimas… "Covid-… <NUL… Prom…
-2 Leitor… 2020-05-04 21:24:47 <NULL>       As últimas… "Covid-… <NUL… Prom…
-3 Destak… 2020-05-04 21:24:47 <NULL>       As últimas… "Covid-… <NUL… Prom…
-# … with 1 more variable: url <chr>
-# A tibble: 3 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
-1 Destak  2020-05-04 21:24:48 <NULL>       As últimas… "Covid-… <NUL… Docu…
-2 Leitor… 2020-05-04 21:24:48 <NULL>       As últimas… "Covid-… <NUL… Docu…
-3 Destak… 2020-05-04 21:24:48 <NULL>       As últimas… "Covid-… <NUL… Docu…
-# … with 1 more variable: url <chr>
-# A tibble: 3 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
-1 Destak  2020-05-04 21:24:48 <NULL>       As últimas… "Covid-… <NUL… Fábr…
-2 Leitor… 2020-05-04 21:24:48 <NULL>       As últimas… "Covid-… <NUL… Fábr…
-3 Destak… 2020-05-04 21:24:48 <NULL>       As últimas… "Covid-… <NUL… Fábr…
-# … with 1 more variable: url <chr>
-# A tibble: 0 x 0
-# A tibble: 3 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
-1 Destak  2020-05-04 21:24:51 <NULL>       As últimas… "Covid-… <NUL… Paga…
-2 Leitor… 2020-05-04 21:24:51 <NULL>       As últimas… "Covid-… <NUL… Paga…
-3 Destak… 2020-05-04 21:24:51 <NULL>       As últimas… "Covid-… <NUL… Paga…
-# … with 1 more variable: url <chr>
-# A tibble: 0 x 0
-# A tibble: 3 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
-1 Destak  2020-05-04 21:24:54 <NULL>       As últimas… "Covid-… <NUL… Fábr…
-2 Leitor… 2020-05-04 21:24:54 <NULL>       As últimas… "Covid-… <NUL… Fábr…
-3 Destak… 2020-05-04 21:24:54 <NULL>       As últimas… "Covid-… <NUL… Fábr…
-# … with 1 more variable: url <chr>
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 3 x 8
-  authors date_download       date_publish description maintext text  title
-  <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
-1 Destak  2020-05-04 21:24:58 <NULL>       As últimas… "Covid-… <NUL… Prom…
-2 Leitor… 2020-05-04 21:24:58 <NULL>       As últimas… "Covid-… <NUL… Prom…
-3 Destak… 2020-05-04 21:24:58 <NULL>       As últimas… "Covid-… <NUL… Prom…
-# … with 1 more variable: url <chr>
 Joining, by = c("titleArticle", "urlArticle")
-Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |======================================================================| 100%
-Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |======================================================================| 100%
-Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |======================================================================| 100%
-Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |======================================================================| 100%
-Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |======================================================================| 100%
-Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |======================================================================| 100%
-Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |======================================================================| 100%
-Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |======================================================================| 100%
-Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |======================================================================| 100%
-Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |======================================================================| 100%
-Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |======================================================================| 100%
-Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |======================================================================| 100%
-Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |======================================================================| 100%
-Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |======================================================================| 100%
-Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |======================================================================| 100%
-Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |======================================================================| 100%
-Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |======================================================================| 100%
-Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |======================================================================| 100%
-Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |======================================================================| 100%
-Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |======================================================================| 100%
-Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |======================================================================| 100%
-Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |======================================================================| 100%
-Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |======================================================================| 100%
-Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |======================================================================| 100%
-Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |======================================================================| 100%
-Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |======================================================================| 100%
-Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |======================================================================| 100%
-Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |======================================================================| 100%
-Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |======================================================================| 100%
-Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |======================================================================| 100%
 Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
 Request failed [ERROR]. Retrying in 15 seconds...
 Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
