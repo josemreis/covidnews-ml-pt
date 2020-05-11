@@ -70,30 +70,28 @@ Joining, by = "urlGDELTV2FTAPI"
 Warning message:
 In if (class(gdelt_pt_all) == "try-error") { :
   the condition has length > 1 and only the first element will be used
+# A tibble: 0 x 0
 # A tibble: 1 x 8
   authors date_download       date_publish        description maintext text 
   <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Rádio … 2020-05-11 10:15:21 2020-05-11 07:17:47 O vice-pre… "Covid-… <NUL…
+1 Rádio … 2020-05-11 11:15:25 2020-05-11 08:44:41 Acompanham… "Mais a… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 3 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Global… 2020-05-11 11:15:26 2020-05-11 08:27:00 O Presiden… "© EPA\… <NUL…
+2 João A… 2020-05-11 11:15:26 2020-05-11 08:27:00 O Presiden… "© EPA\… <NUL…
+3 Em São… 2020-05-11 11:15:26 2020-05-11 08:27:00 O Presiden… "© EPA\… <NUL…
 # … with 2 more variables: title <chr>, url <chr>
 # A tibble: 1 x 8
   authors date_download       date_publish        description maintext text 
   <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Rádio … 2020-05-11 10:15:22 2020-05-11 07:23:30 Os Estados… "Covid-… <NUL…
+1 Global… 2020-05-11 11:15:27 2020-05-11 08:35:00 Mike Pence… "© EPA\… <NUL…
 # … with 2 more variables: title <chr>, url <chr>
 # A tibble: 1 x 8
   authors date_download       date_publish        description maintext text 
   <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Rádio … 2020-05-11 10:15:23 2020-05-11 07:33:54 "A Amnisti… "Esta r… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Rádio … 2020-05-11 10:15:24 2020-05-11 07:44:19 O presiden… "Na car… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Rádio … 2020-05-11 10:15:24 2020-05-11 07:55:59 "O secretá… "Em cau… <NUL…
+1 Rádio … 2020-05-11 11:15:28 2020-05-11 08:44:41 Acompanham… "Mais a… <NUL…
 # … with 2 more variables: title <chr>, url <chr>
 Joining, by = c("titleArticle", "urlArticle")
 Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
@@ -115,15 +113,6 @@ NULL
 Joining, by = "doc_id"
   |                                                                              |======================================================================| 100%
 Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
-Request failed [ERROR]. Retrying in 15 seconds...
-
-Request refused.
-NULL
-Joining, by = "doc_id"
-  |                                                                              |======================================================================| 100%
-Error in curl::curl_fetch_memory(url, handle = handle): Timeout was reached: [api.dbpedia-spotlight.org] Connection timed out after 10001 milliseconds
 Request failed [ERROR]. Retrying in 15 seconds...
 Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
 Request failed [ERROR]. Retrying in 15 seconds...
