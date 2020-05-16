@@ -70,30 +70,87 @@ Joining, by = "urlGDELTV2FTAPI"
 Warning message:
 In if (class(gdelt_pt_all) == "try-error") { :
   the condition has length > 1 and only the first element will be used
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Rádio … 2020-05-16 11:15:14 2020-05-16 08:45:02 O Governo … "”, é r… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 7 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Bruno … 2020-05-16 11:15:14 2020-05-15 17:58:51 O Google P… "O Goog… <NUL…
+2 Antóni… 2020-05-16 11:15:14 2020-05-15 17:58:51 O Google P… "O Goog… <NUL…
+3 Vitor … 2020-05-16 11:15:14 2020-05-15 17:58:51 O Google P… "O Goog… <NUL…
+4 Filipe… 2020-05-16 11:15:14 2020-05-15 17:58:51 O Google P… "O Goog… <NUL…
+5 Carlos… 2020-05-16 11:15:14 2020-05-15 17:58:51 O Google P… "O Goog… <NUL…
+6 Rui Ba… 2020-05-16 11:15:14 2020-05-15 17:58:51 O Google P… "O Goog… <NUL…
+7 Pedro … 2020-05-16 11:15:14 2020-05-15 17:58:51 O Google P… "O Goog… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Rádio … 2020-05-16 11:15:15 2020-05-16 07:43:50 O México r… "Covid-… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Rádio … 2020-05-16 11:15:15 2020-05-16 08:04:41 "O ministr… "\", qu… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Sandra… 2020-05-16 11:15:16 2020-05-16 07:14:00 Longa vida… "Gosto … <NUL…
+# … with 2 more variables: title <chr>, url <chr>
 # A tibble: 4 x 8
   authors date_download       date_publish        description maintext text 
   <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 João P… 2020-05-16 10:15:16 2020-05-16 07:01:00 A centenár… "Vai um… <NUL…
-2 Miguel… 2020-05-16 10:15:16 2020-05-16 07:01:00 A centenár… "Vai um… <NUL…
-3 Texto   2020-05-16 10:15:16 2020-05-16 07:01:00 A centenár… "Vai um… <NUL…
-4 Fotogr… 2020-05-16 10:15:16 2020-05-16 07:01:00 A centenár… "Vai um… <NUL…
+1 João P… 2020-05-16 11:15:17 2020-05-16 07:01:00 A centenár… "Vai um… <NUL…
+2 Miguel… 2020-05-16 11:15:17 2020-05-16 07:01:00 A centenár… "Vai um… <NUL…
+3 Texto   2020-05-16 11:15:17 2020-05-16 07:01:00 A centenár… "Vai um… <NUL…
+4 Fotogr… 2020-05-16 11:15:17 2020-05-16 07:01:00 A centenár… "Vai um… <NUL…
 # … with 2 more variables: title <chr>, url <chr>
 # A tibble: 1 x 8
   authors date_download       date_publish        description maintext text 
   <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Manuel… 2020-05-16 10:15:17 2020-05-16 07:00:00 Bolsonaro … "Dias d… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Rádio … 2020-05-16 10:15:23 2020-05-16 00:05:14 O Estádio … "Estádi… <NUL…
+1 Manuel… 2020-05-16 11:15:18 2020-05-16 07:00:00 Bolsonaro … "Dias d… <NUL…
 # … with 2 more variables: title <chr>, url <chr>
 Joining, by = c("titleArticle", "urlArticle")
+Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
+Request failed [ERROR]. Retrying in 15 seconds...
+Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
+Request failed [ERROR]. Retrying in 15 seconds...
+
+Request refused.
+NULL
+Joining, by = "doc_id"
+  |                                                                              |======================================================================| 100%
+Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
+Request failed [ERROR]. Retrying in 15 seconds...
+Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
+Request failed [ERROR]. Retrying in 15 seconds...
+
+Request refused.
+NULL
+Joining, by = "doc_id"
+  |                                                                              |======================================================================| 100%
+Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
+Request failed [ERROR]. Retrying in 15 seconds...
+Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
+Request failed [ERROR]. Retrying in 15 seconds...
+
+Request refused.
+NULL
+Joining, by = "doc_id"
+  |                                                                              |======================================================================| 100%
+Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
+Request failed [ERROR]. Retrying in 15 seconds...
+Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
+Request failed [ERROR]. Retrying in 15 seconds...
+
+Request refused.
+NULL
+Joining, by = "doc_id"
+  |                                                                              |======================================================================| 100%
 Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
 Request failed [ERROR]. Retrying in 15 seconds...
 Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
