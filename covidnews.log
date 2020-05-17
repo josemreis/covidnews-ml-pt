@@ -70,46 +70,67 @@ Joining, by = "urlGDELTV2FTAPI"
 Warning message:
 In if (class(gdelt_pt_all) == "try-error") { :
   the condition has length > 1 and only the first element will be used
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Notíci… 2020-05-17 11:15:20 2020-05-17 09:00:00 Os restaur… "Os res… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Rádio … 2020-05-17 11:15:28 2020-05-17 08:45:06 Acompanham… "Acompa… <NUL…
+# … with 2 more variables: title <chr>, url <chr>
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 0 x 0
+# A tibble: 1 x 8
+  authors date_download       date_publish        description maintext text 
+  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
+1 Rádio … 2020-05-17 11:15:32 2020-05-17 07:44:37 O ex-presi… "Obama … <NUL…
+# … with 2 more variables: title <chr>, url <chr>
 # A tibble: 3 x 8
   authors date_download       date_publish description maintext text  title
   <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
-1 Destak  2020-05-17 10:15:14 <NULL>       As últimas… "Covid-… <NUL… Camp…
-2 Leitor… 2020-05-17 10:15:14 <NULL>       As últimas… "Covid-… <NUL… Camp…
-3 Destak… 2020-05-17 10:15:14 <NULL>       As últimas… "Covid-… <NUL… Camp…
+1 Destak  2020-05-17 11:15:32 <NULL>       As últimas… "Covid-… <NUL… Camp…
+2 Leitor… 2020-05-17 11:15:32 <NULL>       As últimas… "Covid-… <NUL… Camp…
+3 Destak… 2020-05-17 11:15:32 <NULL>       As últimas… "Covid-… <NUL… Camp…
 # … with 1 more variable: url <chr>
 # A tibble: 3 x 8
   authors date_download       date_publish description maintext text  title
   <chr>   <dttm>              <list>       <chr>       <chr>    <lis> <chr>
-1 Destak  2020-05-17 10:15:15 <NULL>       As últimas… "Actual… <NUL… Jorn…
-2 Leitor… 2020-05-17 10:15:15 <NULL>       As últimas… "Actual… <NUL… Jorn…
-3 Destak… 2020-05-17 10:15:15 <NULL>       As últimas… "Actual… <NUL… Jorn…
+1 Destak  2020-05-17 11:15:33 <NULL>       As últimas… "Actual… <NUL… Jorn…
+2 Leitor… 2020-05-17 11:15:33 <NULL>       As últimas… "Actual… <NUL… Jorn…
+3 Destak… 2020-05-17 11:15:33 <NULL>       As últimas… "Actual… <NUL… Jorn…
 # … with 1 more variable: url <chr>
 # A tibble: 1 x 8
   authors date_download       date_publish        description maintext text 
   <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Rádio … 2020-05-17 10:15:16 2020-05-17 07:32:58 O Brasil t… "O Mini… <NUL…
+1 Rádio … 2020-05-17 11:15:33 2020-05-17 07:32:58 O Brasil t… "O Mini… <NUL…
 # … with 2 more variables: title <chr>, url <chr>
 # A tibble: 1 x 8
   authors date_download       date_publish        description maintext text 
   <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Rádio … 2020-05-17 10:15:16 2020-05-17 08:01:40 A China re… "Dos no… <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 1 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Rádio … 2020-05-17 10:15:16 2020-05-17 07:44:37 O ex-presi… "Obama … <NUL…
-# … with 2 more variables: title <chr>, url <chr>
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 0 x 0
-# A tibble: 3 x 8
-  authors date_download       date_publish        description maintext text 
-  <chr>   <dttm>              <dttm>              <chr>       <chr>    <lis>
-1 Joaqui… 2020-05-17 10:15:24 2020-05-17 06:30:00 O sistema … "Nos úl… <NUL…
-2 Assist… 2020-05-17 10:15:24 2020-05-17 06:30:00 O sistema … "Nos úl… <NUL…
-3 Direct… 2020-05-17 10:15:24 2020-05-17 06:30:00 O sistema … "Nos úl… <NUL…
+1 Rádio … 2020-05-17 11:15:34 2020-05-17 08:01:40 A China re… "Dos no… <NUL…
 # … with 2 more variables: title <chr>, url <chr>
 Joining, by = c("titleArticle", "urlArticle")
+Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
+Request failed [ERROR]. Retrying in 15 seconds...
+Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
+Request failed [ERROR]. Retrying in 15 seconds...
+
+Request refused.
+NULL
+Joining, by = "doc_id"
+  |                                                                              |======================================================================| 100%
 Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
 Request failed [ERROR]. Retrying in 15 seconds...
 Error in curl::curl_fetch_memory(url, handle = handle): SSL certificate problem: unable to get local issuer certificate
