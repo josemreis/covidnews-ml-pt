@@ -39,13 +39,8 @@ After some experimentation I settled on a random forests model using
     Coronaviruses**. You can find it in `train/data/labeled_data`. For
     collecting the corpus, empty queries (“e”) for Newspapers in Europe
     in Portuguese were used.
-  - **Sampling**: the first sample strategy, up to roughly 3000 docs,
-    involved making queries for news articles in random dates between
-    01/01/2018 and 01/10/2019 - not coronavirus-related - and random
-    dates between 15/02/2020 and today using the above-mentioned label
-    as a query parameters. Has this was leading to some overfitting a
-    new strategy was adopted. I made queries for all news in a random
-    date between 15/02/2020 and today, and labeled the data based on the
+  - **Sampling**: I made queries for all news in a random
+    date between  01/01/2018 and 01/04/2020 in Factiva and labeled the data based on the
     presence of the coronavirus factiva label.
   - **Features** - unigram to 5-ngram tokenized words without stop-words
     and stemmed represented as a tf-idf vector. Only words which
