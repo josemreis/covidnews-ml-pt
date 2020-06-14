@@ -41,7 +41,7 @@ After some experimentation I settled on a random forests model using
     in Portuguese were used.
   - **Sampling**: I made queries for all news in a random
     date between  01/01/2018 and 01/04/2020 in Factiva and labeled the data based on the
-    presence of the coronavirus factiva label.
+    presence of the coronavirus factiva label ('Novel Coronaviruses') and its date.
   - **Features** - unigram to 5-ngram tokenized words without stop-words
     and stemmed represented as a tf-idf vector. Only words which
     appeated in at least 20 documents were kept. Furthermore, using
