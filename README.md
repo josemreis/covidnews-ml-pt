@@ -49,7 +49,7 @@ After some experimentation I settled on a random forests model using
     extracted all named entities present in the document, aggregated
     them by dbpedia macro-category, and added the counts for each
     category as features.
-  - **10-fold crossvalidation repeated 3 times** for parameter tunning
+  - **10-fold crossvalidation repeated 3 times** for hyper-parameter tunning
   - Latest **model
 specification**
 
